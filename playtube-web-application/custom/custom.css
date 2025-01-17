@@ -1,0 +1,197 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+body {
+    font-family: sans-serif;
+    background-color: #222222;
+    color: #FFFFFF;
+}
+
+.row > .col-lg-4,
+.col-6 {
+    padding: 0;
+}
+
+.slideshow-container {
+    justify-content: center;
+    display: flex;
+}
+
+.menushow-container a {
+    align-items: center;
+    margin: 15px;
+    color: #FFFFFF;
+}
+
+.menushow-container div {
+    align-items: center;
+    margin: 15px;
+    color: #FFFFFF;
+}
+
+#navbar {
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: top 0.3s;
+}
+
+#overlay {
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: block;
+    width: 100%;
+    transition: top 0.3s;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#list {
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: none;
+    top: 50px;
+    width: 100%;
+    height: calc(100vh - 50px - 35vh);
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#list a {
+    color: #FFFFFF;
+    display: inline-block;
+    margin: 20px;
+}
+
+#overlay iframe {
+    pointer-events: none;
+}
+
+.goto, .gotochannel, .collaspse, .folderminus, .folderplus, .foldersave, .folderopen, .fileminus, .fileplus, .addapikey, .random {
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.centered:hover {
+    background-color: black;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    text-decoration: none;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.thumbnailed {
+    outline: 4px solid white;
+    outline-offset: -4px;
+}
+
+.icon-upload > input {
+    display: none;
+}
+
+.icon-download > input {
+    display: none;
+}
+
+.navMenu {
+    transform: translate(-30px, 0px);
+}
+
+.myMenu {
+    transform: translate(-30px, 0px);
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+.spinner {
+    position: absolute;
+    top: calc(50% - 10vh);
+    left: calc(50% - 10vh);
+    text-align: center;
+    font-size: 20vh;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #eee;
+}
+
+.overlaytitle {
+    height: 7vh;
+    color: #FFFFFF;
+}
+
+.overlayimage {
+    height: 100%;
+    width: 100%;
+}

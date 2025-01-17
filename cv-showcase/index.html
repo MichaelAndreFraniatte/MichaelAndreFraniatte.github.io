@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="My profesional CV, achieved with JavaScript.">
+        <meta name="keywords" content="works, cv, contact">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+        <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+        <title>Michael CV</title>
+        <link rel="stylesheet" href="../extra/font-awesome.css">
+        <link rel="stylesheet" href="../extra/bootstrap.css">
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+        <script src="../extra/smtp.js"></script>
+        <link rel="stylesheet" href="custom/custom.css">
+        <script src="../custom/redirect.js"></script>
+    </head>
+    <body class id="page-top" onLoad="page_onload()">
+        <!-- Vertical navbar -->
+        <div class="vertical-nav" id="sidebar">
+            <div class="sidebar-header">
+                <div class="media d-flex align-items-center">
+                    <img src="img/favicon.png" class="m-2 rounded" onclick="clickLogo()">
+                    <div class="media-body">
+                        <h4 class="text-light m-2">Michael</h4>
+                        <p class="font-weight-light text-light m-2"><span id="typewrite"></span>|</p>
+                    </div>
+                </div>
+            </div>
+            <div id="navbar">
+                <ul class="nav">
+                    <li class="nav-li">
+                        <a class="text-dark" style="background: #d9ddde !important;font-weight: 700;">
+                            <i class="fa"></i>
+                            RESUMES
+                        </a>
+                    </li>
+                    <li class="nav-li" data-id="1">
+                        <a href="#about" class="text-dark">
+                            <i class="fa fa-info fa-fw"></i>
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-li" data-id="2">
+                        <a href="#experience" class="text-dark">
+                            <i class="fa fa-history fa-fw"></i>
+                            Experience
+                        </a>
+                    </li>
+                    <li class="nav-li" data-id="3">
+                        <a href="#education" class="text-dark">
+                            <i class="fa fa-graduation-cap fa-fw"></i>
+                            Education
+                        </a>
+                    </li>
+                    <li class="nav-li" data-id="4">
+                        <a href="#skills" class="text-dark">
+                            <i class="fa fa-cogs fa-fw"></i>
+                            Skills
+                        </a>
+                    </li>
+                    <li class="nav-li" data-id="6">
+                        <a href="#form" class="text-dark">
+                            <i class="fa fa-user fa-fw"></i>
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-li" data-id="7">
+                        <a href="#works" class="text-dark">
+                            <i class="fa fa-cubes fa-fw"></i>
+                            Works
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-li">
+                        <a class="text-dark" style="background: #d9ddde !important;font-weight: 700;">
+                            <i class="fa"></i>
+                            LINKS
+                        </a>
+                    </li>
+                    <li class="nav-li">
+                        <a onclick="openCV()" class="text-dark">
+                            <i class="fa fa-camera-retro fa-fw"></i>
+                            Curriculum Vitae
+                        </a>
+                    </li>
+                    <li class="nav-li">
+                        <a onclick="openMain()" class="text-dark">
+                            <i class="fa fa-clock-o fa-fw"></i>
+                            Personal Works
+                        </a>
+                    </li>
+                    <li class="nav-li">
+                        <a href="https://github.com/michaelandrefraniatte" class="text-dark">
+                            <i class="fa fa-github fa-fw"></i>
+                            Github Account
+                        </a>
+                    </li>
+                    <li class="nav-li">
+                        <a onclick="openThesis()" class="text-dark">
+                            <i class="fa fa-book fa-fw"></i>
+                            Doctor Thesis
+                        </a>
+                    </li>
+                    <li class="nav-li">
+                        <a href="https://link.springer.com/article/10.1007/s11084-008-9126-5" class="text-dark">
+                            <i class="fa fa-newspaper-o fa-fw"></i>
+                            Science Article
+                        </a>
+                    </li>
+                    <li class="nav-li">
+                        <a href="https://www.youtube.com/@adeadshit" class="text-dark">
+                            <i class="fa fa-youtube fa-fw"></i>
+                            Youtube Channel
+                        </a>
+                    </li>
+                    <li class="nav-li">
+                        <a href="https://steamcommunity.com/id/adeadshit" class="text-dark">
+                            <i class="fa fa-gamepad fa-fw"></i>
+                            Steam Profile
+                        </a>
+                    </li>
+                    <li class="nav-li">
+                        <a href="mailto:michael.franiatte@gmail.com" class="text-dark">
+                            <i class="fa fa-envelope fa-fw"></i>
+                            Prompt Mailing
+                        </a>
+                    </li>
+                    <li class="nav-li">
+                        <a href="javascript:printHTML()" class="text-dark">
+                            <i class="fa fa-print fa-fw"></i>
+                            Print Portfolio
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End vertical navbar -->
+        <!-- Page content holder -->
+        <div class="page-content mt-0 mb-0" id="content">
+            <!-- Toggle button -->
+            <div id="sidebarCollapse"></div>
+            <!-- End Toggle button -->
+            <!-- Demo content -->
+            <div class="marged">
+                <div class="hr" data-id="1" id="about">
+                    <section class="resume-section p-6 p-lg-6 justify-content-center text-white">
+                        <div class="w-100">
+                            <br>
+                            <h1>Michael Andre Franiatte</h1>
+                            <div class="resume-item">
+                                <div class="resume-content">
+                                    <h3 class="status">Web Developer</h3>
+                                    <div class="subheading"><b>FRANCE</b></div>
+                                    <form method="get" action='' style="display:none;" id="formid">
+                                        <button type="submit" style="display:none;"></button>
+                                    </form>
+                                    <br />
+                                    <p class="keywords">
+                                        <span class="keyword text-dark">Creative</span>
+                                        <span class="keyword text-dark">Imaginative</span>
+                                        <span class="keyword text-dark">Worker</span>
+                                        <span class="keyword text-dark">Developer</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="hr" data-id="2" id="experience">
+                    <section class="resume-section p-6 p-lg-6 justify-content-center text-white">
+                        <div class="w-100">
+                            <br>
+                            <h1 class="mb-3 mt-3">Experience</h1>
+                            <div class="resume-item">
+                                <div class="resume-content">
+                                    <h3 class="m-0">C# Developer</h3>
+                                    <div class="resume-date">
+                                        <span>2022 - 2023</span>
+                                    </div>
+                                    <div class="subheading"><b>Infomil</b></div>
+                                    <p>
+                                        Working on Windows with Visual Studio 2019 for updating applications and
+                                        packages, resolving bugs, optimizing SQL requests, adding new features, and
+                                        consulting with other developers.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="resume-item">
+                                <div class="resume-content">
+                                    <h3 class="m-0">Full Stack Developer</h3>
+                                    <div class="resume-date">
+                                        <span>2020 - 2022</span>
+                                    </div>
+                                    <div class="subheading"><b>SIMA</b></div>
+                                    <p>
+                                        Working on Linux OS with Drupal, Symfony, PHP, JavaScript, JQuery, Twig, HTML,
+                                        CSS, API, Ajax, CURL, Back Office, server administration, Docker, Composer,
+                                        Drush, Phing, SQL, Ghostscript and other packages, and packaging applications...
+                                        On different projects.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="resume-item">
+                                <div class="resume-content">
+                                    <h3 class="m-0">Informatic Developer</h3>
+                                    <div class="resume-date">
+                                        <span>2019 - 2020</span>
+                                    </div>
+                                    <div class="subheading"><b>SAM</b></div>
+                                    <p>
+                                        Update and add of functionnalities for applications (C#, VB6), update and add of
+                                        stored procedures and SQL requests for data extractions from databases (SQL
+                                        Server), update and add of Reports (Report Builder, Cristal Report, Sharepoint),
+                                        technical support with remote PC connection (400 employes), closing tickets
+                                        (GLPI), managing applications on servers (Windows Servers 2008).
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="resume-item">
+                                <div class="resume-content">
+                                    <h3 class="m-0">Full Stack Developer</h3>
+                                    <div class="resume-date">
+                                        <span>2018 - 2019</span>
+                                    </div>
+                                    <div class="subheading"><b>CFA</b></div>
+                                    <p>
+                                        Corrections of bugs (CAS, profiles, authorizations), set up new PHP framework
+                                        (CodeIgniter), set up new CSS library (Bootstrap), update and add of
+                                        functionnalities (mail, pagination, maps), managing server files (filezila),
+                                        handle errors with host (logs).
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="resume-item">
+                                <div class="resume-content">
+                                    <h3 class="m-0">Self-Educated Developer</h3>
+                                    <div class="resume-date">
+                                        <span>2014 - 2017</span>
+                                    </div>
+                                    <div class="subheading"><b>Entrepreneurship</b></div>
+                                    <p>
+                                        Building and developing various applications, books, technical supports (Azure,
+                                        1and1, Windows Store, GooglePlay, GoogleBooks, Blogs, Vlogs, Forums).
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="resume-item">
+                                <div class="resume-content">
+                                    <h3 class="m-0">Visit Manager</h3>
+                                    <div class="resume-date">
+                                        <span>2013 - 2014</span>
+                                    </div>
+                                    <div class="subheading"><b>Agora</b></div>
+                                    <p>
+                                        Presenting to visitors the Bure site and explaining to them the burial of
+                                        radioactive waste process, in a team of 3 other visit managers.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="resume-item">
+                                <div class="resume-content">
+                                    <h3 class="m-0">School Teacher</h3>
+                                    <div class="resume-date">
+                                        <span>2012 - 2013</span>
+                                    </div>
+                                    <div class="subheading"><b>Acadomia, Prestacours</b></div>
+                                    <p>
+                                        Teaching Chemistry, Physic and Mathematic to high school students.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="resume-item">
+                                <div class="resume-content">
+                                    <h3 class="m-0">Geothenical Ingeneer</h3>
+                                    <div class="resume-date">
+                                        <span>2011 - 2012</span>
+                                    </div>
+                                    <div class="subheading"><b>Terrafor</b></div>
+                                    <p>
+                                        Drilling ingeneering and working on ground with drilling technicians. Studies on
+                                        soils and calculation on fundations for building environnements.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="resume-item">
+                                <div class="resume-content">
+                                    <h3 class="m-0">Searcher in Sciences</h3>
+                                    <div class="resume-date">
+                                        <span>2006 - 2011</span>
+                                    </div>
+                                    <div class="subheading"><b>MRT, ANDRA, CNRS</b></div>
+                                    <p>
+                                        Research on stability and synthesis of C-H-O-N molecules in hydrothermal
+                                        submarine systems with experiments and modelizations at high temperature and
+                                        high pressure using Equation of State on fluids. Archean submarine systems
+                                        deliver enough hydrogen with iron oxidation to magnetite for synthetise, in big
+                                        quantities, molecules like acridine orange at 250°C and 140 bar, a molecule
+                                        increasing lifetime and making ADN, the highest reduced C-H-O-N molecule where
+                                        every other molecules are easy to produce from, with oxidation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="hr" data-id="3" id="education">
+                    <section class="resume-section p-6 p-lg-6 justify-content-center text-white">
+                        <div class="w-100">
+                            <br>
+                            <h1 class="mb-3 mt-3">Education</h1>
+                            <div class="resume-item">
+                                <div class="resume-content">
+                                    <h3 class="m-0">IUT</h3>
+                                    <div class="resume-date">
+                                        <span>2018 - 2019</span>
+                                    </div>
+                                    <div class="subheading"><b>Bachelor+3 Degree</b></div>
+                                    <p>
+                                        Web Development: Back-end and front-end, web and mobile applications, ergonomy
+                                        mobile, workshop, alone or in group of 2-3 students.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="resume-item">
+                                <div class="resume-content">
+                                    <h3 class="m-0">University</h3>
+                                    <div class="resume-date">
+                                        <span>2006 - 2011</span>
+                                    </div>
+                                    <div class="subheading"><b>Doctor Degree</b></div>
+                                    <p>
+                                        Geosciences: Discovery of the Origin of Life with experiments and calculations.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="resume-item">
+                                <div class="resume-content">
+                                    <h3 class="m-0">University</h3>
+                                    <div class="resume-date">
+                                        <span>2001 - 2006</span>
+                                    </div>
+                                    <div class="subheading"><b>Bachelor+5 Degree</b></div>
+                                    <p>
+                                        Sciences: Chemistry, Physic, Mathematic, Geology, Informatic.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="resume-item">
+                                <div class="resume-content">
+                                    <h3 class="m-0">Architecture School</h3>
+                                    <div class="resume-date">
+                                        <span>2000 - 2001</span>
+                                    </div>
+                                    <div class="subheading"><b>Bachelor+1 Degree</b></div>
+                                    <p>
+                                        Architecture: History of Architecture and History of Art, Scale and Conception,
+                                        Art and Design, Technical Conception, Plan, Project.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="resume-item">
+                                <div class="resume-content">
+                                    <h3 class="m-0">High School</h3>
+                                    <div class="resume-date">
+                                        <span>1995 - 2000</span>
+                                    </div>
+                                    <div class="subheading"><b>Bachelor Degree</b></div>
+                                    <p>
+                                        Sciences, Biology option: Chemistry, Physic, Mathematic, Biology, English,
+                                        Spanish, French, History of France, Sport, Electronic, Mechanic.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="hr" data-id="4" id="skills">
+                    <section class="resume-section p-6 p-lg-6 justify-content-center text-white">
+                        <div class="w-100">
+                            <br>
+                            <h1 class="mb-3 mt-3">Skills</h1>
+                            <ul class="fa-ul">
+                                <li>
+                                    <div class="m-0">
+                                        <h3>Spoken:</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <ul class="fa-ul text-white mb-3">
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> French
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> English
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Spanish
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="m-0">
+                                        <h3>IDE:</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <ul class="fa-ul text-white mb-3">
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Visual Studio - Xamarin -
+                                            Eclipse
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Visual Code Studio - PHPStorm
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Unity - Game Studio Maker
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Notepad - Notepad++
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Playground
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="m-0">
+                                        <h3>Backend:</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <ul class="fa-ul text-white mb-3">
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> SQL - PHP - C# - C++ - .NET -
+                                            Java - Python - Lua
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Slim - Symfony - Drupal -
+                                            Django
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> PDO - JWT Authentication - API
+                                            Rest
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Real-Time Communication with
+                                            Websockets
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="m-0">
+                                        <h3>Frontend:</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <ul class="fa-ul text-white mb-3">
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> HTML - CSS - Bootstrap -
+                                            Materalize - SASS
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> JavaScript - JQuery - NodeJS
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> VueJS - Angular - Razor -
+                                            Entity - Twig
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="m-0">
+                                        <h3>Dev Ops Experience:</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <ul class="fa-ul text-white mb-3">
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Docker - NGrok - AWS - Google
+                                            API (JQuery, Ajax)
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Setup web servers (Apache,
+                                            MariaDB, PHP, IIS)
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Deploying applications (Linux
+                                            server, Windows server)
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Setup DNS for
+                                            domain/sub-domains (VirtualHost) - Active Directory - CNAME - Sitemap -
+                                            Robots.txt
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="m-0">
+                                        <h3>Database Design & Implementation:</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <ul class="fa-ul text-white mb-3">
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> PhpMyAdmin - SQL Server -
+                                            Freesqldatabase
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> MySQL Connector - MariaDB -
+                                            Firestore
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Azure SQL Server - 1and1 -
+                                            Firebase - Pages (Github)
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="m-0">
+                                        <h3>Agile Development &amp; Scrum Tools:</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <ul class="fa-ul text-white mb-3">
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Projects (Github)
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Trello
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Slack
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Discord
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="m-0">
+                                        <h3>Source Control Tools:</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <ul class="fa-ul text-white mb-3">
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Github (Github Desktop)
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Bitbucket (Linux Terminal)
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Gitlab (Bash Shell)
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="m-0">
+                                        <h3>Miscellaneous:</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <ul class="fa-ul text-white mb-3">
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Stored procedures - Sharepoint
+                                            - VB6
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Report Builder - Crystal Report
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> FileZilla - WinSCP - Curl
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Libraries - Wrappers
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Frameworks - Composer -
+                                            Packages
+                                        </li>
+                                        <li>
+                                            <i class="fa-li fa fa-check text-white"></i> Client support tickets
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <div class="hr" data-id="6" id="form">
+                    <section class="resume-section p-6 p-lg-6 justify-content-center text-white">
+                        <div class="w-100">
+                            <br>
+                            <h1 class="mb-3 mt-3">Contact</h1>
+                            <div class="m-5">
+                                <form id="contact-form" style="break-inside: avoid;">
+                                    <div class="row">
+                                        <div>
+                                            <input type="text" id="name" name="name" class="form-control">
+                                            <label for="name">Your name</label>
+                                        </div>
+                                        <div>
+                                            <input type="text" id="email" name="email" class="form-control">
+                                            <label for="email">Your email</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div>
+                                            <input type="text" id="subject" name="subject" class="form-control">
+                                            <label for="subject">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div>
+                                            <textarea type="text" id="message" name="message"
+                                                class="form-control"></textarea>
+                                            <label for="message">Your message</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div>
+                                            <input type="button" id="send" name="send" value="Send" class="form-control"
+                                                onclick="validateForm()">
+                                            <label id="status"></label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="hr" data-id="7" id="works">
+                    <section class="resume-section p-6 p-lg-6 justify-content-center text-white">
+                        <div class="w-100">
+                            <br>
+                            <h1 class="mb-3 mt-3">Works</h1>
+                            <div class="m-5 row row-eq-height">
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/ebooks.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Ebooks:</b> </h5>
+                                        <p class="card-text text-dark">All my programs explained in books, blogs and
+                                            videos recycled for explain the manner of working.</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/newb-main.png, ../img/monogame-main.png, ../img/diffusion-main.png, ../img/micedition-main.png, ../img/polynomial-main.png, ../img/gamepadlibraries-main.png]', '613', '470');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/nono.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Nonogram Generator And Player:</b> </h5>
+                                        <p class="card-text text-dark">Generating and playing Nonograms. I was inspired
+                                            by indie games, and wanted to understand the process. Creating little tools
+                                            always helped me.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/wiijoy.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>WiiJoy4FPS:</b> </h5>
+                                        <p class="card-text text-dark">Emulation of Nintendo Joycons, Wiimote/Nunchuck,
+                                            laser/cam, keyboard and mouse to send keyboard and mouse events for playing
+                                            games scripting in text file with my WiiJoyScripter.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/wiimote.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>WiimoteTheory:</b> </h5>
+                                        <p class="card-text text-dark">Emulation of Nintendo Wiimote (and Nunchuck) to
+                                            send keyboard and mouse events for playing games.</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/wiimotetheory-main.png, ../img/wiimotetheory-settings.png]', '773', '490');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/joycons.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>JoyconsTheory:</b> </h5>
+                                        <p class="card-text text-dark">Emulation of Nintendo Joycon(s) to send keyboard
+                                            and mouse events for playing games.</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/joyconstheory-main.png, ../img/joyconstheory-settings.png]', '587', '522');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/aim.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>AIIM:</b> </h5>
+                                        <p class="card-text text-dark">Emulation of Nintendo Wiimote/Nunchuck to send
+                                            keyboard and mouse events for playing games scripting in text file with my
+                                            WiiJoyScripter (WiiJoy4FPS simple version).</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/gamepad.jpeg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>codes-in-gamepad-libraries:</b> </h5>
+                                        <p class="card-text text-dark">Emulation of Wiimote and Xbox360 controller to
+                                            send keyboard and mouse events for playing games.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/xaim.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Launcher:</b> </h5>
+                                        <p class="card-text text-dark">Easy and fast access for start Cronusmax plugin
+                                            X-Aim importing automatically a script and starting an exe choosen in a list
+                                            with same name.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/joycons.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>AYM:</b> </h5>
+                                        <p class="card-text text-dark">Emulation of Nintendo Joycons to send keyboard
+                                            and mouse events for playing games scripting in text file with my
+                                            WiiJoyScripter (WiiJoy4FPS simple version).</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/warzonebr.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>WiiZone:</b> </h5>
+                                        <p class="card-text text-dark">Playing Warzone using Wiimote. Declined, so
+                                            everything fixed.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/warzone.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>JoyZone:</b> </h5>
+                                        <p class="card-text text-dark">Playing Warzone using Joycons. Declined, so
+                                            everything fixed.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/mouse.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>MouseControlTester:</b> </h5>
+                                        <p class="card-text text-dark">Simulation of mouse with arrow keys to find easy
+                                            the best mouse control adapted for each game, 11 mouse controls available
+                                            found testing 600 games, normally enough, ready for use in my
+                                            WiiJoyScripter.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/control.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Keyboard-Mouse-Emulation:</b> </h5>
+                                        <p class="card-text text-dark">Emulating keyboard and mouse with various tools
+                                            sending keyboard and mouse events for PC master race.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/motion.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>MotionOverlay:</b> </h5>
+                                        <p class="card-text text-dark">Display of mouse motion as a background overlay
+                                            for games in windowed mode.</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/mo-main.png, ../img/mo-xc.png]', '683', '384');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/labyrinth.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Aim-Controller-Project:</b> </h5>
+                                        <p class="card-text text-dark">Creation of a Wiimote on PC like controller for
+                                            playing games simulating keyboard/mouse or gamepad.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/controller.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>MounkeyZone:</b> </h5>
+                                        <p class="card-text text-dark">Playing Warzone with both mouse and keyboard but
+                                            it's a gamepad bearer.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/dos.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>crappy-scripts:</b> </h5>
+                                        <p class="card-text text-dark">Simple programs for playing PC games using
+                                            Wiimote and Joycons.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/wiijoyxs.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>WiiJoyXS:</b> </h5>
+                                        <p class="card-text text-dark">A complete program to play games in different
+                                            maners using Joycons and/or Wiimote and/or Nunchuck with different drivers.
+                                            It comes with a configuration helper.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/mojo.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>MoJoXS:</b> </h5>
+                                        <p class="card-text text-dark">A complete program to play games in different
+                                            maners using Joycon Left and/or mouse and/or keyboard with different
+                                            drivers. It comes with a configuration helper.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/presenter.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>AirJoyXS:</b> </h5>
+                                        <p class="card-text text-dark">A complete program to play games in different
+                                            maners using Joycon(s) and/or Airmouse with different drivers. It comes with
+                                            a configuration helper.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/deadzone.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>ControllerDeadzoneFinder:</b> </h5>
+                                        <p class="card-text text-dark">Little tool to find deadzone in games for
+                                            removing it in simple programs. I used it when I developed optimized codes
+                                            for interacting with console gaming controllers. Instead of changing the
+                                            codes and building again the program, I retrieved directly deadzone with
+                                            this tool.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/jm.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>JM-ColdWar:</b> </h5>
+                                        <p class="card-text text-dark">Playing with a Joycon and a mouse in Call of Duty
+                                            Cold War but it's a gamepad bearer.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/first.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>FTA:</b> </h5>
+                                        <p class="card-text text-dark">Input Mapper FirstToAim. It uses web browser
+                                            control for having a nice user interface. I did the same, for some of my
+                                            other programs, like with FaceTo, or TeamTrooper, or ThumbnailCreator or
+                                            PDF-Generator. There are Steam, or Epic Games Launcher, or reWASD using this
+                                            control.</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/firsttoaim-main.png, ../img/fta-keyboard.png, ../img/fta-controller.png]', '653', '356');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/trax.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>TraX:</b> </h5>
+                                        <p class="card-text text-dark">Tracking mouse, keyboard, and Wiimote IR for
+                                            pilot gamers. It's similar to OpenTrack. But ProGamingMapper can do the
+                                            trick also. I'm so proud of it. It's kind of Virtual Reality without the
+                                            need of a helmet. It trick the watching around in a cockpit.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/mickey.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>AutoFireAutoSwitchCuphead:</b> </h5>
+                                        <p class="card-text text-dark">Auto Fire and Auto Switch in Cuphead.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/speech.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>SpeechToTextTest:</b> </h5>
+                                        <p class="card-text text-dark">Testing SpeechToText API.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/keyboardhook.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>KeyboardHook:</b> </h5>
+                                        <p class="card-text text-dark">Low keyboard hook.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/mousehook.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>MouseHook:</b> </h5>
+                                        <p class="card-text text-dark">Low mouse hook.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/mapper.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Master Pieces in Gaming:</b> </h5>
+                                        <p class="card-text text-dark">Remapping gaming devices with MotionInputCore,
+                                            MounkeyZoneMapper, JoyconMapper, WiiJoyMapper, ProGamingMapper, ...</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/pgm-main.png, ../img/pgm-ir.png, ../img/pgm-classic.png, ../img/pgm-extra.png]', '802', '482');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/runngun.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>RunAndGun:</b> </h5>
+                                        <p class="card-text text-dark">Network human interface devices data pass through
+                                            that I integrated in ProGamingMapper for forward controls remotely.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/bigbigwon.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>ProControlMapper:</b> </h5>
+                                        <p class="card-text text-dark">Using airmouse and xbox controller or xbox
+                                            controller or bigbigwon rainbow controller in shooters as keyboard and
+                                            mouse, or creating macros for xbox controller, or Switch Pro Controller as
+                                            Xbox controller or keyboard and mouse.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/glovepie.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>SIGIL:</b> </h5>
+                                        <p class="card-text text-dark">Stand for Standard In Gaming Input Lowing, like
+                                            glovepie but far more better, and like previous known as mapper, but
+                                            optimized as never, with all gaming devices.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/xboxwii.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>WiiJoyPilot / WiiJoyReflex:</b> </h5>
+                                        <p class="card-text text-dark">Realtime changes user interface for using Joycon
+                                            left and Wiimote as Xbox Controller or Keyboard/Mouse in FPS games.</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/wjp-main.png, ../img/wjr-main.png]', '986', '543');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/keyboard.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>VirtualKeyboard:</b> </h5>
+                                        <p class="card-text text-dark">A virtual Keyboard made to replace a physical
+                                            Keyboard.</p>
+                                        <input type="submit" onclick="viewModal('[../img/vk-main.png]', '683', '384');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/cam.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>HPCamTest:</b> </h5>
+                                        <p class="card-text text-dark">Testing a webcam with AForge library for control
+                                            mouse cursor with a laser beam.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/art.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>CamArtASCII:</b> </h5>
+                                        <p class="card-text text-dark">ASCII Art with a Webcam.</p>
+                                        <input type="submit" onclick="viewModal('[../img/caa-main.png]', '681', '522');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/streaming.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>ffmpeg-cmd-streaming:</b> </h5>
+                                        <p class="card-text text-dark">Launcher commands to stream video-games using
+                                            ffmpeg.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/recording.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>ffmpeg-cmd-recording:</b> </h5>
+                                        <p class="card-text text-dark">Launcher commands to record video-games using
+                                            ffmpeg.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/webcam.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>WebcamOverlay:</b> </h5>
+                                        <p class="card-text text-dark">Using webcam in overlay of windowed game for
+                                            streaming.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/printscreen.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>PrintScreen:</b> </h5>
+                                        <p class="card-text text-dark">A printscreen recorder and manager.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/ban.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>NewB:</b> </h5>
+                                        <p class="card-text text-dark">Shared memory flooding, IP of fake servers
+                                            searching and blocking, IP of official servers, IP in list blocking,
+                                            researches on securing a PC and optimizing a PC.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/optimize.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Anti Cheating Note And Solution:</b> </h5>
+                                        <p class="card-text text-dark">A study I always continue, just to find the
+                                            better settings for my gaming PC to play with pleasure.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/monogame.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>CrazySpaceship:</b> </h5>
+                                        <p class="card-text text-dark">A game I made with Monogame in 3 days for
+                                            learning game engines.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/gms2.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>outofwhack:</b> </h5>
+                                        <p class="card-text text-dark">Tried to make a game with Game Maker Studio 2 but
+                                            it's too much works.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/gamepad.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Gamepad-API-Test:</b> </h5>
+                                        <p class="card-text text-dark">Testing gamepad API.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/pc.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>GetUniqueID:</b> </h5>
+                                        <p class="card-text text-dark">Retrieving unique ID of a PC for secure a
+                                            program.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/md5.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>GetHashedChecksum:</b> </h5>
+                                        <p class="card-text text-dark">A tool to protect a program against reverse
+                                            ingeneering in addition to secure connection.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/connection.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>testconnectiondb:</b> </h5>
+                                        <p class="card-text text-dark">Testing secure connection for sale programs using
+                                            a database with freesqldatabase.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/logon.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>testconnectionoffline:</b> </h5>
+                                        <p class="card-text text-dark">Secure a program with offline connection checking
+                                            logon user identifiers and MAC address.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/firestore.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>testconnectionfirestore:</b> </h5>
+                                        <p class="card-text text-dark">Testing secure connection for sale programs with
+                                            Firestore.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/installer.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>installer-test:</b> </h5>
+                                        <p class="card-text text-dark">Creating an installer for test.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/reflection.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>ReflectionTest:</b> </h5>
+                                        <p class="card-text text-dark">String to code to object to code running as a
+                                            standalone program.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/configuration.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>FilesWriter-FilesRewriter:</b> </h5>
+                                        <p class="card-text text-dark">Group files, rewrite files, replace in files
+                                            tools.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/key.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>mapkey:</b> </h5>
+                                        <p class="card-text text-dark">Little tool to know which key code to assign for
+                                            enumrate constant.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/html.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>pdf-generator:</b> </h5>
+                                        <p class="card-text text-dark">Converting HTML file to PDF file.</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/pdfgenerator-main.png]', '462', '366');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/png.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>PngToIco:</b> </h5>
+                                        <p class="card-text text-dark">Loading a PNG file to save it as icone file.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/eo.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>ui-libraries:</b> </h5>
+                                        <p class="card-text text-dark">Testing User Interface Libraries.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/text.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Scripts:</b> </h5>
+                                        <p class="card-text text-dark">I made a bunch of scripts eaten by programs and
+                                            also my owns.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/mimo.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>webViewer:</b> </h5>
+                                        <p class="card-text text-dark">A little web browser for watching youtube skiping
+                                            ads automatically.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/book.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>EBookViewver:</b> </h5>
+                                        <p class="card-text text-dark">Sale EBook with secure connection using a
+                                            database with freesqldatabase.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/roadmap.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Coding-Library:</b> </h5>
+                                        <p class="card-text text-dark">Various useful codes I found browsing the web.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/stage.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Stage-CFA:</b> </h5>
+                                        <p class="card-text text-dark">My works on the extranet website of CFA.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/merge.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>update-git:</b> </h5>
+                                        <p class="card-text text-dark">A bash script for update git repository.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/php.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Optimized-and-Simple-Enhanced-Framework:</b>
+                                        </h5>
+                                        <p class="card-text text-dark">Php framework for application as service.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/ytpioche.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>to-face:</b> </h5>
+                                        <p class="card-text text-dark">A web app in dot net core 3.1 with razor pages
+                                            for commenting youtube videos with a search tool on commented videos and a
+                                            page to the 20 last videos of a channel for access it.</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/faceto-main.png, ../img/faceto-message.png, ../img/faceto-list.png, ../img/faceto-search.png, ../img/faceto-modal.png]', '643', '347');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/angry.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>go-face-so:</b> </h5>
+                                        <p class="card-text text-dark">Same principle as to-face but using Firebase
+                                            framework.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/vpnalt.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>geoquizz_mobile:</b> </h5>
+                                        <p class="card-text text-dark">An API in PHP and a Playground mobile app in
+                                            VueJS for sending a photo with geolocalisation on a server with docker
+                                            (Ngrok for expose API, inspired from 3 demos on Playground: geolocalisation,
+                                            camera, and file transfer).</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/equation.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Polynomial-Equation-Resolution:</b> </h5>
+                                        <p class="card-text text-dark">A book about resolving polynomial equations of
+                                            3rd and 4th degree with my own new mathematical hypothesis.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/earth.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>DiffusionH2essais:</b> </h5>
+                                        <p class="card-text text-dark">Calculating diffusion coefficient of hydrogen
+                                            from pressure diffusion profile for various membranes.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/pendule.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Master Pieces in Sciences:</b> </h5>
+                                        <p class="card-text text-dark">New Derivation Equation, Differential Equation
+                                            Resolution, Polynomial Equation Resolution, Electrochemical Potential
+                                            Resolution, Hydrogen Diffusion Resolution.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/plume.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>EoSResol:</b> </h5>
+                                        <p class="card-text text-dark">Calculating and defining all PVTX and reaction
+                                            data from 1 to 8 constituents with various programation languages.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/acridine.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>EoSResol-Web-Application:</b> </h5>
+                                        <p class="card-text text-dark">Calculating and defining all PVTX and reaction
+                                            data from 1 to 8 constituents, with quantities of synthesis for the Origin
+                                            of Life molecules, in a web application. Open/Save in CSV files capabilities
+                                            with several example files. EoSResol stands for Equation of State
+                                            Resolution, achieved with JavaScript.</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/eosresol-main.png, ../img/eosresol-reaction1.png, ../img/eosresol-reaction2.png, ../img/eosresol-reaction3.png]', '857', '462');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/excel.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>EoSResol Excel:</b> </h5>
+                                        <p class="card-text text-dark">Resolving and defining all PVTX data using Excel
+                                            for making phasis and PT traject diagrams.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/reaction.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>ReactionResol:</b> </h5>
+                                        <p class="card-text text-dark">Automatically equilibrate reactions with 3 to 9
+                                            constituents, and can be used in conjunction with EoSResol to synthetize
+                                            molecules with 8 atomes.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/clock.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>wakeupnow:</b> </h5>
+                                        <p class="card-text text-dark">A web app for wakeup with music.</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/wakeup-main.png]', '657', '462');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/portfolio.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>This website:</b> </h5>
+                                        <p class="card-text text-dark">My profesional portfolio, achieved with
+                                            JavaScript.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/binary.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>localstorage-info:</b> </h5>
+                                        <p class="card-text text-dark">Retrieve information on localstorage.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/target.gif">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>aimtraining:</b> </h5>
+                                        <p class="card-text text-dark">A target moving to click for reach higher score,
+                                            achieved with JavaScript.</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/aimtraining-main.png]', '857', '462');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/youtube.jpeg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>clean-youtube:</b> </h5>
+                                        <p class="card-text text-dark">A clean youtube video player associate with
+                                            channels to open with PP because it's a page with API key, OAuth header and
+                                            DNS requirement, achieved with JavaScript.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/pdf.jpeg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Gallery-Ebooks:</b> </h5>
+                                        <p class="card-text text-dark">My gallery of Ebooks automatically loading
+                                            folders of Ebooks and Ebooks, achieved with JavaScript.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/gallerie.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Gallery-Photos:</b> </h5>
+                                        <p class="card-text text-dark">My gallery photos automatically loading folders
+                                            of pictures and pictures, achieved with JavaScript.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/music.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Gallery-Videos:</b> </h5>
+                                        <p class="card-text text-dark">My gallery videos automatically loading folders
+                                            of videos and videos from youtube, to open with PP because it's a page with
+                                            API key, OAuth header and DNS requirement, achieved with JavaScript.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/contents.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Gallery-Contents:</b> </h5>
+                                        <p class="card-text text-dark">Personal contents for access it with my
+                                            Gallery-Photos, Gallery-Videos and Gallery-Ebooks.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/playlist.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Listing-Videos:</b> </h5>
+                                        <p class="card-text text-dark">Retrieving a list of videos ID from a playlist ID
+                                            saving it in files for use with my Gallery-Videos.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/muse.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>playtube:</b> </h5>
+                                        <p class="card-text text-dark">Playtube is a youtube gallery player where you
+                                            create playlists and add video in with id of video or playlist or channel.
+                                        </p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/playtube-main.png, ../img/playtube-menu.png, ../img/playtube-play.png, ../img/playtube-api.png]', '643', '346');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/calendar.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>daynote:</b> </h5>
+                                        <p class="card-text text-dark">Daynote is a calendar where you add task or note
+                                            for each day with easy practice and simple visual.</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/daynote-main.png, ../img/daynote-2024.png, ../img/daynote-edit.png, ../img/daynote-memento.png]', '857', '462');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/favours.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>myfavours:</b> </h5>
+                                        <p class="card-text text-dark">My-Favours is a image and video gallery player
+                                            where you create favours and add videos and images in with links of videos
+                                            and images.</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/myfavours-main.png, ../img/myfavours-down.png, ../img/myfavours-crash.png, ../img/myfavours-mp4.png]', '643', '347');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/twitch.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>streamchat:</b> </h5>
+                                        <p class="card-text text-dark">Streamchat is a chat with viewers for streamers
+                                            where channel is imported and saved.</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/streamchat-main.png]', '849', '460');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/pp.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>PP:</b> </h5>
+                                        <p class="card-text text-dark">Stand for Private Pages for hosting confidential
+                                            page with Github Pages whatever the page in a HTML file loaded with the
+                                            button, when page needs API key, OAuth header and DNS as requirement,
+                                            achieved with JavaScript.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/credentials.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>PPL:</b> </h5>
+                                        <p class="card-text text-dark">Private repository for enable load of PP with
+                                            credentials.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/mute.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>ppp:</b> </h5>
+                                        <p class="card-text text-dark">Stand for private pages playtube.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/note.jpeg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>ppd:</b> </h5>
+                                        <p class="card-text text-dark">Stand for private pages daynote.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/favor.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>ppm:</b> </h5>
+                                        <p class="card-text text-dark">Stand for private pages myfavours.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/chat.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>pps:</b> </h5>
+                                        <p class="card-text text-dark">Stand for private pages streamchat.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/presentation.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>playtube-presentation:</b> </h5>
+                                        <p class="card-text text-dark">I'm presenting my playtube web application.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/presentation.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>daynote-presentation:</b> </h5>
+                                        <p class="card-text text-dark">I'm presenting my daynote application.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/feedback.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>myfavours-presentation:</b> </h5>
+                                        <p class="card-text text-dark">I'm presenting my my-favours application.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/present.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>streamchat-presentation:</b> </h5>
+                                        <p class="card-text text-dark">I'm presenting my streamchat application.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/arpic.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Cardboard:</b> </h5>
+                                        <p class="card-text text-dark">I'm presenting my projects.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/audio.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>ConvertWavToMp3:</b> </h5>
+                                        <p class="card-text text-dark">Converting Wave audio file to MP3 audio file.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/soundrecord.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>SongCapture:</b> </h5>
+                                        <p class="card-text text-dark">Capturing any output audio from sound card.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/spectrum.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>AudioSpliter:</b> </h5>
+                                        <p class="card-text text-dark">Tool to split a MP3 audio file.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/spectrum.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>AudioMerger:</b> </h5>
+                                        <p class="card-text text-dark">Tool to merge MP3 audio files.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/audiolan.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>PlayAndListen:</b> </h5>
+                                        <p class="card-text text-dark">Listening music on all your PC playing on one of
+                                            your PC.</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/playandlisten-client.png]', '550', '440');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/bass.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>VirtualBassSpeaker:</b> </h5>
+                                        <p class="card-text text-dark">Universal equalizer able to forward sound on
+                                            audio cards.</p>
+                                        <input type="submit"
+                                            onclick="viewModal('[../img/footstepamplifier-main.png]', '549', '431');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/textedit.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>TextEditor:</b> </h5>
+                                        <p class="card-text text-dark">Editing text like notepad but securely.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/codeedit.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>CodeEditor:</b> </h5>
+                                        <p class="card-text text-dark">Editing code with an optimized and adapted way.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/process.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>StopIt:</b> </h5>
+                                        <p class="card-text text-dark">Stoping useless programs for playing games with
+                                            an optimized way.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/av-libraries.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>av-libraries:</b> </h5>
+                                        <p class="card-text text-dark">I created audio visualizations for integrate it
+                                            in programs.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/private.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>gpp:</b> </h5>
+                                        <p class="card-text text-dark">A Github Pages Page for Gauger my Private Pages:
+                                            streamchat, daynote, playtube, my-favours, localstorage-info, ...</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/pp.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Private Pages:</b> </h5>
+                                        <p class="card-text text-dark">Allow entering pages with a GitHub token or a
+                                            Firebase authentication.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/encryption.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Encrypted Pages:</b> </h5>
+                                        <p class="card-text text-dark">Allow entering pages with a password.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/authentify.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>(Local) Authentication:</b> </h5>
+                                        <p class="card-text text-dark">Allow opening a program using computer ID or/and
+                                            Firestore.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/drupal.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>cookiebanner:</b> </h5>
+                                        <p class="card-text text-dark">I made a module in Drupal for RGPD.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/edge.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Edge Extensions:</b> </h5>
+                                        <p class="card-text text-dark">I made different extensions for the web browser
+                                            of Microsoft.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/ads.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>no ads:</b> </h5>
+                                        <p class="card-text text-dark">I made a script to skip ads on Youtube inside an
+                                            extension.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/favorite.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>recipe-extension:</b> </h5>
+                                        <p class="card-text text-dark">Page with research tool on favorites websites and
+                                            Youtube channels.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/comments.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>speech-comments-extension:</b> </h5>
+                                        <p class="card-text text-dark">Edge extension speeching Youtube video
+                                            commentaries of viewers.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/tiktok.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>tiktok-voicer-extension:</b> </h5>
+                                        <p class="card-text text-dark">Edge extension for skipping and liking shorts
+                                            with voice commands.</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/deezer.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Playzer:</b> </h5>
+                                        <p class="card-text text-dark">My program to listen music on Deezer with audio
+                                            visualization of frequencies and the best quality as possible.</p>
+                                        <input type="submit" onclick="viewModal('[../img/playzer.png]', '903', '599');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/molotov.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Playtov:</b> </h5>
+                                        <p class="card-text text-dark">My program to watch Molotov TV.</p>
+                                        <input type="submit" onclick="viewModal('[../img/playtov.png]', '951', '536');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/yt.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>Playcipe:</b> </h5>
+                                        <p class="card-text text-dark">My program to watch Youtube.</p>
+                                        <input type="submit" onclick="viewModal('[../img/playcipe.png]', '888', '473');"
+                                            value="View...">
+                                    </div>
+                                </div>
+                                <div class="card" style="break-inside: avoid;">
+                                    <img src="img/000.jpg">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark"><b>000:</b> </h5>
+                                        <p class="card-text text-dark">My essentials collection of my own useful
+                                            programs and files I continue to maintain with last updates.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <footer class="bottom">
+                <img src="img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="white">©1999-2025</b>
+            </footer>
+            <div id="modal">
+                <span id="modalclose" onclick="closeModal()">&times;</span>
+                <div id="modalcontent">
+                    <img src="../img/newb-main.png" />
+                    <img src="../img/monogame-main.png" />
+                    <img src="../img/diffusion-main.png" />
+                    <img src="../img/micedition-main.png" />
+                    <img src="../img/polynomial-main.png" />
+                    <img src="../img/gamepadlibraries-main.png" />
+                    <img src="../img/wiimotetheory-main.png" />
+                    <img src="../img/wiimotetheory-settings.png" />
+                    <img src="../img/joyconstheory-main.png" />
+                    <img src="../img/joyconstheory-settings.png" />
+                    <img src="../img/mo-main.png" />
+                    <img src="../img/mo-xc.png" />
+                    <img src="../img/firsttoaim-main.png" />
+                    <img src="../img/fta-keyboard.png" />
+                    <img src="../img/fta-controller.png" />
+                    <img src="../img/pgm-main.png" />
+                    <img src="../img/pgm-ir.png" />
+                    <img src="../img/pgm-classic.png" />
+                    <img src="../img/pgm-extra.png" />
+                    <img src="../img/wjp-main.png" />
+                    <img src="../img/vk-main.png" />
+                    <img src="../img/wjr-main.png" />
+                    <img src="../img/caa-main.png" />
+                    <img src="../img/pdfgenerator-main.png" />
+                    <img src="../img/faceto-main.png" />
+                    <img src="../img/faceto-message.png" />
+                    <img src="../img/faceto-list.png" />
+                    <img src="../img/faceto-search.png" />
+                    <img src="../img/faceto-modal.png" />
+                    <img src="../img/eosresol-main.png" />
+                    <img src="../img/eosresol-reaction1.png" />
+                    <img src="../img/eosresol-reaction2.png" />
+                    <img src="../img/eosresol-reaction3.png" />
+                    <img src="../img/wakeup-main.png" />
+                    <img src="../img/aimtraining-main.png" />
+                    <img src="../img/playtube-main.png" />
+                    <img src="../img/playtube-menu.png" />
+                    <img src="../img/playtube-play.png" />
+                    <img src="../img/playtube-api.png" />
+                    <img src="../img/daynote-main.png" />
+                    <img src="../img/daynote-2024.png" />
+                    <img src="../img/daynote-edit.png" />
+                    <img src="../img/daynote-memento.png" />
+                    <img src="../img/myfavours-main.png" />
+                    <img src="../img/myfavours-down.png" />
+                    <img src="../img/myfavours-crash.png" />
+                    <img src="../img/myfavours-mp4.png" />
+                    <img src="../img/streamchat-main.png" />
+                    <img src="../img/playandlisten-client.png" />
+                    <img src="../img/footstepamplifier-main.png" />
+                    <img src="../img/playzer.png" />
+                    <img src="../img/playtov.png" />
+                    <img src="../img/playcipe.png" />
+                </div>
+
+            </div>
+        </div>
+        <script type="text/javascript">
+            function page_onload() {
+                var sc = document.createElement('script');
+                sc.src = "custom/custom.js";
+                document.getElementsByTagName('head')[0].appendChild(sc);
+                document.getElementsByClassName("spinner")[0].classList.remove("show");
+                document.getElementsByClassName("spinner")[0].classList.add("hide");
+                $(".spinner").removeClass("show");
+                $(".spinner").addClass("hide");
+            }
+        </script>
+    </body>
+
+</html>

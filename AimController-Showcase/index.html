@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+        <title>AimController Showcase</title>
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: black;
+                width: 100%;
+                height: 100%;
+            }
+
+            * {
+                overflow: hidden;
+            }
+
+            img {
+                cursor: pointer;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="w3-center row">
+                <div class="column">
+                    <img src="../img/ac-1.png" alt="ac-main" style="width:100%;" onclick='img_box("../img/ac-1.png")'>
+                    <img src="../img/ac-2.png" alt="ac-main" style="width:0%" onclick='img_box("../img/ac-2.png")'>
+                    <img src="../img/ac-3.png" alt="ac-main" style="width:0%" onclick='img_box("../img/ac-3.png")'>
+                    <img src="../img/ac-4.png" alt="ac-main" style="width:0%" onclick='img_box("../img/ac-4.png")'>
+                </div>
+            </div>
+        </div>
+
+        <copyrights
+            style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: white; text-align: center; font-family: sans-serif; font-size: 15px; line-height: 15px; z-index: 1;">
+            <b>© MAF</b>
+        </copyrights>
+
+        <script>
+
+            var bg_color_img_box = 'rgba(0,0,0,0.75)'
+            var allow_hide_scroll_img_box = 'no'
+            var use_fade_inout_img_box = 'no'
+            var speed_img_box = 0.08
+            var z_index_dv_img_box = 999
+            var vopa_img_box, idpopup_img_box
+
+            var hwin_img_box = window.innerHeight
+            var wwin_img_box = window.innerWidth
+            var himg_img_box, padtop_img_box, idfadein_img_box
+            var img_img_box = new Image()
+
+            var imagesource = ''
+            var imageinc = 0
+            var imagearray = []
+
+            // Modal box images
+            var crtdv_img_box = document.createElement('div')
+            crtdv_img_box.id = 'img_box'
+            document.getElementsByTagName('body')[0].appendChild(crtdv_img_box)
+            idpopup_img_box = document.getElementById("img_box")
+            idpopup_img_box.style.top = 0
+            idpopup_img_box.style.left = 0
+            idpopup_img_box.style.opacity = 0
+            idpopup_img_box.style.width = '100%'
+            idpopup_img_box.style.height = '100%'
+            idpopup_img_box.style.display = 'none'
+            idpopup_img_box.style.position = 'fixed'
+            idpopup_img_box.style.cursor = 'pointer'
+            idpopup_img_box.style.textAlign = 'center'
+            idpopup_img_box.style.zIndex = z_index_dv_img_box
+            idpopup_img_box.style.backgroundColor = bg_color_img_box
+
+            var images = document.getElementsByTagName('img');
+
+            img_box("../img/ac-1.png");
+
+            function img_box(self) {
+                document.getElementsByTagName('html')[0].style.overflowY = 'hidden'
+                var namepic_img_box = typeof self === 'string' ? self : self.src
+                imagesource = namepic_img_box
+                vopa_img_box = 0
+                img_img_box.src = namepic_img_box
+                img_img_box.onload = function () {
+                    himg_img_box = img_img_box.height
+                    wimg_img_box = img_img_box.width
+                    idpopup_img_box.innerHTML = '<img src=' + namepic_img_box + '>'
+                    if (wimg_img_box > wwin_img_box) {
+                        idpopup_img_box.getElementsByTagName('img')[0].style.width = '90%'
+                    }
+                    else if (himg_img_box > hwin_img_box) {
+                        idpopup_img_box.getElementsByTagName('img')[0].style.height = '90%'
+                        himg_img_box = hwin_img_box * 90 / 100
+                    }
+                    if (himg_img_box < hwin_img_box) {
+                        padtop_img_box = (hwin_img_box / 2) - (himg_img_box / 2)
+                        idpopup_img_box.style.paddingTop = padtop_img_box + 'px'
+                    }
+                    else {
+                        idpopup_img_box.style.paddingTop = '0px'
+                    }
+
+                    if (allow_hide_scroll_img_box == 'yes') {
+                        document.body.style.overflow = 'hidden'
+                    }
+                    idpopup_img_box.style.display = 'block'
+                }
+                if (use_fade_inout_img_box == 'yes') {
+                    idfadein_img_box = setInterval(function () {
+                        if (vopa_img_box <= 1.1) {
+                            idpopup_img_box.style.opacity = vopa_img_box
+                            vopa_img_box += speed_img_box
+                        }
+                        else {
+                            idpopup_img_box.style.opacity = 1
+                            clearInterval(idfadein_img_box)
+                        }
+                    }, 10)
+                }
+                else {
+                    idpopup_img_box.style.opacity = 1
+                }
+            }
+            idpopup_img_box.onclick = function () {
+                if (imagesource == '../img/ac-1.png' | imagesource == '../img/ac-2.png' | imagesource == '../img/ac-3.png' | imagesource == '../img/ac-4.png') {
+                    imagearray = ['../img/ac-1.png', '../img/ac-2.png', '../img/ac-3.png', '../img/ac-4.png']
+                }
+                imageinc++
+                if (imageinc >= imagearray.length) {
+                    imageinc = 0
+                }
+                img_box(imagearray[imageinc])
+                if (imagesource == '../img/ac-1.png') {
+                    images[0].style.width = '100%';
+                    images[1].style.width = '0%';
+                    images[2].style.width = '0%';
+                    images[3].style.width = '0%';
+                }
+                else if (imagesource == '../img/ac-2.png') {
+                    images[0].style.width = '0%';
+                    images[1].style.width = '100%';
+                    images[2].style.width = '0%';
+                    images[3].style.width = '0%';
+                }
+                else if (imagesource == '../img/ac-3.png') {
+                    images[0].style.width = '0%';
+                    images[1].style.width = '0%';
+                    images[2].style.width = '100%';
+                    images[3].style.width = '0%';
+                }
+                else if (imagesource == '../img/ac-4.png') {
+                    images[0].style.width = '0%';
+                    images[1].style.width = '0%';
+                    images[2].style.width = '0%';
+                    images[3].style.width = '100%';
+                }
+            }
+
+        </script>
+    </body>
+
+</html>

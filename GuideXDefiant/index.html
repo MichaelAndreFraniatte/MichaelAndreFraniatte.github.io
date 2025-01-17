@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Guide XDefiant</title>
+        <meta name="description" content="For playing competitive while setting control">
+        <meta name="keywords" content="guide, control, competitive, game, controller">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="guide.png" alt="guide" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>Guide</h2>
+                    <h1>XDefiant</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Playing a Multiplayer Free to Play Game</b></h3>
+                        <p>
+                            The guide is made to understand better how to setup XDefiant on console. 
+                            There are less cheaters than Call of Duty, and it's playable on console using remote 
+                            play, unlike this last. You will learn how to set your firewalls and to have good 
+                            gameplay settings. Let's see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Firewall Settings</b></h3>
+                        <p>
+                            For remote play on your PC, you just need local ports 49152-65535 with distant ports 80 and 443 in TCP,
+                            like for your console. For accessing servers you need all ports for your console. You can only set it on 
+                            your modem/router and disable Windows firewall on your PC.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/guidexdefiant.png" alt="firewall5" style="width:50%"
+                            onclick='img_box("../img/guidexdefiant.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Gameplay Settings</b></h3>
+                        <p>
+                            You can change the FOV (Field Of View) to maximum if available, you can disable some graphism features, you can let
+                            built layout for your controller because it's the most adapted. Change deadzone to lowest for right stick 
+                            and a half for left stick, set acceleration to 0 for aim, set multiplicators to 1 for aim, enable toggle aim 
+                            with left button trigger.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Audio and Social Settings</b></h3>
+                        <p>
+                            Disable microphone. On your console, disable every features for your account, but let enable multiplayer and crossplatform only.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

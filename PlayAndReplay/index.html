@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PlayAndReplay</title>
+        <meta name="description" content="PlayAndReplay about playing PC games from a friend">
+        <meta name="keywords" content="play, PC, games, codes">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+          
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="replay.png" alt="replay" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>PlayAndReplay</h2>
+                    <h1>Playing PC from a Friend</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Play with Controller and Replay It</b></h3>
+                        <p>
+                            The PlayAndReplay is made to play a game and store (record) the controller events, then to
+                            replay the controller events automatically as the record stored it. It need a Xbox
+                            controller. It need also a big memory. Let's see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/playandreplay.png" alt="newb-main" style="width:50%;"
+                            onclick='img_box("../img/playandreplay.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Considerations About the Program</b></h3>
+                        <p>
+                            The PlayAndReplay isn't complex to understand but it need someone to be good at games and
+                            game played to be a runner like mario or a racing game like rally. The program exist also
+                            with the version for keyboard and mouse. The shortcuts keys left control + P is for record,
+                            left control + R is for replay, left control + U is for stop the record or the replay, and
+                            left control + S is for automatically save the record.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

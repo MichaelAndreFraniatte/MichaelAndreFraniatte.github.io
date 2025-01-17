@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>EncryptedFiles</title>
+        <meta name="description"
+            content="EncryptedFiles is like Notepad but you encrypt/decrypt files with the password and indicator">
+        <meta name="keywords" content="text, editor, notepad, secure">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+        
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="ef.png" alt="ef" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>EncryptedFiles</h2>
+                    <h1>Encrypt/Decrypt Text File</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Store Your Passwords or Notes Securely</b></h3>
+                        <p>
+                            The program is like Notepad but you encrypt/decrypt files with the password and indicator
+                            you choosing for each file you create. It's simple to use for store passwords or notes
+                            securely. Let's see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/ef-main.png" alt="EncryptedFiles-main" style="width:30%"
+                            onclick='img_box("../img/ef-main.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Considerations About the Program</b></h3>
+                        <p>
+                            It only create a file automatically to remember the path of the last file opened, and a
+                            folder with file that store the indicator of the password you both set with a prompt window.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

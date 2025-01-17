@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+        <title>paint-tile by michael franiatte</title>
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            body {
+                background: url("img/saloon.jpg") no-repeat center center fixed;
+                background-size: cover;
+                overflow: hidden;
+            }
+
+            div {
+                display: float;
+                float: left;
+                width: 10vw;
+                height: 10vh;
+                background-color: green;
+                padding: 0;
+                margin: 0;
+            }
+
+            .rotate {
+                animation: rotate 1s 1 alternate ease-out forwards;
+            }
+
+            @keyframes rotate {
+                0% {
+                    opacity: 1;
+                    transform: rotateY(0deg);
+                }
+
+                100% {
+                    opacity: 0;
+                    transform: rotateY(90deg);
+                }
+            }
+        </style>
+    </head>
+
+    <body class>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <copyrights
+            style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: white; text-align: center; font-family: sans-serif; font-size: 15px; line-height:15px;">
+            <b>© MAF</b></copyrights>
+
+        <script>
+
+            document.querySelectorAll('div').forEach(function (div) {
+                div.style.backgroundColor = getRandomColor();
+            });
+
+            function getRandomColor() {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            document.querySelectorAll('div').forEach(function (div) {
+                div.addEventListener('mouseover', function () {
+                    if (div.className != "rotate") {
+                        div.classList.add('rotate');
+                    }
+                });
+            });
+
+            var divs = document.querySelectorAll('div');
+
+            setInterval(rotate, 150);
+
+            function rotate() {
+                var rndInt;
+                do {
+                    rndInt = randomIntFromInterval(0, divs.length - 1);
+                    if (divs[rndInt].className != "rotate") {
+                        divs[rndInt].classList.add('rotate');
+                    }
+                }
+                while (divs[rndInt].className != "rotate");
+            }
+
+            function randomIntFromInterval(min, max) {
+                return Math.floor(Math.random() * (max - min + 1) + min);
+            }
+
+        </script>
+
+    </body>
+
+</html>

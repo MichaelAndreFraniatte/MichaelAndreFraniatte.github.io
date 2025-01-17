@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Book</title>
+        <meta name="description"
+            content="Book to explain how to resolve polynomial equations of 3rd and 4th degree with a hand pen">
+        <meta name="keywords" content="sale, ebook, user, authentication">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+        
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="polynomial.png" alt="polynomial" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>Book</h2>
+                    <h1>Polynomial Equation Resolution</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Resolving All Polynomial Equations</b></h3>
+                        <p>
+                            The book is explaining how to resolve polynomial equations of 3rd and 4th degree with a hand
+                            pen. It's also a pre-sequel to resolve the faster all polynomial equations without the need
+                            of several servers or quantic computers. Let's see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/polynomial-main.png" alt="polynomial-main" style="width:33%;"
+                            onclick='img_box("../img/polynomial-main.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Considerations About the Program</b></h3>
+                        <p>
+                            The book is explaining how to resolve all polynomial equations and can be used in
+                            conjunction with my method to derive equations. <a href="../PolynomialEquation-Book/">This</a> is my book.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

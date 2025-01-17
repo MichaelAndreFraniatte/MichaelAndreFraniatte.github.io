@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Guide HidHide</title>
+        <meta name="description" content="Against Steam and other game launchers connecting controllers">
+        <meta name="keywords" content="guide, HidHide, SteamInput, Epic Games, game launcher, competitive, game, controller, connecting">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="guide.png" alt="guide" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>Guide</h2>
+                    <h1>HidHide</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Hiding Controllers from SteamInput</b></h3>
+                        <p>
+                            The guide is made to hide controllers, here Joycon Charging Grip, from SteamInput, normally
+                            cloaking it to play with in games, but if you prefer to use a third party program, you need
+                            to hide it from SteamInput, otherwise it's totally out of controls, like disabling gyroscope
+                            and accelerometer, even every buttons and sticks if you forcing. Let's see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/hidhide1.png" alt="hidhide1" style="width:70%"
+                            onclick='img_box("../img/hidhide1.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Adding Steam and Steam Web Helper to the List of
+                                Applications</b></h3>
+                        <p>
+                            The first step is to add to the list Steam.exe and SteamWebHelper.exe to HidHide, and check
+                            the box: inverse application cloak, to prevent Steam to see the controller. You need also to
+                            remove HidHide from the list, it's added by default. But HidHide need to see your controller
+                            by letting this guy cloaking your controller, so remove HidHide.exe from the list of applications.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/hidhide2.png" alt="hidhide2" style="width:70%"
+                            onclick='img_box("../img/hidhide2.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Enable Hiding to Added Applications</b></h3>
+                        <p>
+                            The second step is to connect your controller, and check the box where it appear in device
+                            list to lock it from added applications. Check the box: enable device hiding. You need to
+                            reconnect your controller for it take effect.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/hidhide3.png" alt="hidhide3" style="width:70%"
+                            onclick='img_box("../img/hidhide3.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Now It Go Well</b></h3>
+                        <p>
+                            The third and last step is to launch Steam to see everything is perfect now. You can use your
+                            third party program to play with your controller as a virtual Xbox controller. Steam will
+                            only see a Xbox controller. You can navigate into Steam Big Picture with your controller
+                            like with a Xbox controller. Repeat the steps when you want to use your other controllers.
+                            You can close HidHide, it don't need to be open to hide your controller from Steam, even
+                            after restarting your PC. It's almost magic.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

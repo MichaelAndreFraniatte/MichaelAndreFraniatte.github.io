@@ -1,0 +1,672 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SIGIL</title>
+        <meta name="description" content="HID Competitive Mapper">
+        <meta name="keywords" content="HID, Competitive, Mapper">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="sigil.png" alt="sigil" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>SIGIL</h2>
+                    <h1>StandardInGamingInputLowing</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>HID Competitive Mapper</b></h3>
+                        <p>
+                            This program is allowing to have inputs of physical HID (Human Interface Device) and
+                            transfer to outputs of virtual or physical HID for competitive gaming. It's easy to use 
+                            and the program use programmable scripting user interface. It's for competitive gaming, 
+                            there isn't any cheat like read and write in process memory, so it's not cheating. Let's see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/sigil-main.png" alt="sigil-main" width="100%" height="auto"
+                            onclick='img_box("../img/sigil-main.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/sigil-option.png" alt="sigil-main" width="100%" height="auto"
+                            onclick='img_box("../img/sigil-option.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/sigil-accessibility.png" alt="sigil-main" width="100%" height="auto"
+                            onclick='img_box("../img/sigil-accessibility.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/sigil-feature.png" alt="sigil-main" width="100%" height="auto"
+                            onclick='img_box("../img/sigil-feature.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Considerations About the Program</b></h3>
+                        <p>
+                            I've been inspired by <a target="_blank" class="dl-link" href="https://forums.whirlpool.net.au/archive/1192317">this</a>, 
+                            it's 100 000 lines of code, so well, while I made only crappy scripts. 
+                            I imagined this standard way, I named SIGIL (StandardInGamingInputLowing), for using gaming
+                            controllers in all PC games with highest level of optimization, even with lot of HID
+                            handles. You don't need any prerequist, just knowing to read and write some easy
+                            programmable scripts. I'm the only one who pushed to highest level the optimization of HID
+                            interactions in games with SIGIL. To note, for fully working, like setting options, SIGIL
+                            need to run with administrative privilege, and like using launch at PC boot option, you need
+                            to copy all external DLL in folder C:/Windows/System32/ with administrative privilege
+                            (keyboard.dll, mouse.dll, lhidread.dll, rhidread.dll, prohidread.dll,
+                            MotionInputPairing.dll, interception.dll). It need to enable synchronization of Wiimote and
+                            Joycons at script run to automatically connect it, closing SIGIL automatically disconnect
+                            it, other controllers must be wired. SIGIL is like PGM (ProGamingMapper), but fully working,
+                            more optimized, more simple, with more freedom, more HID handles, even data view is handle,
+                            and also HID network data passthrough. You can play in any manner you want, it correspond to
+                            programmable scripts you write, the way you want. Even if you write scripts to automate some
+                            bindings, it's totally not cheating, it's just handles to gaming controllers to play on PC,
+                            for competitive gaming. SIGIL is completely different than Cronus Zen and Titan Two, where
+                            you use uncompatible controllers on closed platforms, which are consoles, like for using
+                            keyboard and mouse to gain an unfair advantage on other players, and where you install
+                            gamepacks dedicated for each game, which detect the weapon you use in FPS, like for adapt
+                            the right anti-recoil, because it enter in game memory for read and write in order to cheat,
+                            like with an aimbot / aim abuse, and so it's not a simple script like everyone are
+                            believing, it's humanizing the cheat, but staying overpowered, far from competitive at all.
+                            Instead Cronus Zen and Titan Two are for cheaters which need even more than aim-assist. Any
+                            noob with any potatoe control can be the strongest with an aimbot / aim abuse, it stay a
+                            overpowered cheat, even using it with banana. For example, there are cheaters using Wiimote
+                            on consoles, and when we watching their gameplays, it look like it's not them playing, it
+                            look so fake, because of their aimbot / aim abuse, otherwise it would not be playable. To
+                            opposite, SIGIL don't require any kind of gamepack, like aimbot / aim abuse, to be a
+                            competitive gamer. Another good example, is that it's possible to have same button with a
+                            little press or a long press for one action or the other, practical when it lack some
+                            buttons on the gaming controller you want to play with. From memory, it's only implemented
+                            by game developers for their own games, not with a script like I did. I'm also the only one
+                            to have found some perfect Wiimote IR cam pointing sensor bar to axis equations. To note,
+                            SIGIL is for x player(s) with any combination possible, but above 2 players Wiimote and
+                            Joycons need to be connected manually to PC with Bluetooth using the Windows tool add
+                            peripherals from control peripherals and printers under control panel, and disconnected
+                            manually obviously after closing SIGIL. SIGIL is my final version among all the programs I
+                            did on gaming controllers for playing all games with no native supports, and it's better,
+                            and very well achieved and complete, better than any other programs and methods you find
+                            everywhere. PGM is not maintained at the expense of SIGIL, because SIGIL do everything
+                            better and more. SIGIL is 15 years of works finalization. To note, for using several times
+                            same controllers, you need each time a new instance with "Scan" function or "Connect"
+                            function having the argument number 1 for first controller, 2 for second controller, etc. I
+                            added the ability to see polling rate and input delay for each library and for each digital
+                            and analogic input and output, for you can test better each library to see what is more
+                            competitive, but also for knowledge. The input delay and polling rate are enough accurate to see
+                            what's is better to use, and it's close to the truth the way I managed everything, and because the
+                            handle to shared files of HID are already well managed natively, another way possible would imply using
+                            captors and reading in the process of the game. I also added a lot of options and accessibility features.
+                            If you want a workaround about using any controller on console with remote play enable and with SIGIL, 
+                            check my <a href="../GuideSigilRemotePlay/">guide</a> for it. Check also <a href="../ProGamingMapper/">PGM</a> 
+                            if you want more workaround and more help and tips, in case you are lost. 
+                            For using program, it need a key file for authenticate locally in order to be able to start properly, 
+                            ask me to obtain this key file (it depend of your computer, not of the program).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-row script-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Code Example Scripts</b></h3>
+                        <p>
+                            It need to explain some functions for scan and connect with respective arguments and sometimes different for each library. 
+                            The rest is in the available scripts I already made entirely and comming with SIGIL.
+                        </p>
+                        <p>
+                            For emulate:
+                        </p>
+                        <div class="script">
+                            <div>
+                                <div class="test-autocomplete-textarea-container">
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using CameraAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">red: 0</font>, <font color="#0000FF">green: 205</font>, <font color="#0000FF">blue: 205</font>, <font color="#0000FF">brightness: -50</font>, <font color="#0000FF">radius: 175</font>, <font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one camera */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">red: 0</font>, <font color="#0000FF">green: 205</font>, <font color="#0000FF">blue: 205</font>, <font color="#0000FF">brightness: -50</font>, <font color="#0000FF">radius: 175</font>, <font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first camera */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">red: 0</font>, <font color="#0000FF">green: 205</font>, <font color="#0000FF">blue: 205</font>, <font color="#0000FF">brightness: -50</font>, <font color="#0000FF">radius: 175</font>, <font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second camera */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using DirectInputsAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one joystick */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first joystick */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second joystick */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using DualSensesAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">label_id: ""</font>, <font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one PS5 controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">label_id: ""</font>, <font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first PS5 controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">label_id: ""</font>, <font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second PS5 controller */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using DualSensesProAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">label_id: ""</font>, <font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one PS5 controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">label_id: ""</font>, <font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first PS5 controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">label_id: ""</font>, <font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second PS5 controller */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using DualShocks4API</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">label_id: ""</font>, <font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one PS4 controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">label_id: ""</font>, <font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first PS4 controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">label_id: ""</font>, <font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second PS4 controller */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using DualShocks4ProAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">label_id: ""</font>, <font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one PS4 controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">label_id: ""</font>, <font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first PS4 controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">label_id: ""</font>, <font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second PS4 controller */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using GamepadsHooksAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one Xbox controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first Xbox controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second Xbox controller */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using JoyconChargingGripsAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one Joycon Charging Grip controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first Joycon Charging Grip controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second Joycon Charging Grip controller */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using JoyconLeftChargingGripsAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate Joycon left in Joycon Charging Grip controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate Joycon left in first Joycon Charging Grip controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate Joycon left in second Joycon Charging Grip controller */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using JoyconRightChargingGripsAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate Joycon right in Joycon Charging Grip controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate Joycon right in first Joycon Charging Grip controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate Joycon right in second Joycon Charging Grip controller */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using JoyconsLeftAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one Joycon left controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first Joycon left controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second Joycon left controller */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using JoyconsRightAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one Joycon right controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first Joycon right controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second Joycon right controller */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using JoysticksHooksAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one joystick */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first joystick */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second joystick */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using KeyboardsHooksAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one keyboard */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first keyboard */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second keyboard */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using KeyboardInputsAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one keyboard */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first keyboard */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second keyboard */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using KeyboardRawHooksAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one keyboard */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first keyboard */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second keyboard */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using KeyboardRawInputsAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one keyboard */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first keyboard */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second keyboard */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using KeyboardXnaHookAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one keyboard */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first keyboard */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second keyboard */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using MousesHooksAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one mouse */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first mouse */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second mouse */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using MouseInputsAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one mouse */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first mouse */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second mouse */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using MouseRawHooksAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one mouse */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first mouse */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second mouse */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using MouseRawInputsAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one mouse */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first mouse */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second mouse */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using MouseXnaHookAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one mouse */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first mouse */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second mouse */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using Readdevices</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">length: 0</font>, <font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one device */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">length: 0</font>, <font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first device */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">length: 0</font>, <font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second device */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using Readfiles</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">length: 0</font>, <font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one file */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">length: 0</font>, <font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first file */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">length: 0</font>, <font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second file */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using Readhids</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">length: 0</font>, <font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one HID */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">length: 0</font>, <font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first HID */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">vendor_id: ""</font>, <font color="#0000FF">product_id: ""</font>, <font color="#0000FF">length: 0</font>, <font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second HID */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using ScalingFactorAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one screen */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first screen */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second screen */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using SpeechAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">SpeechToTextHandle: new string[] { }</font>, <font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one microphone */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">SpeechToTextHandle: new string[] { }</font>, <font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first microphone */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">SpeechToTextHandle: new string[] { }</font>, <font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second microphone */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using SwitchProControllersAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one Switch Pro Controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first Switch Pro Controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second Switch Pro Controller */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using TimersAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one timerwatch */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first timerwatch */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second timerwatch */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using WiiMotesAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one Wiimote */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first Wiimote */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second Wiimote */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using WiiMotesLibAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one Wiimote */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first Wiimote */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second Wiimote */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using WiiMotesLibMPAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one Wiimote */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first Wiimote */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second Wiimote */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using WiiMotesProAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one Wiimote */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first Wiimote */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second Wiimote */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using X360InputsAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one Xbox controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first Xbox controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second Xbox controller */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using XInputsAPI</font>;<br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Emulate one Xbox controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Emulate first Xbox controller */</font><br>
+                                        <font color="#ff4500">Scan</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Emulate second Xbox controller */</font><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            For simulate:
+                        </p>
+                        <div class="script">
+                            <div>
+                                <div class="test-autocomplete-textarea-container">
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using arduinocommunications</font>;<br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Simulate one keyboard and mouse */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Simulate first keyboard and mouse */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Simulate second keyboard and mouse */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using controllers</font>;<br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Simulate one Xbox controller */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Simulate first Xbox controller */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Simulate second Xbox controller */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using controllersds4</font>;<br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Simulate one Dualshock4 controller */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Simulate first Dualshock4 controller */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Simulate second Dualshock4 controller */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using controllerspro</font>;<br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Simulate one Xbox controller */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Simulate first Xbox controller */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Simulate second Xbox controller */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using controllersvjoy</font>;<br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Simulate one joystick */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Simulate first joystick */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Simulate second joystick */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using Interceptions</font>;<br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Simulate one keyboard and mouse */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Simulate first keyboard and mouse */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Simulate second keyboard and mouse */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using keyboardsmouses</font>;<br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Simulate one keyboard and mouse */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Simulate first keyboard and mouse */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Simulate second keyboard and mouse */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using Networks</font>;<br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">localip: ""</font>, <font color="#0000FF">port: ""</font>, <font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Simulate one client */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">localip: ""</font>, <font color="#0000FF">port: ""</font>, <font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Simulate first client */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">localip: ""</font>, <font color="#0000FF">port: ""</font>, <font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Simulate second client */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using Networkshost</font>;<br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">localip: ""</font>, <font color="#0000FF">port: ""</font>, <font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Simulate one server */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">localip: ""</font>, <font color="#0000FF">port: ""</font>, <font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Simulate first server */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">localip: ""</font>, <font color="#0000FF">port: ""</font>, <font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Simulate second server */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using SendInputs</font>;<br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Simulate one keyboard and mouse */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Simulate first keyboard and mouse */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Simulate second keyboard and mouse */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using Sound</font>;<br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">pathsound1: ""</font>, ..., <font color="#0000FF">pathsound12: ""</font>, <font color="#0000FF">pathtempsound1: ""</font>, ..., <font color="#0000FF">pathtempsound12: ""</font>, <font color="#0000FF">number: 0</font>);<br>
+                                        <font color="#004500">/* Simulate one sound */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">pathsound1: ""</font>, ..., <font color="#0000FF">pathsound12: ""</font>, <font color="#0000FF">pathtempsound1: ""</font>, ..., <font color="#0000FF">pathtempsound12: ""</font>, <font color="#0000FF">number: 1</font>);<br>
+                                        <font color="#004500">/* Simulate first sound */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">pathsound1: ""</font>, ..., <font color="#0000FF">pathsound12: ""</font>, <font color="#0000FF">pathtempsound1: ""</font>, ..., <font color="#0000FF">pathtempsound12: ""</font>, <font color="#0000FF">number: 2</font>);<br>
+                                        <font color="#004500">/* Simulate second sound */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using teensycommunications</font>;<br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Simulate one keyboard and mouse */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Simulate first keyboard and mouse */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Simulate second keyboard and mouse */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using teensyjoysticks</font>;<br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 0</font>);
+                                        <font color="#004500">/* Simulate one joystick */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 1</font>);
+                                        <font color="#004500">/* Simulate first joystick */</font><br>
+                                        <font color="#ff4500">Connect</font>(<font color="#0000FF">number: 2</font>);
+                                        <font color="#004500">/* Simulate second joystick */</font><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-row script-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Code Example Script for Video Overlay</b></h3>
+                        <p>
+                            It's possible to have a nice video overlay when any controller is used as a Xbox Controller, displaying 
+                            Xbox Controller, audio visualization of left and right speakers, crosshair, motion dot(s), minimap, webcam. 
+                            You can use a webcam, but not necessary, and show dot(s) for IR, gyroscope, or accelerometer. There is a argument 
+                            to take account, "fps" (standing for first person shooter) is for show minimap in top center and crosshair, 
+                            while "rg" (standing for racing game) isn't showing minimap and crosshair, as following.
+                        </p>
+                        <div class="script">
+                            <div>
+                                <div class="test-autocomplete-textarea-container">
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using controllersvid</font>;<br>
+                                        <font color="#007fff">controllersvid.Form1</font> form1 = <font color="#0000FF">new</font> <font color="#007fff">controllersvid.Form1</font>("fps");
+                                        <font color="#004500">/* Webcam if connected and minimap in top center and crosshair */</font><br>
+                                        <font color="#007fff">controllersvid.Form1</font> form1 = <font color="#0000FF">new</font> <font color="#007fff">controllersvid.Form1</font>("rg");
+                                        <font color="#004500">/* Webcam if connected and no minimap and no crosshair */</font><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

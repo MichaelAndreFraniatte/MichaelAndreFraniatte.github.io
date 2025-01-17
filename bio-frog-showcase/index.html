@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+        <title>michael bio frogs</title>
+
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                background-color: greenyellow;
+                width: 100%;
+                height: 100%;
+                font-family: Arial;
+                overflow: hidden;
+                font-size: 2ex;
+            }
+
+            #menu {
+                position: absolute;
+                display: block;
+                left: 0%;
+                top: 0%;
+                width: 36%;
+                height: 100%;
+            }
+
+            .menu-item {
+                position: relative;
+                left: 30%;
+                top: 10%;
+                width: 40%;
+                color: white;
+                background-color: forestgreen;
+                font-weight: 900;
+                border-style: solid;
+                border-color: white;
+                border-radius: 3.5ex;
+                font-size: 2.5ex;
+                cursor: pointer;
+                line-height: 2.5%;
+                padding: 2.5%;
+                margin: 2.5%;
+            }
+
+            .active {
+                background-color: lawngreen;
+            }
+
+            center {
+                margin-top: 1ex;
+                margin-bottom: 1ex;
+            }
+
+            #menu img {
+                position: fixed;
+                top: 80%;
+                left: 16%;
+                width: 7%;
+                height: auto;
+            }
+
+            #content {
+                position: absolute;
+                display: block;
+                left: 38%;
+                top: 0%;
+                width: 64%;
+                height: 100%;
+                overflow-x: scroll;
+                text-align: left;
+                white-space: nowrap;
+                overflow-y: hidden;
+            }
+
+            .hr,
+            .hr img {
+                display: inline-block;
+                width: auto;
+                height: 100%;
+            }
+
+            ::-webkit-scrollbar {
+                width: 10px;
+                height: 10px;
+                border-radius: 0.5vw;
+                cursor: pointer;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: green;
+                border-radius: 0.5vw;
+                cursor: pointer;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: lawngreen;
+                border-radius: 0.5vw;
+                cursor: pointer;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: greenyellow;
+                border-radius: 0.5vw;
+                cursor: pointer;
+            }
+
+            #Frog1 #Frog2,
+            #Frog3,
+            #Frog4,
+            #Frog5,
+            #Frog6,
+            #Frog7 {
+                scroll-behavior: smooth !important;
+                transition: 0.6s ease;
+            }
+
+            .left {
+                left: 39%;
+            }
+
+            .right {
+                right: 1%;
+            }
+
+            .nav {
+                position: fixed;
+                cursor: pointer;
+                top: 1%;
+                font-size: 3.5ex;
+                color: white;
+                text-align: center;
+                vertical-align: middle;
+                border-style: solid;
+                border-color: white;
+                border-radius: 2.5ex;
+                background: rgba(180, 180, 180, 0.7);
+                margin: 0;
+                padding: 0.5ex;
+                width: 2.5ex;
+                height: 2.5ex;
+            }
+
+            .hr {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .hr img {
+                margin: 0;
+                padding: 0;
+            }
+
+            #Frog1Text,
+            #Frog2Text,
+            #Frog3Text,
+            #Frog4Text,
+            #Frog5Text,
+            #Frog6Text,
+            #Frog7Text {
+                display: block;
+                position: absolute;
+                width: 47%;
+                height: 20%;
+                bottom: 1ex;
+                color: white;
+                background: rgba(0, 0, 0, 0.7);
+                overflow: hidden;
+                white-space: pre-wrap;
+                padding: 1ex;
+                line-height: 3ex;
+                font-size: 2.5ex;
+                border-radius: 2ex;
+                overflow-y: auto;
+            }
+
+            #Frog1Text {
+                left: 47%;
+            }
+
+            #Frog2Text {
+                left: 147%;
+            }
+
+            #Frog3Text {
+                left: 248%;
+            }
+
+            #Frog4Text {
+                left: 348%;
+            }
+
+            #Frog5Text {
+                left: 449%;
+            }
+
+            #Frog6Text {
+                left: 549%;
+            }
+
+            #Frog7Text {
+                left: 650%;
+            }
+        </style>
+    </head>
+
+    <body class onLoad="page_onload()">
+        <div id="menu">
+            <div class="button menu-item active" data-id="1">
+                <center>Frog One</center>
+            </div>
+            <div class="button menu-item" data-id="2">
+                <center>Frog Two</center>
+            </div>
+            <div class="button menu-item" data-id="3">
+                <center>Frog Three</center>
+            </div>
+            <div class="button menu-item" data-id="4">
+                <center>Frog Four</center>
+            </div>
+            <div class="button menu-item" data-id="5">
+                <center>Frog Five</center>
+            </div>
+            <div class="button menu-item" data-id="6">
+                <center>Frog Six</center>
+            </div>
+            <div class="button menu-item" data-id="7">
+                <center>Frog Seven</center>
+            </div>
+            <img src="img/favicon.png" />
+        </div>
+        <div id="content">
+            <div class="hr" id="Frog1" data-id="1">
+                <img src="img/frog1.jpg" />
+            </div>
+            <div class="hr" id="Frog2" data-id="2">
+                <img src="img/frog2.jpg" />
+            </div>
+            <div class="hr" id="Frog3" data-id="3">
+                <img src="img/frog3.jpg" />
+            </div>
+            <div class="hr" id="Frog4" data-id="4">
+                <img src="img/frog4.jpg" />
+            </div>
+            <div class="hr" id="Frog5" data-id="5">
+                <img src="img/frog5.jpg" />
+            </div>
+            <div class="hr" id="Frog6" data-id="6">
+                <img src="img/frog6.jpg" />
+            </div>
+            <div class="hr" id="Frog7" data-id="7">
+                <img src="img/frog7.jpg" />
+            </div>
+            <div class="left nav" onclick="scrollToClass(-1)">&laquo;</div>
+            <div class="right nav" onclick="scrollToClass(1)">&raquo;</div>
+            <span id="Frog1Text">I'm the grandpa frog. <br>I'm living on a branch under a sheet the majority of time. <br>I get out, above my sheet, to eat some mosquitoes. <br>I like this life. I'm sleeping all the time. My familly of frogs is wonderfull.</span>
+            <span id="Frog2Text">I'm the grandma frog. <br>I'm living in water and trees, I like wearing on back my little sons. <br>I get out of water, for eating some mosquitoes. <br>I like the sun also but I'm sleeping all the rest of time.</span>
+            <span id="Frog3Text">I'm the little son frog. <br>I'm living on a brand and a sheet to play with my brothers. I like to eat some mosquitoes. <br>I like this life while playing all the time.</span>
+            <span id="Frog4Text">We are the parent of frogs. <br>We are living on branches. We eat some mosquitoes and bring back it to our familly. <br>Our familly of frogs is wonderfull.</span>
+            <span id="Frog5Text">I'm a simple frog. <br>I'm living on a branch and under water the majority of time. <br>I get out, to eat some mosquitoes. I like this life. <br>I'm sleeping all the time.</span>
+            <span id="Frog6Text">I'm a simple frog. <br>I'm living on a branch and under water the majority of time. <br>I get out, to eat some mosquitoes. I like this life. <br>I'm sleeping all the time.</span>
+            <span id="Frog7Text">I'm a simple frog. <br>I'm living on a branch and under water the majority of time. <br>I get out, to eat some mosquitoes. I like this life. <br>I'm sleeping all the time.</span>
+        </div>
+        <copyrights
+            style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: white; text-align: center; font-family: sans-serif; font-size: 15px;">
+            <b>© MAF</b></copyrights>
+        <script>
+            var id = 1;
+            var hri = 0;
+            var hroffset = [];
+            var hrtop = 0;
+
+            function page_onload() {
+                getOffset();
+            }
+
+            // Active on click and smooth scrolling to page anchor on click
+            $(".button").on("click", function () {
+                id = jQuery(this).data('id');
+                var vallong = setOffset(id);
+                $("#content").animate({ scrollLeft: vallong }, 1000);
+            });
+
+            window.addEventListener("resize", getOffset);
+
+            function getOffset() {
+                $("#content").animate({ scrollLeft: 0 }, 0);
+                jQuery('.button').removeClass('active');
+                jQuery('.button[data-id="1"]').addClass('active');
+                hri = 0;
+                hroffset = [];
+                hrvallong = 0;
+                hrtop = 0;
+                $(".hr").each(function () {
+                    hri++;
+                    hrtop = $('.hr[data-id="' + hri + '"]').offset().left - $('#content').offset().left;
+                    hroffset.push(hrtop);
+                });
+            }
+
+            function setOffset(id) {
+                return hroffset[id - 1];
+            }
+
+            // Active on scroll
+            $('#content').scroll(function () {
+                var fromTop = $('#content').scrollLeft();
+                for (i = 1; i <= hri; i++) {
+                    if (fromTop >= hroffset[i - 1] - 100 & fromTop <= hroffset[i - 1] + 400) {
+                        jQuery('.button').not('[data-id="' + i + '"]').removeClass('active');
+                        jQuery('.button[data-id="' + i + '"]').addClass('active');
+                        id = i;
+                    }
+                }
+            });
+
+            // Active on button click
+            function scrollToClass(inc) {
+                var index = id;
+                index += inc;
+                if (index > 7) {
+                    index = 7;
+                    return;
+                }
+                if (index < 1) {
+                    index = 1;
+                    return;
+                }
+                id = index;
+                var vallong = setOffset(id);
+                $("#content").animate({ scrollLeft: vallong }, 1000);
+            }
+
+            // Mouse scroll to horizontal scroll
+            (function () {
+                function scrollHorizontally(e) {
+                    e = window.event || e;
+                    var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+                    document.getElementById('content').scrollLeft -= (delta * 40); // Multiplied by 40
+                    e.preventDefault();
+                }
+                document.querySelectorAll("*").forEach(elem => elem.addEventListener("mousewheel", scrollHorizontally));
+            })();
+
+        </script>
+
+    </body>
+
+</html>

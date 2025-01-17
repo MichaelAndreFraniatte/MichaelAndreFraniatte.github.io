@@ -1,0 +1,41 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+body {
+    font-family: sans-serif;
+    background-color: #222222;
+    color: #FFFFFF;
+}
+
+.row > .col-lg-4,
+.col-6 {
+    padding: 0;
+}
+
+#page-top, #title, #sub-title {
+    font-family: sans-serif;
+    background-color: #222222;
+    color: #FFFFFF;
+    background-color: #222222;
+}
+
+.button {
+    color: #000000;
+}
+
+#csvFileInput {
+    color: #FFFFFF;
+}
+
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #000000;
+}

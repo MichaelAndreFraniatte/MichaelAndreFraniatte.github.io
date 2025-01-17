@@ -1,0 +1,5 @@
+﻿- You can disable controllers in Steam at start in order Steam don't connect it to Steam Inputs
+- Open control printers with Run command (Win + R), find the VID/PID of your controller (on Windows, open control panel > devices and printers > go to the properties of the wii remote > hardware > select Bluetooth HID device > details > Hardware IDs and copy the VID/PID)
+- Close Steam, disconnect any controller, go to your Steam folder, open the config folder and open "config.vdf" with notepad (default: C:\Program Files\Steam\config\config.vdf)
+- At the end of this file, before the last bracket insert this: "controller_blacklist"	"57e/0306", with tabulations, save the file, and then open Steam
+- If you want to blacklist more than one controller, place a "," between the VID/PID, for example: "controller_blacklist"	"57e/0330,57e/0306,57e/2009,57e/2007,57e/2006,57e/200e,54c/ce6,54c/9cc,11c0/4001", with tabulations

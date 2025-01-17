@@ -1,0 +1,4 @@
+Contact: mailto:michael.franiatte@gmail.com
+Preferred-Languages: fr, en, es
+Acknowledgments: https://michaelandrefraniatte.github.io/hall-of-fame/
+Canonical: https://michaelandrefraniatte.github.io/.well-known/security.txt

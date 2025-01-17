@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FastAccess</title>
+        <meta name="description" content="Startup Menu for Browsing Web Fastly">
+        <meta name="keywords" content="FastAccess, Startup, Web, web browser, Fast Access">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="fap.png" alt="fastaccess" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>FastAccess</h2>
+                    <h1>Startup Page for Browsing Web Fastly</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Fast Access Page to Add Websites</b></h3>
+                        <p>
+                            The page is made to add it as startup page from Edge settings. It's made to have a list of
+                            websites as startup page. There's also the extension for having this page as startup and 
+                            new tab. Let's see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/fastaccess.png" alt="fastaccess" style="width:40%;"
+                            onclick='img_box("../img/fastaccess.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Considerations About the Program</b></h3>
+                        <p>
+                            I made this page to edit by toggle mode with right click opening a menu. It's for having a
+                            page to fastly access websites with boxes. You can set the websites and name of the websites
+                            with easy edit. You can drag and drop a box when you toggle mode to edit. To note, if you encounter 
+                            issue, simply open a empty file or set to default the background. You can use google drive to upload 
+                            a background picture and use directly the link from copy link under google drive file menu when 
+                            clicking right on it and choosing share. This page is <a href="../FastAccess-Web-Application/">here</a> and the showcase <a href="../FastAccess-Showcase/">here</a>. I also made the Edge extension to install from <a 
+                            href="edge://extensions">edge://extensions</a> in order to popup page in a new tab. But you can use 
+                            the extension <a target="_blank" class="dl-link" 
+                            href="https://microsoftedge.microsoft.com/addons/detail/custom-new-tab/onagfgjlokaciajhjmajljcfanonbmia">
+                            custom new tab</a>, or my other own extension made for it, or my full extension for
+                            automatically have startup page and new tab page.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

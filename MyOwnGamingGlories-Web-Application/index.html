@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description"
+            content="a built in web application for showing my gamer skill with my best videos on multiplayer games, but do not confuse the name with MyOwnageShameHacking (MOSH) because I hate cheats, I'm just a noob learning and playing on PC.">
+        <meta name="keywords" content="MOGG, gameplay, games, videos, skill, noob, PC">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+        <title>MyOwnGamingGlories</title>
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <script src="../custom/redirect.js"></script>
+
+        <style>
+            body {
+                background: black;
+                overflow-y: hidden;
+            }
+
+            video {
+                display: block;
+                height: auto;
+                width: 70%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+
+            img {
+                display: block;
+                height: auto;
+                width: 70%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: #444;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #888;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #eee;
+            }
+
+            .fa-arrow-left {
+                display: block;
+                margin: auto;
+                position: absolute;
+                width: 0%;
+                height: 0%;
+                top: 50%;
+                left: 0%;
+                transform: translate(50%, -50%);
+            }
+
+            .fa-arrow-right {
+                display: block;
+                margin: auto;
+                position: absolute;
+                width: 0%;
+                height: 0%;
+                top: 50%;
+                right: 12px;
+                transform: translate(50%, -50%);
+            }
+
+            .link {
+                cursor: pointer;
+                color: white;
+            }
+        </style>
+
+    </head>
+
+    <body class>
+
+        <select id="contentselection" onchange="changeContent(this)">
+            <option>Broforce</option>
+            <option>The Expendabros</option>
+        </select>
+
+        <div id="canvas" class="canvas"></div>
+        <div class="link" onclick="playNext()"><i class="fa fa-arrow-right"></i></div>
+        <div class="link" onclick="playPrevious()"><i class="fa fa-arrow-left"></i></div>
+
+        <copyrights
+            style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: white; text-align: center; font-family: sans-serif; font-size: 15px; line-height:15px;">
+            <b>© MAF</b></copyrights>
+
+        <script>
+
+            var canvas = $('#canvas');
+            var srcImage = '<img src="$" alt="$">';
+            var srcVideo = '<div style="width:100%;height:auto;background-color:black;text-align:center;"><video controls autoplay><source src="$" type="video/mp4"></video></div>';
+            var current = -1;
+            var source = '';
+            var file = '';
+
+            var content = [];
+
+            changeContent(document.getElementById("contentselection"));
+
+            function changeContent(newcontent) {
+                if (newcontent.options[newcontent.selectedIndex].text == "Broforce") {
+                    content = ['http://drive.google.com/thumbnail?sz=s4000&id=16O1DqJbhUW1UIs3VKS57w0AMdUcjYfAo', 'https://www.googleapis.com/drive/v3/files/1tde73TvnfrWvbmkwMR0UoD7va1oDjXUL?key=AIzaSyDOVCZuS6xwKf2XZWcX7s3LK6V8fIFxDHc&alt=media&origin=https://michaelandrefraniatte.github.io', 'https://www.googleapis.com/drive/v3/files/1uWeeTgaWzgqiWm5JoQbrj86xe2T3rTMD?key=AIzaSyDOVCZuS6xwKf2XZWcX7s3LK6V8fIFxDHc&alt=media&origin=https://michaelandrefraniatte.github.io', 'https://www.googleapis.com/drive/v3/files/1OgkyDtKObhtF013BCzeTORa7DPAtvN-w?key=AIzaSyDOVCZuS6xwKf2XZWcX7s3LK6V8fIFxDHc&alt=media&origin=https://michaelandrefraniatte.github.io', 'https://www.googleapis.com/drive/v3/files/1KYB7KsEROOEXQaijEKmELCyyaRwlqrs7?key=AIzaSyDOVCZuS6xwKf2XZWcX7s3LK6V8fIFxDHc&alt=media&origin=https://michaelandrefraniatte.github.io'];
+                }
+                if (newcontent.options[newcontent.selectedIndex].text == "The Expendabros") {
+                    content = ['http://drive.google.com/thumbnail?sz=s4000&id=1X6BYsb315zRmvFTV3y8Fu7RU3SJDLFTy', 'https://www.googleapis.com/drive/v3/files/1Y__SzevkYo4oMJnVfxaNZjUHjxVJa0SK?key=AIzaSyDOVCZuS6xwKf2XZWcX7s3LK6V8fIFxDHc&alt=media&origin=https://michaelandrefraniatte.github.io', 'https://www.googleapis.com/drive/v3/files/1wfoQeHzSe1pOfDHpXK5McMv53JZV7btQ?key=AIzaSyDOVCZuS6xwKf2XZWcX7s3LK6V8fIFxDHc&alt=media&origin=https://michaelandrefraniatte.github.io'];
+                }
+                current = -1;
+                playNext();
+            }
+
+            function changeCanvas() {
+                if (file.indexOf('http://drive.google.com/thumbnail?sz=s4000&id=') > -1)
+                    source = srcImage;
+                else
+                    source = srcVideo;
+                source = source.replaceAll('$', file);
+                canvas.html(source);
+            }
+
+            function playNext() {
+                current++;
+                if (current >= content.length) {
+                    current = 0;
+                }
+                file = content[current];
+                changeCanvas()
+            }
+
+            function playPrevious() {
+                current--;
+                if (current < 0) {
+                    current = content.length - 1;
+                }
+                file = content[current];
+                changeCanvas()
+            }
+
+        </script>
+
+    </body>
+
+</html>

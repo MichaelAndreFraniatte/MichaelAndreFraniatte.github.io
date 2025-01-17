@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Supporting Controllers</title>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="icone.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+        <link rel="stylesheet" href="../extra/font-awesome.css">
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <script src="../custom/redirect.js"></script>
+
+        <style>
+            html,
+            #About,
+            #Home,
+            #Pilot,
+            #Reflex {
+                scroll-behavior: smooth !important;
+                transition: 0.6s ease;
+            }
+
+            body {
+                font-family: "Times New Roman", Georgia, Serif;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: "Playfair Display";
+                letter-spacing: 5px;
+            }
+
+            .container {
+                position: relative;
+                width: 100%;
+            }
+
+            .image {
+                opacity: 1;
+                display: block;
+                width: 100%;
+                height: auto;
+                backface-visibility: hidden;
+            }
+
+            .middle {
+                cursor: pointer;
+                text-decoration: none;
+                transition: .5s ease;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            .container:hover .image {
+                opacity: 0.5;
+            }
+
+            .container:hover .middle {
+                opacity: 1;
+            }
+
+            header {
+                width: 100%;
+            }
+
+            footer {
+                background-color: rgba(0, 0, 0, 1);
+                color: white;
+                display: block;
+                height: 100vh;
+            }
+
+            p {
+                opacity: 1;
+            }
+
+            h1 {
+                opacity: 0.8;
+            }
+
+            .cover-image {
+                width: 90vw;
+                height: 100vh;
+            }
+
+            .mySlidesPilot {
+                display: none
+            }
+
+            .mySlidesReflex {
+                display: none
+            }
+
+            img {
+                vertical-align: middle;
+            }
+
+            .mySlidesPilot img {
+                width: auto;
+                height: 50vh;
+            }
+
+            .mySlidesReflex img {
+                width: auto;
+                height: 50vh;
+            }
+
+            .slideshowpilot-container {
+                position: absolute;
+                margin: auto;
+                left: 10vw;
+                top: 124vh;
+                object-fit: contain;
+            }
+
+            .slideshowreflex-container {
+                position: absolute;
+                margin: auto;
+                left: 10vw;
+                top: 230vh;
+                object-fit: contain;
+            }
+
+            .pilot-container {
+                position: absolute;
+                right: 7vw;
+                top: 33vh;
+                color: black;
+            }
+
+            .reflex-container {
+                position: absolute;
+                right: 7vw;
+                top: 41vh;
+                color: black;
+            }
+
+            .prev {
+                cursor: pointer;
+                position: relative;
+                top: calc(25vh + 1.5vw);
+                left: calc(-3.5%);
+                height: 3vw;
+                font-weight: bold;
+                font-size: 1.5vw;
+                color: white;
+            }
+
+            .next {
+                cursor: pointer;
+                position: relative;
+                top: calc(25vh + 1.5rem);
+                left: calc(103.5% - 2vw);
+                height: 3vw;
+                font-weight: bold;
+                font-size: 1.5vw;
+                color: black;
+            }
+
+            #Main {
+                background-color: black;
+                height: 100vh;
+                width: 100vw;
+            }
+
+            .main {
+                width: auto;
+                height: 94vh;
+                position: relative;
+                top: 6vh;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .xxlarge {
+                font-size: 2.1vw;
+            }
+
+            .xlarge {
+                font-size: 1.6vw;
+            }
+
+            .large {
+                font-size: 1.1vw;
+            }
+
+            .bar {
+                object-fit: contain;
+            }
+
+            .bar-item {
+                height: 5vh;
+                font-size: 2.2vh;
+                margin-bottom: 0.5vh;
+            }
+
+            .link a i {
+                height: 1vw;
+                font-size: 1vw;
+            }
+        </style>
+    </head>
+
+    <body class>
+
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top hr" id="Home" data-id="1">
+            <div class="bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+                <a href="#Main" class="bar-item w3-button w3-hover-black dl-link" data-id="1">Supporting Controllers</a>
+                <!-- Right-sided navbar links. Hide them on small screens -->
+                <div class="w3-right">
+                    <a href="#Pilot" class="bar-item w3-button w3-hover-black dl-link" data-id="2">Pilot</a>
+                    <a href="#Reflex" class="bar-item w3-button w3-hover-black dl-link" data-id="3">Reflex</a>
+                    <a href="#About" class="bar-item w3-button w3-hover-black dl-link" data-id="4">About</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="hr" id="Main" data-id="1">
+            <img class="main" src="rear.png">
+        </header>
+
+        <!-- Header -->
+        <header class="w3-display-container hr" style="width:100%;" id="Pilot" data-id="2">
+            <img class="cover-image" src="rear-front.png" width="2057" height="1158">
+            <div class="w3-display-bottommiddle w3-padding-large">
+                <h1 class="xxlarge"><span style="color:white;">Xbox Controller</span></h1>
+            </div>
+            <div class="pilot-container">
+                <div class="xxlarge"><span style="color:black;">Pilot</span></div>
+                <div class="xlarge"><span style="color: black;">WiiJoyPilot</span></div>
+                <div class="large"><span style="color: grey;">Wiimote and Joycon left</span></div>
+                <div class="large"><span style="color: grey;">Simulating an Xbox Controller</span></div>
+                <div class="large"><span style="color: grey;">An Expert Way for Aiming in FPS</span></div>
+                <div class="large"><span style="color: grey;">Well Optimized and Adapted for Competition</span></div>
+                <div class="large link">
+                    <div class="w3-button w3-hover-black btn1"><i class="fa fa-link"></i></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="slideshowpilot-container">
+
+            <a class="prev" onclick="plusSlidesPilot(-1)">❮</a>
+
+            <a class="next" onclick="plusSlidesPilot(1)">❯</a>
+
+            <div class="mySlidesPilot">
+                <img src="../img/wjp-main.png" style="width:100%">
+            </div>
+
+            <div class="mySlidesPilot">
+                <img src="../img/wjp-wj.png" style="width:100%">
+            </div>
+
+            <div class="mySlidesPilot">
+                <img src="../img/wjp-p.png" style="width:100%">
+            </div>
+
+        </div>
+
+        <!-- Header -->
+        <header class="w3-display-container hr" style="width:100%;" id="Reflex" data-id="3">
+            <img class="cover-image" src="rear-back.png" width="2057" height="1158">
+            <div class="w3-display-bottommiddle w3-padding-large">
+                <h1 class="xxlarge"><span style="color:black;">Keyboard and Mouse</span></h1>
+            </div>
+            <div class="reflex-container">
+                <div class="xxlarge"><span style="color: black;">Reflex</span></div>
+                <div class="xlarge"><span style="color: black;">WiiJoyReflex</span></div>
+                <div class="large"><span style="color: grey;">Wiimote and Joycon left</span></div>
+                <div class="large"><span style="color: grey;">Simulating a Mouse and Keyboard</span></div>
+                <div class="large"><span style="color: grey;">An Expert Way for Aiming in FPS</span></div>
+                <div class="large"><span style="color: grey;">Well Optimized and Adapted for Competition</span></div>
+                <div class="large link">
+                    <div class="w3-button w3-hover-black btn2"><i class="fa fa-link"></i></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="slideshowreflex-container">
+
+            <a class="prev" onclick="plusSlidesReflex(-1)">❮</a>
+
+            <a class="next" onclick="plusSlidesReflex(1)">❯</a>
+
+            <div class="mySlidesReflex">
+                <img src="../img/wjr-main.png" style="width:100%">
+            </div>
+
+            <div class="mySlidesReflex">
+                <img src="../img/wjr-wj.png" style="width:100%">
+            </div>
+
+            <div class="mySlidesReflex">
+                <img src="../img/wjr-r.png" style="width:100%">
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="large w3-center hr" id="About" data-id="4">
+            <br />
+            <br />
+            <br />
+            <br />
+            <h1 class="xxlarge">About</h1>
+            <br />
+            <br />
+            <p><b>·</b> Expertise Programmation in Motion Controllers since 2008 <b>·</b> Helps and Supports <b>·</b>
+            </p>
+            <br />
+            <br />
+            <p><b>·</b> Supporting Controllers <b>·</b> From Wiimote to Dualsense through Arduino <b>·</b></p>
+            <br />
+            <br />
+            <p><b>·</b> Contact <b>·</b> michael.franiatte@gmail.com <b>·</b></p>
+        </footer>
+
+        <copyrights
+            style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: gray; text-align: center; font-family: sans-serif; font-size: 15px;">
+            <b>© MAF</b>
+        </copyrights>
+
+        <script>
+            let slideIndexPilot = 1;
+            showSlidesPilot(slideIndexPilot);
+
+            function plusSlidesPilot(n) {
+                showSlidesPilot(slideIndexPilot += n);
+            }
+
+            function currentSlidePilot(n) {
+                showSlidesPilot(slideIndexPilot = n);
+            }
+
+            function showSlidesPilot(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlidesPilot");
+                if (n > slides.length) { slideIndexPilot = 1 }
+                if (n < 1) { slideIndexPilot = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndexPilot - 1].style.display = "block";
+            }
+
+            let slideIndexReflex = 1;
+            showSlidesReflex(slideIndexReflex);
+
+            function plusSlidesReflex(n) {
+                showSlidesReflex(slideIndexReflex += n);
+            }
+
+            function currentSlideReflex(n) {
+                showSlidesReflex(slideIndexReflex = n);
+            }
+
+            function showSlidesReflex(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlidesReflex");
+                if (n > slides.length) { slideIndexReflex = 1 }
+                if (n < 1) { slideIndexReflex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndexReflex - 1].style.display = "block";
+            }
+        </script>
+        <script>
+            var valsection = "";
+            var valdisplaysection = "";
+
+            //Smooth scrolling to page anchor on click
+            $("a[href*='#']:not([href='#'])").click(function () {
+                if (location.hostname == this.hostname && this.pathname.replace(/^\//, "") == location.pathname.replace(/^\//, "")) {
+                    var anchor = $(this.hash);
+                    anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) + "]");
+                    valsection = anchor;
+                    if (anchor.length) {
+                        $("html, body").animate({ scrollTop: anchor.offset().top }, 1000);
+                    }
+                }
+            });
+
+            //ScrollSpy
+            jQuery(window).scroll(checkActiveSection);
+            jQuery(document).ready(checkActiveSection);
+
+            function checkActiveSection() {
+                setTimeout(enableActiveSection, 50);
+            }
+
+            function enableActiveSection() {
+                var fromTop = jQuery(window).scrollTop();
+                jQuery('.hr').each(function () {
+                    var sectionOffset = jQuery(this).offset();
+                    if (sectionOffset.top <= fromTop + 10) {
+                        valsection = $(this);
+                        jQuery('div .w3-button').addClass('w3-text-black');
+                        jQuery('div .w3-button').addClass('w3-white');
+                        jQuery('div .w3-button').removeClass('w3-text-white');
+                        jQuery('div .w3-button').removeClass('w3-black');
+                        jQuery('div .w3-button[data-id="' + jQuery(this).data('id') + '"]').removeClass('w3-text-black');
+                        jQuery('div .w3-button[data-id="' + jQuery(this).data('id') + '"]').removeClass('w3-white');
+                        jQuery('div .w3-button[data-id="' + jQuery(this).data('id') + '"]').addClass('w3-text-white');
+                        jQuery('div .w3-button[data-id="' + jQuery(this).data('id') + '"]').addClass('w3-black');
+                    }
+                });
+            }
+
+            //External navigation
+            $('a:not(.dl-link)').click(function (event) {
+                event.preventDefault();
+                localStorage.setItem("copyrights", "accept");
+                newPage(this.href);
+            });
+
+            function newPage(newlocation) {
+                window.location = newlocation;
+            }
+
+        </script>
+
+        <script>
+
+            var btn1 = document.getElementsByClassName("btn1")[0];
+            btn1.addEventListener('click', () => {
+                localStorage.setItem("copyrights", "accept");
+                location.href = "../WiiJoyPilot/";
+            }, false);
+
+            var btn2 = document.getElementsByClassName("btn2")[0];
+            btn2.addEventListener('click', () => {
+                localStorage.setItem("copyrights", "accept");
+                location.href = "../WiiJoyReflex/";
+            }, false);
+
+        </script>
+
+    </body>
+
+</html>

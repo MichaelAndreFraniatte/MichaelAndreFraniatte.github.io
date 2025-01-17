@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Otep</title>
+        <meta name="description" content="Games of plate looking like real for playing at 2 players">
+        <meta name="keywords" content="games, plate, real, players">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+        
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="otep.png" alt="otep" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>Otep</h2>
+                    <h1>Gaming Plate for 2 Players</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Play at 2 Players Like in Reality</b></h3>
+                        <p>
+                            The games of plate allow to play at 2 players. It's easy to get all emotionnals like if you
+                            play with another player on real gaming plate. It's for being used with table top, and is
+                            optimized for being used with tiny PC. It requires only one Mouse with 2 click buttons and
+                            one Keyboard with 2 key buttons to press. Let's see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row row-eq-height justify-content-center">
+                    <div class="column">
+                        <img src="../img/otep-checkers.png" alt="otep-checkers" style="width:100%"
+                            onclick='img_box("../img/otep-checkers.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/otep-chess.png" alt="otep-chess" style="width:100%"
+                            onclick='img_box("../img/otep-chess.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-center row row-eq-height justify-content-center">
+                    <div class="column">
+                        <img src="../img/otep-chinese-checkers.png" alt="otep-chinese-checkers" style="width:100%"
+                            onclick='img_box("../img/otep-chinese-checkers.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/otep-othello.png" alt="otep-othello" style="width:100%"
+                            onclick='img_box("../img/otep-othello.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/otep-power4.png" alt="otep-power4" style="width:100%"
+                            onclick='img_box("../img/otep-power4.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Considerations About the Program</b></h3>
+                        <p>
+                            The pions can be reinitialized with space bar key, and moved with cursor pressing left
+                            click, and also returned with a right click. The escape key is used to close the games. I
+                            made the web version of <a href="../OtepCheckers-Web-Application/">OtepCheckers</a>, <a href="../OtepChess-Web-Application/">OtepChess</a>, <a href="../OtepChineseCheckers-Web-Application/">OtepChineseCheckers</a>, <a href="../OtepOthello-Web-Application/">OtepOthello</a>, and <a href="../OtepPower4-Web-Application/">OtepPower4</a>. For the web version, the key F5 is
+                            used to reinitialize the game, the key F11 is used for fullscreen, and the pions are moved
+                            with cursor after a simple left click. To note, for power 4 plate game, a left click on the
+                            position where to place the pion is required, and it doesn't slice from the top. But unlike
+                            the web version I didn't take time to do, the pions can only be placed consecutively like in
+                            reality. Also, the programs are only adapted for a screen resolution of 1366 per 768 pixels.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

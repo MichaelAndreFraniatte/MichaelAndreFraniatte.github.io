@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>ledendecraterclouds</title>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="icone.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+        <link rel="stylesheet" href="../extra/font-awesome.css">
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <script src="../custom/redirect.js"></script>
+
+        <style>
+            body {
+                font-family: "Times New Roman", Georgia, Serif;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: "Playfair Display";
+                letter-spacing: 5px;
+            }
+
+            .container {
+                position: relative;
+                width: 100%;
+            }
+
+            .image {
+                opacity: 1;
+                display: block;
+                width: 100%;
+                height: auto;
+                transition: .5s ease;
+                backface-visibility: hidden;
+            }
+
+            .middle {
+                cursor: pointer;
+                text-decoration: none;
+                transition: .5s ease;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            .container:hover .image {
+                opacity: 0.5;
+            }
+
+            .container:hover .middle {
+                opacity: 1;
+            }
+
+            .text {
+                background-color: #ff5722;
+                color: white;
+                font-size: 16px;
+                padding: 16px 32px;
+            }
+
+            footer {
+                background-color: rgba(50, 50, 50, 0.2);
+            }
+
+            p {
+                opacity: 1;
+            }
+
+            h1 {
+                opacity: 0.8;
+            }
+
+            .cover-image {
+                width: 100%;
+                height: 100vh;
+                object-fit: cover;
+                object-position: 50% 25%;
+            }
+
+            .w3-hover-text-white:hover {
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body class>
+
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+                <a href="#home" class="w3-bar-item w3-button w3-hover-deep-orange" data-id="1">Voyage à l'Eden de Crater
+                    Clouds</a>
+                <!-- Right-sided navbar links. Hide them on small screens -->
+                <div class="w3-right w3-hide-small">
+                    <a href="#menu" class="w3-bar-item w3-button w3-hover-deep-orange" data-id="2">À la carte</a>
+                    <a href="#situation" class="w3-bar-item w3-button w3-hover-deep-orange" data-id="3">Emplacement</a>
+                    <a target="_blank" href="https://www.facebook.com/voyagecraterclouds"
+                        class="w3-bar-item w3-button w3-hover-deep-orange"><i
+                            class="fa fa-facebook-f w3-hover-text-white"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="w3-display-container w3-content w3-wide hr" style="max-width:1600px;min-width:500px" id="home"
+            data-id="1">
+            <img class="w3-image cover-image" src="redplanet.jpg" width="2057" height="1158">
+            <div class="w3-display-bottommiddle w3-padding-large">
+                <h1 class="w3-xxlarge"><span style="color:#ff5722;">ledendecraterclouds.fr</span></h1>
+            </div>
+        </header>
+
+        <!-- Page content -->
+        <div class="w3-content" style="max-width:1100px">
+
+            <hr>
+
+            <!-- Menu Section -->
+            <div class="w3-row w3-padding-64 hr" id="menu" data-id="2">
+                <div class="w3-col l6 w3-padding-large">
+                    <h1 class="w3-center">À la carte</h1><br>
+
+                    <h4>Chambre individuel</h4>
+                    <p class="w3-text-grey">Des chambres vous attendes pour vous et votre famille, seul ou en couple</p>
+                    <br>
+
+                    <h4>Bains</h4>
+                    <p class="w3-text-grey">Des bains pour vous relaxer ou des douches chaudes pour vous réveiller en
+                        douceur</p><br>
+
+                    <h4>Sorties</h4>
+                    <p class="w3-text-grey">Des sorties d'explorations et de recherches, qui vous attendent et
+                        n'attendent que vous, partout sur Mars</p><br>
+
+                    <h4>Soins</h4>
+                    <p class="w3-text-grey">Ce que vous voulez, vous l'avez, vous être libre de vous détendre et
+                        travailler, musique, sieste, calme, luxe, et volupté</p><br>
+
+                    <h4>Besoins naturelles</h4>
+                    <p class="w3-text-grey">Le confort et le respect de tout à chacun est la priorité pour laquelle vous
+                        êtes tous choisis</p><br>
+
+                </div>
+
+                <div class="w3-col l6 w3-padding-large">
+                    <img src="platine.jpg" class="w3-image" alt="Table Setting" width="600" height="750">
+                    <p></p><br>
+                    <img src="vape-town.jpg" class="w3-image" alt="Menu" style="width:100%">
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Emplacement Section -->
+            <div class="w3-row w3-padding-64 hr" id="situation" data-id="3">
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <img src="habitat.jpg" class="w3-image" alt="Table Setting" width="600" height="750">
+                    <p></p><br>
+                    <div class="container">
+                        <img src="emplacement.png" class="w3-image image" alt="Table Setting" width="600" height="750">
+                        <a class="middle" class="dl-link" target="_blank" href="http://themis.asu.edu/zoom-20060126a">
+                            <div class="text">Voir la page officiel</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w3-col m6 w3-padding-large">
+                    <h1 class="w3-center">Emplacement</h1><br>
+                    <h5 class="w3-center">Situé dans le Crater Clouds</h5>
+                    <p class="w3-large">À proximité du lac d'eau gelée de l'hémisphère Sud, au milieu de Crater Clouds,
+                        protégé et au calme.</p>
+                    <p class="w3-large w3-text-grey w3-hide-medium">"Vous y retrouvez des personnes agréables qui vous
+                        aides à mieux vivre, des personnes comme vous qui ont aussi leurs rôles."</p>
+                    <p></p><br>
+                    <p></p><br>
+                    <p></p><br>
+                    <h5 class="w3-center">Sur Mars</h5>
+                    <p class="w3-large">Vous êtes occupés à vivre en communauté avec quelques tâches à réaliser pour la
+                        vie en communauté, mais vous êtes libres d'explorer et de chercher.</p>
+                    <p class="w3-large w3-text-grey w3-hide-medium">"Vous trouvez ce que vous attendriez de la vie sur
+                        Terre, avec vos compétences et vos loisirs."</p>
+                </div>
+            </div>
+
+            <!-- End page content -->
+        </div>
+
+        <!-- Footer -->
+        <footer class="w3-center w3-padding-32">
+            <p>Harmonie <b>·</b> Exploration <b>·</b> Recherche</p>
+            <p>Habitat - L'Eden de Crater Clouds, Crater Clouds, Mars</p>
+        </footer>
+
+        <copyrights
+            style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: dimgray; text-align: center; font-family: sans-serif; font-size: 15px; line-height:15px;">
+            <b>© MAF</b></copyrights>
+
+        <script>
+            var valsection = "";
+            var valdisplaysection = "";
+
+            //Smooth scrolling to page anchor on click
+            $("a[href*='#']:not([href='#'])").click(function () {
+                if (location.hostname == this.hostname && this.pathname.replace(/^\//, "") == location.pathname.replace(/^\//, "")) {
+                    var anchor = $(this.hash);
+                    anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) + "]");
+                    valsection = anchor;
+                    if (anchor.length) {
+                        $("html, body").animate({ scrollTop: anchor.offset().top }, 1000);
+                    }
+                }
+            });
+
+            //ScrollSpy
+            jQuery(window).scroll(checkActiveSection);
+            jQuery(document).ready(checkActiveSection);
+
+            function checkActiveSection() {
+                setTimeout(enableActiveSection, 50);
+            }
+
+            function enableActiveSection() {
+                var fromTop = jQuery(window).scrollTop();
+                jQuery('.hr').each(function () {
+                    var sectionOffset = jQuery(this).offset();
+                    if (sectionOffset.top <= fromTop + 10) {
+                        valsection = $(this);
+                        jQuery('div .w3-button').addClass('w3-text-black');
+                        jQuery('div .w3-button').addClass('w3-white');
+                        jQuery('div .w3-button').removeClass('w3-text-white');
+                        jQuery('div .w3-button').removeClass('w3-deep-orange');
+                        jQuery('div .w3-button[data-id="' + jQuery(this).data('id') + '"]').removeClass('w3-text-black');
+                        jQuery('div .w3-button[data-id="' + jQuery(this).data('id') + '"]').removeClass('w3-white');
+                        jQuery('div .w3-button[data-id="' + jQuery(this).data('id') + '"]').addClass('w3-text-white');
+                        jQuery('div .w3-button[data-id="' + jQuery(this).data('id') + '"]').addClass('w3-deep-orange');
+                    }
+                });
+            }
+        </script>
+
+    </body>
+
+</html>

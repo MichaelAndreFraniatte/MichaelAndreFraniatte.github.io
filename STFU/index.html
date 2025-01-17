@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>STFU</title>
+        <meta name="description"
+            content="Capture audio sound from sound card for recording perfectly songs over internet">
+        <meta name="keywords" content="capture, audio, sound, record, card, songs">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+        
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="sc.png" alt="sc" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>STFU</h2>
+                    <h1>Spotify Tracks For You</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Easy Tool to Capture Audio from Sound Card on Spotify</b></h3>
+                        <p>
+                            The program is made for capture audio sound from sound card for recording perfectly songs
+                            over Spotify with dedicated browser. The files recorded are in MP3 format. Let's see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/stfu-main.png" alt="stfu-main" style="width:50%"
+                            onclick='img_box("../img/stfu-main.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Considerations About the Program</b></h3>
+                        <p>
+                            It stoping capture after the end of the current track, and restart before the next track, 
+                            recording each time a song in a new file. It automatically records the file with the good name, and 
+                            with tags like title and artist of song. It's the features of <a href="../rmomo">rmomo</a> and 
+                            <a href="../AlbumCapture">AlbumCapture</a> but in a better shape for record easy songs and add it directly to 
+                            <a href="../DesktopAudio">DesktopAudio</a> or <a href="../DesktopOverlay">DesktopOverlay</a>. 
+                            You just need to trigger twice the record for starting but after it trigger alone the record for each song 
+                            you listen with right flow. If the name of title is too long it need to use <a href="../rmomo">rmomo</a> to change title's tag. 
+                            You having a far better audio sound listening with the mp3 recorded. 
+                            For using program, it need a key file for authenticate locally in order to be able to start properly, 
+                            ask me to obtain this key file (it depend of your computer, not of the program).
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

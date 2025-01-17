@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+        
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+        <title>Fast Access Tab</title>
+
+        <style>
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: rgb(127, 127, 127);
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: rgb(0, 0, 0);
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: rgb(255, 255, 255);
+            }
+
+            body {
+                background-color: black;
+                margin: 0;
+                padding: 0;
+                color: white;
+                overflow-x: hidden;
+            }
+
+            #page {
+                margin: auto;
+                padding: 0%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 600px;
+                min-height: 100%;
+                background-color: black;
+            }
+
+            #promotional {
+                display: block;
+                margin-bottom: 2.5%;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 100%;
+                height: auto;
+                padding: 0;
+            }
+
+            #title {
+                display: block;
+                max-width: 100%;
+                font-size: 250%;
+                text-align: center;
+                color: grey;
+                margin: auto;
+                margin-top: 2.5%;
+            }
+
+            #subtitle {
+                display: block;
+                max-width: 100%;
+                font-size: 200%;
+                text-align: center;
+                color: white;
+                margin: auto;
+                margin-bottom: 5%;
+            }
+
+            #network {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                margin: auto;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                padding: 0;
+                text-align: center;
+            }
+
+            #network a {
+                margin: 3%;
+                font-size: 150%;
+                color: rgb(200, 200, 200);
+                text-decoration: underline;
+            }
+
+            #network a:hover {
+                cursor: pointer;
+                color: white;
+            }
+
+            #explaination, #note {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                margin: 3%;
+                padding: 0;
+                text-align: justify;
+                text-indent: 5%;
+                font-size: 110%;
+            }
+
+            #screen {
+                display: block;
+                margin-top: 7.5%;
+                margin-bottom: 7.5%;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 80%;
+                height: auto;
+                padding: 0;
+                border: solid 4px white;
+            }
+
+            #copyrights {
+                display: inline-block;
+                width: 100%;
+                height: auto;
+                margin: 2%;
+                padding: 0;
+                text-align: center;
+                font-size: 110%;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="page">
+            <img id="promotional" src="img/promotional.jpg">
+            <dv id="title">
+                Fast Access
+            </dv>
+            <div id="subtitle">
+                Get to your websites fastly!
+            </div>
+            <div id="network">
+                <a target="_blank" class="dl-link" href="https://github.com/michaelandrefraniatte">GitHub</a>
+                <a href="../FastAccess/">Doc</a>
+                <a href="https://microsoftedge.microsoft.com/addons/search/Fast%20Access%20Tab">Extension</a>
+                <a href="../Privacy/">Privacy</a>
+            </div>
+            <div id="explaination">
+                It's made to have a list of websites as startup page and new tab page. Edit it by toggle mode with
+                right click opening a menu. You can fastly access websites with boxes. You can set the websites and name
+                of the websites with easy edit. You can also drag and drop boxes, and changing background color or
+                picture, etc.
+            </div>
+            <img id="screen" src="img/fastaccess.png">
+            <div id="note">
+                To note, if you encounter issue, simply open a empty file or set to default the background. You can use
+                google drive to upload a background picture and use directly the link from copy link under google drive
+                file menu when clicking right on it and choosing share.
+            </div>
+            <div id="copyrights">
+                <p>
+                    Michael Andre Franiatte ©1999-2025
+                </p>
+            </div>
+        </div>
+
+        <script>
+
+            //External navigation
+            $('a:not(.dl-link)').click(function(event) {
+                event.preventDefault();
+                localStorage.setItem("copyrights", "accept");
+                newPage(this.href);
+            });
+
+            function newPage(newlocation) {
+                window.location = newlocation;
+            }
+        
+        </script>
+
+    </body>
+
+</html>

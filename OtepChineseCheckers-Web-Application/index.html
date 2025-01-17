@@ -1,0 +1,2300 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+
+		<title>OtepCheckers</title>
+		<meta charset="utf-8">
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Michael Andre Franiatte OtepCheckers">
+		<meta name="keywords" content="Michael Andre Franiatte, OtepCheckers">
+		<meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+		<link rel="shortcut icon" type="image/ico" href="img/pions.ico">
+
+		<script src="../custom/redirect.js"></script>
+
+		<style>
+			body {
+				background-color: royalblue;
+				padding: 0px;
+				margin: 0px;
+				overflow: hidden;
+			}
+		</style>
+
+	</head>
+
+	<body class oncontextmenu="return false;">
+
+		<img id="Checkers" src="img/chinese-checkers.png"></img>
+
+		<img id="checker-green-1" src="img/chinese-checker-green-ball.png"><img>
+		<img id="checker-green-2" src="img/chinese-checker-green-ball.png"><img>
+		<img id="checker-green-3" src="img/chinese-checker-green-ball.png"><img>
+		<img id="checker-green-4" src="img/chinese-checker-green-ball.png"><img>
+		<img id="checker-green-5" src="img/chinese-checker-green-ball.png"><img>
+		<img id="checker-green-6" src="img/chinese-checker-green-ball.png"><img>
+		<img id="checker-green-7" src="img/chinese-checker-green-ball.png"><img>
+		<img id="checker-green-8" src="img/chinese-checker-green-ball.png"><img>
+		<img id="checker-green-9" src="img/chinese-checker-green-ball.png"><img>
+		<img id="checker-green-10" src="img/chinese-checker-green-ball.png"><img>
+
+		<img id="checker-blue-1" src="img/chinese-checker-blue-ball.png"><img>
+		<img id="checker-blue-2" src="img/chinese-checker-blue-ball.png"><img>
+		<img id="checker-blue-3" src="img/chinese-checker-blue-ball.png"><img>
+		<img id="checker-blue-4" src="img/chinese-checker-blue-ball.png"><img>
+		<img id="checker-blue-5" src="img/chinese-checker-blue-ball.png"><img>
+		<img id="checker-blue-6" src="img/chinese-checker-blue-ball.png"><img>
+		<img id="checker-blue-7" src="img/chinese-checker-blue-ball.png"><img>
+		<img id="checker-blue-8" src="img/chinese-checker-blue-ball.png"><img>
+		<img id="checker-blue-9" src="img/chinese-checker-blue-ball.png"><img>
+		<img id="checker-blue-10" src="img/chinese-checker-blue-ball.png"><img>
+
+		<img id="checker-purple-1" src="img/chinese-checker-purple-ball.png"><img>
+		<img id="checker-purple-2" src="img/chinese-checker-purple-ball.png"><img>
+		<img id="checker-purple-3" src="img/chinese-checker-purple-ball.png"><img>
+		<img id="checker-purple-4" src="img/chinese-checker-purple-ball.png"><img>
+		<img id="checker-purple-5" src="img/chinese-checker-purple-ball.png"><img>
+		<img id="checker-purple-6" src="img/chinese-checker-purple-ball.png"><img>
+		<img id="checker-purple-7" src="img/chinese-checker-purple-ball.png"><img>
+		<img id="checker-purple-8" src="img/chinese-checker-purple-ball.png"><img>
+		<img id="checker-purple-9" src="img/chinese-checker-purple-ball.png"><img>
+		<img id="checker-purple-10" src="img/chinese-checker-purple-ball.png"><img>
+
+		<img id="checker-red-1" src="img/chinese-checker-red-ball.png"><img>
+		<img id="checker-red-2" src="img/chinese-checker-red-ball.png"><img>
+		<img id="checker-red-3" src="img/chinese-checker-red-ball.png"><img>
+		<img id="checker-red-4" src="img/chinese-checker-red-ball.png"><img>
+		<img id="checker-red-5" src="img/chinese-checker-red-ball.png"><img>
+		<img id="checker-red-6" src="img/chinese-checker-red-ball.png"><img>
+		<img id="checker-red-7" src="img/chinese-checker-red-ball.png"><img>
+		<img id="checker-red-8" src="img/chinese-checker-red-ball.png"><img>
+		<img id="checker-red-9" src="img/chinese-checker-red-ball.png"><img>
+		<img id="checker-red-10" src="img/chinese-checker-red-ball.png"><img>
+
+		<img id="checker-orange-1" src="img/chinese-checker-orange-ball.png"><img>
+		<img id="checker-orange-2" src="img/chinese-checker-orange-ball.png"><img>
+		<img id="checker-orange-3" src="img/chinese-checker-orange-ball.png"><img>
+		<img id="checker-orange-4" src="img/chinese-checker-orange-ball.png"><img>
+		<img id="checker-orange-5" src="img/chinese-checker-orange-ball.png"><img>
+		<img id="checker-orange-6" src="img/chinese-checker-orange-ball.png"><img>
+		<img id="checker-orange-7" src="img/chinese-checker-orange-ball.png"><img>
+		<img id="checker-orange-8" src="img/chinese-checker-orange-ball.png"><img>
+		<img id="checker-orange-9" src="img/chinese-checker-orange-ball.png"><img>
+		<img id="checker-orange-10" src="img/chinese-checker-orange-ball.png"><img>
+
+		<img id="checker-yellow-1" src="img/chinese-checker-yellow-ball.png"><img>
+		<img id="checker-yellow-2" src="img/chinese-checker-yellow-ball.png"><img>
+		<img id="checker-yellow-3" src="img/chinese-checker-yellow-ball.png"><img>
+		<img id="checker-yellow-4" src="img/chinese-checker-yellow-ball.png"><img>
+		<img id="checker-yellow-5" src="img/chinese-checker-yellow-ball.png"><img>
+		<img id="checker-yellow-6" src="img/chinese-checker-yellow-ball.png"><img>
+		<img id="checker-yellow-7" src="img/chinese-checker-yellow-ball.png"><img>
+		<img id="checker-yellow-8" src="img/chinese-checker-yellow-ball.png"><img>
+		<img id="checker-yellow-9" src="img/chinese-checker-yellow-ball.png"><img>
+		<img id="checker-yellow-10" src="img/chinese-checker-yellow-ball.png"><img>
+
+		<copyrights
+			style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: white; text-align: center; font-family: sans-serif; font-size: 15px; line-height:15px;">
+			<b>© MAF</b></copyrights>
+
+		<script type="text/javascript">
+
+			var win = window,
+				doc = document,
+				docElem = doc.documentElement,
+				body = doc.getElementsByTagName('body')[0],
+				x = win.innerWidth || docElem.clientWidth || body.clientWidth,
+				y = win.innerHeight || docElem.clientHeight || body.clientHeight;
+
+			var sizex = x;
+			var sizey = y;
+			var posx = '';
+			var posy = '';
+			var mousex = '';
+			var mousey = '';
+			var key = '';
+			var click = '';
+			var rightclick = false;
+			var leftclick = false;
+			var spacekey = false;
+
+			function mouse_position(e) {
+				mousex = e.clientX;
+				mousey = e.clientY;
+				posx = mousex / sizex;
+				posy = mousey / sizey;
+				console.log("posx: " + posx + ", posy: " + posy);
+			}
+
+			onmousemove = function (e) { mouse_position(e) };
+
+			function key_code_down(e) {
+				key = e.keyCode || e.which;
+				if (key == 32) {
+					console.log("space bar pressed");
+					spacekey = true;
+				}
+			}
+
+			onkeydown = function (e) { key_code_down(e) };
+
+			function key_code_up(e) {
+				key = e.keyCode || e.which;
+				if (key == 32) {
+					console.log("space bar released");
+					spacekey = false;
+				}
+			}
+
+			onkeyup = function (e) { key_code_up(e) };
+
+			function mouse_code_down(e) {
+				click = e.keyCode || e.which;
+				if (click == 1) {
+					console.log("click left pressed");
+					leftclick = true;
+				}
+				if (click == 3) {
+					console.log("click right pressed");
+					rightclick = true;
+				}
+			}
+
+			onmousedown = function (e) { mouse_code_down(e) };
+
+			function mouse_code_up(e) {
+				click = e.keyCode || e.which;
+				if (click == 1) {
+					console.log("click left released");
+					leftclick = false;
+				}
+				if (click == 3) {
+					console.log("click right released");
+					rightclick = false;
+				}
+			}
+
+			onmouseup = function (e) { mouse_code_up(e) };
+
+			var checkersx = 1366;
+			var checkersy = 768;
+			var checkersposx = (sizex - checkersx) / 2;
+			var checkersposy = (sizey - checkersy) / 2;
+			var checkers = document.getElementById('Checkers');
+			checkers.style.position = "absolute";
+			checkers.style.left = checkersposx + 'px';
+			checkers.style.top = checkersposy + 'px';
+
+			var checkerx = 39;
+			var checkery = 39;
+			var checkerposx = checkersposx - checkerx / 2;
+			var checkerposy = checkersposy - checkery / 2;
+
+			var checker_green_1 = document.getElementById('checker-green-1');
+
+			checker_green_1.style.width = checkerx + 'px';
+			checker_green_1.style.height = checkery + 'px';
+			checker_green_1.style.position = "absolute";
+			checker_green_1.style.left = checkerposx + 682 + 'px';
+			checker_green_1.style.top = checkerposy + 65 + 'px';
+
+			checker_green_1.addEventListener("click", clickGreen1);
+
+			var movinggreen1 = true;
+			var checkedgreen1 = true;
+
+			function clickGreen1(e) {
+				if (movinggreen1) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_green_1 & elements[n] != checkers) {
+							elements[n].after(checker_green_1);
+						}
+					}
+					checker_green_1.addEventListener('mousemove', moveGreen1);
+					movinggreen1 = false;
+				}
+				else {
+					checker_green_1.removeEventListener('mousemove', moveGreen1);
+					movinggreen1 = true;
+				}
+			}
+
+			function moveGreen1(e) {
+				checker_green_1.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_green_1.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_green_2 = document.getElementById('checker-green-2');
+
+			checker_green_2.style.width = checkerx + 'px';
+			checker_green_2.style.height = checkery + 'px';
+			checker_green_2.style.position = "absolute";
+			checker_green_2.style.left = checkerposx + 660 + 'px';
+			checker_green_2.style.top = checkerposy + 105 + 'px';
+
+			checker_green_2.addEventListener("click", clickGreen2);
+
+			var movinggreen2 = true;
+			var checkedgreen2 = true;
+
+			function clickGreen2(e) {
+				if (movinggreen2) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_green_2 & elements[n] != checkers) {
+							elements[n].after(checker_green_2);
+						}
+					}
+					checker_green_2.addEventListener('mousemove', moveGreen2);
+					movinggreen2 = false;
+				}
+				else {
+					checker_green_2.removeEventListener('mousemove', moveGreen2);
+					movinggreen2 = true;
+				}
+			}
+
+			function moveGreen2(e) {
+				checker_green_2.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_green_2.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_green_3 = document.getElementById('checker-green-3');
+
+			checker_green_3.style.width = checkerx + 'px';
+			checker_green_3.style.height = checkery + 'px';
+			checker_green_3.style.position = "absolute";
+			checker_green_3.style.left = checkerposx + 705 + 'px';
+			checker_green_3.style.top = checkerposy + 105 + 'px';
+
+			checker_green_3.addEventListener("click", clickGreen3);
+
+			var movinggreen3 = true;
+			var checkedgreen3 = true;
+
+			function clickGreen3(e) {
+				if (movinggreen3) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_green_3 & elements[n] != checkers) {
+							elements[n].after(checker_green_3);
+						}
+					}
+					checker_green_3.addEventListener('mousemove', moveGreen3);
+					movinggreen3 = false;
+				}
+				else {
+					checker_green_3.removeEventListener('mousemove', moveGreen3);
+					movinggreen3 = true;
+				}
+			}
+
+			function moveGreen3(e) {
+				checker_green_3.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_green_3.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_green_4 = document.getElementById('checker-green-4');
+
+			checker_green_4.style.width = checkerx + 'px';
+			checker_green_4.style.height = checkery + 'px';
+			checker_green_4.style.position = "absolute";
+			checker_green_4.style.left = checkerposx + 637 + 'px';
+			checker_green_4.style.top = checkerposy + 145 + 'px';
+
+			checker_green_4.addEventListener("click", clickGreen4);
+
+			var movinggreen4 = true;
+			var checkedgreen4 = true;
+
+			function clickGreen4(e) {
+				if (movinggreen4) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_green_4 & elements[n] != checkers) {
+							elements[n].after(checker_green_4);
+						}
+					}
+					checker_green_4.addEventListener('mousemove', moveGreen4);
+					movinggreen4 = false;
+				}
+				else {
+					checker_green_4.removeEventListener('mousemove', moveGreen4);
+					movinggreen4 = true;
+				}
+			}
+
+			function moveGreen4(e) {
+				checker_green_4.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_green_4.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_green_5 = document.getElementById('checker-green-5');
+
+			checker_green_5.style.width = checkerx + 'px';
+			checker_green_5.style.height = checkery + 'px';
+			checker_green_5.style.position = "absolute";
+			checker_green_5.style.left = checkerposx + 682 + 'px';
+			checker_green_5.style.top = checkerposy + 145 + 'px';
+
+			checker_green_5.addEventListener("click", clickGreen5);
+
+			var movinggreen5 = true;
+			var checkedgreen5 = true;
+
+			function clickGreen5(e) {
+				if (movinggreen5) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_green_5 & elements[n] != checkers) {
+							elements[n].after(checker_green_5);
+						}
+					}
+					checker_green_5.addEventListener('mousemove', moveGreen5);
+					movinggreen5 = false;
+				}
+				else {
+					checker_green_5.removeEventListener('mousemove', moveGreen5);
+					movinggreen5 = true;
+				}
+			}
+
+			function moveGreen5(e) {
+				checker_green_5.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_green_5.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_green_6 = document.getElementById('checker-green-6');
+
+			checker_green_6.style.width = checkerx + 'px';
+			checker_green_6.style.height = checkery + 'px';
+			checker_green_6.style.position = "absolute";
+			checker_green_6.style.left = checkerposx + 728 + 'px';
+			checker_green_6.style.top = checkerposy + 145 + 'px';
+
+			checker_green_6.addEventListener("click", clickGreen6);
+
+			var movinggreen6 = true;
+			var checkedgreen6 = true;
+
+			function clickGreen6(e) {
+				if (movinggreen6) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_green_6 & elements[n] != checkers) {
+							elements[n].after(checker_green_6);
+						}
+					}
+					checker_green_6.addEventListener('mousemove', moveGreen6);
+					movinggreen6 = false;
+				}
+				else {
+					checker_green_6.removeEventListener('mousemove', moveGreen6);
+					movinggreen6 = true;
+				}
+			}
+
+			function moveGreen6(e) {
+				checker_green_6.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_green_6.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_green_7 = document.getElementById('checker-green-7');
+
+			checker_green_7.style.width = checkerx + 'px';
+			checker_green_7.style.height = checkery + 'px';
+			checker_green_7.style.position = "absolute";
+			checker_green_7.style.left = checkerposx + 614 + 'px';
+			checker_green_7.style.top = checkerposy + 186 + 'px';
+
+			checker_green_7.addEventListener("click", clickGreen7);
+
+			var movinggreen7 = true;
+			var checkedgreen7 = true;
+
+			function clickGreen7(e) {
+				if (movinggreen7) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_green_7 & elements[n] != checkers) {
+							elements[n].after(checker_green_7);
+						}
+					}
+					checker_green_7.addEventListener('mousemove', moveGreen7);
+					movinggreen7 = false;
+				}
+				else {
+					checker_green_7.removeEventListener('mousemove', moveGreen7);
+					movinggreen7 = true;
+				}
+			}
+
+			function moveGreen7(e) {
+				checker_green_7.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_green_7.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_green_8 = document.getElementById('checker-green-8');
+
+			checker_green_8.style.width = checkerx + 'px';
+			checker_green_8.style.height = checkery + 'px';
+			checker_green_8.style.position = "absolute";
+			checker_green_8.style.left = checkerposx + 660 + 'px';
+			checker_green_8.style.top = checkerposy + 186 + 'px';
+
+			checker_green_8.addEventListener("click", clickGreen8);
+
+			var movinggreen8 = true;
+			var checkedgreen8 = true;
+
+			function clickGreen8(e) {
+				if (movinggreen8) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_green_8 & elements[n] != checkers) {
+							elements[n].after(checker_green_8);
+						}
+					}
+					checker_green_8.addEventListener('mousemove', moveGreen8);
+					movinggreen8 = false;
+				}
+				else {
+					checker_green_8.removeEventListener('mousemove', moveGreen8);
+					movinggreen8 = true;
+				}
+			}
+
+			function moveGreen8(e) {
+				checker_green_8.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_green_8.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_green_9 = document.getElementById('checker-green-9');
+
+			checker_green_9.style.width = checkerx + 'px';
+			checker_green_9.style.height = checkery + 'px';
+			checker_green_9.style.position = "absolute";
+			checker_green_9.style.left = checkerposx + 705 + 'px';
+			checker_green_9.style.top = checkerposy + 186 + 'px';
+
+			checker_green_9.addEventListener("click", clickGreen9);
+
+			var movinggreen9 = true;
+			var checkedgreen9 = true;
+
+			function clickGreen9(e) {
+				if (movinggreen9) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_green_9 & elements[n] != checkers) {
+							elements[n].after(checker_green_9);
+						}
+					}
+					checker_green_9.addEventListener('mousemove', moveGreen9);
+					movinggreen9 = false;
+				}
+				else {
+					checker_green_9.removeEventListener('mousemove', moveGreen9);
+					movinggreen9 = true;
+				}
+			}
+
+			function moveGreen9(e) {
+				checker_green_9.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_green_9.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_green_10 = document.getElementById('checker-green-10');
+
+			checker_green_10.style.width = checkerx + 'px';
+			checker_green_10.style.height = checkery + 'px';
+			checker_green_10.style.position = "absolute";
+			checker_green_10.style.left = checkerposx + 751 + 'px';
+			checker_green_10.style.top = checkerposy + 186 + 'px';
+
+			checker_green_10.addEventListener("click", clickGreen10);
+
+			var movinggreen10 = true;
+			var checkedgreen10 = true;
+
+			function clickGreen10(e) {
+				if (movinggreen10) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_green_10 & elements[n] != checkers) {
+							elements[n].after(checker_green_10);
+						}
+					}
+					checker_green_10.addEventListener('mousemove', moveGreen10);
+					movinggreen10 = false;
+				}
+				else {
+					checker_green_10.removeEventListener('mousemove', moveGreen10);
+					movinggreen10 = true;
+				}
+			}
+
+			function moveGreen10(e) {
+				checker_green_10.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_green_10.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_blue_1 = document.getElementById('checker-blue-1');
+
+			checker_blue_1.style.width = checkerx + 'px';
+			checker_blue_1.style.height = checkery + 'px';
+			checker_blue_1.style.position = "absolute";
+			checker_blue_1.style.left = checkerposx + 408 + 'px';
+			checker_blue_1.style.top = checkerposy + 226 + 'px';
+
+			checker_blue_1.addEventListener("click", clickblue1);
+
+			var movingblue1 = true;
+			var checkedblue1 = true;
+
+			function clickblue1(e) {
+				if (movingblue1) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_blue_1 & elements[n] != checkers) {
+							elements[n].after(checker_blue_1);
+						}
+					}
+					checker_blue_1.addEventListener('mousemove', moveblue1);
+					movingblue1 = false;
+				}
+				else {
+					checker_blue_1.removeEventListener('mousemove', moveblue1);
+					movingblue1 = true;
+				}
+			}
+
+			function moveblue1(e) {
+				checker_blue_1.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_blue_1.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_blue_2 = document.getElementById('checker-blue-2');
+
+			checker_blue_2.style.width = checkerx + 'px';
+			checker_blue_2.style.height = checkery + 'px';
+			checker_blue_2.style.position = "absolute";
+			checker_blue_2.style.left = checkerposx + 454 + 'px';
+			checker_blue_2.style.top = checkerposy + 226 + 'px';
+
+			checker_blue_2.addEventListener("click", clickblue2);
+
+			var movingblue2 = true;
+			var checkedblue2 = true;
+
+			function clickblue2(e) {
+				if (movingblue2) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_blue_2 & elements[n] != checkers) {
+							elements[n].after(checker_blue_2);
+						}
+					}
+					checker_blue_2.addEventListener('mousemove', moveblue2);
+					movingblue2 = false;
+				}
+				else {
+					checker_blue_2.removeEventListener('mousemove', moveblue2);
+					movingblue2 = true;
+				}
+			}
+
+			function moveblue2(e) {
+				checker_blue_2.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_blue_2.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_blue_3 = document.getElementById('checker-blue-3');
+
+			checker_blue_3.style.width = checkerx + 'px';
+			checker_blue_3.style.height = checkery + 'px';
+			checker_blue_3.style.position = "absolute";
+			checker_blue_3.style.left = checkerposx + 499 + 'px';
+			checker_blue_3.style.top = checkerposy + 226 + 'px';
+
+			checker_blue_3.addEventListener("click", clickblue3);
+
+			var movingblue3 = true;
+			var checkedblue3 = true;
+
+			function clickblue3(e) {
+				if (movingblue3) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_blue_3 & elements[n] != checkers) {
+							elements[n].after(checker_blue_3);
+						}
+					}
+					checker_blue_3.addEventListener('mousemove', moveblue3);
+					movingblue3 = false;
+				}
+				else {
+					checker_blue_3.removeEventListener('mousemove', moveblue3);
+					movingblue3 = true;
+				}
+			}
+
+			function moveblue3(e) {
+				checker_blue_3.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_blue_3.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_blue_4 = document.getElementById('checker-blue-4');
+
+			checker_blue_4.style.width = checkerx + 'px';
+			checker_blue_4.style.height = checkery + 'px';
+			checker_blue_4.style.position = "absolute";
+			checker_blue_4.style.left = checkerposx + 545 + 'px';
+			checker_blue_4.style.top = checkerposy + 226 + 'px';
+
+			checker_blue_4.addEventListener("click", clickblue4);
+
+			var movingblue4 = true;
+			var checkedblue4 = true;
+
+			function clickblue4(e) {
+				if (movingblue4) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_blue_4 & elements[n] != checkers) {
+							elements[n].after(checker_blue_4);
+						}
+					}
+					checker_blue_4.addEventListener('mousemove', moveblue4);
+					movingblue4 = false;
+				}
+				else {
+					checker_blue_4.removeEventListener('mousemove', moveblue4);
+					movingblue4 = true;
+				}
+			}
+
+			function moveblue4(e) {
+				checker_blue_4.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_blue_4.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_blue_5 = document.getElementById('checker-blue-5');
+
+			checker_blue_5.style.width = checkerx + 'px';
+			checker_blue_5.style.height = checkery + 'px';
+			checker_blue_5.style.position = "absolute";
+			checker_blue_5.style.left = checkerposx + 431 + 'px';
+			checker_blue_5.style.top = checkerposy + 266 + 'px';
+
+			checker_blue_5.addEventListener("click", clickblue5);
+
+			var movingblue5 = true;
+			var checkedblue5 = true;
+
+			function clickblue5(e) {
+				if (movingblue5) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_blue_5 & elements[n] != checkers) {
+							elements[n].after(checker_blue_5);
+						}
+					}
+					checker_blue_5.addEventListener('mousemove', moveblue5);
+					movingblue5 = false;
+				}
+				else {
+					checker_blue_5.removeEventListener('mousemove', moveblue5);
+					movingblue5 = true;
+				}
+			}
+
+			function moveblue5(e) {
+				checker_blue_5.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_blue_5.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_blue_6 = document.getElementById('checker-blue-6');
+
+			checker_blue_6.style.width = checkerx + 'px';
+			checker_blue_6.style.height = checkery + 'px';
+			checker_blue_6.style.position = "absolute";
+			checker_blue_6.style.left = checkerposx + 477 + 'px';
+			checker_blue_6.style.top = checkerposy + 266 + 'px';
+
+			checker_blue_6.addEventListener("click", clickblue6);
+
+			var movingblue6 = true;
+			var checkedblue6 = true;
+
+			function clickblue6(e) {
+				if (movingblue6) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_blue_6 & elements[n] != checkers) {
+							elements[n].after(checker_blue_6);
+						}
+					}
+					checker_blue_6.addEventListener('mousemove', moveblue6);
+					movingblue6 = false;
+				}
+				else {
+					checker_blue_6.removeEventListener('mousemove', moveblue6);
+					movingblue6 = true;
+				}
+			}
+
+			function moveblue6(e) {
+				checker_blue_6.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_blue_6.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_blue_7 = document.getElementById('checker-blue-7');
+
+			checker_blue_7.style.width = checkerx + 'px';
+			checker_blue_7.style.height = checkery + 'px';
+			checker_blue_7.style.position = "absolute";
+			checker_blue_7.style.left = checkerposx + 522 + 'px';
+			checker_blue_7.style.top = checkerposy + 266 + 'px';
+
+			checker_blue_7.addEventListener("click", clickblue7);
+
+			var movingblue7 = true;
+			var checkedblue7 = true;
+
+			function clickblue7(e) {
+				if (movingblue7) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_blue_7 & elements[n] != checkers) {
+							elements[n].after(checker_blue_7);
+						}
+					}
+					checker_blue_7.addEventListener('mousemove', moveblue7);
+					movingblue7 = false;
+				}
+				else {
+					checker_blue_7.removeEventListener('mousemove', moveblue7);
+					movingblue7 = true;
+				}
+			}
+
+			function moveblue7(e) {
+				checker_blue_7.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_blue_7.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_blue_8 = document.getElementById('checker-blue-8');
+
+			checker_blue_8.style.width = checkerx + 'px';
+			checker_blue_8.style.height = checkery + 'px';
+			checker_blue_8.style.position = "absolute";
+			checker_blue_8.style.left = checkerposx + 454 + 'px';
+			checker_blue_8.style.top = checkerposy + 306 + 'px';
+
+			checker_blue_8.addEventListener("click", clickblue8);
+
+			var movingblue8 = true;
+			var checkedblue8 = true;
+
+			function clickblue8(e) {
+				if (movingblue8) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_blue_8 & elements[n] != checkers) {
+							elements[n].after(checker_blue_8);
+						}
+					}
+					checker_blue_8.addEventListener('mousemove', moveblue8);
+					movingblue8 = false;
+				}
+				else {
+					checker_blue_8.removeEventListener('mousemove', moveblue8);
+					movingblue8 = true;
+				}
+			}
+
+			function moveblue8(e) {
+				checker_blue_8.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_blue_8.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_blue_9 = document.getElementById('checker-blue-9');
+
+			checker_blue_9.style.width = checkerx + 'px';
+			checker_blue_9.style.height = checkery + 'px';
+			checker_blue_9.style.position = "absolute";
+			checker_blue_9.style.left = checkerposx + 499 + 'px';
+			checker_blue_9.style.top = checkerposy + 306 + 'px';
+
+			checker_blue_9.addEventListener("click", clickblue9);
+
+			var movingblue9 = true;
+			var checkedblue9 = true;
+
+			function clickblue9(e) {
+				if (movingblue9) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_blue_9 & elements[n] != checkers) {
+							elements[n].after(checker_blue_9);
+						}
+					}
+					checker_blue_9.addEventListener('mousemove', moveblue9);
+					movingblue9 = false;
+				}
+				else {
+					checker_blue_9.removeEventListener('mousemove', moveblue9);
+					movingblue9 = true;
+				}
+			}
+
+			function moveblue9(e) {
+				checker_blue_9.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_blue_9.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_blue_10 = document.getElementById('checker-blue-10');
+
+			checker_blue_10.style.width = checkerx + 'px';
+			checker_blue_10.style.height = checkery + 'px';
+			checker_blue_10.style.position = "absolute";
+			checker_blue_10.style.left = checkerposx + 477 + 'px';
+			checker_blue_10.style.top = checkerposy + 346 + 'px';
+
+			checker_blue_10.addEventListener("click", clickblue10);
+
+			var movingblue10 = true;
+			var checkedblue10 = true;
+
+			function clickblue10(e) {
+				if (movingblue10) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_blue_10 & elements[n] != checkers) {
+							elements[n].after(checker_blue_10);
+						}
+					}
+					checker_blue_10.addEventListener('mousemove', moveblue10);
+					movingblue10 = false;
+				}
+				else {
+					checker_blue_10.removeEventListener('mousemove', moveblue10);
+					movingblue10 = true;
+				}
+			}
+
+			function moveblue10(e) {
+				checker_blue_10.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_blue_10.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_purple_1 = document.getElementById('checker-purple-1');
+
+			checker_purple_1.style.width = checkerx + 'px';
+			checker_purple_1.style.height = checkery + 'px';
+			checker_purple_1.style.position = "absolute";
+			checker_purple_1.style.left = checkerposx + 477 + 'px';
+			checker_purple_1.style.top = checkerposy + 426 + 'px';
+
+			checker_purple_1.addEventListener("click", clickpurple1);
+
+			var movingpurple1 = true;
+			var checkedpurple1 = true;
+
+			function clickpurple1(e) {
+				if (movingpurple1) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_purple_1 & elements[n] != checkers) {
+							elements[n].after(checker_purple_1);
+						}
+					}
+					checker_purple_1.addEventListener('mousemove', movepurple1);
+					movingpurple1 = false;
+				}
+				else {
+					checker_purple_1.removeEventListener('mousemove', movepurple1);
+					movingpurple1 = true;
+				}
+			}
+
+			function movepurple1(e) {
+				checker_purple_1.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_purple_1.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_purple_2 = document.getElementById('checker-purple-2');
+
+			checker_purple_2.style.width = checkerx + 'px';
+			checker_purple_2.style.height = checkery + 'px';
+			checker_purple_2.style.position = "absolute";
+			checker_purple_2.style.left = checkerposx + 454 + 'px';
+			checker_purple_2.style.top = checkerposy + 467 + 'px';
+
+			checker_purple_2.addEventListener("click", clickpurple2);
+
+			var movingpurple2 = true;
+			var checkedpurple2 = true;
+
+			function clickpurple2(e) {
+				if (movingpurple2) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_purple_2 & elements[n] != checkers) {
+							elements[n].after(checker_purple_2);
+						}
+					}
+					checker_purple_2.addEventListener('mousemove', movepurple2);
+					movingpurple2 = false;
+				}
+				else {
+					checker_purple_2.removeEventListener('mousemove', movepurple2);
+					movingpurple2 = true;
+				}
+			}
+
+			function movepurple2(e) {
+				checker_purple_2.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_purple_2.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_purple_3 = document.getElementById('checker-purple-3');
+
+			checker_purple_3.style.width = checkerx + 'px';
+			checker_purple_3.style.height = checkery + 'px';
+			checker_purple_3.style.position = "absolute";
+			checker_purple_3.style.left = checkerposx + 500 + 'px';
+			checker_purple_3.style.top = checkerposy + 467 + 'px';
+
+			checker_purple_3.addEventListener("click", clickpurple3);
+
+			var movingpurple3 = true;
+			var checkedpurple3 = true;
+
+			function clickpurple3(e) {
+				if (movingpurple3) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_purple_3 & elements[n] != checkers) {
+							elements[n].after(checker_purple_3);
+						}
+					}
+					checker_purple_3.addEventListener('mousemove', movepurple3);
+					movingpurple3 = false;
+				}
+				else {
+					checker_purple_3.removeEventListener('mousemove', movepurple3);
+					movingpurple3 = true;
+				}
+			}
+
+			function movepurple3(e) {
+				checker_purple_3.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_purple_3.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_purple_4 = document.getElementById('checker-purple-4');
+
+			checker_purple_4.style.width = checkerx + 'px';
+			checker_purple_4.style.height = checkery + 'px';
+			checker_purple_4.style.position = "absolute";
+			checker_purple_4.style.left = checkerposx + 432 + 'px';
+			checker_purple_4.style.top = checkerposy + 507 + 'px';
+
+			checker_purple_4.addEventListener("click", clickpurple4);
+
+			var movingpurple4 = true;
+			var checkedpurple4 = true;
+
+			function clickpurple4(e) {
+				if (movingpurple4) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_purple_4 & elements[n] != checkers) {
+							elements[n].after(checker_purple_4);
+						}
+					}
+					checker_purple_4.addEventListener('mousemove', movepurple4);
+					movingpurple4 = false;
+				}
+				else {
+					checker_purple_4.removeEventListener('mousemove', movepurple4);
+					movingpurple4 = true;
+				}
+			}
+
+			function movepurple4(e) {
+				checker_purple_4.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_purple_4.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_purple_5 = document.getElementById('checker-purple-5');
+
+			checker_purple_5.style.width = checkerx + 'px';
+			checker_purple_5.style.height = checkery + 'px';
+			checker_purple_5.style.position = "absolute";
+			checker_purple_5.style.left = checkerposx + 477 + 'px';
+			checker_purple_5.style.top = checkerposy + 507 + 'px';
+
+			checker_purple_5.addEventListener("click", clickpurple5);
+
+			var movingpurple5 = true;
+			var checkedpurple5 = true;
+
+			function clickpurple5(e) {
+				if (movingpurple5) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_purple_5 & elements[n] != checkers) {
+							elements[n].after(checker_purple_5);
+						}
+					}
+					checker_purple_5.addEventListener('mousemove', movepurple5);
+					movingpurple5 = false;
+				}
+				else {
+					checker_purple_5.removeEventListener('mousemove', movepurple5);
+					movingpurple5 = true;
+				}
+			}
+
+			function movepurple5(e) {
+				checker_purple_5.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_purple_5.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_purple_6 = document.getElementById('checker-purple-6');
+
+			checker_purple_6.style.width = checkerx + 'px';
+			checker_purple_6.style.height = checkery + 'px';
+			checker_purple_6.style.position = "absolute";
+			checker_purple_6.style.left = checkerposx + 523 + 'px';
+			checker_purple_6.style.top = checkerposy + 507 + 'px';
+
+			checker_purple_6.addEventListener("click", clickpurple6);
+
+			var movingpurple6 = true;
+			var checkedpurple6 = true;
+
+			function clickpurple6(e) {
+				if (movingpurple6) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_purple_6 & elements[n] != checkers) {
+							elements[n].after(checker_purple_6);
+						}
+					}
+					checker_purple_6.addEventListener('mousemove', movepurple6);
+					movingpurple6 = false;
+				}
+				else {
+					checker_purple_6.removeEventListener('mousemove', movepurple6);
+					movingpurple6 = true;
+				}
+			}
+
+			function movepurple6(e) {
+				checker_purple_6.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_purple_6.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_purple_7 = document.getElementById('checker-purple-7');
+
+			checker_purple_7.style.width = checkerx + 'px';
+			checker_purple_7.style.height = checkery + 'px';
+			checker_purple_7.style.position = "absolute";
+			checker_purple_7.style.left = checkerposx + 409 + 'px';
+			checker_purple_7.style.top = checkerposy + 547 + 'px';
+
+			checker_purple_7.addEventListener("click", clickpurple7);
+
+			var movingpurple7 = true;
+			var checkedpurple7 = true;
+
+			function clickpurple7(e) {
+				if (movingpurple7) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_purple_7 & elements[n] != checkers) {
+							elements[n].after(checker_purple_7);
+						}
+					}
+					checker_purple_7.addEventListener('mousemove', movepurple7);
+					movingpurple7 = false;
+				}
+				else {
+					checker_purple_7.removeEventListener('mousemove', movepurple7);
+					movingpurple7 = true;
+				}
+			}
+
+			function movepurple7(e) {
+				checker_purple_7.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_purple_7.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_purple_8 = document.getElementById('checker-purple-8');
+
+			checker_purple_8.style.width = checkerx + 'px';
+			checker_purple_8.style.height = checkery + 'px';
+			checker_purple_8.style.position = "absolute";
+			checker_purple_8.style.left = checkerposx + 455 + 'px';
+			checker_purple_8.style.top = checkerposy + 547 + 'px';
+
+			checker_purple_8.addEventListener("click", clickpurple8);
+
+			var movingpurple8 = true;
+			var checkedpurple8 = true;
+
+			function clickpurple8(e) {
+				if (movingpurple8) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_purple_8 & elements[n] != checkers) {
+							elements[n].after(checker_purple_8);
+						}
+					}
+					checker_purple_8.addEventListener('mousemove', movepurple8);
+					movingpurple8 = false;
+				}
+				else {
+					checker_purple_8.removeEventListener('mousemove', movepurple8);
+					movingpurple8 = true;
+				}
+			}
+
+			function movepurple8(e) {
+				checker_purple_8.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_purple_8.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_purple_9 = document.getElementById('checker-purple-9');
+
+			checker_purple_9.style.width = checkerx + 'px';
+			checker_purple_9.style.height = checkery + 'px';
+			checker_purple_9.style.position = "absolute";
+			checker_purple_9.style.left = checkerposx + 500 + 'px';
+			checker_purple_9.style.top = checkerposy + 547 + 'px';
+
+			checker_purple_9.addEventListener("click", clickpurple9);
+
+			var movingpurple9 = true;
+			var checkedpurple9 = true;
+
+			function clickpurple9(e) {
+				if (movingpurple9) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_purple_9 & elements[n] != checkers) {
+							elements[n].after(checker_purple_9);
+						}
+					}
+					checker_purple_9.addEventListener('mousemove', movepurple9);
+					movingpurple9 = false;
+				}
+				else {
+					checker_purple_9.removeEventListener('mousemove', movepurple9);
+					movingpurple9 = true;
+				}
+			}
+
+			function movepurple9(e) {
+				checker_purple_9.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_purple_9.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_purple_10 = document.getElementById('checker-purple-10');
+
+			checker_purple_10.style.width = checkerx + 'px';
+			checker_purple_10.style.height = checkery + 'px';
+			checker_purple_10.style.position = "absolute";
+			checker_purple_10.style.left = checkerposx + 546 + 'px';
+			checker_purple_10.style.top = checkerposy + 547 + 'px';
+
+			checker_purple_10.addEventListener("click", clickpurple10);
+
+			var movingpurple10 = true;
+			var checkedpurple10 = true;
+
+			function clickpurple10(e) {
+				if (movingpurple10) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_purple_10 & elements[n] != checkers) {
+							elements[n].after(checker_purple_10);
+						}
+					}
+					checker_purple_10.addEventListener('mousemove', movepurple10);
+					movingpurple10 = false;
+				}
+				else {
+					checker_purple_10.removeEventListener('mousemove', movepurple10);
+					movingpurple10 = true;
+				}
+			}
+
+			function movepurple10(e) {
+				checker_purple_10.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_purple_10.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_red_1 = document.getElementById('checker-red-1');
+
+			checker_red_1.style.width = checkerx + 'px';
+			checker_red_1.style.height = checkery + 'px';
+			checker_red_1.style.position = "absolute";
+			checker_red_1.style.left = checkerposx + 615 + 'px';
+			checker_red_1.style.top = checkerposy + 587 + 'px';
+
+			checker_red_1.addEventListener("click", clickred1);
+
+			var movingred1 = true;
+			var checkedred1 = true;
+
+			function clickred1(e) {
+				if (movingred1) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_red_1 & elements[n] != checkers) {
+							elements[n].after(checker_red_1);
+						}
+					}
+					checker_red_1.addEventListener('mousemove', movered1);
+					movingred1 = false;
+				}
+				else {
+					checker_red_1.removeEventListener('mousemove', movered1);
+					movingred1 = true;
+				}
+			}
+
+			function movered1(e) {
+				checker_red_1.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_red_1.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_red_2 = document.getElementById('checker-red-2');
+
+			checker_red_2.style.width = checkerx + 'px';
+			checker_red_2.style.height = checkery + 'px';
+			checker_red_2.style.position = "absolute";
+			checker_red_2.style.left = checkerposx + 661 + 'px';
+			checker_red_2.style.top = checkerposy + 587 + 'px';
+
+			checker_red_2.addEventListener("click", clickred2);
+
+			var movingred2 = true;
+			var checkedred2 = true;
+
+			function clickred2(e) {
+				if (movingred2) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_red_2 & elements[n] != checkers) {
+							elements[n].after(checker_red_2);
+						}
+					}
+					checker_red_2.addEventListener('mousemove', movered2);
+					movingred2 = false;
+				}
+				else {
+					checker_red_2.removeEventListener('mousemove', movered2);
+					movingred2 = true;
+				}
+			}
+
+			function movered2(e) {
+				checker_red_2.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_red_2.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_red_3 = document.getElementById('checker-red-3');
+
+			checker_red_3.style.width = checkerx + 'px';
+			checker_red_3.style.height = checkery + 'px';
+			checker_red_3.style.position = "absolute";
+			checker_red_3.style.left = checkerposx + 707 + 'px';
+			checker_red_3.style.top = checkerposy + 587 + 'px';
+
+			checker_red_3.addEventListener("click", clickred3);
+
+			var movingred3 = true;
+			var checkedred3 = true;
+
+			function clickred3(e) {
+				if (movingred3) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_red_3 & elements[n] != checkers) {
+							elements[n].after(checker_red_3);
+						}
+					}
+					checker_red_3.addEventListener('mousemove', movered3);
+					movingred3 = false;
+				}
+				else {
+					checker_red_3.removeEventListener('mousemove', movered3);
+					movingred3 = true;
+				}
+			}
+
+			function movered3(e) {
+				checker_red_3.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_red_3.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_red_4 = document.getElementById('checker-red-4');
+
+			checker_red_4.style.width = checkerx + 'px';
+			checker_red_4.style.height = checkery + 'px';
+			checker_red_4.style.position = "absolute";
+			checker_red_4.style.left = checkerposx + 752 + 'px';
+			checker_red_4.style.top = checkerposy + 587 + 'px';
+
+			checker_red_4.addEventListener("click", clickred4);
+
+			var movingred4 = true;
+			var checkedred4 = true;
+
+			function clickred4(e) {
+				if (movingred4) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_red_4 & elements[n] != checkers) {
+							elements[n].after(checker_red_4);
+						}
+					}
+					checker_red_4.addEventListener('mousemove', movered4);
+					movingred4 = false;
+				}
+				else {
+					checker_red_4.removeEventListener('mousemove', movered4);
+					movingred4 = true;
+				}
+			}
+
+			function movered4(e) {
+				checker_red_4.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_red_4.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_red_5 = document.getElementById('checker-red-5');
+
+			checker_red_5.style.width = checkerx + 'px';
+			checker_red_5.style.height = checkery + 'px';
+			checker_red_5.style.position = "absolute";
+			checker_red_5.style.left = checkerposx + 638 + 'px';
+			checker_red_5.style.top = checkerposy + 628 + 'px';
+
+			checker_red_5.addEventListener("click", clickred5);
+
+			var movingred5 = true;
+			var checkedred5 = true;
+
+			function clickred5(e) {
+				if (movingred5) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_red_5 & elements[n] != checkers) {
+							elements[n].after(checker_red_5);
+						}
+					}
+					checker_red_5.addEventListener('mousemove', movered5);
+					movingred5 = false;
+				}
+				else {
+					checker_red_5.removeEventListener('mousemove', movered5);
+					movingred5 = true;
+				}
+			}
+
+			function movered5(e) {
+				checker_red_5.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_red_5.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_red_6 = document.getElementById('checker-red-6');
+
+			checker_red_6.style.width = checkerx + 'px';
+			checker_red_6.style.height = checkery + 'px';
+			checker_red_6.style.position = "absolute";
+			checker_red_6.style.left = checkerposx + 684 + 'px';
+			checker_red_6.style.top = checkerposy + 628 + 'px';
+
+			checker_red_6.addEventListener("click", clickred6);
+
+			var movingred6 = true;
+			var checkedred6 = true;
+
+			function clickred6(e) {
+				if (movingred6) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_red_6 & elements[n] != checkers) {
+							elements[n].after(checker_red_6);
+						}
+					}
+					checker_red_6.addEventListener('mousemove', movered6);
+					movingred6 = false;
+				}
+				else {
+					checker_red_6.removeEventListener('mousemove', movered6);
+					movingred6 = true;
+				}
+			}
+
+			function movered6(e) {
+				checker_red_6.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_red_6.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_red_7 = document.getElementById('checker-red-7');
+
+			checker_red_7.style.width = checkerx + 'px';
+			checker_red_7.style.height = checkery + 'px';
+			checker_red_7.style.position = "absolute";
+			checker_red_7.style.left = checkerposx + 730 + 'px';
+			checker_red_7.style.top = checkerposy + 628 + 'px';
+
+			checker_red_7.addEventListener("click", clickred7);
+
+			var movingred7 = true;
+			var checkedred7 = true;
+
+			function clickred7(e) {
+				if (movingred7) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_red_7 & elements[n] != checkers) {
+							elements[n].after(checker_red_7);
+						}
+					}
+					checker_red_7.addEventListener('mousemove', movered7);
+					movingred7 = false;
+				}
+				else {
+					checker_red_7.removeEventListener('mousemove', movered7);
+					movingred7 = true;
+				}
+			}
+
+			function movered7(e) {
+				checker_red_7.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_red_7.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_red_8 = document.getElementById('checker-red-8');
+
+			checker_red_8.style.width = checkerx + 'px';
+			checker_red_8.style.height = checkery + 'px';
+			checker_red_8.style.position = "absolute";
+			checker_red_8.style.left = checkerposx + 661 + 'px';
+			checker_red_8.style.top = checkerposy + 668 + 'px';
+
+			checker_red_8.addEventListener("click", clickred8);
+
+			var movingred8 = true;
+			var checkedred8 = true;
+
+			function clickred8(e) {
+				if (movingred8) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_red_8 & elements[n] != checkers) {
+							elements[n].after(checker_red_8);
+						}
+					}
+					checker_red_8.addEventListener('mousemove', movered8);
+					movingred8 = false;
+				}
+				else {
+					checker_red_8.removeEventListener('mousemove', movered8);
+					movingred8 = true;
+				}
+			}
+
+			function movered8(e) {
+				checker_red_8.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_red_8.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_red_9 = document.getElementById('checker-red-9');
+
+			checker_red_9.style.width = checkerx + 'px';
+			checker_red_9.style.height = checkery + 'px';
+			checker_red_9.style.position = "absolute";
+			checker_red_9.style.left = checkerposx + 707 + 'px';
+			checker_red_9.style.top = checkerposy + 668 + 'px';
+
+			checker_red_9.addEventListener("click", clickred9);
+
+			var movingred9 = true;
+			var checkedred9 = true;
+
+			function clickred9(e) {
+				if (movingred9) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_red_9 & elements[n] != checkers) {
+							elements[n].after(checker_red_9);
+						}
+					}
+					checker_red_9.addEventListener('mousemove', movered9);
+					movingred9 = false;
+				}
+				else {
+					checker_red_9.removeEventListener('mousemove', movered9);
+					movingred9 = true;
+				}
+			}
+
+			function movered9(e) {
+				checker_red_9.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_red_9.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_red_10 = document.getElementById('checker-red-10');
+
+			checker_red_10.style.width = checkerx + 'px';
+			checker_red_10.style.height = checkery + 'px';
+			checker_red_10.style.position = "absolute";
+			checker_red_10.style.left = checkerposx + 684 + 'px';
+			checker_red_10.style.top = checkerposy + 708 + 'px';
+
+			checker_red_10.addEventListener("click", clickred10);
+
+			var movingred10 = true;
+			var checkedred10 = true;
+
+			function clickred10(e) {
+				if (movingred10) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_red_10 & elements[n] != checkers) {
+							elements[n].after(checker_red_10);
+						}
+					}
+					checker_red_10.addEventListener('mousemove', movered10);
+					movingred10 = false;
+				}
+				else {
+					checker_red_10.removeEventListener('mousemove', movered10);
+					movingred10 = true;
+				}
+			}
+
+			function movered10(e) {
+				checker_red_10.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_red_10.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_orange_1 = document.getElementById('checker-orange-1');
+
+			checker_orange_1.style.width = checkerx + 'px';
+			checker_orange_1.style.height = checkery + 'px';
+			checker_orange_1.style.position = "absolute";
+			checker_orange_1.style.left = checkerposx + 888 + 'px';
+			checker_orange_1.style.top = checkerposy + 426 + 'px';
+
+			checker_orange_1.addEventListener("click", clickorange1);
+
+			var movingorange1 = true;
+			var checkedorange1 = true;
+
+			function clickorange1(e) {
+				if (movingorange1) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_orange_1 & elements[n] != checkers) {
+							elements[n].after(checker_orange_1);
+						}
+					}
+					checker_orange_1.addEventListener('mousemove', moveorange1);
+					movingorange1 = false;
+				}
+				else {
+					checker_orange_1.removeEventListener('mousemove', moveorange1);
+					movingorange1 = true;
+				}
+			}
+
+			function moveorange1(e) {
+				checker_orange_1.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_orange_1.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_orange_2 = document.getElementById('checker-orange-2');
+
+			checker_orange_2.style.width = checkerx + 'px';
+			checker_orange_2.style.height = checkery + 'px';
+			checker_orange_2.style.position = "absolute";
+			checker_orange_2.style.left = checkerposx + 866 + 'px';
+			checker_orange_2.style.top = checkerposy + 466 + 'px';
+
+			checker_orange_2.addEventListener("click", clickorange2);
+
+			var movingorange2 = true;
+			var checkedorange2 = true;
+
+			function clickorange2(e) {
+				if (movingorange2) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_orange_2 & elements[n] != checkers) {
+							elements[n].after(checker_orange_2);
+						}
+					}
+					checker_orange_2.addEventListener('mousemove', moveorange2);
+					movingorange2 = false;
+				}
+				else {
+					checker_orange_2.removeEventListener('mousemove', moveorange2);
+					movingorange2 = true;
+				}
+			}
+
+			function moveorange2(e) {
+				checker_orange_2.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_orange_2.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_orange_3 = document.getElementById('checker-orange-3');
+
+			checker_orange_3.style.width = checkerx + 'px';
+			checker_orange_3.style.height = checkery + 'px';
+			checker_orange_3.style.position = "absolute";
+			checker_orange_3.style.left = checkerposx + 912 + 'px';
+			checker_orange_3.style.top = checkerposy + 466 + 'px';
+
+			checker_orange_3.addEventListener("click", clickorange3);
+
+			var movingorange3 = true;
+			var checkedorange3 = true;
+
+			function clickorange3(e) {
+				if (movingorange3) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_orange_3 & elements[n] != checkers) {
+							elements[n].after(checker_orange_3);
+						}
+					}
+					checker_orange_3.addEventListener('mousemove', moveorange3);
+					movingorange3 = false;
+				}
+				else {
+					checker_orange_3.removeEventListener('mousemove', moveorange3);
+					movingorange3 = true;
+				}
+			}
+
+			function moveorange3(e) {
+				checker_orange_3.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_orange_3.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_orange_4 = document.getElementById('checker-orange-4');
+
+			checker_orange_4.style.width = checkerx + 'px';
+			checker_orange_4.style.height = checkery + 'px';
+			checker_orange_4.style.position = "absolute";
+			checker_orange_4.style.left = checkerposx + 844 + 'px';
+			checker_orange_4.style.top = checkerposy + 507 + 'px';
+
+			checker_orange_4.addEventListener("click", clickorange4);
+
+			var movingorange4 = true;
+			var checkedorange4 = true;
+
+			function clickorange4(e) {
+				if (movingorange4) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_orange_4 & elements[n] != checkers) {
+							elements[n].after(checker_orange_4);
+						}
+					}
+					checker_orange_4.addEventListener('mousemove', moveorange4);
+					movingorange4 = false;
+				}
+				else {
+					checker_orange_4.removeEventListener('mousemove', moveorange4);
+					movingorange4 = true;
+				}
+			}
+
+			function moveorange4(e) {
+				checker_orange_4.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_orange_4.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_orange_5 = document.getElementById('checker-orange-5');
+
+			checker_orange_5.style.width = checkerx + 'px';
+			checker_orange_5.style.height = checkery + 'px';
+			checker_orange_5.style.position = "absolute";
+			checker_orange_5.style.left = checkerposx + 890 + 'px';
+			checker_orange_5.style.top = checkerposy + 507 + 'px';
+
+			checker_orange_5.addEventListener("click", clickorange5);
+
+			var movingorange5 = true;
+			var checkedorange5 = true;
+
+			function clickorange5(e) {
+				if (movingorange5) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_orange_5 & elements[n] != checkers) {
+							elements[n].after(checker_orange_5);
+						}
+					}
+					checker_orange_5.addEventListener('mousemove', moveorange5);
+					movingorange5 = false;
+				}
+				else {
+					checker_orange_5.removeEventListener('mousemove', moveorange5);
+					movingorange5 = true;
+				}
+			}
+
+			function moveorange5(e) {
+				checker_orange_5.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_orange_5.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_orange_6 = document.getElementById('checker-orange-6');
+
+			checker_orange_6.style.width = checkerx + 'px';
+			checker_orange_6.style.height = checkery + 'px';
+			checker_orange_6.style.position = "absolute";
+			checker_orange_6.style.left = checkerposx + 936 + 'px';
+			checker_orange_6.style.top = checkerposy + 507 + 'px';
+
+			checker_orange_6.addEventListener("click", clickorange6);
+
+			var movingorange6 = true;
+			var checkedorange6 = true;
+
+			function clickorange6(e) {
+				if (movingorange6) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_orange_6 & elements[n] != checkers) {
+							elements[n].after(checker_orange_6);
+						}
+					}
+					checker_orange_6.addEventListener('mousemove', moveorange6);
+					movingorange6 = false;
+				}
+				else {
+					checker_orange_6.removeEventListener('mousemove', moveorange6);
+					movingorange6 = true;
+				}
+			}
+
+			function moveorange6(e) {
+				checker_orange_6.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_orange_6.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_orange_7 = document.getElementById('checker-orange-7');
+
+			checker_orange_7.style.width = checkerx + 'px';
+			checker_orange_7.style.height = checkery + 'px';
+			checker_orange_7.style.position = "absolute";
+			checker_orange_7.style.left = checkerposx + 821 + 'px';
+			checker_orange_7.style.top = checkerposy + 547 + 'px';
+
+			checker_orange_7.addEventListener("click", clickorange7);
+
+			var movingorange7 = true;
+			var checkedorange7 = true;
+
+			function clickorange7(e) {
+				if (movingorange7) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_orange_7 & elements[n] != checkers) {
+							elements[n].after(checker_orange_7);
+						}
+					}
+					checker_orange_7.addEventListener('mousemove', moveorange7);
+					movingorange7 = false;
+				}
+				else {
+					checker_orange_7.removeEventListener('mousemove', moveorange7);
+					movingorange7 = true;
+				}
+			}
+
+			function moveorange7(e) {
+				checker_orange_7.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_orange_7.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_orange_8 = document.getElementById('checker-orange-8');
+
+			checker_orange_8.style.width = checkerx + 'px';
+			checker_orange_8.style.height = checkery + 'px';
+			checker_orange_8.style.position = "absolute";
+			checker_orange_8.style.left = checkerposx + 867 + 'px';
+			checker_orange_8.style.top = checkerposy + 547 + 'px';
+
+			checker_orange_8.addEventListener("click", clickorange8);
+
+			var movingorange8 = true;
+			var checkedorange8 = true;
+
+			function clickorange8(e) {
+				if (movingorange8) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_orange_8 & elements[n] != checkers) {
+							elements[n].after(checker_orange_8);
+						}
+					}
+					checker_orange_8.addEventListener('mousemove', moveorange8);
+					movingorange8 = false;
+				}
+				else {
+					checker_orange_8.removeEventListener('mousemove', moveorange8);
+					movingorange8 = true;
+				}
+			}
+
+			function moveorange8(e) {
+				checker_orange_8.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_orange_8.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_orange_9 = document.getElementById('checker-orange-9');
+
+			checker_orange_9.style.width = checkerx + 'px';
+			checker_orange_9.style.height = checkery + 'px';
+			checker_orange_9.style.position = "absolute";
+			checker_orange_9.style.left = checkerposx + 912 + 'px';
+			checker_orange_9.style.top = checkerposy + 547 + 'px';
+
+			checker_orange_9.addEventListener("click", clickorange9);
+
+			var movingorange9 = true;
+			var checkedorange9 = true;
+
+			function clickorange9(e) {
+				if (movingorange9) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_orange_9 & elements[n] != checkers) {
+							elements[n].after(checker_orange_9);
+						}
+					}
+					checker_orange_9.addEventListener('mousemove', moveorange9);
+					movingorange9 = false;
+				}
+				else {
+					checker_orange_9.removeEventListener('mousemove', moveorange9);
+					movingorange9 = true;
+				}
+			}
+
+			function moveorange9(e) {
+				checker_orange_9.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_orange_9.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_orange_10 = document.getElementById('checker-orange-10');
+
+			checker_orange_10.style.width = checkerx + 'px';
+			checker_orange_10.style.height = checkery + 'px';
+			checker_orange_10.style.position = "absolute";
+			checker_orange_10.style.left = checkerposx + 957 + 'px';
+			checker_orange_10.style.top = checkerposy + 547 + 'px';
+
+			checker_orange_10.addEventListener("click", clickorange10);
+
+			var movingorange10 = true;
+			var checkedorange10 = true;
+
+			function clickorange10(e) {
+				if (movingorange10) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_orange_10 & elements[n] != checkers) {
+							elements[n].after(checker_orange_10);
+						}
+					}
+					checker_orange_10.addEventListener('mousemove', moveorange10);
+					movingorange10 = false;
+				}
+				else {
+					checker_orange_10.removeEventListener('mousemove', moveorange10);
+					movingorange10 = true;
+				}
+			}
+
+			function moveorange10(e) {
+				checker_orange_10.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_orange_10.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_yellow_1 = document.getElementById('checker-yellow-1');
+
+			checker_yellow_1.style.width = checkerx + 'px';
+			checker_yellow_1.style.height = checkery + 'px';
+			checker_yellow_1.style.position = "absolute";
+			checker_yellow_1.style.left = checkerposx + 821 + 'px';
+			checker_yellow_1.style.top = checkerposy + 226 + 'px';
+
+			checker_yellow_1.addEventListener("click", clickyellow1);
+
+			var movingyellow1 = true;
+			var checkedyellow1 = true;
+
+			function clickyellow1(e) {
+				if (movingyellow1) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_yellow_1 & elements[n] != checkers) {
+							elements[n].after(checker_yellow_1);
+						}
+					}
+					checker_yellow_1.addEventListener('mousemove', moveyellow1);
+					movingyellow1 = false;
+				}
+				else {
+					checker_yellow_1.removeEventListener('mousemove', moveyellow1);
+					movingyellow1 = true;
+				}
+			}
+
+			function moveyellow1(e) {
+				checker_yellow_1.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_yellow_1.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_yellow_2 = document.getElementById('checker-yellow-2');
+
+			checker_yellow_2.style.width = checkerx + 'px';
+			checker_yellow_2.style.height = checkery + 'px';
+			checker_yellow_2.style.position = "absolute";
+			checker_yellow_2.style.left = checkerposx + 866 + 'px';
+			checker_yellow_2.style.top = checkerposy + 226 + 'px';
+
+			checker_yellow_2.addEventListener("click", clickyellow2);
+
+			var movingyellow2 = true;
+			var checkedyellow2 = true;
+
+			function clickyellow2(e) {
+				if (movingyellow2) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_yellow_2 & elements[n] != checkers) {
+							elements[n].after(checker_yellow_2);
+						}
+					}
+					checker_yellow_2.addEventListener('mousemove', moveyellow2);
+					movingyellow2 = false;
+				}
+				else {
+					checker_yellow_2.removeEventListener('mousemove', moveyellow2);
+					movingyellow2 = true;
+				}
+			}
+
+			function moveyellow2(e) {
+				checker_yellow_2.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_yellow_2.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_yellow_3 = document.getElementById('checker-yellow-3');
+
+			checker_yellow_3.style.width = checkerx + 'px';
+			checker_yellow_3.style.height = checkery + 'px';
+			checker_yellow_3.style.position = "absolute";
+			checker_yellow_3.style.left = checkerposx + 912 + 'px';
+			checker_yellow_3.style.top = checkerposy + 226 + 'px';
+
+			checker_yellow_3.addEventListener("click", clickyellow3);
+
+			var movingyellow3 = true;
+			var checkedyellow3 = true;
+
+			function clickyellow3(e) {
+				if (movingyellow3) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_yellow_3 & elements[n] != checkers) {
+							elements[n].after(checker_yellow_3);
+						}
+					}
+					checker_yellow_3.addEventListener('mousemove', moveyellow3);
+					movingyellow3 = false;
+				}
+				else {
+					checker_yellow_3.removeEventListener('mousemove', moveyellow3);
+					movingyellow3 = true;
+				}
+			}
+
+			function moveyellow3(e) {
+				checker_yellow_3.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_yellow_3.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_yellow_4 = document.getElementById('checker-yellow-4');
+
+			checker_yellow_4.style.width = checkerx + 'px';
+			checker_yellow_4.style.height = checkery + 'px';
+			checker_yellow_4.style.position = "absolute";
+			checker_yellow_4.style.left = checkerposx + 958 + 'px';
+			checker_yellow_4.style.top = checkerposy + 226 + 'px';
+
+			checker_yellow_4.addEventListener("click", clickyellow4);
+
+			var movingyellow4 = true;
+			var checkedyellow4 = true;
+
+			function clickyellow4(e) {
+				if (movingyellow4) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_yellow_4 & elements[n] != checkers) {
+							elements[n].after(checker_yellow_4);
+						}
+					}
+					checker_yellow_4.addEventListener('mousemove', moveyellow4);
+					movingyellow4 = false;
+				}
+				else {
+					checker_yellow_4.removeEventListener('mousemove', moveyellow4);
+					movingyellow4 = true;
+				}
+			}
+
+			function moveyellow4(e) {
+				checker_yellow_4.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_yellow_4.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_yellow_5 = document.getElementById('checker-yellow-5');
+
+			checker_yellow_5.style.width = checkerx + 'px';
+			checker_yellow_5.style.height = checkery + 'px';
+			checker_yellow_5.style.position = "absolute";
+			checker_yellow_5.style.left = checkerposx + 843 + 'px';
+			checker_yellow_5.style.top = checkerposy + 266 + 'px';
+
+			checker_yellow_5.addEventListener("click", clickyellow5);
+
+			var movingyellow5 = true;
+			var checkedyellow5 = true;
+
+			function clickyellow5(e) {
+				if (movingyellow5) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_yellow_5 & elements[n] != checkers) {
+							elements[n].after(checker_yellow_5);
+						}
+					}
+					checker_yellow_5.addEventListener('mousemove', moveyellow5);
+					movingyellow5 = false;
+				}
+				else {
+					checker_yellow_5.removeEventListener('mousemove', moveyellow5);
+					movingyellow5 = true;
+				}
+			}
+
+			function moveyellow5(e) {
+				checker_yellow_5.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_yellow_5.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_yellow_6 = document.getElementById('checker-yellow-6');
+
+			checker_yellow_6.style.width = checkerx + 'px';
+			checker_yellow_6.style.height = checkery + 'px';
+			checker_yellow_6.style.position = "absolute";
+			checker_yellow_6.style.left = checkerposx + 889 + 'px';
+			checker_yellow_6.style.top = checkerposy + 266 + 'px';
+
+			checker_yellow_6.addEventListener("click", clickyellow6);
+
+			var movingyellow6 = true;
+			var checkedyellow6 = true;
+
+			function clickyellow6(e) {
+				if (movingyellow6) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_yellow_6 & elements[n] != checkers) {
+							elements[n].after(checker_yellow_6);
+						}
+					}
+					checker_yellow_6.addEventListener('mousemove', moveyellow6);
+					movingyellow6 = false;
+				}
+				else {
+					checker_yellow_6.removeEventListener('mousemove', moveyellow6);
+					movingyellow6 = true;
+				}
+			}
+
+			function moveyellow6(e) {
+				checker_yellow_6.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_yellow_6.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_yellow_7 = document.getElementById('checker-yellow-7');
+
+			checker_yellow_7.style.width = checkerx + 'px';
+			checker_yellow_7.style.height = checkery + 'px';
+			checker_yellow_7.style.position = "absolute";
+			checker_yellow_7.style.left = checkerposx + 935 + 'px';
+			checker_yellow_7.style.top = checkerposy + 266 + 'px';
+
+			checker_yellow_7.addEventListener("click", clickyellow7);
+
+			var movingyellow7 = true;
+			var checkedyellow7 = true;
+
+			function clickyellow7(e) {
+				if (movingyellow7) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_yellow_7 & elements[n] != checkers) {
+							elements[n].after(checker_yellow_7);
+						}
+					}
+					checker_yellow_7.addEventListener('mousemove', moveyellow7);
+					movingyellow7 = false;
+				}
+				else {
+					checker_yellow_7.removeEventListener('mousemove', moveyellow7);
+					movingyellow7 = true;
+				}
+			}
+
+			function moveyellow7(e) {
+				checker_yellow_7.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_yellow_7.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_yellow_8 = document.getElementById('checker-yellow-8');
+
+			checker_yellow_8.style.width = checkerx + 'px';
+			checker_yellow_8.style.height = checkery + 'px';
+			checker_yellow_8.style.position = "absolute";
+			checker_yellow_8.style.left = checkerposx + 866 + 'px';
+			checker_yellow_8.style.top = checkerposy + 307 + 'px';
+
+			checker_yellow_8.addEventListener("click", clickyellow8);
+
+			var movingyellow8 = true;
+			var checkedyellow8 = true;
+
+			function clickyellow8(e) {
+				if (movingyellow8) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_yellow_8 & elements[n] != checkers) {
+							elements[n].after(checker_yellow_8);
+						}
+					}
+					checker_yellow_8.addEventListener('mousemove', moveyellow8);
+					movingyellow8 = false;
+				}
+				else {
+					checker_yellow_8.removeEventListener('mousemove', moveyellow8);
+					movingyellow8 = true;
+				}
+			}
+
+			function moveyellow8(e) {
+				checker_yellow_8.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_yellow_8.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_yellow_9 = document.getElementById('checker-yellow-9');
+
+			checker_yellow_9.style.width = checkerx + 'px';
+			checker_yellow_9.style.height = checkery + 'px';
+			checker_yellow_9.style.position = "absolute";
+			checker_yellow_9.style.left = checkerposx + 912 + 'px';
+			checker_yellow_9.style.top = checkerposy + 307 + 'px';
+
+			checker_yellow_9.addEventListener("click", clickyellow9);
+
+			var movingyellow9 = true;
+			var checkedyellow9 = true;
+
+			function clickyellow9(e) {
+				if (movingyellow9) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_yellow_9 & elements[n] != checkers) {
+							elements[n].after(checker_yellow_9);
+						}
+					}
+					checker_yellow_9.addEventListener('mousemove', moveyellow9);
+					movingyellow9 = false;
+				}
+				else {
+					checker_yellow_9.removeEventListener('mousemove', moveyellow9);
+					movingyellow9 = true;
+				}
+			}
+
+			function moveyellow9(e) {
+				checker_yellow_9.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_yellow_9.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+			var checker_yellow_10 = document.getElementById('checker-yellow-10');
+
+			checker_yellow_10.style.width = checkerx + 'px';
+			checker_yellow_10.style.height = checkery + 'px';
+			checker_yellow_10.style.position = "absolute";
+			checker_yellow_10.style.left = checkerposx + 890 + 'px';
+			checker_yellow_10.style.top = checkerposy + 347 + 'px';
+
+			checker_yellow_10.addEventListener("click", clickyellow10);
+
+			var movingyellow10 = true;
+			var checkedyellow10 = true;
+
+			function clickyellow10(e) {
+				if (movingyellow10) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != checker_yellow_10 & elements[n] != checkers) {
+							elements[n].after(checker_yellow_10);
+						}
+					}
+					checker_yellow_10.addEventListener('mousemove', moveyellow10);
+					movingyellow10 = false;
+				}
+				else {
+					checker_yellow_10.removeEventListener('mousemove', moveyellow10);
+					movingyellow10 = true;
+				}
+			}
+
+			function moveyellow10(e) {
+				checker_yellow_10.style.left = e.clientX - checkerx / 2 + 'px';
+				checker_yellow_10.style.top = e.clientY - checkery / 2 + 'px';
+			}
+
+		</script>
+
+	</body>
+
+</html>

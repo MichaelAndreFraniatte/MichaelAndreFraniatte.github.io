@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GameplayCapture</title>
+        <meta name="description" content="Capturing video of sound, game, microphone, webcam, desktop">
+        <meta name="keywords" content="capture, video, sound, game, microphone, webcam, desktop">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+        
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="gc.png" alt="wv" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>GameplayCapture</h2>
+                    <h1>Capture Your Gameplay</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>An Optimized Recorder for Your Gameplays</b></h3>
+                        <p>
+                            The program capture video and audio of your desktop and is optimized for gameplay capture.
+                            The numpad key decimal (.) is used to start the capture, the numpad key 0 is used to stop
+                            it. Let's see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/gameplaycapture-main.png" alt="gameplaycapture-main" style="width:30%"
+                            onclick='img_box("../img/gameplaycapture-main.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Considerations About the Program</b></h3>
+                        <p>
+                            It's easy to use. It's better to use GeForce Experience if you have a Nvidia card for
+                            recording desktop. In this case, lower to minimum the audio quality from audio card
+                            settings, to not have unsynchronisation of audio and video.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Creating Contents on Youtube</b></h3>
+                        <ul>
+                            <li>Prefer to record or stream with GeforceExperience and show your contents on Youtube.
+                            </li>
+                            <li>If you want streaming or recording, it's better to use GeForce Experience if you have a
+                                Nvidia card, in this case, lower to minimum the audio quality from audio card settings,
+                                to not have unsynchronisation of audio and video, and disable all audio cards useless.
+                            </li>
+                            <li>GeForce experience with latest driver for Nvidia graphic card is a must have for
+                                streaming and recording.</li>
+                            <li>If you have a fiber internet conncetion, you can stream with all highest settings
+                                (1080p, 60 or 30 fps, 18 Mb/s) on Youtube.</li>
+                            <li>If you don't have a good internet connection you can record games and desktop with
+                                higher quality and upload on Youtube.</li>
+                            <li>You just need a webcam with integrated microphone you connect via USB and start your PC,
+                                use predefined shortcuts.</li>
+                            <li>Enable desktop capture under confidentiality parameter in order to have some custom
+                                overlays.</li>
+                            <li>Set your game in windowed borderless mode for better quality of video and audio enabling
+                                desktop capture.</li>
+                            <li>Set audio quality to 16 bits 44100 Hz under audio settings for your audio cards,
+                                lowering audio quality decrease use of bandwidth.</li>
+                            <li>The audio level for your audio card recorded ingame shall be set to 100, you just have
+                                to adjust your level of earing with your screen or helmet.</li>
+                            <li>It's simplest way and more optimized way than using OBS or Twitch Studio, you can find
+                                nice overlays to integrate as standalone programs, and it's more important to be
+                                concentrate on the content and the gameplay than fight with OBS or Twitch Studio.</li>
+                            <li>Prefer to use Geforce Experience for record and stream videos instead of ffmpeg, because
+                                with bad settings it destroy a little your PC.</li>
+                            <li>Capturing with GeForce Experience for uploading on Youtube need to set parameters.</li>
+                            <li>Game with best graphisms and highest resolution of your game screen, while not encounter
+                                lags, or better choosing native resolution but upscaling after capture with ffmpeg.</li>
+                            <li>720p, 30 FPS, 15 Mbits/s, or 1440p, 30 FPS, 30 MBits/s, or 4k, 30 FPS, 50 Mbits/s, with
+                                in game resolution, in video settings of Geforce.</li>
+                            <li>Allow capturing desktop if using webcam and if using WebcamOverlay in confidentiality
+                                settings of Geforce, but resolution of video will be the resolution of your monitor
+                                screen.</li>
+                            <li>Disable game capture in Windows settings and restart your computer.</li>
+                            <li>To embed a video in Html5 video tag instead of using Youtube iframe, I advice you to
+                                rezise video with bitrate using cmd command "ffmpeg -i input.mp4 -b:v 6M output.mp4",
+                                because video tag aren't compressing video like Youtube is doing and so low connexion
+                                can't watch your video.</li>
+                            <li>It's made for avoid loss of video quality while uploading on Youtube, and not having low
+                                resolution badly compressed by Youtube, so you can use the cmd command "ffmpeg -i
+                                input.mp4 -vf scale=3840:2160:flags=neighbor -b:v 15M output.mp4" for transforming to 4k
+                                your video before uploading on Youtube, but you must recalculate the resolution ratio to
+                                fit original resolution ratio of your video, with a cruce product.</li>
+                            <li>With ffmpeg you can paste several videos one after the others:</li>
+                            - Make input.txt containing the following<br />
+                            file 'input1.mp4'<br />
+                            file 'input2.mp4'<br />
+                            file 'input3.mp4'<br />
+                            - Concatenate<br />
+                            ffmpeg -f concat -i input.txt -c copy output.mp4<br />
+                            <li>With ffmpeg you can crop in time a video without the need of an encoder useless for this
+                                purpose:</li>
+                            ffmpeg -ss 00:01:00 -to 00:02:00 -i input.mp4 -c copy output.mp4<br />
+                            <li>With GeForceExperience, you need to allow Windows firewall rules, like with the
+                                configuration I made for Steam, but only for traffic in TCP, it don't need any traffic
+                                in UDP.</li>
+                            <li>To open the GeForceExperience gaming overlay after changing audio settings or connecting
+                                a microphone or a camera, you need to restart your computer.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

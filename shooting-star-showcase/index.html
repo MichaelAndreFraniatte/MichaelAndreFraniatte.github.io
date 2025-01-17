@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+        <title>Shooting star by michael franiatte</title>
+
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+        <style>
+            body,
+            html {
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                font-variant-numeric: tabular-nums lining-nums;
+                background-color: black;
+            }
+
+            @keyframes move-clouds {
+                0% {
+                    background-position-x: 0px;
+                }
+
+                100% {
+                    background-position-x: -1985px;
+                }
+            }
+
+            .clouds {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url(img/clouds.png);
+                animation: move-clouds 120s linear infinite;
+            }
+
+            :root {
+                --star-color-A: white;
+                --star-color-B: transparent;
+                --star-shadow-color-A: rgba(255, 255, 255, 0.5);
+                --star-shadow-color-B: transparent;
+            }
+
+            .circle {
+                position: absolute;
+                background-color: var(--star-color-A);
+                border-radius: 50%;
+                animation-duration: 40s;
+                animation-iteration-count: infinite;
+                box-shadow: 0px 0px 1px 1px var(--star-shadow-color-A);
+            }
+
+            .sky div:not(.sky) {
+                animation: animate-opacity 20s linear;
+            }
+
+            @keyframes animate-opacity {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            .blink_1 {
+                animation-name: blink10;
+            }
+
+            .blink_2 {
+                animation-name: blink20;
+            }
+
+            .blink_3 {
+                animation-name: blink30;
+            }
+
+            .blink_4 {
+                animation-name: blink40;
+            }
+
+            .blink_5 {
+                animation-name: blink50;
+            }
+
+            @keyframes blink10 {
+
+                0%,
+                100% {
+                    background-color: var(--star-color-A);
+                    box-shadow: 0px 0px 1px 1px var(--star-shadow-color-A);
+                }
+
+                20% {
+                    background-color: var(--star-color-B);
+                    box-shadow: 0px 0px 1px 1px var(--star-shadow-color-B);
+                }
+            }
+
+            @keyframes blink20 {
+
+                0%,
+                100% {
+                    background-color: var(--star-color-B);
+                    box-shadow: 0px 0px 1px 1px var(--star-shadow-color-B);
+                }
+
+                40% {
+                    background-color: var(--star-color-A);
+                    box-shadow: 0px 0px 1px 1px var(--star-shadow-color-A);
+                }
+            }
+
+            @keyframes blink50 {
+
+                0%,
+                100% {
+                    background-color: var(--star-color-A);
+                    box-shadow: 0px 0px 1px 1px var(--star-shadow-color-A);
+                }
+
+                50% {
+                    background-color: var(--star-color-B);
+                    box-shadow: 0px 0px 1px 1px var(--star-shadow-color-B);
+                }
+            }
+
+            @keyframes blink30 {
+
+                0%,
+                100% {
+                    background-color: var(--star-color-A);
+                    box-shadow: 0px 0px 1px 1px var(--star-shadow-color-A);
+                }
+
+                60% {
+                    background-color: var(--star-color-B);
+                    box-shadow: 0px 0px 1px 1px var(--star-shadow-color-B);
+                }
+            }
+
+            @keyframes blink40 {
+
+                0%,
+                100% {
+                    background-color: var(--star-color-B);
+                    box-shadow: 0px 0px 1px 1px var(--star-shadow-color-B);
+                }
+
+                80% {
+                    background-color: var(--star-color-A);
+                    box-shadow: 0px 0px 1px 1px var(--star-shadow-color-A);
+                }
+            }
+
+            @keyframes animate-shooting {
+                0% {
+                    top: var(--rand-top);
+                    left: var(--rand-left);
+                    transform: rotate(var(--rand-degre)) translateX(0);
+                    opacity: 1;
+                }
+
+                6% {
+                    transform: rotate(var(--rand-degre)) translateX(var(--rand-translate));
+                    opacity: 0;
+                    rotate: 285deg;
+                }
+            }
+
+            .shooting {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+            }
+
+            span::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 300px;
+                height: 1px;
+                background: linear-gradient(90deg, #fff, transparent);
+            }
+
+            span {
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background: #fff;
+                border-radius: 50%;
+                box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.1);
+                animation-delay: 10s;
+                animation: animate-shooting 30s linear infinite;
+                --rand-degre: 285deg;
+                --rand-translate: -600px;
+                --rand-top: 0;
+                --rand-left: 0;
+                top: var(--rand-top);
+                left: var(--rand-left);
+                opacity: 0;
+                rotate: 285deg;
+            }
+        </style>
+
+    </head>
+
+    <body class>
+
+        <div class="sky"></div>
+        <div class="shooting">
+            <span id="star"></span>
+        </div>
+        <div class="clouds"></div>
+
+        <copyrights
+            style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: white; text-align: center; font-family: sans-serif; font-size: 15px; line-height:15px;">
+            <b>© MAF</b>
+        </copyrights>
+
+        <script>
+
+            let sky = document.querySelector('.sky');
+            let stars = 100;
+            let size = 3;
+            const box = sky.getBoundingClientRect();
+            const xCenter = (box.left + box.right) / 2;
+            const yCenter = (box.top + box.bottom) / 2;
+
+            paintStars(stars, size);
+
+            function paintStars(stars, size) {
+                for (let i = 0; i < stars; i++) {
+                    createDiv(size);
+                }
+            }
+
+            function random(range, unit) {
+                let randNum = Math.floor(Math.random() * range) + 1;
+                return `${randNum}${unit}`;
+            }
+
+            function createDiv(size) {
+                let circle = document.createElement('div');
+                circle.classList.add('circle');
+                let randRange5 = Math.floor(Math.random() * 5) + 1;
+                circle.classList.add(`blink_${randRange5}`);
+                let widthAndHeight = random(size, 'px');
+                circle.style.height = circle.style.width = widthAndHeight;
+                circle.style.left = random(window.innerWidth, 'px');
+                circle.style.top = random(window.innerHeight, 'px');
+                sky.appendChild(circle);
+            }
+
+        </script>
+
+        <script>
+            let startag = document.getElementById('star');
+            
+            setTimeout(() => {
+                setShootingRandom();
+                setInterval(setShootingRandom, 30000);
+            }, 15000);
+
+            function setShootingRandom() {
+                var degre = randomIntFromInterval(180, 360);
+                startag.style.setProperty('--rand-degre', degre + 'deg');
+                if (degre >= 270) {
+                    startag.style.setProperty('--rand-left', randomIntFromInterval(20, 100) + '%');
+                }
+                else {
+                    startag.style.setProperty('--rand-left', randomIntFromInterval(0, 80) + '%');
+                }
+                startag.style.setProperty('--rand-translate', -randomIntFromInterval(500, 700) + 'px');
+                startag.style.setProperty('--rand-top', randomIntFromInterval(0, 50) + '%');
+            }
+
+            function randomIntFromInterval(min, max) {
+                return Math.floor(Math.random() * (max - min + 1) + min);
+            }
+        </script>
+
+    </body>
+
+</html>

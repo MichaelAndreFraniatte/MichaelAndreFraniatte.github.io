@@ -1,0 +1,34 @@
+body {
+    font-family: sans-serif;
+    background-color: #222222;
+    color: #FFFFFF;
+    overflow-y: hidden;
+}
+
+.row > .col-lg-4,
+.col-6 {
+    padding: 0;
+}
+
+#onair {
+    position: absolute;
+    background-color: #9147FF;
+    outline: none;
+    border-radius: 100%;
+    border: none;
+    width: 15px;
+    height: 15px;
+    left: 20px;
+    top: 20px;
+}
+
+.folderopen {
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.icon-upload > input {
+    display: none;
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+Sitemap: https://michaelandrefraniatte.github.io/sitemap.xml

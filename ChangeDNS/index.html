@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ChangeDNS</title>
+        <meta name="description" content="Programs to change DNS address">
+        <meta name="keywords" content="network, change, dns, address">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+        
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="fp.png" alt="fp" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>ChangeDNS</h2>
+                    <h1>Changing Server DNS Address</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Against DNS Attack</b></h3>
+                        <p>
+                            The program are helping to change server DNS address automatically at program launch. Let's
+                            see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/changedns-main.png" alt="bc-router" style="width: 40%;"
+                            onclick='img_box("../img/changedns-main.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Considerations About the Program</b></h3>
+                        <p>
+                            The program is made for changing server DNS address automatically at launch against DNS
+                            attack. It run in real time, you just need to wait your network reconnect to internet after
+                            launching the program. It create automatically the right Windows firewall rule, but if it
+                            don't set the server DNS IP, you can set it manually under Windows parameters from network
+                            tab.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="w3-row fourth-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Available Free DNS Servers</b></h3>
+                        <ul>
+                            <li>quad9 9.9.9.9, 149.112.112.112</li>
+                            <li>cloudflare 1.1.1.1, 1.0.0.1</li>
+                            <li>Verisign DNS 64.6.64.6, 64.6.65.6</li>
+                            <li>Google DNS 8.8.8.8, 8.8.4.4</li>
+                            <li>Comodo 8.26.56.10, 8.20.247.10</li>
+                            <li>NextDNS 45.90.28.107, 45.90.30.107</li>
+                            <li>DNSWatch 84.200.69.80, 84.200.70.40</li>
+                            <li>AdGuard DNS 176.103.130.130, 176.103.130.131</li>
+                            <li>Dyn Internet Guide 216.146.35.35, 216.146.36.36252</li>
+                            <li>FDN 80.67.169.12, 80.67.169.40</li>
+                            <li>Freenom World 80.80.80.80, 80.80.81.81</li>
+                            <li>FreeDNS 37.235.1.174, 37.235.1.177</li>
+                            <li>Neustar DNS service 156.154.70.4, 156.154.71.4</li>
+                            <li>SafeDNS 195.46.39.39, 195.46.39.40</li>
+                            <li>SmartViper Public DNS 208.76.50.50, 208.76.51.51</li>
+                            <li>YandexDNS 77.88.8.7, 77.88.8.3</li>
+                            <li>CleanBrowsing 185.228.168.9, 185.228.169.9</li>
+                            <li>CenturyLink 4.2.2.1, 4.2.2.2, 4.2.2.3, 4.2.2.4</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

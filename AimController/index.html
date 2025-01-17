@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AimController</title>
+        <meta name="description"
+            content="Build and test of custom controllers with motion abilities for playing every games on PC">
+        <meta name="keywords" content="Motion Controllers, Build, Test, Games, PC, Program">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="cod.png" alt="cod" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>AimController</h2>
+                    <h1>Be Like A Pro</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Building a Controller with Motion Abilities for PC Gaming</b>
+                        </h3>
+                        <p>
+                            It correspond to a program, receiving data from physical programmable circuit board, like
+                            Arduino or Teensy, where are connected sensors as inputs, for simulating outputs as Virtual
+                            Xbox Controller or Virtual Keyboard/Mouse or Interception or Dualshock4 Controller or vJoy
+                            Controller. No input lag, no delay, no stick drift, no gyro drift, no stuttering, fine
+                            aiming, adpated and custom control, competitive and enjoyable. You aiming or driving with
+                            competitive-immerssive-intuitive-natural-emotional controls with motion abilities, as well
+                            as pro player. It's possible to associate any controller or create one with motion sensors,
+                            like accelerometer and magnetometer (to replace IR cam and sensor bar), in order to task as
+                            Wiimote and Nunchuck, but exactly like Razer Hydra Controller in shape (without the magnetic
+                            ball), to play on PC at games with Steam. Let's see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/ac-1.png" alt="ac-main" style="width:23%" onclick='img_box("../img/ac-1.png")'>
+                        <img src="../img/ac-2.png" alt="ac-main" style="width:23%" onclick='img_box("../img/ac-2.png")'>
+                        <img src="../img/ac-3.png" alt="ac-main" style="width:23%" onclick='img_box("../img/ac-3.png")'>
+                        <img src="../img/ac-4.png" alt="ac-main" style="width:23%" onclick='img_box("../img/ac-4.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Considerations About the Program</b></h3>
+                        <p>
+                            The program is made for being more competitive than usual, but it ask a lot of experiences,
+                            and to want aiming or driving like in virtual reality games. The simple way is to connect
+                            sensors to Arduino or Teensy, and receive data in a program to simulate a virtual Xbox
+                            controller or virtual keyboard and mouse or interception or DS4 controller or virtual
+                            joystick. Then with a 3D printer, build an armor for a controller or two armors for a
+                            splitted controller. It's possible to print armors in a multimedia center or a public
+                            workshop with low cost. I have programed with Teensy, Arduino, IR cam, WebCam, Microphone,
+                            CronusMax, Cronus X-Aim, GIMX, GlovePie, Chiaki, PS Remote Play, Devreorder, Interception,
+                            Scp, ViGEm, vJoy, AirMouse, Keyboard, Mouse, Wiimote, Joycon, Joycon Charging Grip, Pro
+                            controller, DualShock4, Dualsense, Xbox controller, PPJoy controller, Six Axis controller...
+                            For all games, on Linux, Windows, Playstation, and Xbox. I have a lot of knowledges in
+                            controllers and motion controls, and so I can say that console isn't adapted to play games
+                            with motion controllers, because less than 10% of console games are playable with. PC is the
+                            ultimate platform to play games with motion controllers and to create one, because more than
+                            90% of PC games are playable with. I prefer emulate inputs with sensors the controller I
+                            built, and simulate outputs with a program the Human Interface Device (HID) to play all
+                            games on PC. I choose this method because with microcontrollers or on consoles you can't
+                            have any accuracy. Also you prevent the built controller to be recognized and connected by
+                            games and launchers on PC like it's doing actually with console controllers and it's very
+                            weird. It have broke all the works I did with several decades on it. Another important
+                            thing, about Cronus and Titan adapters, is that console constructors are hating it to play
+                            on their consoles, and so potentially you will be forwarded on hacked lobbies from
+                            matchmaking, and it's weird controls how the adapters are running but also how games are
+                            configured on consoles, and finally comparing consoles to PC, you can have better settings
+                            in terms of optimization and security with a PC, like I did. There are nice tutorials, <a
+                                target="_blank"
+                                href="https://www.bigbigwon.com/product/controller/rainbow/tutorial/">here</a> and <a
+                                target="_blank"
+                                href="https://www.youtube.com/watch?v=6qUvamu9DLA">here</a> on Six Axis controllers to
+                            start easy playing with motion controls without annoying setting it up. You can find <a
+                                target="_blank" href="https://en.flydigi.com/index/down">here</a> the
+                            driver for Flydigi controllers. You can use August LP310 Remote Airmouse, used normaly for
+                            Power Point presentation, but for Top Down Shooters or First Person Shooters, combined with
+                            a controller. The native support of controllers in PC games, not native controllers known as
+                            keyboard/mouse and Xbox controller, is a very bad idea, because it result in low
+                            optimization of games and low or bugged or not running handle of controllers like with
+                            DirectInput controllers or Dualsense, also it's not in favor of some developers who want
+                            practice on controller support, and it's a time consumer for game developers. I did better
+                            controller support than native controller support in games of game developers, and with
+                            better and infinite customizations. My goal for building a custom controller in terms of
+                            polling rates is to reach a number under 14 milliseconds, it's largely doable, and it's
+                            sufficient, because a game is caped generally at 30-60 FPS, a big screen have a latency of
+                            around 10 milliseconds, and the ping of a server is around 20 milliseconds, so there's no
+                            need to go far under and I already checked with a time watcher the polling rates, no need to
+                            eat one CPU for nothing, but just lagging. But it stay always better to simulate a Keyboad/Mouse, because of the deadzone
+                            unsignifiant, contrary to the deadzone of a controller, and sometimes very badly handle at
+                            the output of the deadzone too sensitive, but also the lowest sensitivity when aiming down
+                            sight not competitive at all, and almost impossible to have a good aim by tricking the
+                            sensitivities, or even the maximum sensitivity toggle after only a certain amont of timing
+                            at maximum path of the stick. I made the showcase <a href="../AimController-Showcase/">here</a>.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

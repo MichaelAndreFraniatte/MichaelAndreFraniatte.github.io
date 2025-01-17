@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+        <title>Paint Art by MAF</title>
+
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+        <style>
+            body {
+                background-color: #333;
+                font-size: 30px;
+                color: white;
+            }
+
+            ::-webkit-scrollbar {
+                width: 15px;
+                height: 15px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #000;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #333;
+                cursor: pointer;
+            }
+
+            .centered {
+                width: 1000px;
+                height: 600px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, -50%);
+                background-color: gray;
+                overflow-x: scroll;
+                text-align: left;
+                white-space: nowrap;
+                overflow-y: hidden;
+            }
+
+            .first {
+                display: inline-block;
+                overflow: hidden;
+            }
+
+            .second {
+                display: inline-block;
+                overflow: hidden;
+            }
+
+            .third {
+                display: inline-block;
+                overflow: hidden;
+            }
+
+            .left {
+                position: absolute;
+                top: calc(50% - 15px);
+                left: 10%;
+                cursor: pointer;
+            }
+
+            .right {
+                position: absolute;
+                top: calc(50% - 15px);
+                right: 10%;
+                cursor: pointer;
+            }
+        </style>
+
+    </head>
+
+    <body class>
+        <div class="left" onclick="scrollToClass(-1)">&laquo;</div>
+        <div class="centered" id="slider">
+            <img class="first" src="img/bubble.jpg" />
+            <img class="second" src="img/land.jpg" />
+            <img class="third" src="img/rose.jpg" />
+        </div>
+        <div class="right" onclick="scrollToClass(1)">&raquo;</div>
+
+        <copyrights
+            style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: white; text-align: center; font-family: sans-serif; font-size: 15px; line-height:15px;">
+            <b>© MAF</b></copyrights>
+
+        <script>
+            var classarray = [".first", ".second", ".third"];
+            var index = 0;
+            function scrollToClass(inc) {
+                index += inc;
+                if (index > classarray.length - 1) {
+                    index = classarray.length - 1;
+                    return;
+                }
+                if (index < 0) {
+                    index = 0;
+                    return;
+                }
+                document.querySelector(classarray[index]).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'end'
+                });
+            }
+            document.getElementById("slider").addEventListener("scroll", scrolling);
+            function scrolling() {
+                index = parseInt(document.getElementById("slider").scrollLeft / 1008);
+            }
+        </script>
+
+    </body>
+
+</html>

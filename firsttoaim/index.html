@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FirstToAim</title>
+        <meta name="description" content="Use Motion Controllers as Keyboard, Mouse, Xbox Controller in All Games">
+        <meta name="keywords"
+            content="Keyboard, Mouse, Wiimote, Joycons, Joycon, Steering Wheel, Xbox Controller, Scripts, Scripting, Games, Gaming, Gameplay, Motion Controllers, Inputs, Outputs, Human Interface Devices, Emulate, Simulate">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+        
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="fta.png" alt="fta" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>FTA</h2>
+                    <h1>FirstToAim</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Scripting Inputs to Outputs</b></h3>
+                        <p>
+                            With some easy codes helped with autocompletion, assignate well optimized and well
+                            transformed input values of Physical Keyboard, Mouse, Microphone Speech, Xbox Controller,
+                            Joycon left, Joycon right, Wiimote, and/or Nunchuck, to output values of Virtual Keyboard,
+                            Mouse, and/or Xbox Controller. It corresponds globally to 9 different ways for playing :
+                            Keyboard and Mouse as Xbox Controller, Microphone Speech as Keyboard, Xbox Controller as
+                            Keyboard and Mouse, Joycon and Mouse, Joycons, Joycon as steering wheel, Wiimote as steering
+                            wheel, Joycon and Wiimote, Nunchuck and Wiimote. With free code example scripts here, it's
+                            possible to acquire fastly all knowledges for adapt your favorite way to play in all your
+                            games. All game genres are playable, binbok Joypad for Switch or official Joycons and August
+                            LP310 Remote used normaly for Power Point presentation for Top Down Shooters ! Enjoy to be
+                            able to use it in all games you want to play with 0 latency, best accuracy, fast/large
+                            moving, action bindings of a Controller, better fine center aiming... Play competitive using
+                            Joycon and Wiimote or Keyboard and Mouse as Xbox Controller shaming PC master race players.
+                            Win money saling your encrypted scripts to other users you choose to share it. Connect your
+                            Joycons and/or Wiimote pressing synchronisation button(s) of Joycons and/or Wiimote and then
+                            a simple button. Have easy to change different assignation for different games.
+                        </p>
+                        <p>
+                            Have fun in your games with easy and fast codes. Have fun with responsive and clean inputs
+                            to outputs. Have fun with 15 years of researches on all ways for having fun with Motion
+                            Controllers. The following pictures are illustrating the four component pages of the
+                            program. The first page is the main tool for coding the script, running it and manage it.
+                            The other pages are for testing your script. Let's see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/fta-script.png" alt="fta-script" style="width:100%"
+                            onclick='img_box("../img/fta-script.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/microsoft-keyboard.png" alt="Microsoft-Keyboard" style="width:100%"
+                            onclick='img_box("../img/microsoft-keyboard.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/microsoft-mouse.png" alt="Microsoft-Mouse" style="width:100%"
+                            onclick='img_box("../img/microsoft-mouse.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/xbox-controller.png" alt="Xbox-Controller" style="width:100%"
+                            onclick='img_box("../img/xbox-controller.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Considerations About the Program</b></h3>
+                        <p>
+                            The scripts need coding in C# language, but don't be scary to write it, there's
+                            autocompletion of all variables and you find here all script examples and code pieces
+                            explainations, and also all values are already good managed inside the program. The Keyboard
+                            key Add, +, is processing or unprocessing Mouse cursor for hooking the Mouse to be used in
+                            First Personn Shooters as Xbox Controller. It also get the resolution of your screen for
+                            recenter cursor if it changed. The D-Pad Up buttons of Joycons are recentering respectively
+                            gyroscope axis of each Joycon. Each time you run the script, Joycons gyroscopes, Joycons
+                            accelerometers, Wiimote accelerometers, Joycons sticks, and/or Nunchuck stick are
+                            calibrated. Even if your Joycon(s) and/or Wiimote are already connected before starting the
+                            program, you shall connect it with the button for it, but you don't need to push button(s)
+                            of synchronisation before. It doesn't integrate 2 players mode for a reason of performance,
+                            and for it Nintendo consoles are far more enjoyable. But you can ask me custom programs, and
+                            scripts to use with this program, by the what.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-row script-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Code Example Scripts</b></h3>
+                        <p>
+                            It's simple as that, inputs to outputs. Here the directionnal cruce of Wiimote send WASD
+                            Keyboard keys. It's very simple and stupid example, but you will find far better ways for
+                            moving your character or racing car in your games.
+                        </p>
+                        <div class="script">
+                            <div>
+                                <div class="test-autocomplete-textarea-container">
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="orange">SendW</font> = <font color="#1E90FF">mWSButtonStateUp
+                                        </font>;<br>
+                                        <font color="orange">SendA</font> = <font color="#1E90FF">mWSButtonStateLeft
+                                        </font>;<br>
+                                        <font color="orange">SendS</font> = <font color="#1E90FF">mWSButtonStateDown
+                                        </font>;<br>
+                                        <font color="orange">SendD</font> = <font color="#1E90FF">mWSButtonStateRight
+                                        </font>;<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            It's just easy as that for sale your encrypted script. Each time you save your script, 2
+                            files are created, 1 is your script codes, 1 is your script sales. Don't use this line code
+                            if you want all users can play with your script. You can add one to several users.
+                        </p>
+                        <div class="script">
+                            <div>
+                                <div class="test-autocomplete-textarea-container">
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="orange">UsersAllowedList</font> = <font color="#1E90FF">new
+                                            string[] { "username1", "username2" }</font>;<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            There's some inner usefull variables to have the control like for switching of
+                            configurations, or for automatically set an output later after another one.
+                        </p>
+                        <div class="script">
+                            <div>
+                                <div class="test-autocomplete-textarea-container">
+                                    <div class="test-autocomplete-textarea">
+                                        /* Set to false getstate */<br>
+                                        <font color="orange">getstate</font> = <font color="white">false</font>;<br>
+                                        /* Initialize pollcount */<br>
+                                        <font color="orange">pollcount</font> = 0;<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            There's some variables to adapt the outputs for your prefered rendering, like recenter
+                            Wiimote IR for the center of your screen in function of sensor bar at top or bottom of your
+                            screen. Also like adapt speed of mouse move sent lowering its sensitivity with poll time.
+                        </p>
+                        <div class="script">
+                            <div>
+                                <div class="test-autocomplete-textarea-container">
+                                    <div class="test-autocomplete-textarea">
+                                        /* Recenter Wiimote IR */<br>
+                                        <font color="orange">centery</font> = -200;<br>
+                                        /* Set the sleep time to wait between each poll (must be set between 1 and 50
+                                        ms) */<br>
+                                        <font color="orange">sleeptime</font> = 20;<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            Here's some codes to set mouse cursor position from gyroscope axis of right Joycon.
+                        </p>
+                        <div class="script">
+                            <div>
+                                <div class="test-autocomplete-textarea-container">
+                                    <div class="test-autocomplete-textarea">
+                                        /* Set mouse cursor axis X from Joycon right gyro axis X */<br>
+                                        <font color="orange">MouseDesktopX</font> = <font color="#1E90FF">width</font> /
+                                        2f - <font color="#1E90FF">RightGyroX</font> * <font color="#1E90FF">width
+                                        </font> / 2f / 1024f;<br>
+                                        /* Set mouse cursor axis Y from Joycon right gyro axis Y */<br>
+                                        <font color="orange">MouseDesktopY</font> = <font color="#1E90FF">height</font>
+                                        / 2f + <font color="#1E90FF">RightGyroY</font> * <font color="#1E90FF">height
+                                        </font> / 2f / 1024f;<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            There's an integrate function to rescale values. It's usefull for remove deadzone or for
+                            change easily sensistivity like in the following example.
+                        </p>
+                        <div class="script">
+                            <div>
+                                <div class="test-autocomplete-textarea-container">
+                                    <div class="test-autocomplete-textarea">
+                                        /* Scale and set values of mouse move axis X from Wiimote IR axis X */<br>
+                                        <font color="orange">MouseMoveX</font> = <font color="#1E90FF">Scale</font>(
+                                        <font color="#1E90FF">irx</font>, -1024, 1024, -127, 127);<br>
+                                        /* Scale and set values of mouse move axis Y from Wiimote IR axis Y */<br>
+                                        <font color="orange">MouseMoveY</font> = <font color="#1E90FF">Scale</font>(
+                                        <font color="#1E90FF">iry</font>, -1024, 1024, -127, 127);<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            Here the codes to assignate Joycon right stick axis to Xbox Controller right stick axis when
+                            Joycon right is used alone.
+                        </p>
+                        <div class="script">
+                            <div>
+                                <div class="test-autocomplete-textarea-container">
+                                    <div class="test-autocomplete-textarea">
+                                        if (<font color="#1E90FF">stickRight[1]</font> > 0.25f) <font color="orange">
+                                            rightstickx</font> = 32767;<br>
+                                        if (<font color="#1E90FF">stickRight[1]</font>
+                                        < -0.25f) <font color="orange">rightstickx</font> = -32767;<br>
+                                            if (<font color="#1E90FF">stickRight[1]</font>
+                                            <= 0.25f & <font color="#1E90FF">stickRight[1]</font> >= -0.25f) <font
+                                                    color="orange">rightstickx</font> = 0;<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            And the codes to assignate Nunchuck stick axis to Xbox Controller stick axis, almost
+                            similar.
+                        </p>
+                        <div class="script">
+                            <div>
+                                <div class="test-autocomplete-textarea-container">
+                                    <div class="test-autocomplete-textarea">
+                                        if (<font color="#1E90FF">mWSNunchuckStateRawJoystickX</font> > 33f) <font
+                                            color="orange">rightstickx</font> = 32767;<br>
+                                        if (<font color="#1E90FF">mWSNunchuckStateRawJoystickX</font>
+                                        < -33f) <font color="orange">rightstickx</font> = -32767;<br>
+                                            if (<font color="#1E90FF">mWSNunchuckStateRawJoystickX</font>
+                                            <= 33f & <font color="#1E90FF">mWSNunchuckStateRawJoystickX</font> >= -33f)
+                                                <font color="orange">rightstickx</font> = 0;<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            The codes to set Xbox Controller left stick axis from Mouse axis is as following if the
+                            deadzone of Xbox Controller left stick in game options is set to 0.
+                        </p>
+                        <div class="script">
+                            <div>
+                                <div class="test-autocomplete-textarea-container">
+                                    <div class="test-autocomplete-textarea">
+                                        /* Set Xbox Controller left stick axis X from Mouse axis X */<br>
+                                        <font color="orange">leftstickx</font> = <font color="#1E90FF">MouseHookX</font>
+                                        <font color="#1E90FF"></font> / 1024f * 32767f;<br>
+                                        /* Set Xbox Controller left stick axis Y from Mouse axis Y */<br>
+                                        <font color="orange">leftsticky</font> = -<font color="#1E90FF">MouseHookY
+                                        </font>
+                                        <font color="#1E90FF"></font> / 1024f * 32767f;<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            Here's the sample for Microphone Speech.
+                        </p>
+                        <div class="script">
+                            <div>
+                                <div class="test-autocomplete-textarea-container">
+                                    <div class="test-autocomplete-textarea">
+                                        /* Set the speech to recognize */<br>
+                                        <font color="orange">SpeechToText</font> = <font color="#1E90FF">new string[] {
+                                            "Load", "Blow", "Fire", "Aiming", "Welcome", "Hello" }</font>;<br>
+                                        /* Send Keyboard key R if you say load */<br>
+                                        <font color="orange">SendR</font> = <font color="#1E90FF">TextFromSpeech</font>
+                                        == "Load" ? true : false;<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            There is another Wiimote irmode asking to be more accurate than the default Wiimote irmode
+                            more easy to use.
+                        </p>
+                        <div class="script">
+                            <div>
+                                <div class="test-autocomplete-textarea-container">
+                                    <div class="test-autocomplete-textarea">
+                                        /* Default irmode */<br>
+                                        <font color="orange">irmode</font> = 1;<br>
+                                        /* More complexity aiming accuracy irmode */<br>
+                                        <font color="orange">irmode</font> = 2;<br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-row third-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Available Scripts</b></h3>
+                        <ul class="w3-center">
+                            <li>keyboard-mouse-warzone</li>
+                            <li>joycon-left-mouse-warzone</li>
+                            <li>joycon-left-wiimote-fortnite</li>
+                            <li>joycon-left-wiimote-fortnite-version-keyboard-mouse</li>
+                            <li>joycon-left-wiimote-warzone</li>
+                            <li>nunchuck-wiimote-warzone</li>
+                            <li>wiimote-hot-wheels</li>
+                            <li>joycon-right-hot-wheels</li>
+                            <li>joycons-inside</li>
+                            <li>joycons-gods-trigger</li>
+                            <li>joycons-airmouse-gods-trigger</li>
+                            <li>and more...</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

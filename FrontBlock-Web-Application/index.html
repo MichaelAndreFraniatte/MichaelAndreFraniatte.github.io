@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+
+		<title>FrontBlock</title>
+		<meta charset="utf-8">
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Michael Andre Franiatte FrontAttacker">
+		<meta name="keywords" content="Michael Andre Franiatte, FrontBlock">
+		<meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+		<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+		
+		<script src="../custom/redirect.js"></script>
+
+		<style>
+			::-webkit-scrollbar {
+				width: 10px;
+				height: 100%;
+			}
+
+			::-webkit-scrollbar-track {
+				background: #fff;
+			}
+
+			::-webkit-scrollbar-thumb {
+				background: rgba(215, 215, 215, 1);
+			}
+
+			::-webkit-scrollbar-thumb:hover {
+				background: #000;
+			}
+
+			body {
+				font-family: sans-serif;
+				font-size: 2.5vh;
+				text-align: center;
+				color: #000;
+				padding: 0px;
+				margin: 0px;
+			}
+
+			table {
+				position: absolute;
+				left: calc(50%);
+				top: calc(50%);
+				transform: translate(-50%, -50%);
+			}
+
+			table,
+			th,
+			td {
+				border: 1px solid;
+			}
+
+			th,
+			td {
+				border: 1px solid;
+				width: 20px;
+				height: 20px;
+			}
+
+			#p1content {
+				position: absolute;
+				left: 25%;
+				top: calc(50%);
+				text-align: center;
+				font-weight: 600;
+				transform: translate(-50%, -50%);
+			}
+
+			#p2content {
+				position: absolute;
+				left: 75%;
+				top: calc(50%);
+				text-align: center;
+				font-weight: 600;
+				transform: translate(-50%, -50%);
+			}
+
+			#title {
+				position: absolute;
+				left: 50%;
+				top: 20%;
+				text-align: center;
+				font-weight: 600;
+				transform: translate(-50%, -50%);
+			}
+
+			#p1points {
+				color: purple;
+			}
+
+			#p2points {
+				color: green;
+			}
+		</style>
+
+	</head>
+
+	<body class>
+
+		<header>
+		</header>
+
+		<content>
+
+			<div id="title">
+				<div>FrontBlock</div>
+			</div>
+			<div id="p1content">
+				<div id="p1">>Player 1</div></br>
+				<div id="p1points">0</div>
+			</div>
+			<div id="p2content">
+				<div id="p2">Player 2</div></br>
+				<div id="p2points">0</div>
+			</div>
+			<table id="grid">
+				<tr id="l1">
+					<th id="l1-1" onclick="setPosition(this)"></th>
+					<th id="l1-2" onclick="setPosition(this)"></th>
+					<th id="l1-3" onclick="setPosition(this)"></th>
+					<th id="l1-4" onclick="setPosition(this)"></th>
+					<th id="l1-5" onclick="setPosition(this)"></th>
+					<th id="l1-6" onclick="setPosition(this)"></th>
+					<th id="l1-7" onclick="setPosition(this)"></th>
+					<th id="l1-8" onclick="setPosition(this)"></th>
+					<th id="l1-9" onclick="setPosition(this)"></th>
+					<th id="l1-10" onclick="setPosition(this)"></th>
+				</tr>
+				<tr id="l2">
+					<th id="l2-1" onclick="setPosition(this)"></th>
+					<th id="l2-2" onclick="setPosition(this)"></th>
+					<th id="l2-3" onclick="setPosition(this)"></th>
+					<th id="l2-4" onclick="setPosition(this)"></th>
+					<th id="l2-5" onclick="setPosition(this)"></th>
+					<th id="l2-6" onclick="setPosition(this)"></th>
+					<th id="l2-7" onclick="setPosition(this)"></th>
+					<th id="l2-8" onclick="setPosition(this)"></th>
+					<th id="l2-9" onclick="setPosition(this)"></th>
+					<th id="l2-10" onclick="setPosition(this)"></th>
+				</tr>
+				<tr id="l3">
+					<th id="l3-1" onclick="setPosition(this)"></th>
+					<th id="l3-2" onclick="setPosition(this)"></th>
+					<th id="l3-3" onclick="setPosition(this)"></th>
+					<th id="l3-4" onclick="setPosition(this)"></th>
+					<th id="l3-5" onclick="setPosition(this)"></th>
+					<th id="l3-6" onclick="setPosition(this)"></th>
+					<th id="l3-7" onclick="setPosition(this)"></th>
+					<th id="l3-8" onclick="setPosition(this)"></th>
+					<th id="l3-9" onclick="setPosition(this)"></th>
+					<th id="l3-10" onclick="setPosition(this)"></th>
+				</tr>
+				<tr id="l4">
+					<th id="l4-1" onclick="setPosition(this)"></th>
+					<th id="l4-2" onclick="setPosition(this)"></th>
+					<th id="l4-3" onclick="setPosition(this)"></th>
+					<th id="l4-4" onclick="setPosition(this)"></th>
+					<th id="l4-5" onclick="setPosition(this)"></th>
+					<th id="l4-6" onclick="setPosition(this)"></th>
+					<th id="l4-7" onclick="setPosition(this)"></th>
+					<th id="l4-8" onclick="setPosition(this)"></th>
+					<th id="l4-9" onclick="setPosition(this)"></th>
+					<th id="l4-10" onclick="setPosition(this)"></th>
+				</tr>
+				<tr id="l5">
+					<th id="l5-1" onclick="setPosition(this)"></th>
+					<th id="l5-2" onclick="setPosition(this)"></th>
+					<th id="l5-3" onclick="setPosition(this)"></th>
+					<th id="l5-4" onclick="setPosition(this)"></th>
+					<th id="l5-5" onclick="setPosition(this)"></th>
+					<th id="l5-6" onclick="setPosition(this)"></th>
+					<th id="l5-7" onclick="setPosition(this)"></th>
+					<th id="l5-8" onclick="setPosition(this)"></th>
+					<th id="l5-9" onclick="setPosition(this)"></th>
+					<th id="l5-10" onclick="setPosition(this)"></th>
+				</tr>
+				<tr id="l6">
+					<th id="l6-1" onclick="setPosition(this)"></th>
+					<th id="l6-2" onclick="setPosition(this)"></th>
+					<th id="l6-3" onclick="setPosition(this)"></th>
+					<th id="l6-4" onclick="setPosition(this)"></th>
+					<th id="l6-5" onclick="setPosition(this)"></th>
+					<th id="l6-6" onclick="setPosition(this)"></th>
+					<th id="l6-7" onclick="setPosition(this)"></th>
+					<th id="l6-8" onclick="setPosition(this)"></th>
+					<th id="l6-9" onclick="setPosition(this)"></th>
+					<th id="l6-10" onclick="setPosition(this)"></th>
+				</tr>
+				<tr id="l7">
+					<th id="l7-1" onclick="setPosition(this)"></th>
+					<th id="l7-2" onclick="setPosition(this)"></th>
+					<th id="l7-3" onclick="setPosition(this)"></th>
+					<th id="l7-4" onclick="setPosition(this)"></th>
+					<th id="l7-5" onclick="setPosition(this)"></th>
+					<th id="l7-6" onclick="setPosition(this)"></th>
+					<th id="l7-7" onclick="setPosition(this)"></th>
+					<th id="l7-8" onclick="setPosition(this)"></th>
+					<th id="l7-9" onclick="setPosition(this)"></th>
+					<th id="l7-10" onclick="setPosition(this)"></th>
+				</tr>
+				<tr id="l8">
+					<th id="l8-1" onclick="setPosition(this)"></th>
+					<th id="l8-2" onclick="setPosition(this)"></th>
+					<th id="l8-3" onclick="setPosition(this)"></th>
+					<th id="l8-4" onclick="setPosition(this)"></th>
+					<th id="l8-5" onclick="setPosition(this)"></th>
+					<th id="l8-6" onclick="setPosition(this)"></th>
+					<th id="l8-7" onclick="setPosition(this)"></th>
+					<th id="l8-8" onclick="setPosition(this)"></th>
+					<th id="l8-9" onclick="setPosition(this)"></th>
+					<th id="l8-10" onclick="setPosition(this)"></th>
+				</tr>
+				<tr id="l9">
+					<th id="l9-1" onclick="setPosition(this)"></th>
+					<th id="l9-2" onclick="setPosition(this)"></th>
+					<th id="l9-3" onclick="setPosition(this)"></th>
+					<th id="l9-4" onclick="setPosition(this)"></th>
+					<th id="l9-5" onclick="setPosition(this)"></th>
+					<th id="l9-6" onclick="setPosition(this)"></th>
+					<th id="l9-7" onclick="setPosition(this)"></th>
+					<th id="l9-8" onclick="setPosition(this)"></th>
+					<th id="l9-9" onclick="setPosition(this)"></th>
+					<th id="l9-10" onclick="setPosition(this)"></th>
+				</tr>
+				<tr id="l10">
+					<th id="l10-1" onclick="setPosition(this)"></th>
+					<th id="l10-2" onclick="setPosition(this)"></th>
+					<th id="l10-3" onclick="setPosition(this)"></th>
+					<th id="l10-4" onclick="setPosition(this)"></th>
+					<th id="l10-5" onclick="setPosition(this)"></th>
+					<th id="l10-6" onclick="setPosition(this)"></th>
+					<th id="l10-7" onclick="setPosition(this)"></th>
+					<th id="l10-8" onclick="setPosition(this)"></th>
+					<th id="l10-9" onclick="setPosition(this)"></th>
+					<th id="l10-10" onclick="setPosition(this)"></th>
+				</tr>
+			</table>
+
+		</content>
+
+		<footer>
+		</footer>
+
+		<copyrights
+			style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: black; text-align: center; font-family: sans-serif; font-size: 15px; line-height:15px;">
+			<b>© MAF</b></copyrights>
+
+		<script>
+			var stillturn = false;
+			var isp1turn = 0;
+			var p1points = 0;
+			var p2points = 0;
+			function setPosition(el) {
+				if (el.style.backgroundColor != "purple" & el.style.backgroundColor != "green") {
+					if (isp1turn == 0 | isp1turn == 1) {
+						el.style.backgroundColor = "purple";
+						p1points++;
+						document.getElementById("p1points").innerText = p1points.toString();
+						var id = el.nextElementSibling.id;
+						if (document.getElementById(id).style.backgroundColor == "green") {
+							isp1turn--;
+							stillturn = true;
+						}
+						else if (stillturn) {
+							isp1turn--;
+							stillturn = false;
+						}
+					}
+					else if (isp1turn == 2 | isp1turn == 3) {
+						el.style.backgroundColor = "green";
+						p2points++;
+						document.getElementById("p2points").innerText = p2points.toString();
+						var id = el.previousElementSibling.id;
+						if (document.getElementById(id).style.backgroundColor == "purple") {
+							isp1turn--;
+							stillturn = true;
+						}
+						else if (stillturn) {
+							isp1turn--;
+							stillturn = false;
+						}
+					}
+					isp1turn++;
+					if (isp1turn >= 4) {
+						isp1turn = 0;
+					}
+				}
+				else {
+					if (el.style.backgroundColor == "purple" & (isp1turn == 0 | isp1turn == 1)) {
+						el.style.backgroundColor = "";
+						p1points--;
+					}
+					if (el.style.backgroundColor == "green" & (isp1turn == 2 | isp1turn == 3)) {
+						el.style.backgroundColor = "";
+						p2points--;
+					}
+				}
+				if (isp1turn == 0 | isp1turn == 1) {
+					document.getElementById("p1").innerText = ">Player 1";
+					document.getElementById("p2").innerText = "Player 2";
+				}
+				else if (isp1turn == 2 | isp1turn == 3) {
+					document.getElementById("p1").innerText = "Player 1";
+					document.getElementById("p2").innerText = ">Player 2";
+				}
+			}
+
+		</script>
+
+	</body>
+
+</html>

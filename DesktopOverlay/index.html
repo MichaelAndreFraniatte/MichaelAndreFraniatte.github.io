@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DesktopOverlay</title>
+        <meta name="description"
+            content="Program to have a desktop audio random listening with audio visualization and background screen animated">
+        <meta name="keywords" content="desktop, overlay, audio, background, animated">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+          
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="do.png" alt="do" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>DesktopOverlay</h2>
+                    <h1>Overlay for Desktop</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Desktop Audio with Visualization and Animated Background</b></h3>
+                        <p>
+                            The program is for display and listen audio as overlay for your desktop and also for having a animated background. Let's see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/do-main.png" alt="DesktopOverlay" style="width:65%"
+                            onclick='img_box("../img/do-main.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Considerations About the Program</b></h3>
+                        <p>
+                            I've been inspired by <a target="_blank" class="dl-link" href="https://www.rainmeter.net/">this</a>, 
+                            but take care it modify your OS. You can close it with right click on the notify icon. 
+                            You can also set the overlay to start automatically at your PC launch, or unset it, but you need to start the overlay 
+                            with administrator privilege. You shall tweak the HTML file under assets folder from where is the program to add new audio files. 
+                            Check my program named <a href="../rmomo/">rmomo</a> for tweak the HTML file with auto creation of audio tags in a file to copy/paste. 
+                            You can also remove background picture from HTML file and add it for your desktop from display settings of Windows. 
+                            But the last version run automatically with <a href="../STFU/">STFU</a>, you just need to copy/paste songs under assets or songs folder 
+                            from where is located the program. Disable <a href="../EchoBoost/">EchoBoost</a> from params text file if you don't have a second audio card. 
+                            From this file you can set the level of hearing for your second audio card like your laptop speakers. The first audio card corresponding to Bluetooth speakers. 
+                            For using program, it need a key file for authenticate locally in order to be able to start properly, 
+                            ask me to obtain this key file (it depend of your computer, not of the program).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Bind of Action Buttons</b></h3>
+                        <p>
+                            Keyboard key Escape is used to close the program. F1 is used to open about (?). Previous, Next and Pause tracks are used to normal binding, 
+                            but a long press for Previous and Next skip the current track to a new random track.
+                        </p>
+                        <p>
+                            Xbox controller button A is used to skip the current track to a new random track. B is used to return to previous tracks already listen. X and Y 
+                            are used for Play/Pause current track. Left and Right Shoulders are used to go to previous and next track. Left and Right Triggers are used 
+                            to go to previous and next artist. Start and Back are used for fast forward and fast backward current track. Left, Rigth, Up and Down are used
+                            to set previous, next, random and loop playing. It don't need to have the program in background, while keyboard binding need the program to be 
+                            in background.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-row third-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Demonstration of the Program</b></h3>
+                        <p>
+                            The following video demonstrate the features of my program. The video is a bit laggy because of my cheap laptop PC, 
+                            unable to record properly, but in reality audio visualization is very smooth and well synchronized with audio.
+                        </p>
+                        <div align="center" class="center">
+                            <video width="100%" height="56%" controls>
+                                <source src="DesktopOverlay.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+        <title>michael portfolio</title>
+
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                background-color: #21262d;
+                width: 100vw;
+                height: 100vh;
+                font-family: Arial;
+                overflow: hidden;
+            }
+
+            #menu {
+                position: absolute;
+                display: block;
+                left: 16vw;
+                top: 10vh;
+                width: 20vw;
+                height: 80vh;
+            }
+
+            .menu-item {
+                margin: 1vw;
+                width: 18vw;
+                height: 5vh;
+                color: white;
+                font-weight: 900;
+                background-color: #32373e;
+                border-style: solid;
+                border-color: gray;
+                border-radius: 1.5vw;
+                font-size: 2vh;
+                cursor: pointer;
+            }
+
+            .active {
+                background-color: #d6436f;
+            }
+
+            center {
+                margin-top: 1vh;
+                margin-bottom: 1vh;
+            }
+
+            #content {
+                position: absolute;
+                display: block;
+                left: 38vw;
+                top: 10vh;
+                width: 45vw;
+                height: 80vh;
+                border-style: solid;
+                border-color: gray;
+                border-radius: 0.5vw;
+            }
+
+            #content-box {
+                width: 45vw;
+                height: 80vh;
+                border-radius: 0.5vw;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+
+            .content-item {
+                margin: 2vw;
+                width: 40vw;
+                color: white;
+                font-size: 1.9vh;
+            }
+
+            ::-webkit-scrollbar {
+                width: 10px;
+                height: 10px;
+                border-radius: 0.5vw;
+                cursor: pointer;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: gray;
+                border-radius: 0.5vw;
+                cursor: pointer;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #32373e;
+                border-radius: 0.5vw;
+                cursor: pointer;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #d6436f;
+                border-radius: 0.5vw;
+                cursor: pointer;
+            }
+
+            title-item {
+                text-decoration: underline;
+                font-weight: 900;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            #About,
+            #Job,
+            #Fluid,
+            #Program,
+            #Webbrowser,
+            #Controller,
+            #Project {
+                scroll-behavior: smooth !important;
+                transition: 0.6s ease;
+            }
+
+            * {
+                line-height: 3vh;
+            }
+        </style>
+    </head>
+
+    <body class onLoad="page_onload()">
+        <div id="menu">
+            <div class="button menu-item active" data-id="1">
+                <center>About</center>
+            </div>
+            <div class="button menu-item" data-id="2">
+                <center>Job</center>
+            </div>
+            <div class="button menu-item" data-id="3">
+                <center>Fluid</center>
+            </div>
+            <div class="button menu-item" data-id="4">
+                <center>Program</center>
+            </div>
+            <div class="button menu-item" data-id="5">
+                <center>Webbrowser</center>
+            </div>
+            <div class="button menu-item" data-id="6">
+                <center>Controller</center>
+            </div>
+            <div class="button menu-item" data-id="7">
+                <center>Project</center>
+            </div>
+        </div>
+        <div id="content">
+            <div id="content-box">
+                <div class="hr" id="About" data-id="1">
+                    <div class="content-item">
+                        <title-item>About</title-item><br />
+                        <text-item>Hi, I'm Michael Andre Franiatte, a geoscience doctor and a web developer, uppon
+                            diplomas I passed at high school. I'm also a application developer in my free
+                            time.</text-item><br />
+                        <text-item>Since my childhood, I'm a lover of writting codes, because I know that every ideas
+                            can bring to life, while working hard, and with some knowledges in codes, extraordinary
+                            websites, applications, games, and tools can be masterpieces for
+                            everything.</text-item><br />
+                        <text-item>I had luck to have good parents, for had time to learn geosciences, and programation,
+                            to listen music, to watch films and series, and to play video games.</text-item><br />
+                        <text-item>I'm not in rest for consuming my times, to bring my dreams to reality by working hard
+                            and a lot. I've always hold my objectives, even if sometimes, it can revert if
+                            bad.</text-item><br />
+                    </div>
+                </div>
+                <div class="hr" id="Job" data-id="2">
+                    <div class="content-item">
+                        <title-item>Job</title-item><br />
+                        <text-item>I've been often unemployed, because I don't find my place. I'm too experimented, or
+                            not enough. People at work are not simple to speak with. They make their works and learn for
+                            themselves. It's not like that I imagined a job. It's often not interesting, or complicate
+                            because badly optimized.</text-item><br />
+                        <text-item>I have lot of competences, and I love to work and accomplish the jobs to be done.
+                            I've always succeed to have all jobs I did done. But if you are someone very simple and
+                            inner minded, like me, you know exactly that people are very different from you, and talking
+                            or being with them is very complicate. It's not the same objectives, and before action I
+                            always mind twice before applying anything.</text-item><br />
+                        <text-item>I love clean codes, clean ways, clean websites, and clean applications. I have enough
+                            force in me to bring everything above all.</text-item><br />
+                    </div>
+                </div>
+                <div class="hr" id="Fluid" data-id="3">
+                    <div class="content-item">
+                        <title-item>Fluid</title-item><br />
+                        <text-item>I've resolved Equation of State to fit all PVTX of all fluids, I'm the only one in
+                            the world to have accomplished it, and in only 3 years. Also I've resolved to define
+                            diffusion coefficients in hydrogen line from diffusion profiles.</text-item><br />
+                        <text-item>From my EoS calculation, I'm able to synthetise or stabilze any molecules like
+                            C-H-O-N. I've stabilized Adenine à 300°C and synthetised Acridine Orange at
+                            250°C.</text-item><br />
+                    </div>
+                </div>
+                <div class="hr" id="Program" data-id="4">
+                    <div class="content-item">
+                        <title-item>Program</title-item><br />
+                        <text-item>I made lot of programs, it was not to learn programation languages, but instead to
+                            make true programs I needed. It's better to choose the right languages from what to
+                            accomplish. I know lot of tools to program, all are similars. I know well the type C
+                            language, and it's hard for me to learn other types of languages like Python. I love only
+                            type C in fact. I don't like other at all.</text-item><br />
+                    </div>
+                </div>
+                <div class="hr" id="Webbrowser" data-id="5">
+                    <div class="content-item">
+                        <title-item>Webbrowser</title-item><br />
+                        <text-item>It's possible to connect a webbrowser to a program. It's possible to customize big
+                            websites, like Youtube, Netflix, Deezer, ... Removing all ads, adding audio visualization,
+                            changing colors, ... But also it's possible to create a nice program, with HTML, CSS and
+                            Javascript, with all features and powers of C# and C++.</text-item><br />
+                    </div>
+                </div>
+                <div class="hr" id="Controller" data-id="6">
+                    <div class="content-item">
+                        <title-item>Controller</title-item><br />
+                        <text-item>I've worked a lot on console controllers to be used on PC to play games. But also
+                            using microcontrollers for simulate keyboard, mouse and joystick. I've searched the best
+                            optimization, and found it. I created lot of programs with all types of
+                            interfaces.</text-item><br />
+                    </div>
+                </div>
+                <div class="hr" id="Project" data-id="7">
+                    <div class="content-item">
+                        <title-item>Project</title-item><br />
+                        <text-item>I have a nice project, but I need to find a job for it. I want to create a gamepad
+                            for playing on PC with motion controls, using a microcontroller. I've made already
+                            everything in terms of programation, but it lack to connect sensors to a microcontroller and
+                            to build armors with a 3D printer.</text-item><br />
+                    </div>
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
+
+        <copyrights
+            style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: white; text-align: center; font-family: sans-serif; font-size: 15px; line-height:15px;">
+            <b>© MAF</b></copyrights>
+
+        <script>
+
+            var hri = 0;
+            var hroffset = [];
+            var hrtop = 0;
+
+            function page_onload() {
+                getOffset();
+            }
+
+            // Active on click and smooth scrolling to page anchor on click
+            $(".button").on("click", function () {
+                var id = jQuery(this).data('id');
+                var vallong = setOffset(id);
+                $("#content-box").animate({ scrollTop: vallong }, 1000);
+            });
+
+            window.addEventListener("resize", getOffset);
+
+            function getOffset() {
+                $("#content-box").animate({ scrollTop: 0 }, 0);
+                jQuery('.button').removeClass('active');
+                jQuery('.button[data-id="1"]').addClass('active');
+                hri = 0;
+                hroffset = [];
+                hrvallong = 0;
+                hrtop = 0;
+                $(".hr").each(function () {
+                    hri++;
+                    hrtop = $('.hr[data-id="' + hri + '"]').offset().top - $('#content-box').offset().top;
+                    hroffset.push(hrtop);
+                });
+            }
+
+            function setOffset(id) {
+                return hroffset[id - 1];
+            }
+
+            // Active on scroll
+            $('#content-box').scroll(function () {
+                var fromTop = $('#content-box').scrollTop();
+                for (i = 1; i <= hri; i++) {
+                    if (fromTop >= hroffset[i - 1] - 30 & fromTop <= hroffset[i - 1] + 300) {
+                        jQuery('.button').not('[data-id="' + i + '"]').removeClass('active');
+                        jQuery('.button[data-id="' + i + '"]').addClass('active');
+                    }
+                }
+            });
+
+            // Mouse scroll to horizontal scroll
+            function scrollHorizontally(e) {
+                e = window.event || e;
+                var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+                document.getElementById('content-box').scrollLeft -= (delta * 40); // Multiplied by 40
+            }
+
+            document.querySelectorAll("*").forEach(elem => elem.addEventListener("mousewheel", scrollHorizontally), { passive: false });
+
+        </script>
+
+    </body>
+
+</html>

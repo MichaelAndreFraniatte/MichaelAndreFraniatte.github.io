@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Mono);
+
+
+        body {
+            background-color: #999;
+            width: 100%;          
+            height: 100%;
+            background-image: url("../img/background.jpg");
+            background-position: center center;
+            background-repeat: no-repeat; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        #timer, #watch, #clock {
+            background-color: #333;
+            border-radius: 30vh;
+            height: 30vh;
+            width: 30vh;
+            position: relative;
+            margin: 2.5vh auto;
+        }
+
+        .screen {
+            width: 22vh;
+            height: 6vh;
+            background-color: #444;
+            background-image: linear-gradient(300deg, rgba(255,255,255,0.1), rgba(255,255,255,0.1) 20%, rgba(255,255,255,0.5) 10%, rgba(255,255,255,0.1), rgba(255,255,255,0.1));
+            border-radius: 2vh;
+            margin: auto;
+            position: relative;
+            top: 12vh;
+            text-align: center;
+            font-family: 'PT Mono', monospace;
+            color: #fff;
+            line-height: 6vh;
+            font-size: 4vh;
+        }

@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Guide Firewall</title>
+        <meta name="description" content="Against Server IP Spoofing / Playing On Official Servers / MW2">
+        <meta name="keywords" content="guide, Call of Duty, official servers, MW2, competitive, game">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+        
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="guide.png" alt="guide" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>Guide</h2>
+                    <h1>CoD Official Servers</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Playing on Official Servers of MW2</b></h3>
+                        <p>
+                            The guide is for MW2 (2022) on Battle.net, but in general it can be applied for all Call of
+                            Duty and on Steam, then it need to look up IP of connection with ressource monitor
+                            (perfmon.exe), for entering the game with authentication. Fortunatly, It don't need to
+                            search about game server IP. IP of servers are spoofed by hackers to open hacked lobbies
+                            where cheaters banned can still invade the game. They can cheat on these unofficial servers,
+                            and you, legit players, are falling against them, in every matches. Using Windows firewall
+                            of your PC and opening a NAT/PAT rule on your modem/router, can solve the problem, with the
+                            right rules. Let's see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/firewall5.png" alt="firewall5" style="width:70%"
+                            onclick='img_box("../img/firewall5.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/firewall6.png" alt="firewall6" style="width:70%"
+                            onclick='img_box("../img/firewall6.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Setting Network Configuration</b></h3>
+                        <p>
+                            For using Windows firewall with right rules, you need to set manually your network
+                            configuration. Open cmd.exe and enter ipconfig, to see your DNS IP, and internal IP of your
+                            PC. Open control panel and then network and share center. Under details, for properties of
+                            your network card, you can set IPv4 properties allowing to set a static IP corresponding the
+                            the internal IP of your computer, and set the DNS local IP of your modem/router. The sub
+                            network mask is auto completed. You can also add a DNS server, but in case you don't want,
+                            you can set the DNS local IP of your modem/router instead.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/firewall8.png" alt="firewall8" style="width:30%"
+                            onclick='img_box("../img/firewall8.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Opening a NAT/PAT Rule on Your Modem/Router</b></h3>
+                        <p>
+                            By connecting to your modem, you can create a NAT/PAT rule for port 3074 in UDP for your PC.
+                            It allow inbound traffic, but block the traversal edge which is used by hackers to spoof IP
+                            of servers opening hacked lobbies. Nothing complicate here, you can find easily tutorials
+                            and videos on internet, dedicated to your modem/router.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/firewall1.png" alt="firewall1" style="width:100%"
+                            onclick='img_box("../img/firewall1.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/firewall2.png" alt="firewall2" style="width:100%"
+                            onclick='img_box("../img/firewall2.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/firewall3.png" alt="firewall3" style="width:100%"
+                            onclick='img_box("../img/firewall3.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/firewall4.png" alt="firewall4" style="width:100%"
+                            onclick='img_box("../img/firewall4.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/firewall23.png" alt="firewall23" style="width:30%"
+                            onclick='img_box("../img/firewall23.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Using Windows Firewall for Allowing Official Servers and
+                                Blocking Unofficial Servers</b></h3>
+                        <p>
+                            Set Windows firewall properties to blocking if no rules for inbound and outbound traffic. If
+                            your connection is set to private or public, the properties tab where to set it shall
+                            corresponding to the network type of your connection. A public network is more secure than a
+                            private network because the share capabilities are disable for a public network. The inbound
+                            traffic allowed with NAT/PAT rules do the trick for playing on official servers because the
+                            outbound traffic allowed with Windows firewall must block server connection. For other games
+                            than Call of Duty, it need to create rules for these games, otherwise you can save and
+                            restore to default Windows firewall, like for updating your PC. It's from upper right
+                            corner, to restore default rules, and open/save a Windows firewall configuration. There are
+                            2 important tabs where to add rules for services, game launchers, and games. There's a tab
+                            for outbound traffic and a tab for inbound traffic. The tabs can be accessed from upper left
+                            corner. The very first tab, when you open Windows firewall, is the tab corresponding to
+                            Windows firewall properties with a link to access configurations, where you will set the
+                            properties for inbound and outbound traffic (blocking if no rules) for your network type
+                            (private or public). It's settings you have to set in combo boxes. The next step is to
+                            create rules for services, game launchers and games. It's easy to get the name and the path,
+                            by opening task manager with the shortcut ctrl + shift + esc on your keyboard. Click right
+                            on a task to open the control menu where you can open the folder to copy path, and then when
+                            you specify a program in a rule, you can paste the path in address bar and get the
+                            corresponding program to allow traffic. I advice to create a shortcut icon on task bar for
+                            Windows firewall with advanced rules, and also one for the ressource monitor, perfmon. It's
+                            possible Windows firewall isn't enable because you have a firewall from a anti-virus.
+                            Managing rules with firewall from a anti-virus, is possible. But if you uninstall
+                            anti-virus, Windows firewall will be enable. Don't worry, Windows have also his own
+                            anti-virus, and it will be enable also.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/firewall9.png" alt="firewall9" style="width:100%"
+                            onclick='img_box("../img/firewall9.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/firewall10.png" alt="firewall10" style="width:100%"
+                            onclick='img_box("../img/firewall10.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/firewall11.png" alt="firewall11" style="width:100%"
+                            onclick='img_box("../img/firewall11.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/firewall12.png" alt="firewall12" style="width:100%"
+                            onclick='img_box("../img/firewall12.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/firewall13.png" alt="firewall13" style="width:100%"
+                            onclick='img_box("../img/firewall13.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/firewall14.png" alt="firewall14" style="width:100%"
+                            onclick='img_box("../img/firewall14.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/firewall15.png" alt="firewall15" style="width:100%"
+                            onclick='img_box("../img/firewall15.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/firewall16.png" alt="firewall16" style="width:100%"
+                            onclick='img_box("../img/firewall16.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>The Right Rules to Have in Windows Firewall in Details for
+                                Outbound Traffic</b></h3>
+                        <p>
+                            For this step, the most important, you need to remove all rules. You can use shift and left
+                            click for select all rules from the first to the last, and then click right on it to delete
+                            by opening the control menu. It need to create several rules. To create a rule, click right
+                            to open control menu, and then click add a new rule. A tab to create a rule is appearing.
+                            Check the box personnalized rule, and click next. After doing it one time, I prefer
+                            copy/paste the rule, for create another and configure it manually. The first rule to create
+                            is for the service client DNS, to choose under the tab programs and services. All services
+                            and programs shall be enable again if you choose a program name and path. Configuration for
+                            service client DNS: - Protocole > UDP, local ports: 49152-65535, distant port: 53. - Local
+                            IP > your PC internal IP, distant IP > your DNS server IP (here my modem/router IP because I
+                            didn't set a server DNS). You need to create allowing rules for Battle.net, Battle.net Agent
+                            (changing of path when Battle.net is updated), if you using Battle.net (all protocoles).
+                            Same rules for Steam, Steam Web Helper, and Steam client service (local ports > 49152-65535,
+                            distant ports > 80, 443, 27000-27050 in TCP), if using Steam. Configuration for the game
+                            with protocole TCP: - Protocole > TCP, local ports > 1024-65535, distant ports > 1-49151. -
+                            local IP > your PC internal IP, distant IP > 0.0.0.1-223.255.255.255. Configuration for the
+                            game (MW2 2022) with protocole UDP: - Protocole > UDP, local ports > 3074, 49152-65535,
+                            distant ports > 1024-49151. - local IP > your PC internal IP, distant IP >
+                            185.34.104.0-185.34.108.255, 95.179.128/17. This last scale of IP is corresponding to IP of
+                            matchmaking search. It can be different from game to game, and outside europe. If the game
+                            is updated, it need to restore to default Window firewall, and close the game, then open the
+                            configuration, and go to the game. It lack IP but the majority of time, it's enough and more
+                            secure so. The connection to official servers for playing a match is with the next step. It
+                            need rules in UDP of course.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/firewall17.png" alt="firewall17" style="width:100%"
+                            onclick='img_box("../img/firewall17.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/firewall18.png" alt="firewall18" style="width:100%"
+                            onclick='img_box("../img/firewall18.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/firewall19.png" alt="firewall19" style="width:100%"
+                            onclick='img_box("../img/firewall19.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/firewall20.png" alt="firewall20" style="width:100%"
+                            onclick='img_box("../img/firewall20.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/firewall21.png" alt="firewall21" style="width:70%"
+                            onclick='img_box("../img/firewall21.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/firewall22.png" alt="firewall22" style="width:70%"
+                            onclick='img_box("../img/firewall22.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b> The Right Rules to Have in Windows Firewall in Details for
+                                Inbound Traffic</b></h3>
+                        <p>
+                            This step is also the most important, it's the core of the trick to play on official
+                            servers. It also need to remove all rules. It need to create 3 rules for the game. It's
+                            almost the same 3 rules for the game. The first is a rule allowing, the second is a rule
+                            blocking and the third is a rule allowing if secure with something to except. All 3 rules
+                            have these configurations: - Protocole > UDP, local ports > 3074 (rule blocking with
+                            traversal edge instead of 3074), distant ports > 1024-49151. - Local IP > your PC internal
+                            IP, distant IP > 0.0.0.1-223.255.255.255. The rule allowing if secure with distant computer
+                            to except the rule: - Do not take account of group creator. - Add a policy, click on
+                            advanced, click on search, click on group creator. - Add group creator to distant computer
+                            to except the rule. You can copy/paste the allowing rule after creating it, and change to
+                            blocking (with local ports assignate to traversal edge), and allowing if secure, and for
+                            this one, except the rule for group creator from distant computer tab.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/firewall7.png" alt="firewall7" style="width:70%"
+                            onclick='img_box("../img/firewall7.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Using Ressource Monitor to Find IP of Connection to
+                                Authenticate in Game</b></h3>
+                        <p>
+                            By opening ressource monitor, perfmon.exe, you can see IP of connection. By restoring
+                            default Windows firewall rules, and restarting the game, you can see all IP, under the tab
+                            network. Check the game in first tab, the tab under is for UDP IP, and under for TCP IP. If
+                            you have any problem, you can save and restore rules under Windows firewall tab, at top and
+                            right corner. If you don't find IP of connection using perfmon, it's possible to test IP
+                            with scales, defining IP scale more and more fine, until find the good IP scale. Also by
+                            checking on bgpview.io, you can have the sub network mask precisely.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Consideration About Reading and Applying this Guide</b></h3>
+                        <p>
+                            After all done, you are a pro for setting your PC. Windows firewall is a good tool to start
+                            for optimize your PC. It don't allow your PC to be attacked easily, with lot of connection
+                            always invading your PC. It's a way to start optimizing your PC. There's lot of tutorials on
+                            other way very interesting and important over internet. I'm also able to disable services,
+                            but without knowing exactly which services to disable, it's risky. But using other tutorials
+                            and this one I made for you, it's far from risky. If you set everything, and you are Open
+                            NAT in MW2, your are all good.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

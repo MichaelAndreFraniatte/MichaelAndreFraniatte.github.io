@@ -1,0 +1,739 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Book</title>
+        <meta name="description" content="Book to explain how to secure and optimize a PC mainly for gaming">
+        <meta name="keywords" content="sale, ebook, user, authentication">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+        
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="newb.png" alt="newb" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>Book</h2>
+                    <h1>Anti-Cheating Note and Solution</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Secure and Optimize Your Computer</b></h3>
+                        <p>
+                            The book is about to explain how to secure and optimize PC and consoles mainly for gaming.
+                            It explain everything to know to have a PC in best shape. Let's see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/newb-main.png" alt="newb-main" style="width:25%;"
+                            onclick='img_box("../img/newb-main.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Considerations About the Program</b></h3>
+                        <p>
+                            The book is explaining everything to know to secure and optimize your PC in order to enjoy
+                            playing. <a href="../anti-cheating-note-and-solution-book/">This</a> is my book. I made cmd and reg
+                            and ps1 files in order to automatically optimize your PC using settings to run with
+                            administrative privilege. It also contain a resume of all it need with all the stuffs. To
+                            note, it need to install game launchers before using it, otherwise game launchers will not
+                            want to be installed. Also, it coming with redistributable frameworks, in order you
+                            uninstall those coming with your PC, and install it, because it increase security for your
+                            PC. I also made a program to disable all services where names are not in a white list, and another 
+                            to delete automatically everything of what remain in the folder %temp%.
+                            I'm the only one who reached such high levels of optimization and security on a PC. I
+                            advice to make videos on cheaters caugth cheating letting killcams shown.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Trouble Shooting</b></h3>
+                        <p>
+                            - If you get an error of connection
+                        </p>
+                        <ul>
+                            <li>delete config files.</li>
+                            <li>reinstall the game or check integrity of files.</li>
+                            <li>reinitialize your PC.</li>
+                            <li>Allow Windows firewall rules for all programs (distant ports 80 and 443 in TCP).</li>
+                            <li>use cmd dos prompt command ipconfig/renew setting Windows firewall and modem/router
+                                firewall with default rules.</li>
+                        </ul>
+                        <p>
+                            - If your game crash
+                        </p>
+                        <ul>
+                            <li>allow more virtual ram.</li>
+                            <li>add physical ram.</li>
+                            <li>uninstall redist frameworks and install recent ones.</li>
+                        </ul>
+                        <p>
+                            - If your PC restart due to overheating
+                        </p>
+                        <ul>
+                            <li>apply fresh paste under your CPU.</li>
+                            <li>clean your PC with pencils and vacuum cleaner especially the fans.</li>
+                            <li>update drivers and bios with Windows update.</li>
+                            <li>upgrade your graphic card and power supply.</li>
+                        </ul>
+                        <p>
+                            - If you get black screen
+                        </p>
+                        <ul>
+                            <li>update your graphic card driver.</li>
+                            <li>upgrade your HDMI wire.</li>
+                            <li>set to default your Windows or modem firewalls or DNS servers for game updates.</li>
+                            <li>check integrity of files with your game launcher.</li>
+                        </ul>
+                        <p>
+                            - If your desktop icons are freeze
+                        </p>
+                        <ul>
+                            <li>open powershell run as administrator and execute the following command:</li>
+                            <li>"Get-AppxPackage *WebExperience* | Remove-AppxPackage".</li>
+                            <li>"Get-AppxPackage Microsoft.XboxGamingOverlay | Remove-AppxPackage".</li>
+                            <li>"Get-AppxPackage Microsoft.XboxIdentityProvider | Remove-AppxPackage".</li>
+                            <li>"Get-AppxPackage Microsoft.XboxSpeechToTextOverlay | Remove-AppxPackage".</li>
+                            <li>"Get-AppxPackage Microsoft.XboxGameOverlay | Remove-AppxPackage".</li>
+                            <li>execute again explorer.exe fron task manager.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Anti-Cheating and Optimization Solutions</b></h3>
+                        <ul>
+                            <li>You can't break your PC by tweaking it for security and optimization, it's always
+                                possible to repair it.</li>
+                            <li>Press shift and click at same time on restart to refresh your PC from factory.</li>
+                            <li>Don't wire ethernet and disable every features when you refreshing your PC.</li>
+                            <li>Set your prefered screen color for desktop and task bar.</li>
+                            <li>Disable features of task bar and notifications.</li>
+                            <li>Disable sleep mode when you don't touch your PC.</li>
+                            <li>Create shortcuts in task bar for advanced Windows firewall settings and ressource
+                                monitor (perfmon.exe), and on desktop for Ethernet card, and Powershell.</li>
+                            <li>Set to higher level UAC (User Account Control) from control panel.</li>
+                            <li>Enabling UAC to highest level is allowing to know if battle.net is launched as admin and
+                                so games, and so restart battle.net until it's not running as admin.</li>
+                            <li>Uninstall every apps and disable every features from Windows parameters and from
+                                programs and functionnalities under control panel, let only drivers of graphic, audio,
+                                and ethernet cards, power automate, Intel rapid storage, and redistributable frameworks
+                                (x86), but remove all the rest like Intel drivers, PhysX, XNA framework, Wireless WiFi
+                                and Bluetooth, etc, uninstall all redistributable packages and install redistributable
+                                package found on Microsoft official website, only the last x86 version, i.e. uninstall
+                                all programs but let ethernet card drivers, audio and video drivers (Nvidia audio and
+                                graphic drivers), power automate, Intel rapid storage, and redistributable frameworks
+                                (the most recents and only x86).</li>
+                            <li>Turn off functionnalites but let only checked frameworks 3.5 and 4.8 from programs and
+                                functionnalities under control panel.</li>
+                            <li>Disable automatic reorganization of icons under the desktop screen.</li>
+                            <li>Set parameter for better performance and disable remote connection from advanced system
+                                under control panel.</li>
+                            <li>Delete C:\Windows\System32\wlanext.exe, C:\Windows\System32\ibtsiva.exe, and C:\Program
+                                Files\Intel\WiFi (dllhost), and use ethernet wire.</li>
+                            <li>Use wired ethernet for your gaming PC and use Wi-Fi with MAC filter for your other
+                                devices.</li>
+                            <li>It's better to use only Ethernet card with a RJ45 wire connected to your modem, setting
+                                network public instead of private, and uninstall from programs and functionnalities
+                                under control panel, the Wi-Fi framework, but let Ethernet framework.</li>
+                            <li>Revert all advanced settings of network card, and change often ethernet network card MAC
+                                address with always same two first numbers corresponding to label of your card
+                                constructor (from configuration of ethernet network card under control panel), because
+                                there's spoofing of IP of official server due to MAC address hashing table hacked from
+                                network routers between your rooter and official servers, but if you using Wi-Fi and MAC
+                                address filtering under your modem settings it's boring.</li>
+                            <li>Set your network to public and with only Ethernet, no Wi-Fi.</li>
+                            <li>Disable from task manager all the programs starting automatically at PC start.</li>
+                            <li>Install your prefered launcher, downloaded from edge, for downloading and playing your
+                                prefered games, i.e. battle.net.</li>
+                            <li>Repair files often from your prefered launcher and set automatically close launcher when
+                                game starts.</li>
+                            <li>Change your PC internal IP in IPv4 properties when you can't connect into the games.
+                            </li>
+                            <li>Report and block every cheaters under social tab of Call of Duty, when someone is
+                                suspicious in the killcams, leave the match everytimes, because it's dangerous for your
+                                PC and private data, and it helps the someone to be reported by other players like you,
+                                if it's a cheater he will get banned, and you will have more good matches, and being
+                                less annoyed.</li>
+                            <li>There's a little way to encounter less cheaters in multiplayer games, it consist to
+                                report and block cheaters, each time you have any doubt, and at first, then as soon as
+                                possible, when the block list is full, to empty the list, it's because cheaters can
+                                change with their hacks, their display names and platforms, but not account, and if you
+                                not do that, you will always fight against these little jerky noobs in every matches you
+                                want to play and in a raw.</li>
+                            <li>Remove cheaters you blocked after your list is full, then you can add again the new
+                                cheaters, for having true gamers in your matches and not be harrassed everytime by these
+                                jerks, and so devs can take actions more easy with reports of cheating to get rid of
+                                cheaters in their games.</li>
+                            <li>Set Windows defender tools to highest levels (accept only call of duty and mmc to access
+                                folders), add C:\Windows\System32\wbem\unsecapp.exe, and
+                                C:\Windows\System32\dllhost.exe, wmic, powershell
+                                (C:\Windows\System32\WindowsPowerShell\v1.0), conhost, ShellExperienceHost to exploit
+                                protection with all features enable.</li>
+                            <li>Enable all security features from Windows security under Windows parameters, like node
+                                isolation, security against ransomeware adding all disks (C:/ and D:/), exploit
+                                protection, etc.</li>
+                            <li>From protection against ransomware, allow exe to access folders: Battle.net
+                                Launcher.exe, Battle.net.exe, Agent.exe (x2), ciine.exe, TextEditor.exe, MMC.exe.</li>
+                            <li>Set better graphic performance option for your game from display properties under
+                                graphic parameters.</li>
+                            <li>Delete all tasks and folders as you can under task scheduler from administrative tools
+                                in control panel, you can do it with powershell run as administrator with following
+                                command:</li>
+                            Get-ScheduledTask * | Unregister-ScheduledTask -Confirm:$false<br />
+                            <li>Set modem/router firewall to allow all ports for your gaming PC but only port 80 and 443
+                                in TCP for your other devices.</li>
+                            <li>Set firewall of your modem with rules for each of your PC:</li>
+                            local IP: internal IP of your PC, mask: 255.255.255.255, local ports: 1024-65535, distant
+                            ports: 1-49151, protocoles: TCP/UDP<br />
+                            <li>For your PC gaming, you just need the following rules to play Call of Duty (local ports
+                                -> distant ports):</li>
+                            in TCP:<br />
+                            49152-65535 -> 80<br />
+                            49152-65535 -> 443<br />
+                            49152-65535 -> 1119<br />
+                            49152-65535 -> 3074<br />
+                            3074 -> 80<br />
+                            3074 -> 443<br />
+                            in UDP:<br />
+                            49152-65535 -> 3074<br />
+                            3074 -> 3074<br />
+                            3074 -> 30000-40000<br />
+                            <li>For your laptop PC, you just need the following rules to browse internet (the last is
+                                for DNS client if you set one):</li>
+                            in TCP:<br />
+                            49152-65535 -> 80<br />
+                            49152-65535 -> 443<br />
+                            in UDP:<br />
+                            49152-65535 -> 53<br />
+                            <li>Disable UPNP and IPv6 on your modem/router under network tab.</li>
+                            <li>Download NVidia drivers under Nvidia official website but in my case I prefer to not
+                                update my GPU for better performances.</li>
+                            <li>Use Windows firewall rules, exploit protection and folder access against ransomeware as
+                                anti-cheat.</li>
+                            <li>For each Windows application, go to parameters of it by clicking right on it and disable
+                                background running.</li>
+                            <li>Disable all useless cards like Wi-Fi and Bluetooth cards, disable all ethernet network
+                                card features from card configuration (let enable only Wake on Magic Packet) and let
+                                only IPv4 installed from network properties.</li>
+                            <li>Disable all useless peripherals from peripheral manager and from peripherals and
+                                printers under control panel.</li>
+                            <li>Set manually your IPv4 settings from network properties under network and share center
+                                in control panel.</li>
+                            <li>Disable NetBios on TCP/IP from server WINS tab under IPv4 properties.</li>
+                            <li>Norton 360 Gaming or Razer Cortex or WTFast or ExitLag or Mudfish or ProtonVPN or
+                                NordVPN or ExpressVPN are all useless for optimization or security, even with all
+                                features enable.</li>
+                            <li>Set the command line parameters -d3d11 -high, to launch games with DirectX 11 and high
+                                CPU process priority for better performances, from your game settings under Battle.net
+                                parameters.</li>
+                            <li>Set your screen resolution to 800x600 and no scaling from your graphic card control
+                                panel instead from Windows settings, for better game performance, and disable every
+                                features from it, but enable performance features like cache and multi-threading.</li>
+                            <li>Set your screen native resolution for your game in your game graphic options.</li>
+                            <li>Set audio quality to lowest value, disable all audio effects and features, disable
+                                microphone and stereo mixer, disable all audio cards you don't use, under audio card
+                                parameters from settings and Windows parameters, to avoid audio crash and cool down your
+                                ears.</li>
+                            <li>Uninstall programs if it eats memory, then reinstall it with last installer, if you are
+                                using it.</li>
+                            <li>Delete everything in %temp% folder, even masked elements.</li>
+                            <li>Delete the maxinmum of useless things in folders %programfiles(x86)%, %programdata%,
+                                %localappdata%, %appdata%.</li>
+                            <li>Clean the disks often from administrative tools under control panel.</li>
+                            <li>Launch repair tool often when restarting pressing shift key with click on restart.</li>
+                            <li>Launch battle.net, your games and applications without administrative privilege.</li>
+                            <li>Set IPv4 properties to default under network properties, and set Windows firewall rules
+                                to default for resolving your internal IP, then import your rules again if you have an
+                                issue for connecting in Call of Duty.</li>
+                            <li>Delete call of duty game folder under documents sometimes, when your game is open (use
+                                Alt + F4, Alt + Enter is to switch fullscreen/windowed).</li>
+                            <li>Add your games and applications for access folders (D:/, C:/) you protected when using
+                                protection against ransomware.</li>
+                            <li>Enable all exploit protection for default system settings under protection tools from
+                                Windows parameters.</li>
+                            <li>Shut down execution of unwanted applications using exploit protection but not those
+                                essentials.</li>
+                            <li>You can block ransomeware by blocking start of some exe with exploit protection settings
+                                to all enable.</li>
+                            <li>Whitelist against ransomeware to not block:</li>
+                            BlackOpsColdWar.exe, ModernWarfare.exe, cod.exe, Battle.net.exe, Battle.net Launcher.exe,
+                            mmc.exe, Agent.exe, TextEditor.exe, Taskmgr.exe, perfmon.exe, csrss.exe, dwm.exe,
+                            explorer.exe, lsass.exe, ntoskrnl.exe, RtkAudUService64.exe, audiodg.exe, smss.exe,
+                            svchost.exe, consent.exe, conhost.exe, webViewer.exe, smartscreen.exe, rundll32.exe,
+                            fontdrvhost.exe, jhi_service.exe, NisSrv.exe, NVDisplay.Container.exe,
+                            SecurityHealthService.exe, services.exe, SgrmBroker.exe, sihost.exe,
+                            TPMProvisioningService.exe, wininit.exe, winlogon.exe, StartMenuExperienceHost.exe,
+                            MsMpEng.exe, ApplicationFrameHost.exe, wlanext.exe, WmiApSrv.exe, SIHClient.exe,
+                            RuntimeBroker.exe<br />
+                            <li>Blacklist against ransomeware to block:</li>
+                            dllhost.exe, gamingservices.exe, gamingservicesnet.exe, MicrosoftEdgeUpdate.exe,
+                            msedgewebview2.exe, msedge.exe, Microsoft.Photos.exe, PhoneExperienceHost.exe,
+                            SearchHost.exe, SearchApp.exe, WMIADAP.exe, WMIC.exe, Widgets.exe,
+                            GameBarPresenceWriter.exe, GameBarFTServer.exe, GameBar.exe, dxgiadaptercache.exe,
+                            UserOOBEBroker.exe, backgroundTaskHost.exe, taskhostw.exe, ShellExperienceHost.exe,
+                            DsmUserTask.exe<br />
+                            <li>Disable useless services (all intel services) under administrative tools from control
+                                panel.</li>
+                            <li>Windows services to let in french:</li>
+                            Informations d’application, Service de profil utilisateur, Générateur de point de
+                            terminaison du service audio Windows, Audio Windows, Moteur de filtrage de base, Service de
+                            prise en charge bluetooth, Service de chiffrement, Client DHCP, Client DNS, Journal
+                            d’événement Windows , Service de stratégie de diagnostic, Service d'association de
+                            périphérique, Gestionnaire d'installation de periphérique, Détection materiel noyau,
+                            Plug-and-Play, Client de stratégie de groupe, Planificateur de classe multimédia, Windows
+                            installer, Netlogon, Connexions réseau , Service Interface du magasin réseau, Alimentation,
+                            Mappeur de point de terminaison, Planificateur de taches, Sauvegarde Windows, Service
+                            ouverture de session locale, Service de découverte automatique de Proxy Web pour les
+                            services HTTP Windows, Service de moteur de sauvegarde en mode bloc, Security services as
+                            Windows firewall<br />
+                            <li>Windows services to let in english:</li>
+                            Application Information, Background Tasks Infrastructure Service, Base Filtering Engine,
+                            Bluetooth Support Service, Cryptographic Services, DCOM Server Process Launcher, DHCP
+                            Client, Diagnostic Policy Service, Diagnostic System Host, Distributed Link Tracking Client,
+                            DNS Client, Function Discovery Resource Publication, Group Policy Client, IKE and AuthIP
+                            IPsec Keying Modules, IP Helper, Local Session Manager, Multimedia Class Scheduler, Network
+                            Connections, Network List Service, Network Location Awareness, Network Store Interface
+                            Service, Power, Remote Procedure Call (RPC), RPC Endpoint Mapper, Security Accounts Manager,
+                            Security Center, Shell Hardware Detection, Task Scheduler, User Profile Service, Windows
+                            Audio, Windows Audio Endpoint Builder, Windows Connection Manager, Windows Error Reporting
+                            Service, Windows Event Log, Windows Firewall, Windows Management Instrumentation, WinHTTP
+                            Web Proxy Auto-Discovery Service<br />
+                            <li>Don't let Microsoft Edge running in background after you closing it, you must disable
+                                every features under parameters of Microsoft Edge, but let all security and
+                                confidentiality enable, check if it run with task manager open with shortcut
+                                ctrl+shift+esc.</li>
+                            <li>For repair Windows Update not able to find updates, or for repair sales in Fortnite, you
+                                need to disable protected folders under security parameters, and also exploit protection
+                                for dllhost.exe, ShellExperienceHost and UserOOBEBroker.exe, and disable avoid child
+                                process launching.</li>
+                            <li>Update often your PC with Windows Update, choosing global updates, but also facultative
+                                updates for driver updates, like BIOS, under Windows parameters, and from advanced
+                                options, under third party driver updates.</li>
+                            <li>Update your Windows PC and repair install if not want updating
+                                (Windows10Upgrade9252.exe).</li>
+                            <li>You can set with cmd.exe your IPv4 properties as following:<br />
+                                netsh interface ipv4 show config<br />
+                                netsh interface ipv4 set address name="Wi-Fi" static 192.168.1.8 255.255.255.0
+                                192.168.1.1<br />
+                                netsh interface ipv4 set dns name="Wi-Fi" static 8.8.8.8<br />
+                                netsh interface ipv4 set dns name="Wi-Fi" static 8.8.4.4 index=2<br />
+                            <li>Change your modem/router DHCP config for set internal IP of buisness like, i.e.
+                                10.0.0.1, and then in cmd.exe type as following:</li>
+                            ipconfig/release<br />
+                            ipconfig/renew<br />
+                            <li>Use secure DNS server of CloudFlare (1.1.1.1) over HTTPS from IPv4 manual settings and
+                                Windows parameters under network tab to enable encryption, or use other secure DNS
+                                server (Google 8.8.8.8, Quad9 9.9.9.9, etc), and change it often.</li>
+                            <li>DNS to not block if using NextDNS as DNS server to set in whitelist.</li>
+                            api.blizzard.com, eu.cdn.blizzard.com, level3.blizzard.com, level3.ssl.blizzard.com,
+                            eu.api.blizzard.com, www.callofduty.com, telescope.callofduty.com, prod.cdni.callofduty.com,
+                            prod-data-energon.infra-ext.activision.com, weezyblue-lobby.prod.demonware.net,
+                            jup-bnet-loginservice.prod.demonware.net, genesis.stun.us.demonware.net,
+                            genesis.stun.eu.demonware.net, objectstore-cloud-prod-jup.egcp.demonware.net, digicert.com,
+                            cloudfront.net, battle.net.</li>
+                            <li>When you want to use NextDNS server, use it over https as following:</li>
+                            Open Windows parameters<br />
+                            Go to Network & Internet<br />
+                            Click Wi-Fi (or Ethernet)<br />
+                            Click Hardware Properties, or skip this step if you clicked Ethernet<br />
+                            Click the Edit button next to DNS Server Assignment<br />
+                            Select Manual<br />
+                            Enable IPv4<br />
+                            Enter 45.90.28.0 as your preferred DNS, then select Enabled (manual model) and enter
+                            https://dns.nextdns.io/886e64<br />
+                            Enter 45.90.30.0 as Alternate DNS, then select Enabled (manual model) and enter
+                            https://dns.nextdns.io/886e64<br />
+                            Click Save<br />
+                            <li>For setting security with NextDNS, go to https://my.nextdns.io/886e64/settings, add all
+                                security feature settings, add all TLD (first level domain) to block in settings.</li>
+                            <li>Choose to close group access in call of duty to avoid the hack of big cheaters make them
+                                invade your matches.</li>
+                            <li>Saving your games you add from Xbox application on a SSD needs it be formatted in NTFS
+                                format.</li>
+                            <li>Disable options of applications from Windows parameters, don't let it execute in
+                                background.</li>
+                            <li>In CoD, set group to private, check file modification like
+                                telescopeCache\telescope_index.dat or xpak_cache\xpak_settings.bin or main\toc1.dcache
+                                or .build.info or Launcher.exe, but start again battle.net setup before, check integrity
+                                of files after removing these files.</li>
+                            <li>Enhance CoD game settings with the dedicated file named adv_options.ini.</li>
+                            <li>If you can't update your games, you need to enter the following commands in cmd prompt
+                                run with administrative privilege.</li>
+                            net stop winmgmt<br />
+                            winmgmt /resetrepository<br />
+                            net start winmgmt<br />
+                            <li>And also delete the following folders<br />
+                                In %programdata% delete the Battle.net and Blizzard Entertainment folders<br />
+                                In %appdata% delete the Battle.net folder<br />
+                                In %localappdata% delete the battle.net and Blizzard Entertainment folders<br />
+                            <li>Uninstalling Battle.net<br />
+                                Press Windows key + R and type in %programfiles(x86)%<br />
+                                Delete anything related to Blizzard or Battle.net<br />
+                                Do the same for %temp%, %programdata%, %localappdata%, %appdata%<br />
+                            <li>Finally uninstall and reinstall battle.net, copy your game files, uninstall the game,
+                                format your SSD with default settings, and copy again your game files, and then
+                                reinstall your game by locate game files, or simply, uninstall the game, and reinstall
+                                it disabling auto update, enabling english language, and make a copy of fresh files, do
+                                it each time there are too much cheaters, it's probably they changed your game files by
+                                injecting a malware.</li>
+                            <li>Set battle.net to quit when launching a game, and make manually update of your game and
+                                launch it after that without firewall blocking rules for both, taking care to not break
+                                the game files to not have to redownload it.</li>
+                            <li>Disable voice tchat, disable text tchat, disable all graphic features under game
+                                options.</li>
+                            <li>If you have a bad connection for your matches and it's fill with cheaters, prefer in it
+                                less players as possible.</li>
+                            <li>Every free drivers of any kind, not comming with your OS, and every free programs you
+                                download on internet have or are viruses.</li>
+                            <li>You can repair your PC with cmd dos prompt command run with administrative privilege
+                                typing both commands: sfc /scannow, DISM /Online /Cleanup-Image /ScanHealth.</li>
+                            <li>You can repair Windows Security with powershell run with administrative privilege typing
+                                command: Get-AppxPackage Microsoft.SecHealthUI -AllUsers | Reset-AppxPackage.</li>
+                            <li>Game in fullscreen is running better than windowed or fullscreen without border.</li>
+                            <li>Prefer install your favorite multiplayer games under C:/program files (x86) folder for
+                                better performance.</li>
+                            <li>Prefer install your favorite multiplayer game under the drive where your OS is installed
+                                for better performances, also don't let useless disks installed to set under disk
+                                manager from computer manager in administrative tools.</li>
+                            <li>Disable and lower everything for Ethernet network card settings from advanced options
+                                under configuration.</li>
+                            <li>Your FPS but also your ping in multiplayer games depends on health of your PC, ping is a
+                                better indicator than FPS.</li>
+                            <li>Each time, there's an update of your game under battle.net, quit battle.net until
+                                there's no more update of your game.</li>
+                            <li>It's better to restore your PC from fresh often than trying to repair with strange
+                                programs, you just have to keep your game files on a external disk.</li>
+                            <li>For better performances, keep enable the service SysMain, before named prefetch, even if
+                                it eat a lot of memory and CPU, your system is more stable in time.</li>
+                            <li>Prefer to upgrade to last Windows OS, it's always more optimized and better
+                                performances.</li>
+                            <li>Disable every features and deny every applications to run in background from Windows
+                                parameters, but let parameters for bluetooth and sound from dedicated tabs, not from
+                                Windows parameters, where you can disable everything.</li>
+                            <li>Prefer to update drivers using peipheral manager under control panel.</li>
+                            <li>To avoid input lags or desktop freeze, take care to not having useless hidden drivers
+                                from peripheral manager, under control panel, otherwise remove all of it.</li>
+                            <li>From folder explorer search, remove all folders and files, even hidden, packages, .vs,
+                                .git, .gitattributes.</li>
+                            <li>Prefer to let distant port 443 (https) for all programs in modem and Windows firewall,
+                                in order Windows update slice to secure download instead of unsecure with port 80
+                                (http).</li>
+                            <li>Don't allow SSID of your modem to be discover, and set allow to connect to network if
+                                the SSID is not in discovering mode, from IPv4 network connection properties under
+                                network center and sharing under control panel.</li>
+                            <li>You have less bad lobbies in CoD by not insulting people, remember to stay legit and to
+                                never insult anyone, keep cool.</li>
+                            <li>With Windows 11 OS, you have to register your session with a Microsoft account, but
+                                after it you can add a local user with a password, and set a local account for open your
+                                session, and if you refresh from factory your PC, this setting stay when you choose to
+                                keep files, also you can remove totally the login, like if you encounter issue with PIN
+                                code, check it, also if you have a brand new PC you must set to default firewall for
+                                your modem allowing all ports and IP.</li>
+                            <li>Set security and confidentiality on Edge settings to maximum levels of security for each
+                                of parameter, and also under edge://settings/system you need to disable everything,
+                                particularly the parameter of material acceleration, for be able to watch movies on
+                                Netflix.</li>
+                            <li>If you can't launch some games, it's probably because Windows Defender Diagnosis is set
+                                to required, blocking some game files.</li>
+                            <li>Using invasive programs on a lowend PC is destroying it, it's the case with programs for
+                                recording or streaming, even with anti-virus, be sure of the sources before using
+                                unknown programs.</li>
+                            <li>If you think you are shadowban in CoD, it's probably hackers triggered it with game
+                                config files changing it, so delete it and make again your game config, even reinstall
+                                CoD for prevent it and be sure there's no trace remaining, you can check if you are
+                                shadow banned in Call of Duty with the link: https://support.activision.com/ban-appeal.
+                            </li>
+                            <li>Cheat program used by cheaters have hacks exploiting vulnerabilities for always forward
+                                good and fair players in hacked lobbies, vulnerabilities also destroy your PC.</li>
+                            <li>If you are forwarded in same match after leaving one, or with same cheaters you blocked,
+                                you are forwarded in hacked lobbies, I've tried everything for Call of Duty, there's
+                                almost nothing running, only right firewall rules.</li>
+                            <li>Disable fast boot at PC start from alimentation options under control panel, opening the
+                                tab choose action button at left side, and then clicking on the link modify advanced
+                                options, with the first checkbox under shut down parameters.</li>
+                            <li>Enable high performances for power option (alimentation manager) under Windows
+                                parameters and control panel.</li>
+                            <li>Enable game mode under Windows parameters for better graphic card manager.</li>
+                            <li>From Nvidia paramater panel, set 3D render to performance or quality, and other features
+                                for your graphic card in order to optimize your gaming session with better performance
+                                or quality, then you can disable the service Nvidia container, and the same from system
+                                settings for having better performance or quality.</li>
+                            <li>From programs and functionnalities, under functionnalities, disable everything, but let
+                                frameworks default settings.</li>
+                            <li>Run the following command in cmd dos with administrative privilege to increase the limit
+                                of paged pool memory size "fsutil behavior set memoryusage 2".</li>
+                            <li>Open cmd prompt command with administrative privilege and type ipconfig/flushdns.</li>
+                            <li>Disable every features from advanced tab under your network card configuration.</li>
+                            <li>Under advanced system parameters, disable remote desktop, disable visual features,
+                                disable shared files, and enable DEP for all programs and services.</li>
+                            <li>Disable snap windows from multitasking in system settings under Windows parameters
+                                because your task bar or desktop icons can be unaccesible, it's made to not have to stop
+                                webview2 process task for having access again to icons.</li>
+                            <li>Disable game bar from parameters under Gaming for Game bar by setting "Record game
+                                clips, screenshots and broadcast using Game bar" to "Off".</li>
+                            <li>Disable indexation from disk properties for avoiding unwanted execution.</li>
+                            <li>Check integrity of memory often by typing mdsched in the Run window open with keyboard
+                                shortcut Win+R.</li>
+                            <li>You can use poweshell to export/import exploit protection settings (to run with
+                                administrative privilege) with the two following commands.</li>
+                            Get-ProcessMitigation -RegistryConfigFilePath C:\ExploitConfigfile.xml<br />
+                            Set-ProcessMitigation -PolicyFilePath C:\ExploitConfigfile.xml<br />
+                            <li>Then add/delete dllhost.exe manually from exploit protection otherwise you won't be able
+                                to install or uninstall programs and to have administrative rights, and other stuffs
+                                like that, you also need to disconnect/connect your session to take effect.</li>
+                            <li>Use the following commands of Powershell run with administrative privilege to uninstall
+                                useless Windows packages.</li>
+                            Get-AppxPackage *WebExperience* | Remove-AppxPackage<br />
+                            Get-AppxPackage Microsoft.XboxGamingOverlay | Remove-AppxPackage<br />
+                            Get-AppxPackage Microsoft.XboxIdentityProvider | Remove-AppxPackage<br />
+                            Get-AppxPackage Microsoft.XboxSpeechToTextOverlay | Remove-AppxPackage<br />
+                            Get-AppxPackage Microsoft.XboxGameOverlay | Remove-AppxPackage<br />
+                            Get-AppxPackage * | Remove-AppxPackage<br />
+                            <li>Use the following commands of Powershell run with administrative privilege to repair
+                                Windows packages.</li>
+                            Get-AppxPackage * | Reset-AppxPackage<br />
+                            Get-AppxPackage *notepad* -AllUsers| Foreach {Add-AppxPackage -DisableDevelopmentMode
+                            -Register "$($_.InstallLocation)\AppXManifest.xml"}<br />
+                            Get-AppxPackage *paint* -AllUsers| Foreach {Add-AppxPackage -DisableDevelopmentMode
+                            -Register "$($_.InstallLocation)\AppXManifest.xml"}<br />
+                            Get-AppxPackage -AllUsers| Foreach {Add-AppxPackage -DisableDevelopmentMode -Register
+                            "$($_.InstallLocation)\AppXManifest.xml"}<br />
+                            <li>You can force ASLR if you play only Call of Duty with Battle.net by using the regedit
+                                key MoveImages:</li>
+                            HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\ add
+                            the DWORD 32 bits value "MoveImages" and allocate a hex value of ffffffff<br />
+                            <li>Check settings and installed applications each time you use Windows updates because of
+                                roll back.</li>
+                            <li>To change your IP address, you can let your modem/router shutdown several minutes or
+                                directly under your ISP frontpage connected with your internet account (ISP official
+                                website authentified with the address mail of who pay your internet at your home).</li>
+                            <li>For cleaning your PC, only use a vacuum cleaner with brush attachment and hold on your
+                                fans, but never use a dry air bomb because of conductor liquid inside.</li>
+                            <li>To clean your PC from virus and get it stay safer, you can use malwarebytes antimalwares
+                                (MBSetup.exe).</li>
+                            <li>If you want to copy/paste text in settings of Windows firewall use only keyboard
+                                shortcuts, not mouse context menu.</li>
+                            <li>If you having issue for connecting your bluetooth device, delete it from Windows
+                                parameters, and try again to connect it.</li>
+                            <li>Don't store any private file under your gaming PC, it is vital.</li>
+                            <li>Enable set size managed by system or set manually your VRAM and define values of 64000
+                                Mo for all disks from advanced system parameters under control panel, and also disable
+                                the option of secure disks from the button configure for better performances.</li>
+                            <li>Enable MMAgent for better performances using powershell run with administrative
+                                privilege with the following command.</li>
+                            Enable-MMAgent -ApplicationLaunchPrefetching<br />
+                            Enable-MMAgent -ApplicationPreLaunch -PageCombining -MemoryCompression<br />
+                            Set-MMAgent -ThrottleLimit 0 -MaxOperationAPIFiles 8192<br />
+                            <li>Add to gaming performances for your grahic card under Windows parameters the following
+                                exe (also enable windowed flip optimization from the link settings under same tab).</li>
+                            nvcontainer.exe, NVDisplay.Container.exe, NVIDIA GeForce Experience.exe, NVIDIA Share.exe,
+                            NVIDIA Web Helper.exe, nvsphelper64.exe<br />
+                            <li>To add a program in Windows firewall, you can open task manager (ctrl+shift+esc) for
+                                localize the file path by opening the folder where the program is, and then see it in
+                                explorer bar to copy and paste in Windows firewall rule.</li>
+                            <li>You can test your Xbox controller by typing joy.cpl from Run tool to open with the
+                                keyboard keys shortcut Windows + R, and also open control panel by typing it, and also
+                                control printers by typing it.</li>
+                            <li>You can close your session or open task manager to close a program with the keyboard
+                                keys shortcut ctrl + alt + del.</li>
+                            <li>You need to know the effects of the keys ctrl, shift, double click, and shortcuts
+                                ctrl + a, ctrl + c, ctrl + v, ctrl + x, ctrl + s.</li>
+                            <li>Lower Call of Duty graphisms to the minimum for the best fluidity, disable useless
+                                features in other game options like textchat and microphone, set streaming mode on, and
+                                no public acces to match in order no one can join you like cheaters.</li>
+                            <li>Under Windows parameters, for games, from graphical option, add Call of Duty to high
+                                performance used for graphic card.</li>
+                            <li>When you save your files under a USB storage device, if you asked to copy without file
+                                parameters, say always yes copy the file, otherwise the file will disappear, but best to
+                                copy from USB storage device to your computer disk for not be annoying anymore.</li>
+                            <li>Grant acces to folder of Call of Duty only for adminstrators with the following
+                                powershell command.</li>
+                            icacls "D:\Battlenet Games" /inheritance:r /grant Administrators:F, or if you can't, you
+                            need to install the game under C: disk, or just change permissions of folder with properties
+                            allowing owner administrator, or admistrators, and disable heriting, and then convert
+                            permissions to explicit, and so disable permission of user(s) for modification and all
+                            others things like execution or write, it's because hackers are modifying the following
+                            files:</li>
+                            shmem, D3D12Core.dll, game.icn, telescope_index.dat<br />
+                            <li>But it's better to merge C: and D: partition drives into C: drive with PAssist, and so
+                                install games under protected system files with default path, like under C:\Program
+                                Files, because for Call of Duty the following commands don't run:</li>
+                            powershell -command "attrib +S C:\* /s"<br />
+                            powershell -command "attrib +S C:\* /d /s"<br />
+                            <li>Under administrative tools, from computer manager, in the tab disk manager, you can
+                                delete D: drive, if it's at right to C: drive directly you can merge it, otherwise then
+                                you can use PAssist with advanced options to merge C: and D: drives.</li>
+                            <li>Uninstall/install Call of Duty often or each time you see something suspicious like ping
+                                of matchmaking, because when you meet cheaters, they can modify your game while you are
+                                playing, and after you are like shadow banned.</li>
+                            <li>Sometimes battle.net don't save parameters, so you need to undo settings and redo, by
+                                saving twice.</li>
+                            <li>Windows firewall blocks launch of installation and uninstallation of games with
+                                Battle.net, so set default rules when you want to do it.</li>
+                            <li>Use Windows firewall rules, and also configs of CoD to copy in My Documents folder under
+                                your PC, optimize and secure your PC with settings and manually from infos here, restart
+                                your PC, see if it change something, but before install your favorite game launcher,
+                                i.e. battle.net, otherwise it won't install, but you can still install by enabling again
+                                services, disabling exploit protections, installing Digicert certificate, and run
+                                launcher with administrative privilege, and also use only recent redistributable
+                                frameworks found on official Microsoft website, and also set your shortcuts like for
+                                Ethernet card under desktop, and monitor ressources and Windows firewall advanced
+                                parameters under task bar, and also do windows update, disk cleanup, install your
+                                drivers, and turn off functionnalities.</li>
+                            <li>For eliminate unwanted changes on your network, it’s better checking and changing hosts
+                                file in windows/system32/drivers/etc as following:</li>
+                            127.0.0.1 localhost<br />
+                            ::1 localhost<br />
+                            <li>And checking and changing protocol file in C:/Windows/System32/drivers/etc as following:
+                            </li>
+                            tcp 6 TCP # Transmission control protocol<br />
+                            udp 17 UDP # User datagram protocol<br />
+                            Empty all other files in in C:/Windows/System32/drivers/etc<br />
+                            <li>Disable bitlocker (volume cryptography against stolen device) from confidentiality and
+                                security under Windows parameters, and use Autoruns64.exe with safe mode boot option of
+                                your PC (msconfig.exe to open with Run.exe from shortcut Win + R) to disable WinDefender
+                                service (delete entry), Edge update, EventLog, ALG, Printer, Screen Capture, starting at
+                                PC boot, it's a tool of Microsoft, disable also all other things you think it's unsecure
+                                or useless with this tool, in particular you can delete all entries like for remote
+                                assistances, distant access, Xbox, GameInputSvc, Internet Explorer, Sharing, OneDrive,
+                                RDP, OneSync, Sync Center, ClipSVC, Acrobat, Adobe, ActiveX, Kindle, Themes Setup,
+                                Windows Desktop Update, IconCodecService, NetBios, LanmanWorkstation, SMB, SNMP, P9NP,
+                                RDPNP, webclient, but if you can't delete or uncheck an entry you can open it in
+                                registry for changing autorisation to administrator with all privileges and delete it
+                                directly from registry, and if you are not sure of the entry you just have to uncheck it
+                                not delete it, do it for all users and with Microsoft entries not hidden, don't forget
+                                to save your configuration and all your registry clicking on computer under left tab
+                                (the file exported is around 300 000 Ko), and if you can't reboot you just have to let
+                                pushed the power button several seconds and wait 10 seconds until electricity gone
+                                before reboot, for all these entries make a quick search and a name search, but if you
+                                encounter issue while starting your PC open cmd prompt from start option menu and type
+                                regedit.exe to import all your registry, but before deleting registry entries you can
+                                identify the associate files and delete it directly from disk if the associate files are
+                                used only by entries to delete.</li>
+                            <li>If some settings are missing, try to repair your PC with the following cmd.exe commands.
+                            </li>
+                            DISM.exe /Online /Cleanup-image /Restorehealth<br />
+                            sfc /scannow<br />
+                            chkdsk C: /f /r<br />
+                            <li>If you have explorer.exe task memory leak you can end task with task manager
+                                (Ctrl+shift+esc) and execute it again with the button at top of task manager, then in
+                                the tab you just have to type explorer.exe and check the box administrator privilege,
+                                and then hit the button execute.</li>
+                            <li>Choose a high DPI mouse above 4000, because your aiming will be accurate in center, fast
+                                at edge, and you will adjust ennemies moving more easily.</li>
+                            <li>You can remove the symbol shortcut from your desktop icons with the regedit entry you 
+                                create named Shell Icons as following:<br />
+                                HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons<br />
+                                key name: 29, string value: C:\Blank.ico<br />
+                                You need to copy the <a
+                                href="Blank.ico" download class="dl-link">Blank.ico</a> under C:\ drive.</li>
+                            <li>Never use third party tools, and in particular from unofficial sources, it's often virus
+                                or write and read in your PC like kind of virus, it's harmless, but don't trust noobs
+                                saying optimization of your PC is useless, they try optimization with low asking
+                                ressource games and with a high end PC, optimization is also securing your PC and with
+                                time your PC is feeling better, my tutorial here is complete in terms of optimization
+                                and security as far as I can.</li>
+                            <li>When you refresh your PC, set country to US, set language to United Kingdom, and set
+                                your right keyboard layout.</li>
+                            <li>For using Xbox app, you need to remove all programs from exploit protection, you can 
+                                remove all Appx packages but Xbox app will ask you to install some of these packages 
+                                you need to install, and you can use my ServiceDisabling.exe for stop and disable all 
+                                useless services but you need before to reenable services with my cmd prompt command 
+                                in services.cmd.</li>
+                            <li>If your PIN code isn't available you can open terminal open after restarting your PC
+                                letting shift pressed while clicking on restart, then in cmd type regedit, in registry
+                                click on HKEY_LOCAL_MACHINE, click on File in the menu, then on Load File, go to
+                                C:/Windows/system32/config/SOFTWARE, in the window key name, type msoftware, then in the
+                                left meny in registry entries, click on msoftware/Microsoft/Windows NT/Current
+                                Version/PasswordLess/Device, then under the key name PasswordLessBuildVersion, set the
+                                value of 0.</li>
+                            <li>Personally I use a cheap laptop PC for working with Wi-Fi, just disabling some services
+                                and Appx packages, and a expensive gaming desktop PC for playing with all the
+                                optimization and the security explained here, but in both cases I use the right Windows
+                                firewall rules, for my laptop the simple rules and for my desktop the advanced rules,
+                                complementary I use the following programs:</li>
+                            Laptop PC: StopIt, Edge, my-favours, Playcipe, Playtube, Playzer, Playtov, Playto, Playther,
+                            TextEditor, ms-paint, png2ico, Visual Studio, Visual Studio Code, rmoto, Epic Games website,
+                            Steam website, GitHub Desktop, USB storage device for files saving, logitech speakers,
+                            RecordYoutube, Youtube for upload<br />
+                            Desktop PC: rmofo, StopIt, ChangeMAC, ChangeDNS, ciine, SIGIL, TextEditor, PAssist,
+                            battle.net, Steam, FlydigiPcSpace, InterceptionTest, Interception, vJoy, SCP, ViGEm,
+                            Devreorder, console controllers, GeForceExperience for streaming on Youtube, ffmpeg with
+                            command lines, custom overlays, webcam with microphone, HDMI screen
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

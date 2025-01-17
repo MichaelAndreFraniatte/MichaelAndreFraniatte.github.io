@@ -1,0 +1,3400 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+
+		<title>OtepOthello</title>
+		<meta charset="utf-8">
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Michael Andre Franiatte OtepOthello">
+		<meta name="keywords" content="Michael Andre Franiatte, OtepOthello">
+		<meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+		<link rel="shortcut icon" type="image/ico" href="img/pions.ico">
+
+		<script src="../custom/redirect.js"></script>
+
+		<style>
+			body {
+				background-color: dodgerblue;
+				padding: 0px;
+				margin: 0px;
+				overflow: hidden;
+			}
+		</style>
+
+	</head>
+
+	<body class oncontextmenu="return false;">
+
+		<img id="Othello" src="img/othello.png"></img>
+
+		<img id="othello-black-1" src="img/othello-black.png"><img>
+		<img id="othello-black-2" src="img/othello-black.png"><img>
+		<img id="othello-black-3" src="img/othello-black.png"><img>
+		<img id="othello-black-4" src="img/othello-black.png"><img>
+		<img id="othello-black-5" src="img/othello-black.png"><img>
+		<img id="othello-black-6" src="img/othello-black.png"><img>
+		<img id="othello-black-7" src="img/othello-black.png"><img>
+		<img id="othello-black-8" src="img/othello-black.png"><img>
+		<img id="othello-black-9" src="img/othello-black.png"><img>
+		<img id="othello-black-10" src="img/othello-black.png"><img>
+		<img id="othello-black-11" src="img/othello-black.png"><img>
+		<img id="othello-black-12" src="img/othello-black.png"><img>
+		<img id="othello-black-13" src="img/othello-black.png"><img>
+		<img id="othello-black-14" src="img/othello-black.png"><img>
+		<img id="othello-black-15" src="img/othello-black.png"><img>
+		<img id="othello-black-16" src="img/othello-black.png"><img>
+		<img id="othello-black-17" src="img/othello-black.png"><img>
+		<img id="othello-black-18" src="img/othello-black.png"><img>
+		<img id="othello-black-19" src="img/othello-black.png"><img>
+		<img id="othello-black-20" src="img/othello-black.png"><img>
+		<img id="othello-black-21" src="img/othello-black.png"><img>
+		<img id="othello-black-22" src="img/othello-black.png"><img>
+		<img id="othello-black-23" src="img/othello-black.png"><img>
+		<img id="othello-black-24" src="img/othello-black.png"><img>
+		<img id="othello-black-25" src="img/othello-black.png"><img>
+		<img id="othello-black-26" src="img/othello-black.png"><img>
+		<img id="othello-black-27" src="img/othello-black.png"><img>
+		<img id="othello-black-28" src="img/othello-black.png"><img>
+		<img id="othello-black-29" src="img/othello-black.png"><img>
+		<img id="othello-black-30" src="img/othello-black.png"><img>
+		<img id="othello-black-31" src="img/othello-black.png"><img>
+		<img id="othello-black-32" src="img/othello-black.png"><img>
+
+		<img id="othello-white-1" src="img/othello-white.png"><img>
+		<img id="othello-white-2" src="img/othello-white.png"><img>
+		<img id="othello-white-3" src="img/othello-white.png"><img>
+		<img id="othello-white-4" src="img/othello-white.png"><img>
+		<img id="othello-white-5" src="img/othello-white.png"><img>
+		<img id="othello-white-6" src="img/othello-white.png"><img>
+		<img id="othello-white-7" src="img/othello-white.png"><img>
+		<img id="othello-white-8" src="img/othello-white.png"><img>
+		<img id="othello-white-9" src="img/othello-white.png"><img>
+		<img id="othello-white-10" src="img/othello-white.png"><img>
+		<img id="othello-white-11" src="img/othello-white.png"><img>
+		<img id="othello-white-12" src="img/othello-white.png"><img>
+		<img id="othello-white-13" src="img/othello-white.png"><img>
+		<img id="othello-white-14" src="img/othello-white.png"><img>
+		<img id="othello-white-15" src="img/othello-white.png"><img>
+		<img id="othello-white-16" src="img/othello-white.png"><img>
+		<img id="othello-white-17" src="img/othello-white.png"><img>
+		<img id="othello-white-18" src="img/othello-white.png"><img>
+		<img id="othello-white-19" src="img/othello-white.png"><img>
+		<img id="othello-white-20" src="img/othello-white.png"><img>
+		<img id="othello-white-21" src="img/othello-white.png"><img>
+		<img id="othello-white-22" src="img/othello-white.png"><img>
+		<img id="othello-white-23" src="img/othello-white.png"><img>
+		<img id="othello-white-24" src="img/othello-white.png"><img>
+		<img id="othello-white-25" src="img/othello-white.png"><img>
+		<img id="othello-white-26" src="img/othello-white.png"><img>
+		<img id="othello-white-27" src="img/othello-white.png"><img>
+		<img id="othello-white-28" src="img/othello-white.png"><img>
+		<img id="othello-white-29" src="img/othello-white.png"><img>
+		<img id="othello-white-30" src="img/othello-white.png"><img>
+		<img id="othello-white-31" src="img/othello-white.png"><img>
+		<img id="othello-white-32" src="img/othello-white.png"><img>
+
+		<copyrights
+			style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: white; text-align: center; font-family: sans-serif; font-size: 15px; line-height:15px;">
+			<b>© MAF</b></copyrights>
+
+		<script type="text/javascript">
+
+			var win = window,
+				doc = document,
+				docElem = doc.documentElement,
+				body = doc.getElementsByTagName('body')[0],
+				x = win.innerWidth || docElem.clientWidth || body.clientWidth,
+				y = win.innerHeight || docElem.clientHeight || body.clientHeight;
+
+			var sizex = x;
+			var sizey = y;
+			var posx = '';
+			var posy = '';
+			var mousex = '';
+			var mousey = '';
+			var key = '';
+			var click = '';
+			var rightclick = false;
+			var leftclick = false;
+			var spacekey = false;
+
+			function mouse_position(e) {
+				mousex = e.clientX;
+				mousey = e.clientY;
+				posx = mousex / sizex;
+				posy = mousey / sizey;
+				console.log("posx: " + posx + ", posy: " + posy);
+			}
+
+			onmousemove = function (e) { mouse_position(e) };
+
+			function key_code_down(e) {
+				key = e.keyCode || e.which;
+				if (key == 32) {
+					console.log("space bar pressed");
+					spacekey = true;
+				}
+			}
+
+			onkeydown = function (e) { key_code_down(e) };
+
+			function key_code_up(e) {
+				key = e.keyCode || e.which;
+				if (key == 32) {
+					console.log("space bar released");
+					spacekey = false;
+				}
+			}
+
+			onkeyup = function (e) { key_code_up(e) };
+
+			function mouse_code_down(e) {
+				click = e.keyCode || e.which;
+				if (click == 1) {
+					console.log("click left pressed");
+					leftclick = true;
+				}
+				if (click == 3) {
+					console.log("click right pressed");
+					rightclick = true;
+				}
+			}
+
+			onmousedown = function (e) { mouse_code_down(e) };
+
+			function mouse_code_up(e) {
+				click = e.keyCode || e.which;
+				if (click == 1) {
+					console.log("click left released");
+					leftclick = false;
+				}
+				if (click == 3) {
+					console.log("click right released");
+					rightclick = false;
+				}
+			}
+
+			onmouseup = function (e) { mouse_code_up(e) };
+
+			var Othellox = 1366;
+			var Othelloy = 768;
+			var Othelloposx = (sizex - Othellox) / 2;
+			var Othelloposy = (sizey - Othelloy) / 2;
+			var Othello = document.getElementById('Othello');
+			Othello.style.position = "absolute";
+			Othello.style.left = Othelloposx + 'px';
+			Othello.style.top = Othelloposy + 'px';
+
+			var othellox = 65;
+			var othelloy = 65;
+			var othelloposx = Othelloposx - othellox / 2;
+			var othelloposy = Othelloposy - othelloy / 2;
+
+			var othello_black_1 = document.getElementById('othello-black-1');
+
+			othello_black_1.style.width = othellox + 'px';
+			othello_black_1.style.height = othelloy + 'px';
+			othello_black_1.style.position = "absolute";
+			othello_black_1.style.left = othelloposx + 220 + 'px';
+			othello_black_1.style.top = othelloposy + 385 + 'px';
+
+			othello_black_1.addEventListener("click", clickBlack1);
+			othello_black_1.addEventListener("mousedown", downBlack1);
+
+			var movingblack1 = true;
+			var checkedblack1 = true;
+
+			function clickBlack1(e) {
+				if (movingblack1) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_1 & elements[n] != Othello) {
+							elements[n].after(othello_black_1);
+						}
+					}
+					othello_black_1.addEventListener('mousemove', moveBlack1);
+					movingblack1 = false;
+				}
+				else {
+					othello_black_1.removeEventListener('mousemove', moveBlack1);
+					movingblack1 = true;
+				}
+			}
+
+			function moveBlack1(e) {
+				othello_black_1.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_1.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack1(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack1) {
+						othello_black_1.src = "img/othello-white.png";
+						checkedblack1 = false;
+					}
+					else {
+						othello_black_1.src = "img/othello-black.png";
+						checkedblack1 = true;
+					}
+				}
+			}
+
+			var othello_black_2 = document.getElementById('othello-black-2');
+
+			othello_black_2.style.width = othellox + 'px';
+			othello_black_2.style.height = othelloy + 'px';
+			othello_black_2.style.position = "absolute";
+			othello_black_2.style.left = othelloposx + 220 + 'px';
+			othello_black_2.style.top = othelloposy + 385 + 'px';
+
+			othello_black_2.addEventListener("click", clickBlack2);
+			othello_black_2.addEventListener("mousedown", downBlack2);
+
+			var movingblack2 = true;
+			var checkedblack2 = true;
+
+			function clickBlack2(e) {
+				if (movingblack2) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_2 & elements[n] != Othello) {
+							elements[n].after(othello_black_2);
+						}
+					}
+					othello_black_2.addEventListener('mousemove', moveBlack2);
+					movingblack2 = false;
+				}
+				else {
+					othello_black_2.removeEventListener('mousemove', moveBlack2);
+					movingblack2 = true;
+				}
+			}
+
+			function moveBlack2(e) {
+				othello_black_2.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_2.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack2(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack2) {
+						othello_black_2.src = "img/othello-white.png";
+						checkedblack2 = false;
+					}
+					else {
+						othello_black_2.src = "img/othello-black.png";
+						checkedblack2 = true;
+					}
+				}
+			}
+
+			var othello_black_3 = document.getElementById('othello-black-3');
+
+			othello_black_3.style.width = othellox + 'px';
+			othello_black_3.style.height = othelloy + 'px';
+			othello_black_3.style.position = "absolute";
+			othello_black_3.style.left = othelloposx + 220 + 'px';
+			othello_black_3.style.top = othelloposy + 385 + 'px';
+
+			othello_black_3.addEventListener("click", clickBlack3);
+			othello_black_3.addEventListener("mousedown", downBlack3);
+
+			var movingblack3 = true;
+			var checkedblack3 = true;
+
+			function clickBlack3(e) {
+				if (movingblack3) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_3 & elements[n] != Othello) {
+							elements[n].after(othello_black_3);
+						}
+					}
+					othello_black_3.addEventListener('mousemove', moveBlack3);
+					movingblack3 = false;
+				}
+				else {
+					othello_black_3.removeEventListener('mousemove', moveBlack3);
+					movingblack3 = true;
+				}
+			}
+
+			function moveBlack3(e) {
+				othello_black_3.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_3.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack3(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack3) {
+						othello_black_3.src = "img/othello-white.png";
+						checkedblack3 = false;
+					}
+					else {
+						othello_black_3.src = "img/othello-black.png";
+						checkedblack3 = true;
+					}
+				}
+			}
+
+			var othello_black_4 = document.getElementById('othello-black-4');
+
+			othello_black_4.style.width = othellox + 'px';
+			othello_black_4.style.height = othelloy + 'px';
+			othello_black_4.style.position = "absolute";
+			othello_black_4.style.left = othelloposx + 220 + 'px';
+			othello_black_4.style.top = othelloposy + 385 + 'px';
+
+			othello_black_4.addEventListener("click", clickBlack4);
+			othello_black_4.addEventListener("mousedown", downBlack4);
+
+			var movingblack4 = true;
+			var checkedblack4 = true;
+
+			function clickBlack4(e) {
+				if (movingblack4) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_4 & elements[n] != Othello) {
+							elements[n].after(othello_black_4);
+						}
+					}
+					othello_black_4.addEventListener('mousemove', moveBlack4);
+					movingblack4 = false;
+				}
+				else {
+					othello_black_4.removeEventListener('mousemove', moveBlack4);
+					movingblack4 = true;
+				}
+			}
+
+			function moveBlack4(e) {
+				othello_black_4.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_4.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack4(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack4) {
+						othello_black_4.src = "img/othello-white.png";
+						checkedblack4 = false;
+					}
+					else {
+						othello_black_4.src = "img/othello-black.png";
+						checkedblack4 = true;
+					}
+				}
+			}
+
+			var othello_black_5 = document.getElementById('othello-black-5');
+
+			othello_black_5.style.width = othellox + 'px';
+			othello_black_5.style.height = othelloy + 'px';
+			othello_black_5.style.position = "absolute";
+			othello_black_5.style.left = othelloposx + 220 + 'px';
+			othello_black_5.style.top = othelloposy + 385 + 'px';
+
+			othello_black_5.addEventListener("click", clickBlack5);
+			othello_black_5.addEventListener("mousedown", downBlack5);
+
+			var movingblack5 = true;
+			var checkedblack5 = true;
+
+			function clickBlack5(e) {
+				if (movingblack5) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_5 & elements[n] != Othello) {
+							elements[n].after(othello_black_5);
+						}
+					}
+					othello_black_5.addEventListener('mousemove', moveBlack5);
+					movingblack5 = false;
+				}
+				else {
+					othello_black_5.removeEventListener('mousemove', moveBlack5);
+					movingblack5 = true;
+				}
+			}
+
+			function moveBlack5(e) {
+				othello_black_5.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_5.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack5(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack5) {
+						othello_black_5.src = "img/othello-white.png";
+						checkedblack5 = false;
+					}
+					else {
+						othello_black_5.src = "img/othello-black.png";
+						checkedblack5 = true;
+					}
+				}
+			}
+
+			var othello_black_6 = document.getElementById('othello-black-6');
+
+			othello_black_6.style.width = othellox + 'px';
+			othello_black_6.style.height = othelloy + 'px';
+			othello_black_6.style.position = "absolute";
+			othello_black_6.style.left = othelloposx + 220 + 'px';
+			othello_black_6.style.top = othelloposy + 385 + 'px';
+
+			othello_black_6.addEventListener("click", clickBlack6);
+			othello_black_6.addEventListener("mousedown", downBlack6);
+
+			var movingblack6 = true;
+			var checkedblack6 = true;
+
+			function clickBlack6(e) {
+				if (movingblack6) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_6 & elements[n] != Othello) {
+							elements[n].after(othello_black_6);
+						}
+					}
+					othello_black_6.addEventListener('mousemove', moveBlack6);
+					movingblack6 = false;
+				}
+				else {
+					othello_black_6.removeEventListener('mousemove', moveBlack6);
+					movingblack6 = true;
+				}
+			}
+
+			function moveBlack6(e) {
+				othello_black_6.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_6.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack6(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack6) {
+						othello_black_6.src = "img/othello-white.png";
+						checkedblack6 = false;
+					}
+					else {
+						othello_black_6.src = "img/othello-black.png";
+						checkedblack6 = true;
+					}
+				}
+			}
+
+			var othello_black_7 = document.getElementById('othello-black-7');
+
+			othello_black_7.style.width = othellox + 'px';
+			othello_black_7.style.height = othelloy + 'px';
+			othello_black_7.style.position = "absolute";
+			othello_black_7.style.left = othelloposx + 220 + 'px';
+			othello_black_7.style.top = othelloposy + 385 + 'px';
+
+			othello_black_7.addEventListener("click", clickBlack7);
+			othello_black_7.addEventListener("mousedown", downBlack7);
+
+			var movingblack7 = true;
+			var checkedblack7 = true;
+
+			function clickBlack7(e) {
+				if (movingblack7) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_7 & elements[n] != Othello) {
+							elements[n].after(othello_black_7);
+						}
+					}
+					othello_black_7.addEventListener('mousemove', moveBlack7);
+					movingblack7 = false;
+				}
+				else {
+					othello_black_7.removeEventListener('mousemove', moveBlack7);
+					movingblack7 = true;
+				}
+			}
+
+			function moveBlack7(e) {
+				othello_black_7.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_7.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack7(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack7) {
+						othello_black_7.src = "img/othello-white.png";
+						checkedblack7 = false;
+					}
+					else {
+						othello_black_7.src = "img/othello-black.png";
+						checkedblack7 = true;
+					}
+				}
+			}
+
+			var othello_black_8 = document.getElementById('othello-black-8');
+
+			othello_black_8.style.width = othellox + 'px';
+			othello_black_8.style.height = othelloy + 'px';
+			othello_black_8.style.position = "absolute";
+			othello_black_8.style.left = othelloposx + 220 + 'px';
+			othello_black_8.style.top = othelloposy + 385 + 'px';
+
+			othello_black_8.addEventListener("click", clickBlack8);
+			othello_black_8.addEventListener("mousedown", downBlack8);
+
+			var movingblack8 = true;
+			var checkedblack8 = true;
+
+			function clickBlack8(e) {
+				if (movingblack8) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_8 & elements[n] != Othello) {
+							elements[n].after(othello_black_8);
+						}
+					}
+					othello_black_8.addEventListener('mousemove', moveBlack8);
+					movingblack8 = false;
+				}
+				else {
+					othello_black_8.removeEventListener('mousemove', moveBlack8);
+					movingblack8 = true;
+				}
+			}
+
+			function moveBlack8(e) {
+				othello_black_8.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_8.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack8(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack8) {
+						othello_black_8.src = "img/othello-white.png";
+						checkedblack8 = false;
+					}
+					else {
+						othello_black_8.src = "img/othello-black.png";
+						checkedblack8 = true;
+					}
+				}
+			}
+
+			var othello_black_9 = document.getElementById('othello-black-9');
+
+			othello_black_9.style.width = othellox + 'px';
+			othello_black_9.style.height = othelloy + 'px';
+			othello_black_9.style.position = "absolute";
+			othello_black_9.style.left = othelloposx + 220 + 'px';
+			othello_black_9.style.top = othelloposy + 385 + 'px';
+
+			othello_black_9.addEventListener("click", clickBlack9);
+			othello_black_9.addEventListener("mousedown", downBlack9);
+
+			var movingblack9 = true;
+			var checkedblack9 = true;
+
+			function clickBlack9(e) {
+				if (movingblack9) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_9 & elements[n] != Othello) {
+							elements[n].after(othello_black_9);
+						}
+					}
+					othello_black_9.addEventListener('mousemove', moveBlack9);
+					movingblack9 = false;
+				}
+				else {
+					othello_black_9.removeEventListener('mousemove', moveBlack9);
+					movingblack9 = true;
+				}
+			}
+
+			function moveBlack9(e) {
+				othello_black_9.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_9.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack9(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack9) {
+						othello_black_9.src = "img/othello-white.png";
+						checkedblack9 = false;
+					}
+					else {
+						othello_black_9.src = "img/othello-black.png";
+						checkedblack9 = true;
+					}
+				}
+			}
+
+			var othello_black_10 = document.getElementById('othello-black-10');
+
+			othello_black_10.style.width = othellox + 'px';
+			othello_black_10.style.height = othelloy + 'px';
+			othello_black_10.style.position = "absolute";
+			othello_black_10.style.left = othelloposx + 220 + 'px';
+			othello_black_10.style.top = othelloposy + 385 + 'px';
+
+			othello_black_10.addEventListener("click", clickBlack10);
+			othello_black_10.addEventListener("mousedown", downBlack10);
+
+			var movingblack10 = true;
+			var checkedblack10 = true;
+
+			function clickBlack10(e) {
+				if (movingblack10) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_10 & elements[n] != Othello) {
+							elements[n].after(othello_black_10);
+						}
+					}
+					othello_black_10.addEventListener('mousemove', moveBlack10);
+					movingblack10 = false;
+				}
+				else {
+					othello_black_10.removeEventListener('mousemove', moveBlack10);
+					movingblack10 = true;
+				}
+			}
+
+			function moveBlack10(e) {
+				othello_black_10.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_10.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack10(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack10) {
+						othello_black_10.src = "img/othello-white.png";
+						checkedblack10 = false;
+					}
+					else {
+						othello_black_10.src = "img/othello-black.png";
+						checkedblack10 = true;
+					}
+				}
+			}
+
+			var othello_black_11 = document.getElementById('othello-black-11');
+
+			othello_black_11.style.width = othellox + 'px';
+			othello_black_11.style.height = othelloy + 'px';
+			othello_black_11.style.position = "absolute";
+			othello_black_11.style.left = othelloposx + 220 + 'px';
+			othello_black_11.style.top = othelloposy + 385 + 'px';
+
+			othello_black_11.addEventListener("click", clickBlack11);
+			othello_black_11.addEventListener("mousedown", downBlack11);
+
+			var movingblack11 = true;
+			var checkedblack11 = true;
+
+			function clickBlack11(e) {
+				if (movingblack11) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_11 & elements[n] != Othello) {
+							elements[n].after(othello_black_11);
+						}
+					}
+					othello_black_11.addEventListener('mousemove', moveBlack11);
+					movingblack11 = false;
+				}
+				else {
+					othello_black_11.removeEventListener('mousemove', moveBlack11);
+					movingblack11 = true;
+				}
+			}
+
+			function moveBlack11(e) {
+				othello_black_11.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_11.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack11(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack11) {
+						othello_black_11.src = "img/othello-white.png";
+						checkedblack11 = false;
+					}
+					else {
+						othello_black_11.src = "img/othello-black.png";
+						checkedblack11 = true;
+					}
+				}
+			}
+
+			var othello_black_12 = document.getElementById('othello-black-12');
+
+			othello_black_12.style.width = othellox + 'px';
+			othello_black_12.style.height = othelloy + 'px';
+			othello_black_12.style.position = "absolute";
+			othello_black_12.style.left = othelloposx + 220 + 'px';
+			othello_black_12.style.top = othelloposy + 385 + 'px';
+
+			othello_black_12.addEventListener("click", clickBlack12);
+			othello_black_12.addEventListener("mousedown", downBlack12);
+
+			var movingblack12 = true;
+			var checkedblack12 = true;
+
+			function clickBlack12(e) {
+				if (movingblack12) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_12 & elements[n] != Othello) {
+							elements[n].after(othello_black_12);
+						}
+					}
+					othello_black_12.addEventListener('mousemove', moveBlack12);
+					movingblack12 = false;
+				}
+				else {
+					othello_black_12.removeEventListener('mousemove', moveBlack12);
+					movingblack12 = true;
+				}
+			}
+
+			function moveBlack12(e) {
+				othello_black_12.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_12.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack12(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack12) {
+						othello_black_12.src = "img/othello-white.png";
+						checkedblack12 = false;
+					}
+					else {
+						othello_black_12.src = "img/othello-black.png";
+						checkedblack12 = true;
+					}
+				}
+			}
+
+			var othello_black_13 = document.getElementById('othello-black-13');
+
+			othello_black_13.style.width = othellox + 'px';
+			othello_black_13.style.height = othelloy + 'px';
+			othello_black_13.style.position = "absolute";
+			othello_black_13.style.left = othelloposx + 220 + 'px';
+			othello_black_13.style.top = othelloposy + 385 + 'px';
+
+			othello_black_13.addEventListener("click", clickBlack13);
+			othello_black_13.addEventListener("mousedown", downBlack13);
+
+			var movingblack13 = true;
+			var checkedblack13 = true;
+
+			function clickBlack13(e) {
+				if (movingblack13) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_13 & elements[n] != Othello) {
+							elements[n].after(othello_black_13);
+						}
+					}
+					othello_black_13.addEventListener('mousemove', moveBlack13);
+					movingblack13 = false;
+				}
+				else {
+					othello_black_13.removeEventListener('mousemove', moveBlack13);
+					movingblack13 = true;
+				}
+			}
+
+			function moveBlack13(e) {
+				othello_black_13.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_13.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack13(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack13) {
+						othello_black_13.src = "img/othello-white.png";
+						checkedblack13 = false;
+					}
+					else {
+						othello_black_13.src = "img/othello-black.png";
+						checkedblack13 = true;
+					}
+				}
+			}
+
+			var othello_black_14 = document.getElementById('othello-black-14');
+
+			othello_black_14.style.width = othellox + 'px';
+			othello_black_14.style.height = othelloy + 'px';
+			othello_black_14.style.position = "absolute";
+			othello_black_14.style.left = othelloposx + 220 + 'px';
+			othello_black_14.style.top = othelloposy + 385 + 'px';
+
+			othello_black_14.addEventListener("click", clickBlack14);
+			othello_black_14.addEventListener("mousedown", downBlack14);
+
+			var movingblack14 = true;
+			var checkedblack14 = true;
+
+			function clickBlack14(e) {
+				if (movingblack14) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_14 & elements[n] != Othello) {
+							elements[n].after(othello_black_14);
+						}
+					}
+					othello_black_14.addEventListener('mousemove', moveBlack14);
+					movingblack14 = false;
+				}
+				else {
+					othello_black_14.removeEventListener('mousemove', moveBlack14);
+					movingblack14 = true;
+				}
+			}
+
+			function moveBlack14(e) {
+				othello_black_14.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_14.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack14(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack14) {
+						othello_black_14.src = "img/othello-white.png";
+						checkedblack14 = false;
+					}
+					else {
+						othello_black_14.src = "img/othello-black.png";
+						checkedblack14 = true;
+					}
+				}
+			}
+
+			var othello_black_15 = document.getElementById('othello-black-15');
+
+			othello_black_15.style.width = othellox + 'px';
+			othello_black_15.style.height = othelloy + 'px';
+			othello_black_15.style.position = "absolute";
+			othello_black_15.style.left = othelloposx + 220 + 'px';
+			othello_black_15.style.top = othelloposy + 385 + 'px';
+
+			othello_black_15.addEventListener("click", clickBlack15);
+			othello_black_15.addEventListener("mousedown", downBlack15);
+
+			var movingblack15 = true;
+			var checkedblack15 = true;
+
+			function clickBlack15(e) {
+				if (movingblack15) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_15 & elements[n] != Othello) {
+							elements[n].after(othello_black_15);
+						}
+					}
+					othello_black_15.addEventListener('mousemove', moveBlack15);
+					movingblack15 = false;
+				}
+				else {
+					othello_black_15.removeEventListener('mousemove', moveBlack15);
+					movingblack15 = true;
+				}
+			}
+
+			function moveBlack15(e) {
+				othello_black_15.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_15.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack15(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack15) {
+						othello_black_15.src = "img/othello-white.png";
+						checkedblack15 = false;
+					}
+					else {
+						othello_black_15.src = "img/othello-black.png";
+						checkedblack15 = true;
+					}
+				}
+			}
+
+			var othello_black_16 = document.getElementById('othello-black-16');
+
+			othello_black_16.style.width = othellox + 'px';
+			othello_black_16.style.height = othelloy + 'px';
+			othello_black_16.style.position = "absolute";
+			othello_black_16.style.left = othelloposx + 220 + 'px';
+			othello_black_16.style.top = othelloposy + 385 + 'px';
+
+			othello_black_16.addEventListener("click", clickBlack16);
+			othello_black_16.addEventListener("mousedown", downBlack16);
+
+			var movingblack16 = true;
+			var checkedblack16 = true;
+
+			function clickBlack16(e) {
+				if (movingblack16) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_16 & elements[n] != Othello) {
+							elements[n].after(othello_black_16);
+						}
+					}
+					othello_black_16.addEventListener('mousemove', moveBlack16);
+					movingblack16 = false;
+				}
+				else {
+					othello_black_16.removeEventListener('mousemove', moveBlack16);
+					movingblack16 = true;
+				}
+			}
+
+			function moveBlack16(e) {
+				othello_black_16.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_16.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack16(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack16) {
+						othello_black_16.src = "img/othello-white.png";
+						checkedblack16 = false;
+					}
+					else {
+						othello_black_16.src = "img/othello-black.png";
+						checkedblack16 = true;
+					}
+				}
+			}
+
+			var othello_black_17 = document.getElementById('othello-black-17');
+
+			othello_black_17.style.width = othellox + 'px';
+			othello_black_17.style.height = othelloy + 'px';
+			othello_black_17.style.position = "absolute";
+			othello_black_17.style.left = othelloposx + 220 + 'px';
+			othello_black_17.style.top = othelloposy + 385 + 'px';
+
+			othello_black_17.addEventListener("click", clickBlack17);
+			othello_black_17.addEventListener("mousedown", downBlack17);
+
+			var movingblack17 = true;
+			var checkedblack17 = true;
+
+			function clickBlack17(e) {
+				if (movingblack17) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_17 & elements[n] != Othello) {
+							elements[n].after(othello_black_17);
+						}
+					}
+					othello_black_17.addEventListener('mousemove', moveBlack17);
+					movingblack17 = false;
+				}
+				else {
+					othello_black_17.removeEventListener('mousemove', moveBlack17);
+					movingblack17 = true;
+				}
+			}
+
+			function moveBlack17(e) {
+				othello_black_17.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_17.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack17(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack17) {
+						othello_black_17.src = "img/othello-white.png";
+						checkedblack17 = false;
+					}
+					else {
+						othello_black_17.src = "img/othello-black.png";
+						checkedblack17 = true;
+					}
+				}
+			}
+
+			var othello_black_18 = document.getElementById('othello-black-18');
+
+			othello_black_18.style.width = othellox + 'px';
+			othello_black_18.style.height = othelloy + 'px';
+			othello_black_18.style.position = "absolute";
+			othello_black_18.style.left = othelloposx + 220 + 'px';
+			othello_black_18.style.top = othelloposy + 385 + 'px';
+
+			othello_black_18.addEventListener("click", clickBlack18);
+			othello_black_18.addEventListener("mousedown", downBlack18);
+
+			var movingblack18 = true;
+			var checkedblack18 = true;
+
+			function clickBlack18(e) {
+				if (movingblack18) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_18 & elements[n] != Othello) {
+							elements[n].after(othello_black_18);
+						}
+					}
+					othello_black_18.addEventListener('mousemove', moveBlack18);
+					movingblack18 = false;
+				}
+				else {
+					othello_black_18.removeEventListener('mousemove', moveBlack18);
+					movingblack18 = true;
+				}
+			}
+
+			function moveBlack18(e) {
+				othello_black_18.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_18.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack18(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack18) {
+						othello_black_18.src = "img/othello-white.png";
+						checkedblack18 = false;
+					}
+					else {
+						othello_black_18.src = "img/othello-black.png";
+						checkedblack18 = true;
+					}
+				}
+			}
+
+			var othello_black_19 = document.getElementById('othello-black-19');
+
+			othello_black_19.style.width = othellox + 'px';
+			othello_black_19.style.height = othelloy + 'px';
+			othello_black_19.style.position = "absolute";
+			othello_black_19.style.left = othelloposx + 220 + 'px';
+			othello_black_19.style.top = othelloposy + 385 + 'px';
+
+			othello_black_19.addEventListener("click", clickBlack19);
+			othello_black_19.addEventListener("mousedown", downBlack19);
+
+			var movingblack19 = true;
+			var checkedblack19 = true;
+
+			function clickBlack19(e) {
+				if (movingblack19) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_19 & elements[n] != Othello) {
+							elements[n].after(othello_black_19);
+						}
+					}
+					othello_black_19.addEventListener('mousemove', moveBlack19);
+					movingblack19 = false;
+				}
+				else {
+					othello_black_19.removeEventListener('mousemove', moveBlack19);
+					movingblack19 = true;
+				}
+			}
+
+			function moveBlack19(e) {
+				othello_black_19.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_19.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack19(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack19) {
+						othello_black_19.src = "img/othello-white.png";
+						checkedblack19 = false;
+					}
+					else {
+						othello_black_19.src = "img/othello-black.png";
+						checkedblack19 = true;
+					}
+				}
+			}
+
+			var othello_black_20 = document.getElementById('othello-black-20');
+
+			othello_black_20.style.width = othellox + 'px';
+			othello_black_20.style.height = othelloy + 'px';
+			othello_black_20.style.position = "absolute";
+			othello_black_20.style.left = othelloposx + 220 + 'px';
+			othello_black_20.style.top = othelloposy + 385 + 'px';
+
+			othello_black_20.addEventListener("click", clickBlack20);
+			othello_black_20.addEventListener("mousedown", downBlack20);
+
+			var movingblack20 = true;
+			var checkedblack20 = true;
+
+			function clickBlack20(e) {
+				if (movingblack20) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_20 & elements[n] != Othello) {
+							elements[n].after(othello_black_20);
+						}
+					}
+					othello_black_20.addEventListener('mousemove', moveBlack20);
+					movingblack20 = false;
+				}
+				else {
+					othello_black_20.removeEventListener('mousemove', moveBlack20);
+					movingblack20 = true;
+				}
+			}
+
+			function moveBlack20(e) {
+				othello_black_20.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_20.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack20(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack20) {
+						othello_black_20.src = "img/othello-white.png";
+						checkedblack20 = false;
+					}
+					else {
+						othello_black_20.src = "img/othello-black.png";
+						checkedblack20 = true;
+					}
+				}
+			}
+
+			var othello_black_21 = document.getElementById('othello-black-21');
+
+			othello_black_21.style.width = othellox + 'px';
+			othello_black_21.style.height = othelloy + 'px';
+			othello_black_21.style.position = "absolute";
+			othello_black_21.style.left = othelloposx + 220 + 'px';
+			othello_black_21.style.top = othelloposy + 385 + 'px';
+
+			othello_black_21.addEventListener("click", clickBlack21);
+			othello_black_21.addEventListener("mousedown", downBlack21);
+
+			var movingblack21 = true;
+			var checkedblack21 = true;
+
+			function clickBlack21(e) {
+				if (movingblack21) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_21 & elements[n] != Othello) {
+							elements[n].after(othello_black_21);
+						}
+					}
+					othello_black_21.addEventListener('mousemove', moveBlack21);
+					movingblack21 = false;
+				}
+				else {
+					othello_black_21.removeEventListener('mousemove', moveBlack21);
+					movingblack21 = true;
+				}
+			}
+
+			function moveBlack21(e) {
+				othello_black_21.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_21.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack21(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack21) {
+						othello_black_21.src = "img/othello-white.png";
+						checkedblack21 = false;
+					}
+					else {
+						othello_black_21.src = "img/othello-black.png";
+						checkedblack21 = true;
+					}
+				}
+			}
+
+			var othello_black_22 = document.getElementById('othello-black-22');
+
+			othello_black_22.style.width = othellox + 'px';
+			othello_black_22.style.height = othelloy + 'px';
+			othello_black_22.style.position = "absolute";
+			othello_black_22.style.left = othelloposx + 220 + 'px';
+			othello_black_22.style.top = othelloposy + 385 + 'px';
+
+			othello_black_22.addEventListener("click", clickBlack22);
+			othello_black_22.addEventListener("mousedown", downBlack22);
+
+			var movingblack22 = true;
+			var checkedblack22 = true;
+
+			function clickBlack22(e) {
+				if (movingblack22) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_22 & elements[n] != Othello) {
+							elements[n].after(othello_black_22);
+						}
+					}
+					othello_black_22.addEventListener('mousemove', moveBlack22);
+					movingblack22 = false;
+				}
+				else {
+					othello_black_22.removeEventListener('mousemove', moveBlack22);
+					movingblack22 = true;
+				}
+			}
+
+			function moveBlack22(e) {
+				othello_black_22.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_22.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack22(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack22) {
+						othello_black_22.src = "img/othello-white.png";
+						checkedblack22 = false;
+					}
+					else {
+						othello_black_22.src = "img/othello-black.png";
+						checkedblack22 = true;
+					}
+				}
+			}
+
+			var othello_black_23 = document.getElementById('othello-black-23');
+
+			othello_black_23.style.width = othellox + 'px';
+			othello_black_23.style.height = othelloy + 'px';
+			othello_black_23.style.position = "absolute";
+			othello_black_23.style.left = othelloposx + 220 + 'px';
+			othello_black_23.style.top = othelloposy + 385 + 'px';
+
+			othello_black_23.addEventListener("click", clickBlack23);
+			othello_black_23.addEventListener("mousedown", downBlack23);
+
+			var movingblack23 = true;
+			var checkedblack23 = true;
+
+			function clickBlack23(e) {
+				if (movingblack23) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_23 & elements[n] != Othello) {
+							elements[n].after(othello_black_23);
+						}
+					}
+					othello_black_23.addEventListener('mousemove', moveBlack23);
+					movingblack23 = false;
+				}
+				else {
+					othello_black_23.removeEventListener('mousemove', moveBlack23);
+					movingblack23 = true;
+				}
+			}
+
+			function moveBlack23(e) {
+				othello_black_23.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_23.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack23(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack23) {
+						othello_black_23.src = "img/othello-white.png";
+						checkedblack23 = false;
+					}
+					else {
+						othello_black_23.src = "img/othello-black.png";
+						checkedblack23 = true;
+					}
+				}
+			}
+
+			var othello_black_24 = document.getElementById('othello-black-24');
+
+			othello_black_24.style.width = othellox + 'px';
+			othello_black_24.style.height = othelloy + 'px';
+			othello_black_24.style.position = "absolute";
+			othello_black_24.style.left = othelloposx + 220 + 'px';
+			othello_black_24.style.top = othelloposy + 385 + 'px';
+
+			othello_black_24.addEventListener("click", clickBlack24);
+			othello_black_24.addEventListener("mousedown", downBlack24);
+
+			var movingblack24 = true;
+			var checkedblack24 = true;
+
+			function clickBlack24(e) {
+				if (movingblack24) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_24 & elements[n] != Othello) {
+							elements[n].after(othello_black_24);
+						}
+					}
+					othello_black_24.addEventListener('mousemove', moveBlack24);
+					movingblack24 = false;
+				}
+				else {
+					othello_black_24.removeEventListener('mousemove', moveBlack24);
+					movingblack24 = true;
+				}
+			}
+
+			function moveBlack24(e) {
+				othello_black_24.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_24.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack24(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack24) {
+						othello_black_24.src = "img/othello-white.png";
+						checkedblack24 = false;
+					}
+					else {
+						othello_black_24.src = "img/othello-black.png";
+						checkedblack24 = true;
+					}
+				}
+			}
+
+			var othello_black_25 = document.getElementById('othello-black-25');
+
+			othello_black_25.style.width = othellox + 'px';
+			othello_black_25.style.height = othelloy + 'px';
+			othello_black_25.style.position = "absolute";
+			othello_black_25.style.left = othelloposx + 220 + 'px';
+			othello_black_25.style.top = othelloposy + 385 + 'px';
+
+			othello_black_25.addEventListener("click", clickBlack25);
+			othello_black_25.addEventListener("mousedown", downBlack25);
+
+			var movingblack25 = true;
+			var checkedblack25 = true;
+
+			function clickBlack25(e) {
+				if (movingblack25) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_25 & elements[n] != Othello) {
+							elements[n].after(othello_black_25);
+						}
+					}
+					othello_black_25.addEventListener('mousemove', moveBlack25);
+					movingblack25 = false;
+				}
+				else {
+					othello_black_25.removeEventListener('mousemove', moveBlack25);
+					movingblack25 = true;
+				}
+			}
+
+			function moveBlack25(e) {
+				othello_black_25.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_25.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack25(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack25) {
+						othello_black_25.src = "img/othello-white.png";
+						checkedblack25 = false;
+					}
+					else {
+						othello_black_25.src = "img/othello-black.png";
+						checkedblack25 = true;
+					}
+				}
+			}
+
+			var othello_black_26 = document.getElementById('othello-black-26');
+
+			othello_black_26.style.width = othellox + 'px';
+			othello_black_26.style.height = othelloy + 'px';
+			othello_black_26.style.position = "absolute";
+			othello_black_26.style.left = othelloposx + 220 + 'px';
+			othello_black_26.style.top = othelloposy + 385 + 'px';
+
+			othello_black_26.addEventListener("click", clickBlack26);
+			othello_black_26.addEventListener("mousedown", downBlack26);
+
+			var movingblack26 = true;
+			var checkedblack26 = true;
+
+			function clickBlack26(e) {
+				if (movingblack26) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_26 & elements[n] != Othello) {
+							elements[n].after(othello_black_26);
+						}
+					}
+					othello_black_26.addEventListener('mousemove', moveBlack26);
+					movingblack26 = false;
+				}
+				else {
+					othello_black_26.removeEventListener('mousemove', moveBlack26);
+					movingblack26 = true;
+				}
+			}
+
+			function moveBlack26(e) {
+				othello_black_26.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_26.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack26(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack26) {
+						othello_black_26.src = "img/othello-white.png";
+						checkedblack26 = false;
+					}
+					else {
+						othello_black_26.src = "img/othello-black.png";
+						checkedblack26 = true;
+					}
+				}
+			}
+
+			var othello_black_27 = document.getElementById('othello-black-27');
+
+			othello_black_27.style.width = othellox + 'px';
+			othello_black_27.style.height = othelloy + 'px';
+			othello_black_27.style.position = "absolute";
+			othello_black_27.style.left = othelloposx + 220 + 'px';
+			othello_black_27.style.top = othelloposy + 385 + 'px';
+
+			othello_black_27.addEventListener("click", clickBlack27);
+			othello_black_27.addEventListener("mousedown", downBlack27);
+
+			var movingblack27 = true;
+			var checkedblack27 = true;
+
+			function clickBlack27(e) {
+				if (movingblack27) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_27 & elements[n] != Othello) {
+							elements[n].after(othello_black_27);
+						}
+					}
+					othello_black_27.addEventListener('mousemove', moveBlack27);
+					movingblack27 = false;
+				}
+				else {
+					othello_black_27.removeEventListener('mousemove', moveBlack27);
+					movingblack27 = true;
+				}
+			}
+
+			function moveBlack27(e) {
+				othello_black_27.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_27.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack27(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack27) {
+						othello_black_27.src = "img/othello-white.png";
+						checkedblack27 = false;
+					}
+					else {
+						othello_black_27.src = "img/othello-black.png";
+						checkedblack27 = true;
+					}
+				}
+			}
+
+			var othello_black_28 = document.getElementById('othello-black-28');
+
+			othello_black_28.style.width = othellox + 'px';
+			othello_black_28.style.height = othelloy + 'px';
+			othello_black_28.style.position = "absolute";
+			othello_black_28.style.left = othelloposx + 220 + 'px';
+			othello_black_28.style.top = othelloposy + 385 + 'px';
+
+			othello_black_28.addEventListener("click", clickBlack28);
+			othello_black_28.addEventListener("mousedown", downBlack28);
+
+			var movingblack28 = true;
+			var checkedblack28 = true;
+
+			function clickBlack28(e) {
+				if (movingblack28) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_28 & elements[n] != Othello) {
+							elements[n].after(othello_black_28);
+						}
+					}
+					othello_black_28.addEventListener('mousemove', moveBlack28);
+					movingblack28 = false;
+				}
+				else {
+					othello_black_28.removeEventListener('mousemove', moveBlack28);
+					movingblack28 = true;
+				}
+			}
+
+			function moveBlack28(e) {
+				othello_black_28.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_28.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack28(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack28) {
+						othello_black_28.src = "img/othello-white.png";
+						checkedblack28 = false;
+					}
+					else {
+						othello_black_28.src = "img/othello-black.png";
+						checkedblack28 = true;
+					}
+				}
+			}
+
+			var othello_black_29 = document.getElementById('othello-black-29');
+
+			othello_black_29.style.width = othellox + 'px';
+			othello_black_29.style.height = othelloy + 'px';
+			othello_black_29.style.position = "absolute";
+			othello_black_29.style.left = othelloposx + 220 + 'px';
+			othello_black_29.style.top = othelloposy + 385 + 'px';
+
+			othello_black_29.addEventListener("click", clickBlack29);
+			othello_black_29.addEventListener("mousedown", downBlack29);
+
+			var movingblack29 = true;
+			var checkedblack29 = true;
+
+			function clickBlack29(e) {
+				if (movingblack29) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_29 & elements[n] != Othello) {
+							elements[n].after(othello_black_29);
+						}
+					}
+					othello_black_29.addEventListener('mousemove', moveBlack29);
+					movingblack29 = false;
+				}
+				else {
+					othello_black_29.removeEventListener('mousemove', moveBlack29);
+					movingblack29 = true;
+				}
+			}
+
+			function moveBlack29(e) {
+				othello_black_29.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_29.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack29(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack29) {
+						othello_black_29.src = "img/othello-white.png";
+						checkedblack29 = false;
+					}
+					else {
+						othello_black_29.src = "img/othello-black.png";
+						checkedblack29 = true;
+					}
+				}
+			}
+
+			var othello_black_30 = document.getElementById('othello-black-30');
+
+			othello_black_30.style.width = othellox + 'px';
+			othello_black_30.style.height = othelloy + 'px';
+			othello_black_30.style.position = "absolute";
+			othello_black_30.style.left = othelloposx + 220 + 'px';
+			othello_black_30.style.top = othelloposy + 385 + 'px';
+
+			othello_black_30.addEventListener("click", clickBlack30);
+			othello_black_30.addEventListener("mousedown", downBlack30);
+
+			var movingblack30 = true;
+			var checkedblack30 = true;
+
+			function clickBlack30(e) {
+				if (movingblack30) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_30 & elements[n] != Othello) {
+							elements[n].after(othello_black_30);
+						}
+					}
+					othello_black_30.addEventListener('mousemove', moveBlack30);
+					movingblack30 = false;
+				}
+				else {
+					othello_black_30.removeEventListener('mousemove', moveBlack30);
+					movingblack30 = true;
+				}
+			}
+
+			function moveBlack30(e) {
+				othello_black_30.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_30.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack30(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack30) {
+						othello_black_30.src = "img/othello-white.png";
+						checkedblack30 = false;
+					}
+					else {
+						othello_black_30.src = "img/othello-black.png";
+						checkedblack30 = true;
+					}
+				}
+			}
+
+			var othello_black_31 = document.getElementById('othello-black-31');
+
+			othello_black_31.style.width = othellox + 'px';
+			othello_black_31.style.height = othelloy + 'px';
+			othello_black_31.style.position = "absolute";
+			othello_black_31.style.left = othelloposx + 220 + 'px';
+			othello_black_31.style.top = othelloposy + 385 + 'px';
+
+			othello_black_31.addEventListener("click", clickBlack31);
+			othello_black_31.addEventListener("mousedown", downBlack31);
+
+			var movingblack31 = true;
+			var checkedblack31 = true;
+
+			function clickBlack31(e) {
+				if (movingblack31) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_31 & elements[n] != Othello) {
+							elements[n].after(othello_black_31);
+						}
+					}
+					othello_black_31.addEventListener('mousemove', moveBlack31);
+					movingblack31 = false;
+				}
+				else {
+					othello_black_31.removeEventListener('mousemove', moveBlack31);
+					movingblack31 = true;
+				}
+			}
+
+			function moveBlack31(e) {
+				othello_black_31.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_31.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack31(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack31) {
+						othello_black_31.src = "img/othello-white.png";
+						checkedblack31 = false;
+					}
+					else {
+						othello_black_31.src = "img/othello-black.png";
+						checkedblack31 = true;
+					}
+				}
+			}
+
+			var othello_black_32 = document.getElementById('othello-black-32');
+
+			othello_black_32.style.width = othellox + 'px';
+			othello_black_32.style.height = othelloy + 'px';
+			othello_black_32.style.position = "absolute";
+			othello_black_32.style.left = othelloposx + 220 + 'px';
+			othello_black_32.style.top = othelloposy + 385 + 'px';
+
+			othello_black_32.addEventListener("click", clickBlack32);
+			othello_black_32.addEventListener("mousedown", downBlack32);
+
+			var movingblack32 = true;
+			var checkedblack32 = true;
+
+			function clickBlack32(e) {
+				if (movingblack32) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_black_32 & elements[n] != Othello) {
+							elements[n].after(othello_black_32);
+						}
+					}
+					othello_black_32.addEventListener('mousemove', moveBlack32);
+					movingblack32 = false;
+				}
+				else {
+					othello_black_32.removeEventListener('mousemove', moveBlack32);
+					movingblack32 = true;
+				}
+			}
+
+			function moveBlack32(e) {
+				othello_black_32.style.left = e.clientX - othellox / 2 + 'px';
+				othello_black_32.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downBlack32(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedblack32) {
+						othello_black_32.src = "img/othello-white.png";
+						checkedblack32 = false;
+					}
+					else {
+						othello_black_32.src = "img/othello-black.png";
+						checkedblack32 = true;
+					}
+				}
+			}
+
+			var othello_white_1 = document.getElementById('othello-white-1');
+
+			othello_white_1.style.width = othellox + 'px';
+			othello_white_1.style.height = othelloy + 'px';
+			othello_white_1.style.position = "absolute";
+			othello_white_1.style.left = othelloposx + 1150 + 'px';
+			othello_white_1.style.top = othelloposy + 385 + 'px';
+
+			othello_white_1.addEventListener("click", clickwhite1);
+			othello_white_1.addEventListener("mousedown", downwhite1);
+
+			var movingwhite1 = true;
+			var checkedwhite1 = true;
+
+			function clickwhite1(e) {
+				if (movingwhite1) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_1 & elements[n] != Othello) {
+							elements[n].after(othello_white_1);
+						}
+					}
+					othello_white_1.addEventListener('mousemove', movewhite1);
+					movingwhite1 = false;
+				}
+				else {
+					othello_white_1.removeEventListener('mousemove', movewhite1);
+					movingwhite1 = true;
+				}
+			}
+
+			function movewhite1(e) {
+				othello_white_1.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_1.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite1(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite1) {
+						othello_white_1.src = "img/othello-black.png";
+						checkedwhite1 = false;
+					}
+					else {
+						othello_white_1.src = "img/othello-white.png";
+						checkedwhite1 = true;
+					}
+				}
+			}
+
+			var othello_white_2 = document.getElementById('othello-white-2');
+
+			othello_white_2.style.width = othellox + 'px';
+			othello_white_2.style.height = othelloy + 'px';
+			othello_white_2.style.position = "absolute";
+			othello_white_2.style.left = othelloposx + 1150 + 'px';
+			othello_white_2.style.top = othelloposy + 385 + 'px';
+
+			othello_white_2.addEventListener("click", clickwhite2);
+			othello_white_2.addEventListener("mousedown", downwhite2);
+
+			var movingwhite2 = true;
+			var checkedwhite2 = true;
+
+			function clickwhite2(e) {
+				if (movingwhite2) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_2 & elements[n] != Othello) {
+							elements[n].after(othello_white_2);
+						}
+					}
+					othello_white_2.addEventListener('mousemove', movewhite2);
+					movingwhite2 = false;
+				}
+				else {
+					othello_white_2.removeEventListener('mousemove', movewhite2);
+					movingwhite2 = true;
+				}
+			}
+
+			function movewhite2(e) {
+				othello_white_2.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_2.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite2(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite2) {
+						othello_white_2.src = "img/othello-black.png";
+						checkedwhite2 = false;
+					}
+					else {
+						othello_white_2.src = "img/othello-white.png";
+						checkedwhite2 = true;
+					}
+				}
+			}
+
+			var othello_white_3 = document.getElementById('othello-white-3');
+
+			othello_white_3.style.width = othellox + 'px';
+			othello_white_3.style.height = othelloy + 'px';
+			othello_white_3.style.position = "absolute";
+			othello_white_3.style.left = othelloposx + 1150 + 'px';
+			othello_white_3.style.top = othelloposy + 385 + 'px';
+
+			othello_white_3.addEventListener("click", clickwhite3);
+			othello_white_3.addEventListener("mousedown", downwhite3);
+
+			var movingwhite3 = true;
+			var checkedwhite3 = true;
+
+			function clickwhite3(e) {
+				if (movingwhite3) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_3 & elements[n] != Othello) {
+							elements[n].after(othello_white_3);
+						}
+					}
+					othello_white_3.addEventListener('mousemove', movewhite3);
+					movingwhite3 = false;
+				}
+				else {
+					othello_white_3.removeEventListener('mousemove', movewhite3);
+					movingwhite3 = true;
+				}
+			}
+
+			function movewhite3(e) {
+				othello_white_3.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_3.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite3(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite3) {
+						othello_white_3.src = "img/othello-black.png";
+						checkedwhite3 = false;
+					}
+					else {
+						othello_white_3.src = "img/othello-white.png";
+						checkedwhite3 = true;
+					}
+				}
+			}
+
+			var othello_white_4 = document.getElementById('othello-white-4');
+
+			othello_white_4.style.width = othellox + 'px';
+			othello_white_4.style.height = othelloy + 'px';
+			othello_white_4.style.position = "absolute";
+			othello_white_4.style.left = othelloposx + 1150 + 'px';
+			othello_white_4.style.top = othelloposy + 385 + 'px';
+
+			othello_white_4.addEventListener("click", clickwhite4);
+			othello_white_4.addEventListener("mousedown", downwhite4);
+
+			var movingwhite4 = true;
+			var checkedwhite4 = true;
+
+			function clickwhite4(e) {
+				if (movingwhite4) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_4 & elements[n] != Othello) {
+							elements[n].after(othello_white_4);
+						}
+					}
+					othello_white_4.addEventListener('mousemove', movewhite4);
+					movingwhite4 = false;
+				}
+				else {
+					othello_white_4.removeEventListener('mousemove', movewhite4);
+					movingwhite4 = true;
+				}
+			}
+
+			function movewhite4(e) {
+				othello_white_4.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_4.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite4(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite4) {
+						othello_white_4.src = "img/othello-black.png";
+						checkedwhite4 = false;
+					}
+					else {
+						othello_white_4.src = "img/othello-white.png";
+						checkedwhite4 = true;
+					}
+				}
+			}
+
+			var othello_white_5 = document.getElementById('othello-white-5');
+
+			othello_white_5.style.width = othellox + 'px';
+			othello_white_5.style.height = othelloy + 'px';
+			othello_white_5.style.position = "absolute";
+			othello_white_5.style.left = othelloposx + 1150 + 'px';
+			othello_white_5.style.top = othelloposy + 385 + 'px';
+
+			othello_white_5.addEventListener("click", clickwhite5);
+			othello_white_5.addEventListener("mousedown", downwhite5);
+
+			var movingwhite5 = true;
+			var checkedwhite5 = true;
+
+			function clickwhite5(e) {
+				if (movingwhite5) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_5 & elements[n] != Othello) {
+							elements[n].after(othello_white_5);
+						}
+					}
+					othello_white_5.addEventListener('mousemove', movewhite5);
+					movingwhite5 = false;
+				}
+				else {
+					othello_white_5.removeEventListener('mousemove', movewhite5);
+					movingwhite5 = true;
+				}
+			}
+
+			function movewhite5(e) {
+				othello_white_5.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_5.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite5(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite5) {
+						othello_white_5.src = "img/othello-black.png";
+						checkedwhite5 = false;
+					}
+					else {
+						othello_white_5.src = "img/othello-white.png";
+						checkedwhite5 = true;
+					}
+				}
+			}
+
+			var othello_white_6 = document.getElementById('othello-white-6');
+
+			othello_white_6.style.width = othellox + 'px';
+			othello_white_6.style.height = othelloy + 'px';
+			othello_white_6.style.position = "absolute";
+			othello_white_6.style.left = othelloposx + 1150 + 'px';
+			othello_white_6.style.top = othelloposy + 385 + 'px';
+
+			othello_white_6.addEventListener("click", clickwhite6);
+			othello_white_6.addEventListener("mousedown", downwhite6);
+
+			var movingwhite6 = true;
+			var checkedwhite6 = true;
+
+			function clickwhite6(e) {
+				if (movingwhite6) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_6 & elements[n] != Othello) {
+							elements[n].after(othello_white_6);
+						}
+					}
+					othello_white_6.addEventListener('mousemove', movewhite6);
+					movingwhite6 = false;
+				}
+				else {
+					othello_white_6.removeEventListener('mousemove', movewhite6);
+					movingwhite6 = true;
+				}
+			}
+
+			function movewhite6(e) {
+				othello_white_6.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_6.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite6(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite6) {
+						othello_white_6.src = "img/othello-black.png";
+						checkedwhite6 = false;
+					}
+					else {
+						othello_white_6.src = "img/othello-white.png";
+						checkedwhite6 = true;
+					}
+				}
+			}
+
+			var othello_white_7 = document.getElementById('othello-white-7');
+
+			othello_white_7.style.width = othellox + 'px';
+			othello_white_7.style.height = othelloy + 'px';
+			othello_white_7.style.position = "absolute";
+			othello_white_7.style.left = othelloposx + 1150 + 'px';
+			othello_white_7.style.top = othelloposy + 385 + 'px';
+
+			othello_white_7.addEventListener("click", clickwhite7);
+			othello_white_7.addEventListener("mousedown", downwhite7);
+
+			var movingwhite7 = true;
+			var checkedwhite7 = true;
+
+			function clickwhite7(e) {
+				if (movingwhite7) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_7 & elements[n] != Othello) {
+							elements[n].after(othello_white_7);
+						}
+					}
+					othello_white_7.addEventListener('mousemove', movewhite7);
+					movingwhite7 = false;
+				}
+				else {
+					othello_white_7.removeEventListener('mousemove', movewhite7);
+					movingwhite7 = true;
+				}
+			}
+
+			function movewhite7(e) {
+				othello_white_7.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_7.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite7(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite7) {
+						othello_white_7.src = "img/othello-black.png";
+						checkedwhite7 = false;
+					}
+					else {
+						othello_white_7.src = "img/othello-white.png";
+						checkedwhite7 = true;
+					}
+				}
+			}
+
+			var othello_white_8 = document.getElementById('othello-white-8');
+
+			othello_white_8.style.width = othellox + 'px';
+			othello_white_8.style.height = othelloy + 'px';
+			othello_white_8.style.position = "absolute";
+			othello_white_8.style.left = othelloposx + 1150 + 'px';
+			othello_white_8.style.top = othelloposy + 385 + 'px';
+
+			othello_white_8.addEventListener("click", clickwhite8);
+			othello_white_8.addEventListener("mousedown", downwhite8);
+
+			var movingwhite8 = true;
+			var checkedwhite8 = true;
+
+			function clickwhite8(e) {
+				if (movingwhite8) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_8 & elements[n] != Othello) {
+							elements[n].after(othello_white_8);
+						}
+					}
+					othello_white_8.addEventListener('mousemove', movewhite8);
+					movingwhite8 = false;
+				}
+				else {
+					othello_white_8.removeEventListener('mousemove', movewhite8);
+					movingwhite8 = true;
+				}
+			}
+
+			function movewhite8(e) {
+				othello_white_8.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_8.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite8(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite8) {
+						othello_white_8.src = "img/othello-black.png";
+						checkedwhite8 = false;
+					}
+					else {
+						othello_white_8.src = "img/othello-white.png";
+						checkedwhite8 = true;
+					}
+				}
+			}
+
+			var othello_white_9 = document.getElementById('othello-white-9');
+
+			othello_white_9.style.width = othellox + 'px';
+			othello_white_9.style.height = othelloy + 'px';
+			othello_white_9.style.position = "absolute";
+			othello_white_9.style.left = othelloposx + 1150 + 'px';
+			othello_white_9.style.top = othelloposy + 385 + 'px';
+
+			othello_white_9.addEventListener("click", clickwhite9);
+			othello_white_9.addEventListener("mousedown", downwhite9);
+
+			var movingwhite9 = true;
+			var checkedwhite9 = true;
+
+			function clickwhite9(e) {
+				if (movingwhite9) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_9 & elements[n] != Othello) {
+							elements[n].after(othello_white_9);
+						}
+					}
+					othello_white_9.addEventListener('mousemove', movewhite9);
+					movingwhite9 = false;
+				}
+				else {
+					othello_white_9.removeEventListener('mousemove', movewhite9);
+					movingwhite9 = true;
+				}
+			}
+
+			function movewhite9(e) {
+				othello_white_9.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_9.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite9(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite9) {
+						othello_white_9.src = "img/othello-black.png";
+						checkedwhite9 = false;
+					}
+					else {
+						othello_white_9.src = "img/othello-white.png";
+						checkedwhite9 = true;
+					}
+				}
+			}
+
+			var othello_white_10 = document.getElementById('othello-white-10');
+
+			othello_white_10.style.width = othellox + 'px';
+			othello_white_10.style.height = othelloy + 'px';
+			othello_white_10.style.position = "absolute";
+			othello_white_10.style.left = othelloposx + 1150 + 'px';
+			othello_white_10.style.top = othelloposy + 385 + 'px';
+
+			othello_white_10.addEventListener("click", clickwhite10);
+			othello_white_10.addEventListener("mousedown", downwhite10);
+
+			var movingwhite10 = true;
+			var checkedwhite10 = true;
+
+			function clickwhite10(e) {
+				if (movingwhite10) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_10 & elements[n] != Othello) {
+							elements[n].after(othello_white_10);
+						}
+					}
+					othello_white_10.addEventListener('mousemove', movewhite10);
+					movingwhite10 = false;
+				}
+				else {
+					othello_white_10.removeEventListener('mousemove', movewhite10);
+					movingwhite10 = true;
+				}
+			}
+
+			function movewhite10(e) {
+				othello_white_10.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_10.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite10(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite10) {
+						othello_white_10.src = "img/othello-black.png";
+						checkedwhite10 = false;
+					}
+					else {
+						othello_white_10.src = "img/othello-white.png";
+						checkedwhite10 = true;
+					}
+				}
+			}
+
+			var othello_white_11 = document.getElementById('othello-white-11');
+
+			othello_white_11.style.width = othellox + 'px';
+			othello_white_11.style.height = othelloy + 'px';
+			othello_white_11.style.position = "absolute";
+			othello_white_11.style.left = othelloposx + 1150 + 'px';
+			othello_white_11.style.top = othelloposy + 385 + 'px';
+
+			othello_white_11.addEventListener("click", clickwhite11);
+			othello_white_11.addEventListener("mousedown", downwhite11);
+
+			var movingwhite11 = true;
+			var checkedwhite11 = true;
+
+			function clickwhite11(e) {
+				if (movingwhite11) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_11 & elements[n] != Othello) {
+							elements[n].after(othello_white_11);
+						}
+					}
+					othello_white_11.addEventListener('mousemove', movewhite11);
+					movingwhite11 = false;
+				}
+				else {
+					othello_white_11.removeEventListener('mousemove', movewhite11);
+					movingwhite11 = true;
+				}
+			}
+
+			function movewhite11(e) {
+				othello_white_11.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_11.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite11(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite11) {
+						othello_white_11.src = "img/othello-black.png";
+						checkedwhite11 = false;
+					}
+					else {
+						othello_white_11.src = "img/othello-white.png";
+						checkedwhite11 = true;
+					}
+				}
+			}
+
+			var othello_white_12 = document.getElementById('othello-white-12');
+
+			othello_white_12.style.width = othellox + 'px';
+			othello_white_12.style.height = othelloy + 'px';
+			othello_white_12.style.position = "absolute";
+			othello_white_12.style.left = othelloposx + 1150 + 'px';
+			othello_white_12.style.top = othelloposy + 385 + 'px';
+
+			othello_white_12.addEventListener("click", clickwhite12);
+			othello_white_12.addEventListener("mousedown", downwhite12);
+
+			var movingwhite12 = true;
+			var checkedwhite12 = true;
+
+			function clickwhite12(e) {
+				if (movingwhite12) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_12 & elements[n] != Othello) {
+							elements[n].after(othello_white_12);
+						}
+					}
+					othello_white_12.addEventListener('mousemove', movewhite12);
+					movingwhite12 = false;
+				}
+				else {
+					othello_white_12.removeEventListener('mousemove', movewhite12);
+					movingwhite12 = true;
+				}
+			}
+
+			function movewhite12(e) {
+				othello_white_12.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_12.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite12(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite12) {
+						othello_white_12.src = "img/othello-black.png";
+						checkedwhite12 = false;
+					}
+					else {
+						othello_white_12.src = "img/othello-white.png";
+						checkedwhite12 = true;
+					}
+				}
+			}
+
+			var othello_white_13 = document.getElementById('othello-white-13');
+
+			othello_white_13.style.width = othellox + 'px';
+			othello_white_13.style.height = othelloy + 'px';
+			othello_white_13.style.position = "absolute";
+			othello_white_13.style.left = othelloposx + 1150 + 'px';
+			othello_white_13.style.top = othelloposy + 385 + 'px';
+
+			othello_white_13.addEventListener("click", clickwhite13);
+			othello_white_13.addEventListener("mousedown", downwhite13);
+
+			var movingwhite13 = true;
+			var checkedwhite13 = true;
+
+			function clickwhite13(e) {
+				if (movingwhite13) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_13 & elements[n] != Othello) {
+							elements[n].after(othello_white_13);
+						}
+					}
+					othello_white_13.addEventListener('mousemove', movewhite13);
+					movingwhite13 = false;
+				}
+				else {
+					othello_white_13.removeEventListener('mousemove', movewhite13);
+					movingwhite13 = true;
+				}
+			}
+
+			function movewhite13(e) {
+				othello_white_13.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_13.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite13(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite13) {
+						othello_white_13.src = "img/othello-black.png";
+						checkedwhite13 = false;
+					}
+					else {
+						othello_white_13.src = "img/othello-white.png";
+						checkedwhite13 = true;
+					}
+				}
+			}
+
+			var othello_white_14 = document.getElementById('othello-white-14');
+
+			othello_white_14.style.width = othellox + 'px';
+			othello_white_14.style.height = othelloy + 'px';
+			othello_white_14.style.position = "absolute";
+			othello_white_14.style.left = othelloposx + 1150 + 'px';
+			othello_white_14.style.top = othelloposy + 385 + 'px';
+
+			othello_white_14.addEventListener("click", clickwhite14);
+			othello_white_14.addEventListener("mousedown", downwhite14);
+
+			var movingwhite14 = true;
+			var checkedwhite14 = true;
+
+			function clickwhite14(e) {
+				if (movingwhite14) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_14 & elements[n] != Othello) {
+							elements[n].after(othello_white_14);
+						}
+					}
+					othello_white_14.addEventListener('mousemove', movewhite14);
+					movingwhite14 = false;
+				}
+				else {
+					othello_white_14.removeEventListener('mousemove', movewhite14);
+					movingwhite14 = true;
+				}
+			}
+
+			function movewhite14(e) {
+				othello_white_14.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_14.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite14(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite14) {
+						othello_white_14.src = "img/othello-black.png";
+						checkedwhite14 = false;
+					}
+					else {
+						othello_white_14.src = "img/othello-white.png";
+						checkedwhite14 = true;
+					}
+				}
+			}
+
+			var othello_white_15 = document.getElementById('othello-white-15');
+
+			othello_white_15.style.width = othellox + 'px';
+			othello_white_15.style.height = othelloy + 'px';
+			othello_white_15.style.position = "absolute";
+			othello_white_15.style.left = othelloposx + 1150 + 'px';
+			othello_white_15.style.top = othelloposy + 385 + 'px';
+
+			othello_white_15.addEventListener("click", clickwhite15);
+			othello_white_15.addEventListener("mousedown", downwhite15);
+
+			var movingwhite15 = true;
+			var checkedwhite15 = true;
+
+			function clickwhite15(e) {
+				if (movingwhite15) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_15 & elements[n] != Othello) {
+							elements[n].after(othello_white_15);
+						}
+					}
+					othello_white_15.addEventListener('mousemove', movewhite15);
+					movingwhite15 = false;
+				}
+				else {
+					othello_white_15.removeEventListener('mousemove', movewhite15);
+					movingwhite15 = true;
+				}
+			}
+
+			function movewhite15(e) {
+				othello_white_15.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_15.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite15(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite15) {
+						othello_white_15.src = "img/othello-black.png";
+						checkedwhite15 = false;
+					}
+					else {
+						othello_white_15.src = "img/othello-white.png";
+						checkedwhite15 = true;
+					}
+				}
+			}
+
+			var othello_white_16 = document.getElementById('othello-white-16');
+
+			othello_white_16.style.width = othellox + 'px';
+			othello_white_16.style.height = othelloy + 'px';
+			othello_white_16.style.position = "absolute";
+			othello_white_16.style.left = othelloposx + 1150 + 'px';
+			othello_white_16.style.top = othelloposy + 385 + 'px';
+
+			othello_white_16.addEventListener("click", clickwhite16);
+			othello_white_16.addEventListener("mousedown", downwhite16);
+
+			var movingwhite16 = true;
+			var checkedwhite16 = true;
+
+			function clickwhite16(e) {
+				if (movingwhite16) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_16 & elements[n] != Othello) {
+							elements[n].after(othello_white_16);
+						}
+					}
+					othello_white_16.addEventListener('mousemove', movewhite16);
+					movingwhite16 = false;
+				}
+				else {
+					othello_white_16.removeEventListener('mousemove', movewhite16);
+					movingwhite16 = true;
+				}
+			}
+
+			function movewhite16(e) {
+				othello_white_16.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_16.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite16(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite16) {
+						othello_white_16.src = "img/othello-black.png";
+						checkedwhite16 = false;
+					}
+					else {
+						othello_white_16.src = "img/othello-white.png";
+						checkedwhite16 = true;
+					}
+				}
+			}
+
+			var othello_white_17 = document.getElementById('othello-white-17');
+
+			othello_white_17.style.width = othellox + 'px';
+			othello_white_17.style.height = othelloy + 'px';
+			othello_white_17.style.position = "absolute";
+			othello_white_17.style.left = othelloposx + 1150 + 'px';
+			othello_white_17.style.top = othelloposy + 385 + 'px';
+
+			othello_white_17.addEventListener("click", clickwhite17);
+			othello_white_17.addEventListener("mousedown", downwhite17);
+
+			var movingwhite17 = true;
+			var checkedwhite17 = true;
+
+			function clickwhite17(e) {
+				if (movingwhite17) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_17 & elements[n] != Othello) {
+							elements[n].after(othello_white_17);
+						}
+					}
+					othello_white_17.addEventListener('mousemove', movewhite17);
+					movingwhite17 = false;
+				}
+				else {
+					othello_white_17.removeEventListener('mousemove', movewhite17);
+					movingwhite17 = true;
+				}
+			}
+
+			function movewhite17(e) {
+				othello_white_17.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_17.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite17(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite17) {
+						othello_white_17.src = "img/othello-black.png";
+						checkedwhite17 = false;
+					}
+					else {
+						othello_white_17.src = "img/othello-white.png";
+						checkedwhite17 = true;
+					}
+				}
+			}
+
+			var othello_white_18 = document.getElementById('othello-white-18');
+
+			othello_white_18.style.width = othellox + 'px';
+			othello_white_18.style.height = othelloy + 'px';
+			othello_white_18.style.position = "absolute";
+			othello_white_18.style.left = othelloposx + 1150 + 'px';
+			othello_white_18.style.top = othelloposy + 385 + 'px';
+
+			othello_white_18.addEventListener("click", clickwhite18);
+			othello_white_18.addEventListener("mousedown", downwhite18);
+
+			var movingwhite18 = true;
+			var checkedwhite18 = true;
+
+			function clickwhite18(e) {
+				if (movingwhite18) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_18 & elements[n] != Othello) {
+							elements[n].after(othello_white_18);
+						}
+					}
+					othello_white_18.addEventListener('mousemove', movewhite18);
+					movingwhite18 = false;
+				}
+				else {
+					othello_white_18.removeEventListener('mousemove', movewhite18);
+					movingwhite18 = true;
+				}
+			}
+
+			function movewhite18(e) {
+				othello_white_18.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_18.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite18(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite18) {
+						othello_white_18.src = "img/othello-black.png";
+						checkedwhite18 = false;
+					}
+					else {
+						othello_white_18.src = "img/othello-white.png";
+						checkedwhite18 = true;
+					}
+				}
+			}
+
+			var othello_white_19 = document.getElementById('othello-white-19');
+
+			othello_white_19.style.width = othellox + 'px';
+			othello_white_19.style.height = othelloy + 'px';
+			othello_white_19.style.position = "absolute";
+			othello_white_19.style.left = othelloposx + 1150 + 'px';
+			othello_white_19.style.top = othelloposy + 385 + 'px';
+
+			othello_white_19.addEventListener("click", clickwhite19);
+			othello_white_19.addEventListener("mousedown", downwhite19);
+
+			var movingwhite19 = true;
+			var checkedwhite19 = true;
+
+			function clickwhite19(e) {
+				if (movingwhite19) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_19 & elements[n] != Othello) {
+							elements[n].after(othello_white_19);
+						}
+					}
+					othello_white_19.addEventListener('mousemove', movewhite19);
+					movingwhite19 = false;
+				}
+				else {
+					othello_white_19.removeEventListener('mousemove', movewhite19);
+					movingwhite19 = true;
+				}
+			}
+
+			function movewhite19(e) {
+				othello_white_19.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_19.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite19(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite19) {
+						othello_white_19.src = "img/othello-black.png";
+						checkedwhite19 = false;
+					}
+					else {
+						othello_white_19.src = "img/othello-white.png";
+						checkedwhite19 = true;
+					}
+				}
+			}
+
+			var othello_white_20 = document.getElementById('othello-white-20');
+
+			othello_white_20.style.width = othellox + 'px';
+			othello_white_20.style.height = othelloy + 'px';
+			othello_white_20.style.position = "absolute";
+			othello_white_20.style.left = othelloposx + 1150 + 'px';
+			othello_white_20.style.top = othelloposy + 385 + 'px';
+
+			othello_white_20.addEventListener("click", clickwhite20);
+			othello_white_20.addEventListener("mousedown", downwhite20);
+
+			var movingwhite20 = true;
+			var checkedwhite20 = true;
+
+			function clickwhite20(e) {
+				if (movingwhite20) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_20 & elements[n] != Othello) {
+							elements[n].after(othello_white_20);
+						}
+					}
+					othello_white_20.addEventListener('mousemove', movewhite20);
+					movingwhite20 = false;
+				}
+				else {
+					othello_white_20.removeEventListener('mousemove', movewhite20);
+					movingwhite20 = true;
+				}
+			}
+
+			function movewhite20(e) {
+				othello_white_20.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_20.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite20(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite20) {
+						othello_white_20.src = "img/othello-black.png";
+						checkedwhite20 = false;
+					}
+					else {
+						othello_white_20.src = "img/othello-white.png";
+						checkedwhite20 = true;
+					}
+				}
+			}
+
+			var othello_white_21 = document.getElementById('othello-white-21');
+
+			othello_white_21.style.width = othellox + 'px';
+			othello_white_21.style.height = othelloy + 'px';
+			othello_white_21.style.position = "absolute";
+			othello_white_21.style.left = othelloposx + 1150 + 'px';
+			othello_white_21.style.top = othelloposy + 385 + 'px';
+
+			othello_white_21.addEventListener("click", clickwhite21);
+			othello_white_21.addEventListener("mousedown", downwhite21);
+
+			var movingwhite21 = true;
+			var checkedwhite21 = true;
+
+			function clickwhite21(e) {
+				if (movingwhite21) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_21 & elements[n] != Othello) {
+							elements[n].after(othello_white_21);
+						}
+					}
+					othello_white_21.addEventListener('mousemove', movewhite21);
+					movingwhite21 = false;
+				}
+				else {
+					othello_white_21.removeEventListener('mousemove', movewhite21);
+					movingwhite21 = true;
+				}
+			}
+
+			function movewhite21(e) {
+				othello_white_21.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_21.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite21(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite21) {
+						othello_white_21.src = "img/othello-black.png";
+						checkedwhite21 = false;
+					}
+					else {
+						othello_white_21.src = "img/othello-white.png";
+						checkedwhite21 = true;
+					}
+				}
+			}
+
+			var othello_white_22 = document.getElementById('othello-white-22');
+
+			othello_white_22.style.width = othellox + 'px';
+			othello_white_22.style.height = othelloy + 'px';
+			othello_white_22.style.position = "absolute";
+			othello_white_22.style.left = othelloposx + 1150 + 'px';
+			othello_white_22.style.top = othelloposy + 385 + 'px';
+
+			othello_white_22.addEventListener("click", clickwhite22);
+			othello_white_22.addEventListener("mousedown", downwhite22);
+
+			var movingwhite22 = true;
+			var checkedwhite22 = true;
+
+			function clickwhite22(e) {
+				if (movingwhite22) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_22 & elements[n] != Othello) {
+							elements[n].after(othello_white_22);
+						}
+					}
+					othello_white_22.addEventListener('mousemove', movewhite22);
+					movingwhite22 = false;
+				}
+				else {
+					othello_white_22.removeEventListener('mousemove', movewhite22);
+					movingwhite22 = true;
+				}
+			}
+
+			function movewhite22(e) {
+				othello_white_22.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_22.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite22(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite22) {
+						othello_white_22.src = "img/othello-black.png";
+						checkedwhite22 = false;
+					}
+					else {
+						othello_white_22.src = "img/othello-white.png";
+						checkedwhite22 = true;
+					}
+				}
+			}
+
+			var othello_white_23 = document.getElementById('othello-white-23');
+
+			othello_white_23.style.width = othellox + 'px';
+			othello_white_23.style.height = othelloy + 'px';
+			othello_white_23.style.position = "absolute";
+			othello_white_23.style.left = othelloposx + 1150 + 'px';
+			othello_white_23.style.top = othelloposy + 385 + 'px';
+
+			othello_white_23.addEventListener("click", clickwhite23);
+			othello_white_23.addEventListener("mousedown", downwhite23);
+
+			var movingwhite23 = true;
+			var checkedwhite23 = true;
+
+			function clickwhite23(e) {
+				if (movingwhite23) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_23 & elements[n] != Othello) {
+							elements[n].after(othello_white_23);
+						}
+					}
+					othello_white_23.addEventListener('mousemove', movewhite23);
+					movingwhite23 = false;
+				}
+				else {
+					othello_white_23.removeEventListener('mousemove', movewhite23);
+					movingwhite23 = true;
+				}
+			}
+
+			function movewhite23(e) {
+				othello_white_23.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_23.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite23(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite23) {
+						othello_white_23.src = "img/othello-black.png";
+						checkedwhite23 = false;
+					}
+					else {
+						othello_white_23.src = "img/othello-white.png";
+						checkedwhite23 = true;
+					}
+				}
+			}
+
+			var othello_white_24 = document.getElementById('othello-white-24');
+
+			othello_white_24.style.width = othellox + 'px';
+			othello_white_24.style.height = othelloy + 'px';
+			othello_white_24.style.position = "absolute";
+			othello_white_24.style.left = othelloposx + 1150 + 'px';
+			othello_white_24.style.top = othelloposy + 385 + 'px';
+
+			othello_white_24.addEventListener("click", clickwhite24);
+			othello_white_24.addEventListener("mousedown", downwhite24);
+
+			var movingwhite24 = true;
+			var checkedwhite24 = true;
+
+			function clickwhite24(e) {
+				if (movingwhite24) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_24 & elements[n] != Othello) {
+							elements[n].after(othello_white_24);
+						}
+					}
+					othello_white_24.addEventListener('mousemove', movewhite24);
+					movingwhite24 = false;
+				}
+				else {
+					othello_white_24.removeEventListener('mousemove', movewhite24);
+					movingwhite24 = true;
+				}
+			}
+
+			function movewhite24(e) {
+				othello_white_24.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_24.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite24(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite24) {
+						othello_white_24.src = "img/othello-black.png";
+						checkedwhite24 = false;
+					}
+					else {
+						othello_white_24.src = "img/othello-white.png";
+						checkedwhite24 = true;
+					}
+				}
+			}
+
+			var othello_white_25 = document.getElementById('othello-white-25');
+
+			othello_white_25.style.width = othellox + 'px';
+			othello_white_25.style.height = othelloy + 'px';
+			othello_white_25.style.position = "absolute";
+			othello_white_25.style.left = othelloposx + 1150 + 'px';
+			othello_white_25.style.top = othelloposy + 385 + 'px';
+
+			othello_white_25.addEventListener("click", clickwhite25);
+			othello_white_25.addEventListener("mousedown", downwhite25);
+
+			var movingwhite25 = true;
+			var checkedwhite25 = true;
+
+			function clickwhite25(e) {
+				if (movingwhite25) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_25 & elements[n] != Othello) {
+							elements[n].after(othello_white_25);
+						}
+					}
+					othello_white_25.addEventListener('mousemove', movewhite25);
+					movingwhite25 = false;
+				}
+				else {
+					othello_white_25.removeEventListener('mousemove', movewhite25);
+					movingwhite25 = true;
+				}
+			}
+
+			function movewhite25(e) {
+				othello_white_25.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_25.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite25(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite25) {
+						othello_white_25.src = "img/othello-black.png";
+						checkedwhite25 = false;
+					}
+					else {
+						othello_white_25.src = "img/othello-white.png";
+						checkedwhite25 = true;
+					}
+				}
+			}
+
+			var othello_white_26 = document.getElementById('othello-white-26');
+
+			othello_white_26.style.width = othellox + 'px';
+			othello_white_26.style.height = othelloy + 'px';
+			othello_white_26.style.position = "absolute";
+			othello_white_26.style.left = othelloposx + 1150 + 'px';
+			othello_white_26.style.top = othelloposy + 385 + 'px';
+
+			othello_white_26.addEventListener("click", clickwhite26);
+			othello_white_26.addEventListener("mousedown", downwhite26);
+
+			var movingwhite26 = true;
+			var checkedwhite26 = true;
+
+			function clickwhite26(e) {
+				if (movingwhite26) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_26 & elements[n] != Othello) {
+							elements[n].after(othello_white_26);
+						}
+					}
+					othello_white_26.addEventListener('mousemove', movewhite26);
+					movingwhite26 = false;
+				}
+				else {
+					othello_white_26.removeEventListener('mousemove', movewhite26);
+					movingwhite26 = true;
+				}
+			}
+
+			function movewhite26(e) {
+				othello_white_26.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_26.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite26(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite26) {
+						othello_white_26.src = "img/othello-black.png";
+						checkedwhite26 = false;
+					}
+					else {
+						othello_white_26.src = "img/othello-white.png";
+						checkedwhite26 = true;
+					}
+				}
+			}
+
+			var othello_white_27 = document.getElementById('othello-white-27');
+
+			othello_white_27.style.width = othellox + 'px';
+			othello_white_27.style.height = othelloy + 'px';
+			othello_white_27.style.position = "absolute";
+			othello_white_27.style.left = othelloposx + 1150 + 'px';
+			othello_white_27.style.top = othelloposy + 385 + 'px';
+
+			othello_white_27.addEventListener("click", clickwhite27);
+			othello_white_27.addEventListener("mousedown", downwhite27);
+
+			var movingwhite27 = true;
+			var checkedwhite27 = true;
+
+			function clickwhite27(e) {
+				if (movingwhite27) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_27 & elements[n] != Othello) {
+							elements[n].after(othello_white_27);
+						}
+					}
+					othello_white_27.addEventListener('mousemove', movewhite27);
+					movingwhite27 = false;
+				}
+				else {
+					othello_white_27.removeEventListener('mousemove', movewhite27);
+					movingwhite27 = true;
+				}
+			}
+
+			function movewhite27(e) {
+				othello_white_27.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_27.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite27(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite27) {
+						othello_white_27.src = "img/othello-black.png";
+						checkedwhite27 = false;
+					}
+					else {
+						othello_white_27.src = "img/othello-white.png";
+						checkedwhite27 = true;
+					}
+				}
+			}
+
+			var othello_white_28 = document.getElementById('othello-white-28');
+
+			othello_white_28.style.width = othellox + 'px';
+			othello_white_28.style.height = othelloy + 'px';
+			othello_white_28.style.position = "absolute";
+			othello_white_28.style.left = othelloposx + 1150 + 'px';
+			othello_white_28.style.top = othelloposy + 385 + 'px';
+
+			othello_white_28.addEventListener("click", clickwhite28);
+			othello_white_28.addEventListener("mousedown", downwhite28);
+
+			var movingwhite28 = true;
+			var checkedwhite28 = true;
+
+			function clickwhite28(e) {
+				if (movingwhite28) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_28 & elements[n] != Othello) {
+							elements[n].after(othello_white_28);
+						}
+					}
+					othello_white_28.addEventListener('mousemove', movewhite28);
+					movingwhite28 = false;
+				}
+				else {
+					othello_white_28.removeEventListener('mousemove', movewhite28);
+					movingwhite28 = true;
+				}
+			}
+
+			function movewhite28(e) {
+				othello_white_28.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_28.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite28(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite28) {
+						othello_white_28.src = "img/othello-black.png";
+						checkedwhite28 = false;
+					}
+					else {
+						othello_white_28.src = "img/othello-white.png";
+						checkedwhite28 = true;
+					}
+				}
+			}
+
+			var othello_white_29 = document.getElementById('othello-white-29');
+
+			othello_white_29.style.width = othellox + 'px';
+			othello_white_29.style.height = othelloy + 'px';
+			othello_white_29.style.position = "absolute";
+			othello_white_29.style.left = othelloposx + 1150 + 'px';
+			othello_white_29.style.top = othelloposy + 385 + 'px';
+
+			othello_white_29.addEventListener("click", clickwhite29);
+			othello_white_29.addEventListener("mousedown", downwhite29);
+
+			var movingwhite29 = true;
+			var checkedwhite29 = true;
+
+			function clickwhite29(e) {
+				if (movingwhite29) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_29 & elements[n] != Othello) {
+							elements[n].after(othello_white_29);
+						}
+					}
+					othello_white_29.addEventListener('mousemove', movewhite29);
+					movingwhite29 = false;
+				}
+				else {
+					othello_white_29.removeEventListener('mousemove', movewhite29);
+					movingwhite29 = true;
+				}
+			}
+
+			function movewhite29(e) {
+				othello_white_29.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_29.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite29(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite29) {
+						othello_white_29.src = "img/othello-black.png";
+						checkedwhite29 = false;
+					}
+					else {
+						othello_white_29.src = "img/othello-white.png";
+						checkedwhite29 = true;
+					}
+				}
+			}
+
+			var othello_white_30 = document.getElementById('othello-white-30');
+
+			othello_white_30.style.width = othellox + 'px';
+			othello_white_30.style.height = othelloy + 'px';
+			othello_white_30.style.position = "absolute";
+			othello_white_30.style.left = othelloposx + 1150 + 'px';
+			othello_white_30.style.top = othelloposy + 385 + 'px';
+
+			othello_white_30.addEventListener("click", clickwhite30);
+			othello_white_30.addEventListener("mousedown", downwhite30);
+
+			var movingwhite30 = true;
+			var checkedwhite30 = true;
+
+			function clickwhite30(e) {
+				if (movingwhite30) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_30 & elements[n] != Othello) {
+							elements[n].after(othello_white_30);
+						}
+					}
+					othello_white_30.addEventListener('mousemove', movewhite30);
+					movingwhite30 = false;
+				}
+				else {
+					othello_white_30.removeEventListener('mousemove', movewhite30);
+					movingwhite30 = true;
+				}
+			}
+
+			function movewhite30(e) {
+				othello_white_30.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_30.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite30(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite30) {
+						othello_white_30.src = "img/othello-black.png";
+						checkedwhite30 = false;
+					}
+					else {
+						othello_white_30.src = "img/othello-white.png";
+						checkedwhite30 = true;
+					}
+				}
+			}
+
+			var othello_white_31 = document.getElementById('othello-white-31');
+
+			othello_white_31.style.width = othellox + 'px';
+			othello_white_31.style.height = othelloy + 'px';
+			othello_white_31.style.position = "absolute";
+			othello_white_31.style.left = othelloposx + 1150 + 'px';
+			othello_white_31.style.top = othelloposy + 385 + 'px';
+
+			othello_white_31.addEventListener("click", clickwhite31);
+			othello_white_31.addEventListener("mousedown", downwhite31);
+
+			var movingwhite31 = true;
+			var checkedwhite31 = true;
+
+			function clickwhite31(e) {
+				if (movingwhite31) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_31 & elements[n] != Othello) {
+							elements[n].after(othello_white_31);
+						}
+					}
+					othello_white_31.addEventListener('mousemove', movewhite31);
+					movingwhite31 = false;
+				}
+				else {
+					othello_white_31.removeEventListener('mousemove', movewhite31);
+					movingwhite31 = true;
+				}
+			}
+
+			function movewhite31(e) {
+				othello_white_31.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_31.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite31(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite31) {
+						othello_white_31.src = "img/othello-black.png";
+						checkedwhite31 = false;
+					}
+					else {
+						othello_white_31.src = "img/othello-white.png";
+						checkedwhite31 = true;
+					}
+				}
+			}
+
+			var othello_white_32 = document.getElementById('othello-white-32');
+
+			othello_white_32.style.width = othellox + 'px';
+			othello_white_32.style.height = othelloy + 'px';
+			othello_white_32.style.position = "absolute";
+			othello_white_32.style.left = othelloposx + 1150 + 'px';
+			othello_white_32.style.top = othelloposy + 385 + 'px';
+
+			othello_white_32.addEventListener("click", clickwhite32);
+			othello_white_32.addEventListener("mousedown", downwhite32);
+
+			var movingwhite32 = true;
+			var checkedwhite32 = true;
+
+			function clickwhite32(e) {
+				if (movingwhite32) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != othello_white_32 & elements[n] != Othello) {
+							elements[n].after(othello_white_32);
+						}
+					}
+					othello_white_32.addEventListener('mousemove', movewhite32);
+					movingwhite32 = false;
+				}
+				else {
+					othello_white_32.removeEventListener('mousemove', movewhite32);
+					movingwhite32 = true;
+				}
+			}
+
+			function movewhite32(e) {
+				othello_white_32.style.left = e.clientX - othellox / 2 + 'px';
+				othello_white_32.style.top = e.clientY - othelloy / 2 + 'px';
+			}
+
+			function downwhite32(e) {
+				var clicktype = e.keyCode || e.which;
+				if (clicktype == 3) {
+					if (checkedwhite32) {
+						othello_white_32.src = "img/othello-black.png";
+						checkedwhite32 = false;
+					}
+					else {
+						othello_white_32.src = "img/othello-white.png";
+						checkedwhite32 = true;
+					}
+				}
+			}
+
+		</script>
+
+	</body>
+
+</html>

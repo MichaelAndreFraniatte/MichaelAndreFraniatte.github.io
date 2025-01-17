@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description"
+            content="Calculating and defining all PVTX and reaction data from 1 to 8 constituents, with quantities for synthesis, in a web application. Open/Save in CSV files capabilities with several example files. EoSResol stands for Equation of State Resolution, achieved with JavaScript.">
+        <meta name="keywords" content="liquid, temperature, pressure, synthesis, gas, eos, pvtx">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+        <title>Michael Franiatte EoSResol Web Application</title>
+
+        <link rel="stylesheet" href="../extra/font-awesome.css">
+        <link rel="stylesheet" href="../extra/bootstrap.min.css">
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+        <script src="../extra/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="custom/custom.css">
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class>
+
+        <div id="title">
+            <h2><strong>EoSResol Web Application</strong></h2>
+            <h5>Equation of State Resolution by Michael Andre Franiatte &emsp;<strong class="btn" onclick="openArticle()"><i class="fa fa-book"></i></strong></h5>
+        </div>
+
+        <div id="input">
+            <form class="form-horizontal">
+                <label for="csvFileInput">
+                    <strong>Import CSV File: &emsp;</strong>
+                </label>
+                <input type="file" id="csvFileInput" onchange="handleFiles(this.files)" accept=".csv">
+            </form>
+            <br />
+            <form class="form-horizontal">
+                <label for="filename">
+                    <strong>Export CSV File: &emsp;</strong>
+                </label>
+                <input type="text" id="filename">
+                <input type="button" onClick="handleFilename()" value="Save" class="button">
+            </form>
+            <br />
+            <form class="form-horizontal">
+                <label>
+                    <strong>Proceed Calculation: &emsp;</strong>
+                </label>
+                <input type="button" onClick="Volume()" value="Volume" class="button">
+                <input type="button" onClick="Fugacity()" value="Fugacity" class="button">
+                <input type="button" onClick="Reaction()" value="Reaction" class="button">
+                <input type="button" onClick="Synthesis()" value="Synthesis" class="button">
+            </form>
+        </div>
+        <div id="output">
+            <table contenteditable="true">
+                <tbody>
+                    <tr>
+                        <td id="0-0" style="text-align: center;">P (bars)</td>
+                        <td id="0-1" style="text-align: center; border-right: 1px solid white;">140</td>
+                        <td id="0-2" style="text-align: center; border-bottom: 1px solid white;">constituent</td>
+                        <td id="0-3" style="text-align: center; border-bottom: 1px solid white;">Pc (bars)</td>
+                        <td id="0-4" style="text-align: center; border-bottom: 1px solid white;">Tc (K)</td>
+                        <td id="0-5" style="text-align: center; border-bottom: 1px solid white;">wc</td>
+                        <td id="0-6" style="text-align: center; border-bottom: 1px solid white;">M (g/mol)</td>
+                        <td id="0-7" style="text-align: center; border-bottom: 1px solid white;">molar fraction</td>
+                        <td id="0-8" style="text-align: center; border-bottom: 1px solid white;">massic fraction</td>
+                        <td id="0-9" style="text-align: center; border-bottom: 1px solid white;">molar V (cm3/mol)</td>
+                        <td id="0-10" style="text-align: center; border-bottom: 1px solid white;">fugacity</td>
+                        <td id="0-11" style="text-align: center; border-bottom: 1px solid white;">fugacity°</td>
+                        <td id="0-12" style="text-align: center; border-bottom: 1px solid white;">stoechio react</td>
+                        <td id="0-13" style="text-align: center; border-bottom: 1px solid white;">stoechio prod</td>
+                    </tr>
+                    <tr>
+                        <td id="1-0" style="text-align: center;">T (°C)</td>
+                        <td id="1-1" style="text-align: center; border-right: 1px solid white;">250</td>
+                        <td id="1-2" style="text-align: center;">H2</td>
+                        <td id="1-3" style="text-align: center;">12.97</td>
+                        <td id="1-4" style="text-align: center;">33.3</td>
+                        <td id="1-5" style="text-align: center;">-0.215</td>
+                        <td id="1-6" style="text-align: center;">2.0158</td>
+                        <td id="1-7" style="text-align: center;">0.13776</td>
+                        <td id="1-8" style="text-align: center;">H2</td>
+                        <td id="1-9" style="text-align: center;">H2</td>
+                        <td id="1-10" style="text-align: center;">H2</td>
+                        <td id="1-11" style="text-align: center;">H2</td>
+                        <td id="1-12" style="text-align: center;">30.5</td>
+                        <td id="1-13" style="text-align: center;">0</td>
+                    </tr>
+                    <tr>
+                        <td id="2-0" style="text-align: center;">molar V Liq</td>
+                        <td id="2-1" style="text-align: center; border-right: 1px solid white;">molar V Liq</td>
+                        <td id="2-2" style="text-align: center;">H2O</td>
+                        <td id="2-3" style="text-align: center;">221.2</td>
+                        <td id="2-4" style="text-align: center;">647.30</td>
+                        <td id="2-5" style="text-align: center;">0.344</td>
+                        <td id="2-6" style="text-align: center;">18.0158</td>
+                        <td id="2-7" style="text-align: center;">0.84245</td>
+                        <td id="2-8" style="text-align: center;">H2O</td>
+                        <td id="2-9" style="text-align: center;">H2O</td>
+                        <td id="2-10" style="text-align: center;">H2O</td>
+                        <td id="2-11" style="text-align: center;">H2O</td>
+                        <td id="2-12" style="text-align: center;">0</td>
+                        <td id="2-13" style="text-align: center;">26</td>
+                    </tr>
+                    <tr>
+                        <td id="3-0" style="text-align: center;">V Liq+Gaz/Gaz</td>
+                        <td id="3-1" style="text-align: center; border-right: 1px solid white;">V Liq+Gaz/Gaz</td>
+                        <td id="3-2" style="text-align: center;">CO2</td>
+                        <td id="3-3" style="text-align: center;">73.8</td>
+                        <td id="3-4" style="text-align: center;">304.2</td>
+                        <td id="3-5" style="text-align: center;">0.225</td>
+                        <td id="3-6" style="text-align: center;">44.0096</td>
+                        <td id="3-7" style="text-align: center;">0.0073</td>
+                        <td id="3-8" style="text-align: center;">CO2</td>
+                        <td id="3-9" style="text-align: center;">CO2</td>
+                        <td id="3-10" style="text-align: center;">CO2</td>
+                        <td id="3-11" style="text-align: center;">CO2</td>
+                        <td id="3-12" style="text-align: center;">13</td>
+                        <td id="3-13" style="text-align: center;">0</td>
+                    </tr>
+                    <tr>
+                        <td id="4-0" style="text-align: center;">V Liq+Gaz/Liq+Gaz</td>
+                        <td id="4-1" style="text-align: center; border-right: 1px solid white;">V Liq+Gaz/Liq+Gaz</td>
+                        <td id="4-2" style="text-align: center;">NH3</td>
+                        <td id="4-3" style="text-align: center;">113.33</td>
+                        <td id="4-4" style="text-align: center;">405.40</td>
+                        <td id="4-5" style="text-align: center;">0.25601</td>
+                        <td id="4-6" style="text-align: center;">17.03040</td>
+                        <td id="4-7" style="text-align: center;">0.00000</td>
+                        <td id="4-8" style="text-align: center;">NH3</td>
+                        <td id="4-9" style="text-align: center;">NH3</td>
+                        <td id="4-10" style="text-align: center;">NH3</td>
+                        <td id="4-11" style="text-align: center;">NH3</td>
+                        <td id="4-12" style="text-align: center;">0</td>
+                        <td id="4-13" style="text-align: center;">0</td>
+                    </tr>
+                    <tr>
+                        <td id="5-0" style="text-align: center;">V Gaz/Gaz</td>
+                        <td id="5-1" style="text-align: center; border-right: 1px solid white;">V Gaz/Gaz</td>
+                        <td id="5-2" style="text-align: center;">N2</td>
+                        <td id="5-3" style="text-align: center;">33.9</td>
+                        <td id="5-4" style="text-align: center;">126.2</td>
+                        <td id="5-5" style="text-align: center;">0.04</td>
+                        <td id="5-6" style="text-align: center;">28.0134</td>
+                        <td id="5-7" style="text-align: center;">0.00645</td>
+                        <td id="5-8" style="text-align: center;">N2</td>
+                        <td id="5-9" style="text-align: center;">N2</td>
+                        <td id="5-10" style="text-align: center;">N2</td>
+                        <td id="5-11" style="text-align: center;">N2</td>
+                        <td id="5-12" style="text-align: center;">0.5</td>
+                        <td id="5-13" style="text-align: center;">0</td>
+                    </tr>
+                    <tr>
+                        <td id="6-0" style="text-align: center;">density xl (g/cm3)</td>
+                        <td id="6-1" style="text-align: center; border-right: 1px solid white;">density xl (g/cm3)</td>
+                        <td id="6-2" style="text-align: center;">CO</td>
+                        <td id="6-3" style="text-align: center;">35</td>
+                        <td id="6-4" style="text-align: center;">132.9</td>
+                        <td id="6-5" style="text-align: center;">0.049</td>
+                        <td id="6-6" style="text-align: center;">28.0102</td>
+                        <td id="6-7" style="text-align: center;">0.00000</td>
+                        <td id="6-8" style="text-align: center;">CO</td>
+                        <td id="6-9" style="text-align: center;">CO</td>
+                        <td id="6-10" style="text-align: center;">CO</td>
+                        <td id="6-11" style="text-align: center;">CO</td>
+                        <td id="6-12" style="text-align: center;">0</td>
+                        <td id="6-13" style="text-align: center;">0</td>
+                    </tr>
+                    <tr>
+                        <td id="7-0" style="text-align: center;">density global</td>
+                        <td id="7-1" style="text-align: center; border-right: 1px solid white;">density global</td>
+                        <td id="7-2" style="text-align: center;">O2</td>
+                        <td id="7-3" style="text-align: center;">50.5</td>
+                        <td id="7-4" style="text-align: center;">154.6</td>
+                        <td id="7-5" style="text-align: center;">0.021</td>
+                        <td id="7-6" style="text-align: center;">32.0852</td>
+                        <td id="7-7" style="text-align: center;">0.00604</td>
+                        <td id="7-8" style="text-align: center;">O2</td>
+                        <td id="7-9" style="text-align: center;">O2</td>
+                        <td id="7-10" style="text-align: center;">O2</td>
+                        <td id="7-11" style="text-align: center;">O2</td>
+                        <td id="7-12" style="text-align: center;">0</td>
+                        <td id="7-13" style="text-align: center;">0</td>
+                    </tr>
+                    <tr>
+                        <td id="8-0" style="text-align: center;">Kr/Keq</td>
+                        <td id="8-1" style="text-align: center; border-right: 1px solid white;">Kr/Keq</td>
+                        <td id="8-2" style="text-align: center;">H2S</td>
+                        <td id="8-3" style="text-align: center;">89.4</td>
+                        <td id="8-4" style="text-align: center;">373.2</td>
+                        <td id="8-5" style="text-align: center;">0.1</td>
+                        <td id="8-6" style="text-align: center;">34.0814</td>
+                        <td id="8-7" style="text-align: center;">0.000000</td>
+                        <td id="8-8" style="text-align: center;">H2S</td>
+                        <td id="8-9" style="text-align: center;">H2S</td>
+                        <td id="8-10" style="text-align: center;">H2S</td>
+                        <td id="8-11" style="text-align: center;">H2S</td>
+                        <td id="8-12" style="text-align: center;">0</td>
+                        <td id="8-13" style="text-align: center;">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="sub-output">
+            <table contenteditable="true">
+                <tbody>
+                    <tr>
+                        <td>Volume (cm3)</td>
+                        <td id="Volume">7.42</td>
+                        <td>X H2O</td>
+                        <td id="XH2O"></td>
+                        <td>n H2O (mol)</td>
+                        <td id="nH2O"></td>
+                        <td>d H2O (g/cm3)</td>
+                        <td id="dH2O">1</td>
+                        <td>M H2O (g/mol)</td>
+                        <td id="MH2O">18.0158</td>
+                        <td>m H2O (g)</td>
+                        <td id="mH2O"></td>
+                        <td>V H2O (cm3)</td>
+                        <td id="VH2O"></td>
+                        <td>H H2O (cm)</td>
+                        <td id="HH2O"></td>
+                    </tr>
+                    <tr>
+                        <td id="">Diameter (cm)</td>
+                        <td id="Diameter">1.30</td>
+                        <td>X CO2</td>
+                        <td id="XCO2"></td>
+                        <td>n CO2 (mol)</td>
+                        <td id="nCO2"></td>
+                        <td>d C2H2O42H2O (g/cm3)</td>
+                        <td id="dC2H2O42H2O">1.65</td>
+                        <td>M C2H2O42H2O (g/mol)</td>
+                        <td id="MC2H2O42H2O">126.066</td>
+                        <td>m C2H2O42H2O (g)</td>
+                        <td id="mC2H2O42H2O"></td>
+                        <td>V C2H2O42H2O (cm3)</td>
+                        <td id="VC2H2O42H2O"></td>
+                        <td>H C2H2O42H2O (cm)</td>
+                        <td id="HC2H2O42H2O"></td>
+                    </tr>
+                    <tr>
+                        <td>molar V (cm3/mol)</td>
+                        <td id="molarV"></td>
+                        <td>X N2</td>
+                        <td id="XN2"></td>
+                        <td>n N2 (mol)</td>
+                        <td id="nN2"></td>
+                        <td>d NH4Cl (g/cm3)</td>
+                        <td id="dNH4Cl">1.527</td>
+                        <td>M NH4Cl (g/mol)</td>
+                        <td id="MNH4Cl">53.49</td>
+                        <td>m NH4Cl (g)</td>
+                        <td id="mNH4Cl"></td>
+                        <td>V NH4Cl (cm3)</td>
+                        <td id="VNH4Cl"></td>
+                        <td>H NH4Cl (cm)</td>
+                        <td id="HNH4Cl"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="bordered"></td>
+                        <td>d H2O (g/cm3)</td>
+                        <td id="dH2Oa">1</td>
+                        <td>M H2O (g/mol)</td>
+                        <td id="MH2Oa">18.0158</td>
+                        <td>m H2O (g)</td>
+                        <td id="mH2Oa"></td>
+                        <td>V H2O (cm3)</td>
+                        <td id="VH2Oa"></td>
+                        <td>H H2O (cm)</td>
+                        <td id="HH2Oa"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="bordered"></td>
+                        <td>d C2H2O42H2O (g/cm3)</td>
+                        <td id="dC2H2O42H2Oa">1.65</td>
+                        <td>M C2H2O42H2O (g/mol)</td>
+                        <td id="MC2H2O42H2Oa">126.066</td>
+                        <td>m C2H2O42H2O (g)</td>
+                        <td id="mC2H2O42H2Oa"></td>
+                        <td>V C2H2O42H2O (cm3)</td>
+                        <td id="VC2H2O42H2Oa"></td>
+                        <td>H C2H2O42H2O (cm)</td>
+                        <td id="HC2H2O42H2Oa"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="bordered"></td>
+                        <td>d NH3 (g/cm3)</td>
+                        <td id="dNH3">1</td>
+                        <td>M NH3 (g/mol)</td>
+                        <td id="MNH3">17.03040</td>
+                        <td>m NH3 (g)</td>
+                        <td id="mNH3"></td>
+                        <td>V NH3 (cm3)</td>
+                        <td id="VNH3"></td>
+                        <td>H NH3 (cm)</td>
+                        <td id="HNH3"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <footer>
+            <center>
+                <p>&copy; Michael Andre Franiatte</p>
+            </center>
+        </footer>
+
+        <script type="text/javascript" src="custom/export-import-csv.js"></script>
+        <script src="custom/custom.js"></script>
+
+    </body>
+
+</html>

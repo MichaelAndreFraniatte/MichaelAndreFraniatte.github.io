@@ -1,0 +1,108 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+body {
+    font-family: sans-serif;
+    background-color: #222222;
+    color: #FFFFFF;
+    background-color: #222222;
+    text-align:left;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+#title {
+    border-bottom: 0.15rem solid white;
+    font-size: 1.5rem;
+}
+
+.btn {
+    color: #FFFFFF;
+}
+
+.btn:hover {
+    color: #0063ff;
+}
+
+.button {
+    color: #000000;
+}
+
+#csvFileInput {
+    color: #FFFFFF;
+}
+
+label {
+    float: left;
+}
+
+#input, #title {
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+input {
+    color: #000000;
+}
+
+tr, td {
+    margin: 1.2rem;
+    padding: 1.2rem;
+}
+
+#0-2, #0-3, #0-4, #0-5, #0-6, #0-7, #0-8, #0-9, #0-10, #0-11, #0-12, #0-13 {
+    border-bottom: 0.5rem solid white;
+}
+
+#0-1, #1-1, #2-1, #3-1, #4-1, #5-1, #6-1, #7-1, #8-1 {
+    border-right: 0.5rem solid white;
+}
+
+#output {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#sub-output {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: none;
+}
+
+#Volume, #XH2O, #nH2O, #dH2O, #MH2O, #mH2O, #VH2O, #Diameter, #XCO2, #nCO2, #dC2H2O42H2O, #MC2H2O42H2O, #mC2H2O42H2O, #VC2H2O42H2O, #molarV, #XN2, #nN2, #dNH4Cl, #MNH4Cl, #mNH4Cl, #VNH4Cl, #dH2Oa, #MH2Oa, #mH2Oa, #VH2Oa, #dC2H2O42H2Oa, #MC2H2O42H2Oa, #mC2H2O42H2Oa, #VC2H2O42H2Oa, #dNH3, #MNH3, #mNH3, #VNH3 {
+    border-right: 0.25rem solid white;
+}
+
+.bordered {
+    border-right: 0.25rem solid white;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #222;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #eee;
+    }

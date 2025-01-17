@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+        <title>biopic mina</title>
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+        <style>
+            html,
+            body {
+                background: url('img/mina.png') no-repeat right top fixed;
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                padding: 0;
+                margin: 0;
+                font-size: 2.5vh;
+            }
+
+            #back {
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                padding: 0;
+                margin: 0;
+                background-color: rgba(255, 105, 180, 0.4);
+            }
+
+            #inside {
+                position: absolute;
+                height: 50vh;
+                width: 50vw;
+                left: 10vh;
+                top: 8vw;
+                padding: 4%;
+                margin: 0;
+                background-image: radial-gradient(ellipse, white, transparent 80%);
+            }
+
+            #text {
+                margin: 0%;
+                color: rgba(255, 85, 160, 1);
+                font-weight: 600;
+            }
+        </style>
+
+    </head>
+
+    <body class>
+        <div id="back">
+            <div id="inside">
+                <div id="text"></div>
+            </div>
+        </div>
+        <copyrights
+            style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: black; text-align: center; font-family: sans-serif; font-size: 15px;">
+            <b>© MAF</b></copyrights>
+        <script>
+            var text = ['<p>Hello, I\'m Mina from North Sahara.</p> <p>I\'m living in a town where Oasis are all around. I was born in this town, but I\'ve always moved around the world with my dad. I like travel to find new place to be. People are lovely when you are a stranger. My mom teached me to be someone gentle with people.</p> <p>I\'m liking to talk with my mom, always teaching me new things. I\'m loving to learn new things. It\'s a pleasure for me to be well rounded, but I\'m liking also to be alone to find myself.</p>', '<p>In my time alone, I like reading books, playing Nintendo Switch console, watching movies on Netflix, and also the night watching stars, I\'m doing astronomy during long hours. Sometimes I forget to sleep. I don\'t like going to bed, even if I like sleeping for some dreams.</p> <p>I\'m creating music because I also like listening music. I create games with some friends and we play together when we have times to be. I want to be a complete artist in video games creation, but also a finest astronomist.</p>']
+            var n = 0;
+
+            const printSentence = (id, sentence, speed = 50) => {
+                let index = 0;
+                let element = document.getElementById(id);
+                element.innerHTML = '';
+                let timer = setInterval(function () {
+                    const char = sentence[index];
+                    if (char === '<') {
+                        index = sentence.indexOf('>', index);
+                    }
+                    element.innerHTML = sentence.slice(0, index);
+                    if (++index === sentence.length) {
+                        clearInterval(timer);
+                        n++;
+                        if (n >= text.length) {
+                            n = 0;
+                        }
+                        setTimeout(() => {
+                            printSentence('text', text[n], 50);
+                        }, 1500);
+                    }
+                }, speed);
+            }
+
+            setTimeout(() => {
+                printSentence('text', text[n], 50);
+            }, 1500);
+
+        </script>
+
+    </body>
+
+</html>

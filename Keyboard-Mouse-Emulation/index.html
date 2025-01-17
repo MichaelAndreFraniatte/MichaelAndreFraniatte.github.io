@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Keyboard Mouse Emulation</title>
+        <meta name="description" content="Different little tools for helping players in games to be more competitive">
+        <meta name="keywords" content="Wiimote, Nunchuck, games, PC, program">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../extra/w3.css">
+
+        <link rel="stylesheet" href="../custom/custom.css" />
+        
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+    </head>
+
+    <body class onLoad="window_onload()" id="bodymain">
+        <div class="modalaccept">
+            <div class="modalaccept-content">
+                <div>By continuing, you are agree to be a sponsor, and you
+                    respect the copyrights and intellectual properties of owner.</div>
+                <br />
+                <div>
+                    <input type="checkbox" id="acceptbox" name="acceptbox" />
+                    <label for="acceptbox">I'm agree, I respect, and understand.</label>
+                </div><br />
+                <div><button id="acceptbutton">I understand</button></div>
+            </div>
+        </div>
+        <div class="back" id="main">
+            <span aria-label="Copyrights" class="infobulle">&#8505;</span>
+            <span aria-label="Go to top" class="topbtn">▲</span>
+            <div id="banner"><img src="../img/favicon.jpg" />
+                <div id="closebanner">✖</div>
+                <div id="textbanner">By continuing, you are agree to be a sponsor, and you respect the copyrights and
+                        intellectual properties of owner.</div>
+                <div id="button1banner">I understand</div>
+                <div id="button2banner">I don't understand</div>
+            </div>
+            <span aria-label="Contact" class="infobulle-contact">&#9742;</span>
+            <div id="banner-contact"><img src="../img/favicon.jpg" />
+                <div id="closebanner-contact">✖</div>
+                <div id="textbanner-contact">If you find something usefull, please contact owner at this email address:
+                    <a href="mailto:michael.franiatte@gmail.com" class="dl-link" 
+                       >michael.franiatte@gmail.com</a>.
+                </div>
+                <div id="buttonbanner-contact">Copy</div>
+            </div>
+
+            <div class="top w3-center">
+                <img class="logo" src="kme.png" alt="kme" onclick="clickLogo()">
+                <div class="title colored">
+                    <h2>Keyboard Mouse Emulation</h2>
+                    <h1>Become Competitive Gamer</h1>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="w3-row first-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Different Little Tools To Be More Competitive</b></h3>
+                        <p>
+                            The program is based on a concept of adaptative action with your Keyboard and Mouse for
+                            playing games in a better competitive way. It help to have some actions better than what
+                            exist in games for key bindings and mouse controls. Also it enable shortcuts for your
+                            prefered way to play with your Keyboard and mouse, like extra buttons. Let's see...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/kme-doubleclickreload.png" alt="kme-doubleclickreload" style="width:90%;"
+                            onclick='img_box("../img/kme-doubleclickreload.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/kme-pushreload.png" alt="kme-pushreload" style="width:80%;"
+                            onclick='img_box("../img/kme-pushreload.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/kme-keepaimdownsight.png" alt="kme-keepaimdownsight" style="width:90%;"
+                            onclick='img_box("../img/kme-keepaimdownsight.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-center row">
+                    <div class="column">
+                        <img src="../img/kme-mousemovetokeys.png" alt="kme-mousemovetokeys" style="width:90%;"
+                            onclick='img_box("../img/kme-mousemovetokeys.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/kme-cancelreload-main.png" alt="kme-cancelreload-main" style="width:80%;"
+                            onclick='img_box("../img/kme-cancelreload-main.png")'>
+                    </div>
+                    <div class="column">
+                        <img src="../img/kme-shockmouse.png" alt="kme-shockmouse" style="width:90%;"
+                            onclick='img_box("../img/kme-shockmouse.png")'>
+                    </div>
+                </div>
+
+                <div class="w3-row second-section">
+                    <div class="w3-container">
+                        <h3 class="w3-center colored"><b>Considerations About the Program</b></h3>
+                        <p>
+                            The programs are all game ready support, because it just need to open a program for enjoy
+                            better gaming with some Keyboard and Mouse tweaking.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="bottom w3-center credits" onclick='localStorage.setItem("copyrights", "accept"); window.open("../credits-showcase/", "_blank");'>
+                <img src="../img/favicon.png" />
+                <br>
+                <b class="white">MAF</b>
+                <br>
+                <b class="colored">©1999-2025</b>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

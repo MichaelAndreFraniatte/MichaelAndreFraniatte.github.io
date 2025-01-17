@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+
+		<title>Power4</title>
+		<meta charset="utf-8">
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Michael Andre Franiatte Power4">
+		<meta name="keywords" content="Michael Andre Franiatte, Power4">
+		<meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+		<link rel="shortcut icon" type="image/ico" href="img/Power4.ico">
+
+		<script src="../custom/redirect.js"></script>
+
+		<style>
+			::-webkit-scrollbar {
+				width: 10px;
+				height: 100%;
+			}
+
+			::-webkit-scrollbar-track {
+				background: #fff;
+			}
+
+			::-webkit-scrollbar-thumb {
+				background: rgba(215, 215, 215, 1);
+			}
+
+			::-webkit-scrollbar-thumb:hover {
+				background: #000;
+			}
+
+			body {
+				font-family: sans-serif;
+				font-size: 2.5vh;
+				text-align: center;
+				color: #000;
+				padding: 0px;
+				margin: 0px;
+			}
+
+			table {
+				position: absolute;
+				left: calc(50%);
+				top: calc(50%);
+				transform: translate(-50%, -50%);
+			}
+
+			table,
+			th,
+			td {
+				border: 1px solid;
+			}
+
+			th,
+			td {
+				border: 1px solid;
+				width: 40px;
+				height: 40px;
+			}
+
+			#p1content {
+				position: absolute;
+				left: 25%;
+				top: calc(50%);
+				text-align: center;
+				font-weight: 600;
+				transform: translate(-50%, -50%);
+			}
+
+			#p2content {
+				position: absolute;
+				left: 75%;
+				top: calc(50%);
+				text-align: center;
+				font-weight: 600;
+				transform: translate(-50%, -50%);
+			}
+
+			#title {
+				position: absolute;
+				left: 50%;
+				top: 20%;
+				text-align: center;
+				font-weight: 600;
+				transform: translate(-50%, -50%);
+			}
+
+			#p1points {
+				color: blue;
+			}
+
+			#p2points {
+				color: red;
+			}
+		</style>
+
+	</head>
+
+	<body class>
+
+		<header>
+		</header>
+
+		<content>
+
+			<div id="title">
+				<div>Power4</div>
+			</div>
+			<div id="p1content">
+				<div id="p1">>Player 1</div>
+			</div>
+			<div id="p2content">
+				<div id="p2">Player 2</div>
+			</div>
+			<table id="grid">
+				<tr id="l1">
+					<th id="l1-1" onclick="setPosition(this)"></th>
+					<th id="l1-2" onclick="setPosition(this)"></th>
+					<th id="l1-3" onclick="setPosition(this)"></th>
+					<th id="l1-4" onclick="setPosition(this)"></th>
+					<th id="l1-5" onclick="setPosition(this)"></th>
+					<th id="l1-6" onclick="setPosition(this)"></th>
+					<th id="l1-7" onclick="setPosition(this)"></th>
+				</tr>
+				<tr id="l2">
+					<th id="l2-1" onclick="setPosition(this)"></th>
+					<th id="l2-2" onclick="setPosition(this)"></th>
+					<th id="l2-3" onclick="setPosition(this)"></th>
+					<th id="l2-4" onclick="setPosition(this)"></th>
+					<th id="l2-5" onclick="setPosition(this)"></th>
+					<th id="l2-6" onclick="setPosition(this)"></th>
+					<th id="l2-7" onclick="setPosition(this)"></th>
+				</tr>
+				<tr id="l3">
+					<th id="l3-1" onclick="setPosition(this)"></th>
+					<th id="l3-2" onclick="setPosition(this)"></th>
+					<th id="l3-3" onclick="setPosition(this)"></th>
+					<th id="l3-4" onclick="setPosition(this)"></th>
+					<th id="l3-5" onclick="setPosition(this)"></th>
+					<th id="l3-6" onclick="setPosition(this)"></th>
+					<th id="l3-7" onclick="setPosition(this)"></th>
+				</tr>
+				<tr id="l4">
+					<th id="l4-1" onclick="setPosition(this)"></th>
+					<th id="l4-2" onclick="setPosition(this)"></th>
+					<th id="l4-3" onclick="setPosition(this)"></th>
+					<th id="l4-4" onclick="setPosition(this)"></th>
+					<th id="l4-5" onclick="setPosition(this)"></th>
+					<th id="l4-6" onclick="setPosition(this)"></th>
+					<th id="l4-7" onclick="setPosition(this)"></th>
+				</tr>
+				<tr id="l5">
+					<th id="l5-1" onclick="setPosition(this)"></th>
+					<th id="l5-2" onclick="setPosition(this)"></th>
+					<th id="l5-3" onclick="setPosition(this)"></th>
+					<th id="l5-4" onclick="setPosition(this)"></th>
+					<th id="l5-5" onclick="setPosition(this)"></th>
+					<th id="l5-6" onclick="setPosition(this)"></th>
+					<th id="l5-7" onclick="setPosition(this)"></th>
+				</tr>
+				<tr id="l6">
+					<th id="l6-1" onclick="setPosition(this)"></th>
+					<th id="l6-2" onclick="setPosition(this)"></th>
+					<th id="l6-3" onclick="setPosition(this)"></th>
+					<th id="l6-4" onclick="setPosition(this)"></th>
+					<th id="l6-5" onclick="setPosition(this)"></th>
+					<th id="l6-6" onclick="setPosition(this)"></th>
+					<th id="l6-7" onclick="setPosition(this)"></th>
+				</tr>
+			</table>
+
+		</content>
+
+		<footer>
+		</footer>
+
+		<copyrights
+			style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: black; text-align: center; font-family: sans-serif; font-size: 15px; line-height:15px;">
+			<b>© MAF</b></copyrights>
+
+		<script>
+			var isp1turn = 0;
+			function setPosition(el) {
+				if (el.style.backgroundColor != "red" & el.style.backgroundColor != "blue") {
+					if (isp1turn == 0) {
+						el.style.backgroundColor = "red";
+					}
+					else if (isp1turn == 1) {
+						el.style.backgroundColor = "blue";
+					}
+					isp1turn++;
+					if (isp1turn >= 2) {
+						isp1turn = 0;
+					}
+				}
+				if (isp1turn == 0) {
+					document.getElementById("p1").innerText = ">Player 1";
+					document.getElementById("p2").innerText = "Player 2";
+				}
+				else {
+					document.getElementById("p1").innerText = "Player 1";
+					document.getElementById("p2").innerText = ">Player 2";
+				}
+			}
+
+		</script>
+
+	</body>
+
+</html>

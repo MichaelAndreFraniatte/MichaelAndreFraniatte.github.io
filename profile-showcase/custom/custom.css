@@ -1,0 +1,191 @@
+﻿
+html, body {
+    align-items: center;
+    justify-content: center;
+    background: #131313;
+    color: #fff;
+    font-family: "Allerta Stencil", Sans-serif;
+    font-size: 1vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+    cursor: pointer;
+}
+
+a:hover {
+    color: white;
+}
+
+.title {
+    font-size: 7.5vh;
+}
+
+.word {
+    font-size: 2.5vh;
+}
+
+.header {
+    position: relative;
+    width: 100vw;
+    height: 18vh;
+    top: 0;
+    background-color: #222;
+}
+
+.headertabtitle {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    width: 100vw;
+    height: 4vh;
+    background-color: #222;
+}
+
+.tabtitle {
+    display: inline-block;
+    width: 15vw;
+    height: 4vh;
+    text-align: center;
+    vertical-align: middle;
+    background: #131313;
+    border-color: #131313;
+    border-style: solid;
+    font-size: 2.5vh;
+    cursor: pointer;
+}
+
+.tabtitleactive {
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: white;
+}
+
+.headertab {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    height: 70vh;
+    width: 100vw;
+    background: #131313;
+}
+
+.tab {
+    position: relative;
+    display: inline-block;
+    height: 70vh;
+    width: 100vw;
+    background: #131313;
+    font-size: 2vh;
+}
+
+.tab1active {
+    border-top-style: solid;
+    border-image: linear-gradient(to right, #fff 21vw, transparent 26vw, transparent 43vw, #fff 48vw) 100% 1;
+}
+
+.tab2active {
+    border-top-style: solid;
+    border-image: linear-gradient(to right, #fff 37vw, transparent 42vw, transparent 58vw, #fff 63vw) 100% 1;
+}
+
+.tab3active {
+    border-top-style: solid;
+    border-image: linear-gradient(to right, #fff 52vw, transparent 57vw, transparent 74vw, #fff 79vw) 100% 1;
+}
+
+img {
+    background-color: white;
+    width: 13vw;
+    height: auto;
+}
+
+figure {
+    display: inline-block;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 12vh;
+    margin-bottom: 5vh;
+    width: 13vw;
+    height: 45vh;
+    border-style: solid;
+    border-radius: 3%;
+    cursor: pointer;
+    background-color: #222;
+    opacity: 1;
+    zoom: 1;
+    transition: opacity 0.1s ease-out;
+    transition: zoom 0.1s ease-out;
+    z-index: 1;
+}
+
+figure:hover {
+    opacity: 1;
+    zoom: 1;
+    z-index: 1;
+}
+
+figcaption {
+    display: table;
+    text-align: justify;
+    width: 11vw;
+    height: 11vh;
+    opacity: 1 !important;
+    zoom: 1;
+    z-index: 10;
+}
+
+figcaption:hover {
+    opacity: 1 !important;
+    zoom: 1;
+    z-index: 10;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline-block;
+}
+
+.opac {
+    opacity: 1;
+}
+
+.transparent {
+    opacity: 0;
+}
+
+.fadein {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeout {
+    animation: fadeOut 1s;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

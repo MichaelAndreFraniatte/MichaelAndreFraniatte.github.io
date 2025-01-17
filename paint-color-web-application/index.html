@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+        <title>paint-color by michael franiatte</title>
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="../extra/jquery-3.7.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <script src="../custom/redirect.js"></script>
+
+        <style>
+            body,
+            html {
+                overflow-x: hidden;
+            }
+
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            div {
+                display: float;
+                float: left;
+                width: 1vw;
+                height: 1vw;
+                padding: 0;
+                margin: 0;
+            }
+
+            #tile {
+                display: block;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 6vw;
+                padding: 1vw;
+                margin: 0;
+            }
+
+            #blank {
+                display: float;
+                float: left;
+                width: 100vw;
+                height: 6vw;
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+    </head>
+
+    <body class>
+        <div id="tile"></div>
+        <div id="blank"></div>
+
+        <copyrights
+            style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: gray; text-align: center; font-family: sans-serif; font-size: 15px; line-height:15px;">
+            <b>© MAF</b></copyrights>
+
+        <script>
+
+            for (r = 0; r < 256; r = r + 8) {
+                for (g = 0; g < 256; g = g + 8) {
+                    for (b = 0; b < 256; b = b + 8) {
+                        var div = document.createElement('div');
+                        div.style.backgroundColor = "rgb(" + r + ", " + g + ", " + b + ")";
+                        div.title = "rgb(" + r + ", " + g + ", " + b + ")";
+                        document.getElementsByTagName('body')[0].appendChild(div);
+                    }
+                }
+            }
+
+            var tile = document.querySelector('#tile');
+
+            document.querySelectorAll('div:not(#tile):not(#blank)').forEach(function (div) {
+                div.addEventListener('click', function () {
+                    tile.style.backgroundColor = div.title;
+                    var color = div.title;
+                    color = '#' + color.match(/\d+/g).map(function (x) {
+                        x = parseInt(x).toString(16);
+                        return (x.length == 1) ? "0" + x : x;
+                    }).join("");
+                    tile.innerHTML = div.title + ", " + color;
+                    tile.style.color = invertColor(color);
+                });
+            });
+
+            function invertColor(hex) {
+                if (hex.indexOf('#') === 0) {
+                    hex = hex.slice(1);
+                }
+                // convert 3-digit hex to 6-digits.
+                if (hex.length === 3) {
+                    hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+                }
+                if (hex.length !== 6) {
+                    throw new Error('Invalid HEX color.');
+                }
+                // invert color components
+                var r = (255 - parseInt(hex.slice(0, 2), 16)).toString(16),
+                    g = (255 - parseInt(hex.slice(2, 4), 16)).toString(16),
+                    b = (255 - parseInt(hex.slice(4, 6), 16)).toString(16);
+                // pad each with zeros and return
+                return '#' + padZero(r) + padZero(g) + padZero(b);
+            }
+
+            function padZero(str, len) {
+                len = len || 2;
+                var zeros = new Array(len).join('0');
+                return (zeros + str).slice(-len);
+            }
+
+        </script>
+
+    </body>
+
+</html>

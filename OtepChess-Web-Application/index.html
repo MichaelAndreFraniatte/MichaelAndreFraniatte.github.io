@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+
+		<title>OtepChess</title>
+		<meta charset="utf-8">
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Michael Andre Franiatte OtepChess">
+		<meta name="keywords" content="Michael Andre Franiatte, OtepChess">
+		<meta name="author" content="MICHAEL ANDRE FRANIATTE">
+
+		<link rel="shortcut icon" type="image/ico" href="img/pions.ico">
+
+		<script src="../custom/redirect.js"></script>
+
+		<style>
+			body {
+				background-color: #000;
+				padding: 0px;
+				margin: 0px;
+				overflow: hidden;
+			}
+		</style>
+
+	</head>
+
+	<body class oncontextmenu="return false;">
+
+		<img id="Chess" src="img/chess.png"></img>
+
+		<img id="chess-black-1" src="img/chess-black-tower.png"><img>
+		<img id="chess-black-2" src="img/chess-black-horse.png"><img>
+		<img id="chess-black-3" src="img/chess-black-fool.png"><img>
+		<img id="chess-black-4" src="img/chess-black-queen.png"><img>
+		<img id="chess-black-5" src="img/chess-black-king.png"><img>
+		<img id="chess-black-6" src="img/chess-black-fool.png"><img>
+		<img id="chess-black-7" src="img/chess-black-horse.png"><img>
+		<img id="chess-black-8" src="img/chess-black-tower.png"><img>
+		<img id="chess-black-9" src="img/chess-black-pion.png"><img>
+		<img id="chess-black-10" src="img/chess-black-pion.png"><img>
+		<img id="chess-black-11" src="img/chess-black-pion.png"><img>
+		<img id="chess-black-12" src="img/chess-black-pion.png"><img>
+		<img id="chess-black-13" src="img/chess-black-pion.png"><img>
+		<img id="chess-black-14" src="img/chess-black-pion.png"><img>
+		<img id="chess-black-15" src="img/chess-black-pion.png"><img>
+		<img id="chess-black-16" src="img/chess-black-pion.png"><img>
+
+		<img id="chess-white-1" src="img/chess-white-pion.png"><img>
+		<img id="chess-white-2" src="img/chess-white-pion.png"><img>
+		<img id="chess-white-3" src="img/chess-white-pion.png"><img>
+		<img id="chess-white-4" src="img/chess-white-pion.png"><img>
+		<img id="chess-white-5" src="img/chess-white-pion.png"><img>
+		<img id="chess-white-6" src="img/chess-white-pion.png"><img>
+		<img id="chess-white-7" src="img/chess-white-pion.png"><img>
+		<img id="chess-white-8" src="img/chess-white-pion.png"><img>
+		<img id="chess-white-9" src="img/chess-white-tower.png"><img>
+		<img id="chess-white-10" src="img/chess-white-horse.png"><img>
+		<img id="chess-white-11" src="img/chess-white-fool.png"><img>
+		<img id="chess-white-12" src="img/chess-white-queen.png"><img>
+		<img id="chess-white-13" src="img/chess-white-king.png"><img>
+		<img id="chess-white-14" src="img/chess-white-fool.png"><img>
+		<img id="chess-white-15" src="img/chess-white-horse.png"><img>
+		<img id="chess-white-16" src="img/chess-white-tower.png"><img>
+
+		<copyrights
+			style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: white; text-align: center; font-family: sans-serif; font-size: 15px; line-height:15px;">
+			<b>© MAF</b></copyrights>
+
+		<script type="text/javascript">
+
+			var win = window,
+				doc = document,
+				docElem = doc.documentElement,
+				body = doc.getElementsByTagName('body')[0],
+				x = win.innerWidth || docElem.clientWidth || body.clientWidth,
+				y = win.innerHeight || docElem.clientHeight || body.clientHeight;
+
+			var sizex = x;
+			var sizey = y;
+			var posx = '';
+			var posy = '';
+			var mousex = '';
+			var mousey = '';
+			var key = '';
+			var click = '';
+			var rightclick = false;
+			var leftclick = false;
+			var spacekey = false;
+
+			function mouse_position(e) {
+				mousex = e.clientX;
+				mousey = e.clientY;
+				posx = mousex / sizex;
+				posy = mousey / sizey;
+				console.log("posx: " + posx + ", posy: " + posy);
+			}
+
+			onmousemove = function (e) { mouse_position(e) };
+
+			function key_code_down(e) {
+				key = e.keyCode || e.which;
+				if (key == 32) {
+					console.log("space bar pressed");
+					spacekey = true;
+				}
+			}
+
+			onkeydown = function (e) { key_code_down(e) };
+
+			function key_code_up(e) {
+				key = e.keyCode || e.which;
+				if (key == 32) {
+					console.log("space bar released");
+					spacekey = false;
+				}
+			}
+
+			onkeyup = function (e) { key_code_up(e) };
+
+			function mouse_code_down(e) {
+				click = e.keyCode || e.which;
+				if (click == 1) {
+					console.log("click left pressed");
+					leftclick = true;
+				}
+				if (click == 3) {
+					console.log("click right pressed");
+					rightclick = true;
+				}
+			}
+
+			onmousedown = function (e) { mouse_code_down(e) };
+
+			function mouse_code_up(e) {
+				click = e.keyCode || e.which;
+				if (click == 1) {
+					console.log("click left released");
+					leftclick = false;
+				}
+				if (click == 3) {
+					console.log("click right released");
+					rightclick = false;
+				}
+			}
+
+			onmouseup = function (e) { mouse_code_up(e) };
+
+			var chessx = 649;
+			var chessy = 648;
+			var chessposx = (sizex - chessx) / 2;
+			var chessposy = (sizey - chessy) / 2;
+			var chess = document.getElementById('Chess');
+			chess.style.position = "absolute";
+			chess.style.left = chessposx + 'px';
+			chess.style.top = chessposy + 'px';
+
+			var chesserx = 90;
+			var chessery = 90;
+			var chesserposx = chessposx - chesserx / 2;
+			var chesserposy = chessposy - chessery / 2;
+
+			var chesser_black_1 = document.getElementById('chess-black-1');
+
+			chesser_black_1.style.width = chesserx + 'px';
+			chesser_black_1.style.height = chessery + 'px';
+			chesser_black_1.style.position = "absolute";
+			chesser_black_1.style.left = chesserposx + 42 + 'px';
+			chesser_black_1.style.top = chesserposy + 45 + 'px';
+
+			chesser_black_1.addEventListener("click", clickBlack1);
+
+			var movingblack1 = true;
+			var checkedblack1 = true;
+
+			function clickBlack1(e) {
+				if (movingblack1) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_black_1 & elements[n] != chess) {
+							elements[n].after(chesser_black_1);
+						}
+					}
+					chesser_black_1.addEventListener('mousemove', moveBlack1);
+					movingblack1 = false;
+				}
+				else {
+					chesser_black_1.removeEventListener('mousemove', moveBlack1);
+					movingblack1 = true;
+				}
+			}
+
+			function moveBlack1(e) {
+				chesser_black_1.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_black_1.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_black_2 = document.getElementById('chess-black-2');
+
+			chesser_black_2.style.width = chesserx + 'px';
+			chesser_black_2.style.height = chessery + 'px';
+			chesser_black_2.style.position = "absolute";
+			chesser_black_2.style.left = chesserposx + 42 + 'px';
+			chesser_black_2.style.top = chesserposy + 125 + 'px';
+
+			chesser_black_2.addEventListener("click", clickBlack2);
+
+			var movingblack2 = true;
+			var checkedblack2 = true;
+
+			function clickBlack2(e) {
+				if (movingblack2) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_black_2 & elements[n] != chess) {
+							elements[n].after(chesser_black_2);
+						}
+					}
+					chesser_black_2.addEventListener('mousemove', moveBlack2);
+					movingblack2 = false;
+				}
+				else {
+					chesser_black_2.removeEventListener('mousemove', moveBlack2);
+					movingblack2 = true;
+				}
+			}
+
+			function moveBlack2(e) {
+				chesser_black_2.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_black_2.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_black_3 = document.getElementById('chess-black-3');
+
+			chesser_black_3.style.width = chesserx + 'px';
+			chesser_black_3.style.height = chessery + 'px';
+			chesser_black_3.style.position = "absolute";
+			chesser_black_3.style.left = chesserposx + 42 + 'px';
+			chesser_black_3.style.top = chesserposy + 205 + 'px';
+
+			chesser_black_3.addEventListener("click", clickBlack3);
+
+			var movingblack3 = true;
+			var checkedblack3 = true;
+
+			function clickBlack3(e) {
+				if (movingblack3) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_black_3 & elements[n] != chess) {
+							elements[n].after(chesser_black_3);
+						}
+					}
+					chesser_black_3.addEventListener('mousemove', moveBlack3);
+					movingblack3 = false;
+				}
+				else {
+					chesser_black_3.removeEventListener('mousemove', moveBlack3);
+					movingblack3 = true;
+				}
+			}
+
+			function moveBlack3(e) {
+				chesser_black_3.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_black_3.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_black_4 = document.getElementById('chess-black-4');
+
+			chesser_black_4.style.width = chesserx + 'px';
+			chesser_black_4.style.height = chessery + 'px';
+			chesser_black_4.style.position = "absolute";
+			chesser_black_4.style.left = chesserposx + 42 + 'px';
+			chesser_black_4.style.top = chesserposy + 283 + 'px';
+
+			chesser_black_4.addEventListener("click", clickBlack4);
+
+			var movingblack4 = true;
+			var checkedblack4 = true;
+
+			function clickBlack4(e) {
+				if (movingblack4) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_black_4 & elements[n] != chess) {
+							elements[n].after(chesser_black_4);
+						}
+					}
+					chesser_black_4.addEventListener('mousemove', moveBlack4);
+					movingblack4 = false;
+				}
+				else {
+					chesser_black_4.removeEventListener('mousemove', moveBlack4);
+					movingblack4 = true;
+				}
+			}
+
+			function moveBlack4(e) {
+				chesser_black_4.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_black_4.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_black_5 = document.getElementById('chess-black-5');
+
+			chesser_black_5.style.width = chesserx + 'px';
+			chesser_black_5.style.height = chessery + 'px';
+			chesser_black_5.style.position = "absolute";
+			chesser_black_5.style.left = chesserposx + 42 + 'px';
+			chesser_black_5.style.top = chesserposy + 365 + 'px';
+
+			chesser_black_5.addEventListener("click", clickBlack5);
+
+			var movingblack5 = true;
+			var checkedblack5 = true;
+
+			function clickBlack5(e) {
+				if (movingblack5) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_black_5 & elements[n] != chess) {
+							elements[n].after(chesser_black_5);
+						}
+					}
+					chesser_black_5.addEventListener('mousemove', moveBlack5);
+					movingblack5 = false;
+				}
+				else {
+					chesser_black_5.removeEventListener('mousemove', moveBlack5);
+					movingblack5 = true;
+				}
+			}
+
+			function moveBlack5(e) {
+				chesser_black_5.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_black_5.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_black_6 = document.getElementById('chess-black-6');
+
+			chesser_black_6.style.width = chesserx + 'px';
+			chesser_black_6.style.height = chessery + 'px';
+			chesser_black_6.style.position = "absolute";
+			chesser_black_6.style.left = chesserposx + 42 + 'px';
+			chesser_black_6.style.top = chesserposy + 446 + 'px';
+
+			chesser_black_6.addEventListener("click", clickBlack6);
+
+			var movingblack6 = true;
+			var checkedblack6 = true;
+
+			function clickBlack6(e) {
+				if (movingblack6) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_black_6 & elements[n] != chess) {
+							elements[n].after(chesser_black_6);
+						}
+					}
+					chesser_black_6.addEventListener('mousemove', moveBlack6);
+					movingblack6 = false;
+				}
+				else {
+					chesser_black_6.removeEventListener('mousemove', moveBlack6);
+					movingblack6 = true;
+				}
+			}
+
+			function moveBlack6(e) {
+				chesser_black_6.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_black_6.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_black_7 = document.getElementById('chess-black-7');
+
+			chesser_black_7.style.width = chesserx + 'px';
+			chesser_black_7.style.height = chessery + 'px';
+			chesser_black_7.style.position = "absolute";
+			chesser_black_7.style.left = chesserposx + 42 + 'px';
+			chesser_black_7.style.top = chesserposy + 526 + 'px';
+
+			chesser_black_7.addEventListener("click", clickBlack7);
+
+			var movingblack7 = true;
+			var checkedblack7 = true;
+
+			function clickBlack7(e) {
+				if (movingblack7) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_black_7 & elements[n] != chess) {
+							elements[n].after(chesser_black_7);
+						}
+					}
+					chesser_black_7.addEventListener('mousemove', moveBlack7);
+					movingblack7 = false;
+				}
+				else {
+					chesser_black_7.removeEventListener('mousemove', moveBlack7);
+					movingblack7 = true;
+				}
+			}
+
+			function moveBlack7(e) {
+				chesser_black_7.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_black_7.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_black_8 = document.getElementById('chess-black-8');
+
+			chesser_black_8.style.width = chesserx + 'px';
+			chesser_black_8.style.height = chessery + 'px';
+			chesser_black_8.style.position = "absolute";
+			chesser_black_8.style.left = chesserposx + 42 + 'px';
+			chesser_black_8.style.top = chesserposy + 608 + 'px';
+
+			chesser_black_8.addEventListener("click", clickBlack8);
+
+			var movingblack8 = true;
+			var checkedblack8 = true;
+
+			function clickBlack8(e) {
+				if (movingblack8) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_black_8 & elements[n] != chess) {
+							elements[n].after(chesser_black_8);
+						}
+					}
+					chesser_black_8.addEventListener('mousemove', moveBlack8);
+					movingblack8 = false;
+				}
+				else {
+					chesser_black_8.removeEventListener('mousemove', moveBlack8);
+					movingblack8 = true;
+				}
+			}
+
+			function moveBlack8(e) {
+				chesser_black_8.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_black_8.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_black_9 = document.getElementById('chess-black-9');
+
+			chesser_black_9.style.width = chesserx + 'px';
+			chesser_black_9.style.height = chessery + 'px';
+			chesser_black_9.style.position = "absolute";
+			chesser_black_9.style.left = chesserposx + 127 + 'px';
+			chesser_black_9.style.top = chesserposy + 42 + 'px';
+
+			chesser_black_9.addEventListener("click", clickBlack9);
+
+			var movingblack9 = true;
+			var checkedblack9 = true;
+
+			function clickBlack9(e) {
+				if (movingblack9) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_black_9 & elements[n] != chess) {
+							elements[n].after(chesser_black_9);
+						}
+					}
+					chesser_black_9.addEventListener('mousemove', moveBlack9);
+					movingblack9 = false;
+				}
+				else {
+					chesser_black_9.removeEventListener('mousemove', moveBlack9);
+					movingblack9 = true;
+				}
+			}
+
+			function moveBlack9(e) {
+				chesser_black_9.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_black_9.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_black_10 = document.getElementById('chess-black-10');
+
+			chesser_black_10.style.width = chesserx + 'px';
+			chesser_black_10.style.height = chessery + 'px';
+			chesser_black_10.style.position = "absolute";
+			chesser_black_10.style.left = chesserposx + 127 + 'px';
+			chesser_black_10.style.top = chesserposy + 125 + 'px';
+
+			chesser_black_10.addEventListener("click", clickBlack10);
+
+			var movingblack10 = true;
+			var checkedblack10 = true;
+
+			function clickBlack10(e) {
+				if (movingblack10) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_black_10 & elements[n] != chess) {
+							elements[n].after(chesser_black_10);
+						}
+					}
+					chesser_black_10.addEventListener('mousemove', moveBlack10);
+					movingblack10 = false;
+				}
+				else {
+					chesser_black_10.removeEventListener('mousemove', moveBlack10);
+					movingblack10 = true;
+				}
+			}
+
+			function moveBlack10(e) {
+				chesser_black_10.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_black_10.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_black_11 = document.getElementById('chess-black-11');
+
+			chesser_black_11.style.width = chesserx + 'px';
+			chesser_black_11.style.height = chessery + 'px';
+			chesser_black_11.style.position = "absolute";
+			chesser_black_11.style.left = chesserposx + 127 + 'px';
+			chesser_black_11.style.top = chesserposy + 205 + 'px';
+
+			chesser_black_11.addEventListener("click", clickBlack11);
+
+			var movingblack11 = true;
+			var checkedblack11 = true;
+
+			function clickBlack11(e) {
+				if (movingblack11) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_black_11 & elements[n] != chess) {
+							elements[n].after(chesser_black_11);
+						}
+					}
+					chesser_black_11.addEventListener('mousemove', moveBlack11);
+					movingblack11 = false;
+				}
+				else {
+					chesser_black_11.removeEventListener('mousemove', moveBlack11);
+					movingblack11 = true;
+				}
+			}
+
+			function moveBlack11(e) {
+				chesser_black_11.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_black_11.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_black_12 = document.getElementById('chess-black-12');
+
+			chesser_black_12.style.width = chesserx + 'px';
+			chesser_black_12.style.height = chessery + 'px';
+			chesser_black_12.style.position = "absolute";
+			chesser_black_12.style.left = chesserposx + 127 + 'px';
+			chesser_black_12.style.top = chesserposy + 283 + 'px';
+
+			chesser_black_12.addEventListener("click", clickBlack12);
+
+			var movingblack12 = true;
+			var checkedblack12 = true;
+
+			function clickBlack12(e) {
+				if (movingblack12) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_black_12 & elements[n] != chess) {
+							elements[n].after(chesser_black_12);
+						}
+					}
+					chesser_black_12.addEventListener('mousemove', moveBlack12);
+					movingblack12 = false;
+				}
+				else {
+					chesser_black_12.removeEventListener('mousemove', moveBlack12);
+					movingblack12 = true;
+				}
+			}
+
+			function moveBlack12(e) {
+				chesser_black_12.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_black_12.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_black_13 = document.getElementById('chess-black-13');
+
+			chesser_black_13.style.width = chesserx + 'px';
+			chesser_black_13.style.height = chessery + 'px';
+			chesser_black_13.style.position = "absolute";
+			chesser_black_13.style.left = chesserposx + 127 + 'px';
+			chesser_black_13.style.top = chesserposy + 365 + 'px';
+
+			chesser_black_13.addEventListener("click", clickBlack13);
+
+			var movingblack13 = true;
+			var checkedblack13 = true;
+
+			function clickBlack13(e) {
+				if (movingblack13) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_black_13 & elements[n] != chess) {
+							elements[n].after(chesser_black_13);
+						}
+					}
+					chesser_black_13.addEventListener('mousemove', moveBlack13);
+					movingblack13 = false;
+				}
+				else {
+					chesser_black_13.removeEventListener('mousemove', moveBlack13);
+					movingblack13 = true;
+				}
+			}
+
+			function moveBlack13(e) {
+				chesser_black_13.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_black_13.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_black_14 = document.getElementById('chess-black-14');
+
+			chesser_black_14.style.width = chesserx + 'px';
+			chesser_black_14.style.height = chessery + 'px';
+			chesser_black_14.style.position = "absolute";
+			chesser_black_14.style.left = chesserposx + 127 + 'px';
+			chesser_black_14.style.top = chesserposy + 446 + 'px';
+
+			chesser_black_14.addEventListener("click", clickBlack14);
+
+			var movingblack14 = true;
+			var checkedblack14 = true;
+
+			function clickBlack14(e) {
+				if (movingblack14) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_black_14 & elements[n] != chess) {
+							elements[n].after(chesser_black_14);
+						}
+					}
+					chesser_black_14.addEventListener('mousemove', moveBlack14);
+					movingblack14 = false;
+				}
+				else {
+					chesser_black_14.removeEventListener('mousemove', moveBlack14);
+					movingblack14 = true;
+				}
+			}
+
+			function moveBlack14(e) {
+				chesser_black_14.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_black_14.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_black_15 = document.getElementById('chess-black-15');
+
+			chesser_black_15.style.width = chesserx + 'px';
+			chesser_black_15.style.height = chessery + 'px';
+			chesser_black_15.style.position = "absolute";
+			chesser_black_15.style.left = chesserposx + 127 + 'px';
+			chesser_black_15.style.top = chesserposy + 526 + 'px';
+
+			chesser_black_15.addEventListener("click", clickBlack15);
+
+			var movingblack15 = true;
+			var checkedblack15 = true;
+
+			function clickBlack15(e) {
+				if (movingblack15) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_black_15 & elements[n] != chess) {
+							elements[n].after(chesser_black_15);
+						}
+					}
+					chesser_black_15.addEventListener('mousemove', moveBlack15);
+					movingblack15 = false;
+				}
+				else {
+					chesser_black_15.removeEventListener('mousemove', moveBlack15);
+					movingblack15 = true;
+				}
+			}
+
+			function moveBlack15(e) {
+				chesser_black_15.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_black_15.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_black_16 = document.getElementById('chess-black-16');
+
+			chesser_black_16.style.width = chesserx + 'px';
+			chesser_black_16.style.height = chessery + 'px';
+			chesser_black_16.style.position = "absolute";
+			chesser_black_16.style.left = chesserposx + 127 + 'px';
+			chesser_black_16.style.top = chesserposy + 608 + 'px';
+
+			chesser_black_16.addEventListener("click", clickBlack16);
+
+			var movingblack16 = true;
+			var checkedblack16 = true;
+
+			function clickBlack16(e) {
+				if (movingblack16) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_black_16 & elements[n] != chess) {
+							elements[n].after(chesser_black_16);
+						}
+					}
+					chesser_black_16.addEventListener('mousemove', moveBlack16);
+					movingblack16 = false;
+				}
+				else {
+					chesser_black_16.removeEventListener('mousemove', moveBlack16);
+					movingblack16 = true;
+				}
+			}
+
+			function moveBlack16(e) {
+				chesser_black_16.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_black_16.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_white_1 = document.getElementById('chess-white-1');
+
+			chesser_white_1.style.width = chesserx + 'px';
+			chesser_white_1.style.height = chessery + 'px';
+			chesser_white_1.style.position = "absolute";
+			chesser_white_1.style.left = chesserposx + 42 + 480 + 'px';
+			chesser_white_1.style.top = chesserposy + 45 + 'px';
+
+			chesser_white_1.addEventListener("click", clickwhite1);
+
+			var movingwhite1 = true;
+			var checkedwhite1 = true;
+
+			function clickwhite1(e) {
+				if (movingwhite1) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_white_1 & elements[n] != chess) {
+							elements[n].after(chesser_white_1);
+						}
+					}
+					chesser_white_1.addEventListener('mousemove', movewhite1);
+					movingwhite1 = false;
+				}
+				else {
+					chesser_white_1.removeEventListener('mousemove', movewhite1);
+					movingwhite1 = true;
+				}
+			}
+
+			function movewhite1(e) {
+				chesser_white_1.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_white_1.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_white_2 = document.getElementById('chess-white-2');
+
+			chesser_white_2.style.width = chesserx + 'px';
+			chesser_white_2.style.height = chessery + 'px';
+			chesser_white_2.style.position = "absolute";
+			chesser_white_2.style.left = chesserposx + 42 + 480 + 'px';
+			chesser_white_2.style.top = chesserposy + 125 + 'px';
+
+			chesser_white_2.addEventListener("click", clickwhite2);
+
+			var movingwhite2 = true;
+			var checkedwhite2 = true;
+
+			function clickwhite2(e) {
+				if (movingwhite2) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_white_2 & elements[n] != chess) {
+							elements[n].after(chesser_white_2);
+						}
+					}
+					chesser_white_2.addEventListener('mousemove', movewhite2);
+					movingwhite2 = false;
+				}
+				else {
+					chesser_white_2.removeEventListener('mousemove', movewhite2);
+					movingwhite2 = true;
+				}
+			}
+
+			function movewhite2(e) {
+				chesser_white_2.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_white_2.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_white_3 = document.getElementById('chess-white-3');
+
+			chesser_white_3.style.width = chesserx + 'px';
+			chesser_white_3.style.height = chessery + 'px';
+			chesser_white_3.style.position = "absolute";
+			chesser_white_3.style.left = chesserposx + 42 + 480 + 'px';
+			chesser_white_3.style.top = chesserposy + 205 + 'px';
+
+			chesser_white_3.addEventListener("click", clickwhite3);
+
+			var movingwhite3 = true;
+			var checkedwhite3 = true;
+
+			function clickwhite3(e) {
+				if (movingwhite3) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_white_3 & elements[n] != chess) {
+							elements[n].after(chesser_white_3);
+						}
+					}
+					chesser_white_3.addEventListener('mousemove', movewhite3);
+					movingwhite3 = false;
+				}
+				else {
+					chesser_white_3.removeEventListener('mousemove', movewhite3);
+					movingwhite3 = true;
+				}
+			}
+
+			function movewhite3(e) {
+				chesser_white_3.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_white_3.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_white_4 = document.getElementById('chess-white-4');
+
+			chesser_white_4.style.width = chesserx + 'px';
+			chesser_white_4.style.height = chessery + 'px';
+			chesser_white_4.style.position = "absolute";
+			chesser_white_4.style.left = chesserposx + 42 + 480 + 'px';
+			chesser_white_4.style.top = chesserposy + 283 + 'px';
+
+			chesser_white_4.addEventListener("click", clickwhite4);
+
+			var movingwhite4 = true;
+			var checkedwhite4 = true;
+
+			function clickwhite4(e) {
+				if (movingwhite4) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_white_4 & elements[n] != chess) {
+							elements[n].after(chesser_white_4);
+						}
+					}
+					chesser_white_4.addEventListener('mousemove', movewhite4);
+					movingwhite4 = false;
+				}
+				else {
+					chesser_white_4.removeEventListener('mousemove', movewhite4);
+					movingwhite4 = true;
+				}
+			}
+
+			function movewhite4(e) {
+				chesser_white_4.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_white_4.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_white_5 = document.getElementById('chess-white-5');
+
+			chesser_white_5.style.width = chesserx + 'px';
+			chesser_white_5.style.height = chessery + 'px';
+			chesser_white_5.style.position = "absolute";
+			chesser_white_5.style.left = chesserposx + 42 + 480 + 'px';
+			chesser_white_5.style.top = chesserposy + 365 + 'px';
+
+			chesser_white_5.addEventListener("click", clickwhite5);
+
+			var movingwhite5 = true;
+			var checkedwhite5 = true;
+
+			function clickwhite5(e) {
+				if (movingwhite5) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_white_5 & elements[n] != chess) {
+							elements[n].after(chesser_white_5);
+						}
+					}
+					chesser_white_5.addEventListener('mousemove', movewhite5);
+					movingwhite5 = false;
+				}
+				else {
+					chesser_white_5.removeEventListener('mousemove', movewhite5);
+					movingwhite5 = true;
+				}
+			}
+
+			function movewhite5(e) {
+				chesser_white_5.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_white_5.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_white_6 = document.getElementById('chess-white-6');
+
+			chesser_white_6.style.width = chesserx + 'px';
+			chesser_white_6.style.height = chessery + 'px';
+			chesser_white_6.style.position = "absolute";
+			chesser_white_6.style.left = chesserposx + 42 + 480 + 'px';
+			chesser_white_6.style.top = chesserposy + 446 + 'px';
+
+			chesser_white_6.addEventListener("click", clickwhite6);
+
+			var movingwhite6 = true;
+			var checkedwhite6 = true;
+
+			function clickwhite6(e) {
+				if (movingwhite6) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_white_6 & elements[n] != chess) {
+							elements[n].after(chesser_white_6);
+						}
+					}
+					chesser_white_6.addEventListener('mousemove', movewhite6);
+					movingwhite6 = false;
+				}
+				else {
+					chesser_white_6.removeEventListener('mousemove', movewhite6);
+					movingwhite6 = true;
+				}
+			}
+
+			function movewhite6(e) {
+				chesser_white_6.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_white_6.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_white_7 = document.getElementById('chess-white-7');
+
+			chesser_white_7.style.width = chesserx + 'px';
+			chesser_white_7.style.height = chessery + 'px';
+			chesser_white_7.style.position = "absolute";
+			chesser_white_7.style.left = chesserposx + 42 + 480 + 'px';
+			chesser_white_7.style.top = chesserposy + 526 + 'px';
+
+			chesser_white_7.addEventListener("click", clickwhite7);
+
+			var movingwhite7 = true;
+			var checkedwhite7 = true;
+
+			function clickwhite7(e) {
+				if (movingwhite7) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_white_7 & elements[n] != chess) {
+							elements[n].after(chesser_white_7);
+						}
+					}
+					chesser_white_7.addEventListener('mousemove', movewhite7);
+					movingwhite7 = false;
+				}
+				else {
+					chesser_white_7.removeEventListener('mousemove', movewhite7);
+					movingwhite7 = true;
+				}
+			}
+
+			function movewhite7(e) {
+				chesser_white_7.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_white_7.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_white_8 = document.getElementById('chess-white-8');
+
+			chesser_white_8.style.width = chesserx + 'px';
+			chesser_white_8.style.height = chessery + 'px';
+			chesser_white_8.style.position = "absolute";
+			chesser_white_8.style.left = chesserposx + 42 + 480 + 'px';
+			chesser_white_8.style.top = chesserposy + 608 + 'px';
+
+			chesser_white_8.addEventListener("click", clickwhite8);
+
+			var movingwhite8 = true;
+			var checkedwhite8 = true;
+
+			function clickwhite8(e) {
+				if (movingwhite8) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_white_8 & elements[n] != chess) {
+							elements[n].after(chesser_white_8);
+						}
+					}
+					chesser_white_8.addEventListener('mousemove', movewhite8);
+					movingwhite8 = false;
+				}
+				else {
+					chesser_white_8.removeEventListener('mousemove', movewhite8);
+					movingwhite8 = true;
+				}
+			}
+
+			function movewhite8(e) {
+				chesser_white_8.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_white_8.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_white_9 = document.getElementById('chess-white-9');
+
+			chesser_white_9.style.width = chesserx + 'px';
+			chesser_white_9.style.height = chessery + 'px';
+			chesser_white_9.style.position = "absolute";
+			chesser_white_9.style.left = chesserposx + 127 + 480 + 'px';
+			chesser_white_9.style.top = chesserposy + 42 + 'px';
+
+			chesser_white_9.addEventListener("click", clickwhite9);
+
+			var movingwhite9 = true;
+			var checkedwhite9 = true;
+
+			function clickwhite9(e) {
+				if (movingwhite9) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_white_9 & elements[n] != chess) {
+							elements[n].after(chesser_white_9);
+						}
+					}
+					chesser_white_9.addEventListener('mousemove', movewhite9);
+					movingwhite9 = false;
+				}
+				else {
+					chesser_white_9.removeEventListener('mousemove', movewhite9);
+					movingwhite9 = true;
+				}
+			}
+
+			function movewhite9(e) {
+				chesser_white_9.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_white_9.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_white_10 = document.getElementById('chess-white-10');
+
+			chesser_white_10.style.width = chesserx + 'px';
+			chesser_white_10.style.height = chessery + 'px';
+			chesser_white_10.style.position = "absolute";
+			chesser_white_10.style.left = chesserposx + 127 + 480 + 'px';
+			chesser_white_10.style.top = chesserposy + 125 + 'px';
+
+			chesser_white_10.addEventListener("click", clickwhite10);
+
+			var movingwhite10 = true;
+			var checkedwhite10 = true;
+
+			function clickwhite10(e) {
+				if (movingwhite10) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_white_10 & elements[n] != chess) {
+							elements[n].after(chesser_white_10);
+						}
+					}
+					chesser_white_10.addEventListener('mousemove', movewhite10);
+					movingwhite10 = false;
+				}
+				else {
+					chesser_white_10.removeEventListener('mousemove', movewhite10);
+					movingwhite10 = true;
+				}
+			}
+
+			function movewhite10(e) {
+				chesser_white_10.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_white_10.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_white_11 = document.getElementById('chess-white-11');
+
+			chesser_white_11.style.width = chesserx + 'px';
+			chesser_white_11.style.height = chessery + 'px';
+			chesser_white_11.style.position = "absolute";
+			chesser_white_11.style.left = chesserposx + 127 + 480 + 'px';
+			chesser_white_11.style.top = chesserposy + 205 + 'px';
+
+			chesser_white_11.addEventListener("click", clickwhite11);
+
+			var movingwhite11 = true;
+			var checkedwhite11 = true;
+
+			function clickwhite11(e) {
+				if (movingwhite11) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_white_11 & elements[n] != chess) {
+							elements[n].after(chesser_white_11);
+						}
+					}
+					chesser_white_11.addEventListener('mousemove', movewhite11);
+					movingwhite11 = false;
+				}
+				else {
+					chesser_white_11.removeEventListener('mousemove', movewhite11);
+					movingwhite11 = true;
+				}
+			}
+
+			function movewhite11(e) {
+				chesser_white_11.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_white_11.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_white_12 = document.getElementById('chess-white-12');
+
+			chesser_white_12.style.width = chesserx + 'px';
+			chesser_white_12.style.height = chessery + 'px';
+			chesser_white_12.style.position = "absolute";
+			chesser_white_12.style.left = chesserposx + 127 + 480 + 'px';
+			chesser_white_12.style.top = chesserposy + 283 + 'px';
+
+			chesser_white_12.addEventListener("click", clickwhite12);
+
+			var movingwhite12 = true;
+			var checkedwhite12 = true;
+
+			function clickwhite12(e) {
+				if (movingwhite12) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_white_12 & elements[n] != chess) {
+							elements[n].after(chesser_white_12);
+						}
+					}
+					chesser_white_12.addEventListener('mousemove', movewhite12);
+					movingwhite12 = false;
+				}
+				else {
+					chesser_white_12.removeEventListener('mousemove', movewhite12);
+					movingwhite12 = true;
+				}
+			}
+
+			function movewhite12(e) {
+				chesser_white_12.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_white_12.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_white_13 = document.getElementById('chess-white-13');
+
+			chesser_white_13.style.width = chesserx + 'px';
+			chesser_white_13.style.height = chessery + 'px';
+			chesser_white_13.style.position = "absolute";
+			chesser_white_13.style.left = chesserposx + 127 + 480 + 'px';
+			chesser_white_13.style.top = chesserposy + 365 + 'px';
+
+			chesser_white_13.addEventListener("click", clickwhite13);
+
+			var movingwhite13 = true;
+			var checkedwhite13 = true;
+
+			function clickwhite13(e) {
+				if (movingwhite13) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_white_13 & elements[n] != chess) {
+							elements[n].after(chesser_white_13);
+						}
+					}
+					chesser_white_13.addEventListener('mousemove', movewhite13);
+					movingwhite13 = false;
+				}
+				else {
+					chesser_white_13.removeEventListener('mousemove', movewhite13);
+					movingwhite13 = true;
+				}
+			}
+
+			function movewhite13(e) {
+				chesser_white_13.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_white_13.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_white_14 = document.getElementById('chess-white-14');
+
+			chesser_white_14.style.width = chesserx + 'px';
+			chesser_white_14.style.height = chessery + 'px';
+			chesser_white_14.style.position = "absolute";
+			chesser_white_14.style.left = chesserposx + 127 + 480 + 'px';
+			chesser_white_14.style.top = chesserposy + 446 + 'px';
+
+			chesser_white_14.addEventListener("click", clickwhite14);
+
+			var movingwhite14 = true;
+			var checkedwhite14 = true;
+
+			function clickwhite14(e) {
+				if (movingwhite14) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_white_14 & elements[n] != chess) {
+							elements[n].after(chesser_white_14);
+						}
+					}
+					chesser_white_14.addEventListener('mousemove', movewhite14);
+					movingwhite14 = false;
+				}
+				else {
+					chesser_white_14.removeEventListener('mousemove', movewhite14);
+					movingwhite14 = true;
+				}
+			}
+
+			function movewhite14(e) {
+				chesser_white_14.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_white_14.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_white_15 = document.getElementById('chess-white-15');
+
+			chesser_white_15.style.width = chesserx + 'px';
+			chesser_white_15.style.height = chessery + 'px';
+			chesser_white_15.style.position = "absolute";
+			chesser_white_15.style.left = chesserposx + 127 + 480 + 'px';
+			chesser_white_15.style.top = chesserposy + 526 + 'px';
+
+			chesser_white_15.addEventListener("click", clickwhite15);
+
+			var movingwhite15 = true;
+			var checkedwhite15 = true;
+
+			function clickwhite15(e) {
+				if (movingwhite15) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_white_15 & elements[n] != chess) {
+							elements[n].after(chesser_white_15);
+						}
+					}
+					chesser_white_15.addEventListener('mousemove', movewhite15);
+					movingwhite15 = false;
+				}
+				else {
+					chesser_white_15.removeEventListener('mousemove', movewhite15);
+					movingwhite15 = true;
+				}
+			}
+
+			function movewhite15(e) {
+				chesser_white_15.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_white_15.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+			var chesser_white_16 = document.getElementById('chess-white-16');
+
+			chesser_white_16.style.width = chesserx + 'px';
+			chesser_white_16.style.height = chessery + 'px';
+			chesser_white_16.style.position = "absolute";
+			chesser_white_16.style.left = chesserposx + 127 + 480 + 'px';
+			chesser_white_16.style.top = chesserposy + 608 + 'px';
+
+			chesser_white_16.addEventListener("click", clickwhite16);
+
+			var movingwhite16 = true;
+			var checkedwhite16 = true;
+
+			function clickwhite16(e) {
+				if (movingwhite16) {
+					var elements = document.getElementsByTagName("img");
+					for (n = 0; n < elements.length; n++) {
+						if (elements[n] != chesser_white_16 & elements[n] != chess) {
+							elements[n].after(chesser_white_16);
+						}
+					}
+					chesser_white_16.addEventListener('mousemove', movewhite16);
+					movingwhite16 = false;
+				}
+				else {
+					chesser_white_16.removeEventListener('mousemove', movewhite16);
+					movingwhite16 = true;
+				}
+			}
+
+			function movewhite16(e) {
+				chesser_white_16.style.left = e.clientX - chesserx / 2 + 'px';
+				chesser_white_16.style.top = e.clientY - chessery / 2 + 'px';
+			}
+
+		</script>
+
+	</body>
+
+</html>
