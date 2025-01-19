@@ -1,10 +1,10 @@
   
-My works are under **default copyright laws**, and to have my agreement on the private use, you have to **pay me** as following.  
+My works are under **default copyright laws**. For my agreement to use privately, you have to **pay me** as following.  
   
 <table>
   <tr>
     <th><b>Payment:</b></th>
-    <th><b>Price / User:</b></th>
+    <th><b>Price:</b></th>
   </tr>
   <tr>
     <td>
@@ -13,9 +13,9 @@ My works are under **default copyright laws**, and to have my agreement on the p
       </a>   
     </td>
     <td>
-      • For the programs <b>50 €</b><br />
-      • For the web designs <b>500 €</b><br />
-      • For the source codes <b>5000 €</b>
+      • For the program <b>50 €</b><br />
+      • For the web design <b>500 €</b><br />
+      • For the source code <b>5000 €</b>
     </td>
   </tr>
 </table>  
