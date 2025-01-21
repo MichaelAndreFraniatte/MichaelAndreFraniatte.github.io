@@ -635,7 +635,7 @@
                             Xbox Controller, audio visualization of left and right speakers, crosshair, motion dot(s), minimap, webcam. 
                             You can use a webcam, but not necessary, and show dot(s) for IR, gyroscope, or accelerometer. There is a argument 
                             to take account, "fps" (standing for first person shooter) is for show minimap in top center and crosshair, 
-                            while "rg" (standing for racing game) isn't showing minimap and crosshair, as following.
+                            while "rg" (standing for racing game) isn't showing minimap and crosshair, and the same with keyboard and mouse as following.
                         </p>
                         <div class="script">
                             <div>
@@ -648,6 +648,15 @@
                                         <font color="#004500">/* Webcam if connected and no minimap and no crosshair */</font><br>
                                         <font color="#007fff">controllersvid.Form1</font> form1 = <font color="#0000FF">new</font> <font color="#007fff">controllersvid.Form1</font>("fps", "Rainbow Title");<br>
                                         <font color="#004500">/* Whatsoever title in rainbow color changing under controller display (here it's "Rainbow Title") */</font><br>
+                                    </div>
+                                    <div class="test-autocomplete-textarea">
+                                        <font color="#0000FF">using kmsvid</font>;<br>
+                                        <font color="#007fff">kmsvid.Form1</font> form1 = <font color="#0000FF">new</font> <font color="#007fff">kmsvid.Form1</font>("fps");<br>
+                                        <font color="#004500">/* Webcam if connected and minimap in top center and crosshair */</font><br>
+                                        <font color="#007fff">kmsvid.Form1</font> form1 = <font color="#0000FF">new</font> <font color="#007fff">kmsvid.Form1</font>("rg");<br>
+                                        <font color="#004500">/* Webcam if connected and no minimap and no crosshair */</font><br>
+                                        <font color="#007fff">kmsvid.Form1</font> form1 = <font color="#0000FF">new</font> <font color="#007fff">kmsvid.Form1</font>("fps", "Rainbow Title");<br>
+                                        <font color="#004500">/* Whatsoever title in rainbow color changing under keyboard and mouse display (here it's "Rainbow Title") */</font><br>
                                     </div>
                                 </div>
                             </div>
