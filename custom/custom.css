@@ -239,6 +239,7 @@ ul {
     position: relative;
     border-style: inset;
     break-inside: avoid;
+    overflow: hidden;
 }
 
 .test-autocomplete-textarea {
@@ -250,6 +251,7 @@ ul {
     overflow: auto;
     color: black;
     break-inside: avoid;
+    overflow: hidden;
 }
 
 a {
