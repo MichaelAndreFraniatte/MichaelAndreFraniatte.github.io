@@ -72,16 +72,16 @@
             font-size: 16px;
         }
 
-            input[type=text] {
-                background-color: #f1f1f1;
-                width: 93%;
-            }
+        input[type=text] {
+            background-color: #f1f1f1;
+            width: 93%;
+        }
 
-            input[type=submit] {
-                background-color: DodgerBlue;
-                color: #fff;
-                cursor: pointer;
-            }
+        input[type=submit] {
+            background-color: DodgerBlue;
+            color: #fff;
+            cursor: pointer;
+        }
 
         .autocomplete-items {
             position: absolute;
@@ -98,18 +98,18 @@
             overflow-y: auto;
         }
 
-            .autocomplete-items div {
-                padding: 10px;
-                background-color: #000;
-                border-bottom: 1px solid #d4d4d4;
-                display: block;
-                cursor: pointer;
-            }
+        .autocomplete-items div {
+            padding: 10px;
+            background-color: #000;
+            border-bottom: 1px solid #d4d4d4;
+            display: block;
+            cursor: pointer;
+        }
 
-                /*when hovering an item:*/
-                .autocomplete-items div:hover {
-                    background-color: #444;
-                }
+        /*when hovering an item:*/
+        .autocomplete-items div:hover {
+            background-color: #444;
+        }
 
         /*when navigating through the items using the arrow keys:*/
         .autocomplete-active {
@@ -245,6 +245,7 @@
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine</br>
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-black-ops-6</br>
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-bo6</br>
+        ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-call-of-duty-black-ops-6</br>
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-cod</br>
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-cod23</br>
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-ds-forza-vid</br>
@@ -262,7 +263,6 @@
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-gp-wa-fh4</br>
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-gp-wj</br>
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-gp-wj-fzc</br>
-        ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-gp-wjr</br>
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-gp-wn-cod</br>
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-gp-wn-fzc</br>
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-gp-wn-mw2</br>
@@ -275,7 +275,6 @@
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-lg-joys</br>
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-lg-spc</br>
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-lg-wj</br>
-        ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-lg-wjr</br>
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-lg-wn</br>
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-mw-vid</br>
         ⠀⠀⠀⠀⠀⠀⠀└📇 ciine-rw</br>
@@ -912,158 +911,158 @@
     </div>
     <copyrights style="display: float; float: right; position: fixed; right: 4px; bottom: 0px; color: white; text-align: center; font-family: sans-serif; font-size: 15px; line-height:15px;"><b>© MAF</b></copyrights>
 
-        <script>
+    <script>
 
-            var elem = document.getElementById('search');
-            var el = document.getElementById("page");
-            var originalHtml = el.innerHTML;
-            var stringsearches;
-            function search() {
-                var searchword = elem.value;
-                if (searchword != '') {
-                    var newHtml = originalHtml.replace(new RegExp('<b>' + searchword + '</b>', "g"), '<b>' + searchword.fontcolor("DodgerBlue") + '</b>');
+        var elem = document.getElementById('search');
+        var el = document.getElementById("page");
+        var originalHtml = el.innerHTML;
+        var stringsearches;
+        function search() {
+            var searchword = elem.value;
+            if (searchword != '') {
+                var newHtml = originalHtml.replace(new RegExp('<b>' + searchword + '</b>', "g"), '<b>' + searchword.fontcolor("DodgerBlue") + '</b>');
+                el.innerHTML = newHtml;
+                document.querySelector('font').scrollIntoView({ behavior: 'smooth' })
+            }
+            else {
+                setTimeout(function () {
+                    document.querySelector('#wait').style.display = 'block';
+                }, 0);
+                setTimeout(function () {
+                    deleteSearchWords();
+                }, 100);
+            }
+        }
+
+        function deleteSearchWords() {
+            stringsearches = '[';
+            searches.forEach(function (search) {
+                if (search != "") {
+                    stringsearches += '"' + search + '", ';
+                    originalHtml = el.innerHTML;
+                    var newHtml = originalHtml.replace(new RegExp('<b>' + search.fontcolor("DodgerBlue") + '</b>', "g"), '<b>' + search + '</b>');
                     el.innerHTML = newHtml;
-                    document.querySelector('font').scrollIntoView({ behavior: 'smooth' })
                 }
-                else {
-                    setTimeout(function () {
-                        document.querySelector('#wait').style.display = 'block';
-                    }, 0);
-                    setTimeout(function () {
-                        deleteSearchWords();
-                    }, 100);
+            });
+
+        }
+
+    </script>
+
+    <script>
+        function autocomplete(inp, arr) {
+            /*the autocomplete function takes two arguments,
+            the text field element and an array of possible autocompleted values:*/
+            var currentFocus;
+            /*execute a function when someone writes in the text field:*/
+            inp.addEventListener("input", function (e) {
+                var a, b, i, val = this.value;
+                /*close any already open lists of autocompleted values*/
+                closeAllLists();
+                if (!val) { return false; }
+                currentFocus = -1;
+                /*create a DIV element that will contain the items (values):*/
+                a = document.createElement("DIV");
+                a.setAttribute("id", this.id + "autocomplete-list");
+                a.setAttribute("class", "autocomplete-items");
+                /*append the DIV element as a child of the autocomplete container:*/
+                this.parentNode.appendChild(a);
+                /*for each item in the array...*/
+                for (i = 0; i < arr.length; i++) {
+                    /*check if the item starts with the same letters as the text field value:*/
+                    if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                        /*create a DIV element for each matching element:*/
+                        b = document.createElement("DIV");
+                        /*make the matching letters bold:*/
+                        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                        b.innerHTML += arr[i].substr(val.length);
+                        /*insert a input field that will hold the current array item's value:*/
+                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                        /*execute a function when someone clicks on the item value (DIV element):*/
+                        b.addEventListener("click", function (e) {
+                            /*insert the value for the autocomplete text field:*/
+                            inp.value = this.getElementsByTagName("input")[0].value;
+                            /*close the list of autocompleted values,
+                            (or any other open lists of autocompleted values:*/
+                            closeAllLists();
+                        });
+                        a.appendChild(b);
+                    }
+                }
+            });
+            /*execute a function presses a key on the keyboard:*/
+            inp.addEventListener("keydown", function (e) {
+                if (e.keyCode == 13) {
+                    search();
+                }
+                var x = document.getElementById(this.id + "autocomplete-list");
+                if (x) x = x.getElementsByTagName("div");
+                if (e.keyCode == 40) {
+                    /*If the arrow DOWN key is pressed,
+                    increase the currentFocus variable:*/
+                    currentFocus++;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 38) { //up
+                    /*If the arrow UP key is pressed,
+                    decrease the currentFocus variable:*/
+                    currentFocus--;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 13) {
+                    /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                    e.preventDefault();
+                    if (currentFocus > -1) {
+                        /*and simulate a click on the "active" item:*/
+                        if (x) x[currentFocus].click();
+                    }
+                }
+            });
+            function addActive(x) {
+                /*a function to classify an item as "active":*/
+                if (!x) return false;
+                /*start by removing the "active" class on all items:*/
+                removeActive(x);
+                if (currentFocus >= x.length) currentFocus = 0;
+                if (currentFocus < 0) currentFocus = (x.length - 1);
+                /*add class "autocomplete-active":*/
+                x[currentFocus].classList.add("autocomplete-active");
+            }
+            function removeActive(x) {
+                /*a function to remove the "active" class from all autocomplete items:*/
+                for (var i = 0; i < x.length; i++) {
+                    x[i].classList.remove("autocomplete-active");
                 }
             }
-
-            function deleteSearchWords() {
-                stringsearches = '[';
-                searches.forEach(function (search) {
-                    if (search != "") {
-                        stringsearches += '"' + search + '", ';
-                        originalHtml = el.innerHTML;
-                        var newHtml = originalHtml.replace(new RegExp('<b>' + search.fontcolor("DodgerBlue") + '</b>', "g"), '<b>' + search + '</b>');
-                        el.innerHTML = newHtml;
-                    }
-                });
-
-            }
-
-        </script>
-
-        <script>
-            function autocomplete(inp, arr) {
-                /*the autocomplete function takes two arguments,
-                the text field element and an array of possible autocompleted values:*/
-                var currentFocus;
-                /*execute a function when someone writes in the text field:*/
-                inp.addEventListener("input", function (e) {
-                    var a, b, i, val = this.value;
-                    /*close any already open lists of autocompleted values*/
-                    closeAllLists();
-                    if (!val) { return false; }
-                    currentFocus = -1;
-                    /*create a DIV element that will contain the items (values):*/
-                    a = document.createElement("DIV");
-                    a.setAttribute("id", this.id + "autocomplete-list");
-                    a.setAttribute("class", "autocomplete-items");
-                    /*append the DIV element as a child of the autocomplete container:*/
-                    this.parentNode.appendChild(a);
-                    /*for each item in the array...*/
-                    for (i = 0; i < arr.length; i++) {
-                        /*check if the item starts with the same letters as the text field value:*/
-                        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                            /*create a DIV element for each matching element:*/
-                            b = document.createElement("DIV");
-                            /*make the matching letters bold:*/
-                            b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-                            b.innerHTML += arr[i].substr(val.length);
-                            /*insert a input field that will hold the current array item's value:*/
-                            b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-                            /*execute a function when someone clicks on the item value (DIV element):*/
-                            b.addEventListener("click", function (e) {
-                                /*insert the value for the autocomplete text field:*/
-                                inp.value = this.getElementsByTagName("input")[0].value;
-                                /*close the list of autocompleted values,
-                                (or any other open lists of autocompleted values:*/
-                                closeAllLists();
-                            });
-                            a.appendChild(b);
-                        }
-                    }
-                });
-                /*execute a function presses a key on the keyboard:*/
-                inp.addEventListener("keydown", function (e) {
-                    if (e.keyCode == 13) {
-                        search();
-                    }
-                    var x = document.getElementById(this.id + "autocomplete-list");
-                    if (x) x = x.getElementsByTagName("div");
-                    if (e.keyCode == 40) {
-                        /*If the arrow DOWN key is pressed,
-                        increase the currentFocus variable:*/
-                        currentFocus++;
-                        /*and and make the current item more visible:*/
-                        addActive(x);
-                    } else if (e.keyCode == 38) { //up
-                        /*If the arrow UP key is pressed,
-                        decrease the currentFocus variable:*/
-                        currentFocus--;
-                        /*and and make the current item more visible:*/
-                        addActive(x);
-                    } else if (e.keyCode == 13) {
-                        /*If the ENTER key is pressed, prevent the form from being submitted,*/
-                        e.preventDefault();
-                        if (currentFocus > -1) {
-                            /*and simulate a click on the "active" item:*/
-                            if (x) x[currentFocus].click();
-                        }
-                    }
-                });
-                function addActive(x) {
-                    /*a function to classify an item as "active":*/
-                    if (!x) return false;
-                    /*start by removing the "active" class on all items:*/
-                    removeActive(x);
-                    if (currentFocus >= x.length) currentFocus = 0;
-                    if (currentFocus < 0) currentFocus = (x.length - 1);
-                    /*add class "autocomplete-active":*/
-                    x[currentFocus].classList.add("autocomplete-active");
-                }
-                function removeActive(x) {
-                    /*a function to remove the "active" class from all autocomplete items:*/
-                    for (var i = 0; i < x.length; i++) {
-                        x[i].classList.remove("autocomplete-active");
+            function closeAllLists(elmnt) {
+                /*close all autocomplete lists in the document,
+                except the one passed as an argument:*/
+                var x = document.getElementsByClassName("autocomplete-items");
+                for (var i = 0; i < x.length; i++) {
+                    if (elmnt != x[i] && elmnt != inp) {
+                        x[i].parentNode.removeChild(x[i]);
                     }
                 }
-                function closeAllLists(elmnt) {
-                    /*close all autocomplete lists in the document,
-                    except the one passed as an argument:*/
-                    var x = document.getElementsByClassName("autocomplete-items");
-                    for (var i = 0; i < x.length; i++) {
-                        if (elmnt != x[i] && elmnt != inp) {
-                            x[i].parentNode.removeChild(x[i]);
-                        }
-                    }
-                }
-                /*execute a function when someone clicks in the document:*/
-                document.addEventListener("click", function (e) {
-                    closeAllLists(e.target);
-                });
             }
+            /*execute a function when someone clicks in the document:*/
+            document.addEventListener("click", function (e) {
+                closeAllLists(e.target);
+            });
+        }
 
-            /*An array containing all the country names in the world:*/
-            var searches = [];
+        /*An array containing all the country names in the world:*/
+        var searches = [];
 
-            var elements = document.getElementsByTagName('a');
-            for (var i = 0; i < elements.length; i++) {
-                var txt = elements[i].textContent || elements[i].innerText;
-                searches.push(txt);
-            }
+        var elements = document.getElementsByTagName('a');
+        for (var i = 0; i < elements.length; i++) {
+            var txt = elements[i].textContent || elements[i].innerText;
+            searches.push(txt);
+        }
 
-            /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-            autocomplete(document.getElementById("search"), searches);
+        /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+        autocomplete(document.getElementById("search"), searches);
 
-        </script>
+    </script>
 
 </body>
 </html>
